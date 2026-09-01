@@ -1,0 +1,1013 @@
+IMPORTANT! Eviction policy is volatile-lru. It should be "noeviction"
+IMPORTANT! Eviction policy is volatile-lru. It should be "noeviction"
+IMPORTANT! Eviction policy is volatile-lru. It should be "noeviction"
+IMPORTANT! Eviction policy is volatile-lru. It should be "noeviction"
+IMPORTANT! Eviction policy is volatile-lru. It should be "noeviction"
+IMPORTANT! Eviction policy is volatile-lru. It should be "noeviction"
+IMPORTANT! Eviction policy is volatile-lru. It should be "noeviction"
+IMPORTANT! Eviction policy is volatile-lru. It should be "noeviction"
+IMPORTANT! Eviction policy is volatile-lru. It should be "noeviction"
+IMPORTANT! Eviction policy is volatile-lru. It should be "noeviction"
+IMPORTANT! Eviction policy is volatile-lru. It should be "noeviction"
+IMPORTANT! Eviction policy is volatile-lru. It should be "noeviction"
+IMPORTANT! Eviction policy is volatile-lru. It should be "noeviction"
+IMPORTANT! Eviction policy is volatile-lru. It should be "noeviction"
+IMPORTANT! Eviction policy is volatile-lru. It should be "noeviction"
+IMPORTANT! Eviction policy is volatile-lru. It should be "noeviction"
+IMPORTANT! Eviction policy is volatile-lru. It should be "noeviction"
+IMPORTANT! Eviction policy is volatile-lru. It should be "noeviction"
+{"level":"error","timestamp":"2026-05-14T15:49:33.872Z","service":"erp-omnichannel","environment":"development","message":"[IMAP] Client error","scope":"imap-worker","code":"ETIMEOUT","_connId":"4jwmjqfdg7z47ao2azgp"}
+IMAP Client Error: Error: Socket timeout
+    at TLSSocket._socketTimeout (C:\Users\Victus\Desktop\New folder\Backend\node_modules\imapflow\lib\imap-flow.js:875:29)
+    at TLSSocket.emit (node:events:518:28)
+    at Socket._onTimeout (node:net:604:8)
+    at listOnTimeout (node:internal/timers:588:17)
+    at process.processTimers (node:internal/timers:523:7) {
+  code: 'ETIMEOUT',
+  _connId: '4jwmjqfdg7z47ao2azgp'
+}
+{"level":"warn","timestamp":"2026-05-14T15:49:33.885Z","service":"erp-omnichannel","environment":"development","message":"[IMAP] Connection closed. Reconnecting in 15s...","scope":"imap-worker"}
+IMAP Connection Closed. Reconnecting in 15s...
+{"level":"error","timestamp":"2026-05-14T15:49:33.887Z","service":"erp-omnichannel","environment":"development","message":"[IMAP] Error during polling loop","scope":"imap-worker","code":"NoConnection"}
+{"level":"error","timestamp":"2026-05-14T15:51:53.868Z","service":"erp-omnichannel","environment":"development","message":"[IMAP] Client error","scope":"imap-worker","code":"ETIMEOUT","_connId":"t7ls48ize9txutxuh7x4"}
+IMAP Client Error: Error: Socket timeout
+    at TLSSocket._socketTimeout (C:\Users\Victus\Desktop\New folder\Backend\node_modules\imapflow\lib\imap-flow.js:875:29)
+    at TLSSocket.emit (node:events:518:28)
+    at Socket._onTimeout (node:net:604:8)
+    at listOnTimeout (node:internal/timers:588:17)
+    at process.processTimers (node:internal/timers:523:7) {
+  code: 'ETIMEOUT',
+  _connId: 't7ls48ize9txutxuh7x4'
+}
+{"level":"warn","timestamp":"2026-05-14T15:51:53.878Z","service":"erp-omnichannel","environment":"development","message":"[IMAP] Connection closed. Reconnecting in 15s...","scope":"imap-worker"}
+IMAP Connection Closed. Reconnecting in 15s...
+{"level":"error","timestamp":"2026-05-14T15:51:53.879Z","service":"erp-omnichannel","environment":"development","message":"[IMAP] Error during polling loop","scope":"imap-worker","code":"NoConnection"}
+{"level":"error","timestamp":"2026-05-14T15:54:14.432Z","service":"erp-omnichannel","environment":"development","message":"[IMAP] Client error","scope":"imap-worker","code":"ETIMEOUT","_connId":"yamcugsm8x3ewe2oajka"}
+IMAP Client Error: Error: Socket timeout
+    at TLSSocket._socketTimeout (C:\Users\Victus\Desktop\New folder\Backend\node_modules\imapflow\lib\imap-flow.js:875:29)
+    at TLSSocket.emit (node:events:518:28)
+    at Socket._onTimeout (node:net:604:8)
+    at listOnTimeout (node:internal/timers:588:17)
+    at process.processTimers (node:internal/timers:523:7) {
+  code: 'ETIMEOUT',
+  _connId: 'yamcugsm8x3ewe2oajka'
+}
+{"level":"warn","timestamp":"2026-05-14T15:54:14.434Z","service":"erp-omnichannel","environment":"development","message":"[IMAP] Connection closed. Reconnecting in 15s...","scope":"imap-worker"}
+IMAP Connection Closed. Reconnecting in 15s...
+{"level":"error","timestamp":"2026-05-14T15:54:14.436Z","service":"erp-omnichannel","environment":"development","message":"[IMAP] Error during polling loop","scope":"imap-worker","code":"NoConnection"}
+{"level":"error","timestamp":"2026-05-14T15:56:34.795Z","service":"erp-omnichannel","environment":"development","message":"[IMAP] Client error","scope":"imap-worker","code":"ETIMEOUT","_connId":"10x4ihjuf1dn43p0naxi"}
+IMAP Client Error: Error: Socket timeout
+    at TLSSocket._socketTimeout (C:\Users\Victus\Desktop\New folder\Backend\node_modules\imapflow\lib\imap-flow.js:875:29)
+    at TLSSocket.emit (node:events:518:28)
+    at Socket._onTimeout (node:net:604:8)
+    at listOnTimeout (node:internal/timers:588:17)
+    at process.processTimers (node:internal/timers:523:7) {
+  code: 'ETIMEOUT',
+  _connId: '10x4ihjuf1dn43p0naxi'
+}
+{"level":"warn","timestamp":"2026-05-14T15:56:34.805Z","service":"erp-omnichannel","environment":"development","message":"[IMAP] Connection closed. Reconnecting in 15s...","scope":"imap-worker"}
+IMAP Connection Closed. Reconnecting in 15s...
+{"level":"error","timestamp":"2026-05-14T15:56:34.806Z","service":"erp-omnichannel","environment":"development","message":"[IMAP] Error during polling loop","scope":"imap-worker","code":"NoConnection"}
+{"level":"error","timestamp":"2026-05-14T15:58:54.786Z","service":"erp-omnichannel","environment":"development","message":"[IMAP] Client error","scope":"imap-worker","code":"ETIMEOUT","_connId":"j2vfp2vq0wrmkx4x9ecc"}
+IMAP Client Error: Error: Socket timeout
+    at TLSSocket._socketTimeout (C:\Users\Victus\Desktop\New folder\Backend\node_modules\imapflow\lib\imap-flow.js:875:29)
+    at TLSSocket.emit (node:events:518:28)
+    at Socket._onTimeout (node:net:604:8)
+    at listOnTimeout (node:internal/timers:588:17)
+    at process.processTimers (node:internal/timers:523:7) {
+  code: 'ETIMEOUT',
+  _connId: 'j2vfp2vq0wrmkx4x9ecc'
+}
+{"level":"warn","timestamp":"2026-05-14T15:58:54.794Z","service":"erp-omnichannel","environment":"development","message":"[IMAP] Connection closed. Reconnecting in 15s...","scope":"imap-worker"}
+IMAP Connection Closed. Reconnecting in 15s...
+{"level":"error","timestamp":"2026-05-14T15:58:54.796Z","service":"erp-omnichannel","environment":"development","message":"[IMAP] Error during polling loop","scope":"imap-worker","code":"NoConnection"}
+PrismaClientKnownRequestError: 
+Invalid `prisma.client.create()` invocation:
+
+
+Unique constraint failed on the fields: (`refNo`)
+    at $n.handleRequestError (C:\Users\Victus\Desktop\New folder\Backend\src\generated\prisma\runtime\library.js:121:7315)
+    at $n.handleAndLogRequestError (C:\Users\Victus\Desktop\New folder\Backend\src\generated\prisma\runtime\library.js:121:6623)
+    at $n.request (C:\Users\Victus\Desktop\New folder\Backend\src\generated\prisma\runtime\library.js:121:6307)
+    at async l (C:\Users\Victus\Desktop\New folder\Backend\src\generated\prisma\runtime\library.js:130:9633)
+    at async file:///C:/Users/Victus/Desktop/New%20folder/Backend/src/modules/enquiry/repository.js:197:22
+    at async Proxy._transactionWithCallback (C:\Users\Victus\Desktop\New folder\Backend\src\generated\prisma\runtime\library.js:130:8000)
+    at async createEnquiry (file:///C:/Users/Victus/Desktop/New%20folder/Backend/src/modules/enquiry/service.js:9:21)
+    at async handleCreateEnquiry (file:///C:/Users/Victus/Desktop/New%20folder/Backend/src/modules/enquiry/controller.js:9:24) {
+  code: 'P2002',
+  clientVersion: '5.22.0',
+  meta: { modelName: 'Client', target: [ 'refNo' ] }
+}
+PrismaClientKnownRequestError: 
+Invalid `prisma.client.create()` invocation:
+
+
+Unique constraint failed on the fields: (`refNo`)
+    at $n.handleRequestError (C:\Users\Victus\Desktop\New folder\Backend\src\generated\prisma\runtime\library.js:121:7315)
+    at $n.handleAndLogRequestError (C:\Users\Victus\Desktop\New folder\Backend\src\generated\prisma\runtime\library.js:121:6623)
+    at $n.request (C:\Users\Victus\Desktop\New folder\Backend\src\generated\prisma\runtime\library.js:121:6307)
+    at async l (C:\Users\Victus\Desktop\New folder\Backend\src\generated\prisma\runtime\library.js:130:9633)
+    at async file:///C:/Users/Victus/Desktop/New%20folder/Backend/src/modules/enquiry/repository.js:197:22
+    at async Proxy._transactionWithCallback (C:\Users\Victus\Desktop\New folder\Backend\src\generated\prisma\runtime\library.js:130:8000)
+    at async createEnquiry (file:///C:/Users/Victus/Desktop/New%20folder/Backend/src/modules/enquiry/service.js:9:21)
+    at async handleCreateEnquiry (file:///C:/Users/Victus/Desktop/New%20folder/Backend/src/modules/enquiry/controller.js:9:24) {
+  code: 'P2002',
+  clientVersion: '5.22.0',
+  meta: { modelName: 'Client', target: [ 'refNo' ] }
+}
+PrismaClientKnownRequestError: 
+Invalid `prisma.client.create()` invocation:
+
+
+Unique constraint failed on the fields: (`refNo`)
+    at $n.handleRequestError (C:\Users\Victus\Desktop\New folder\Backend\src\generated\prisma\runtime\library.js:121:7315)
+    at $n.handleAndLogRequestError (C:\Users\Victus\Desktop\New folder\Backend\src\generated\prisma\runtime\library.js:121:6623)
+    at $n.request (C:\Users\Victus\Desktop\New folder\Backend\src\generated\prisma\runtime\library.js:121:6307)
+    at async l (C:\Users\Victus\Desktop\New folder\Backend\src\generated\prisma\runtime\library.js:130:9633)
+    at async file:///C:/Users/Victus/Desktop/New%20folder/Backend/src/modules/enquiry/repository.js:197:22
+    at async Proxy._transactionWithCallback (C:\Users\Victus\Desktop\New folder\Backend\src\generated\prisma\runtime\library.js:130:8000)
+    at async createEnquiry (file:///C:/Users/Victus/Desktop/New%20folder/Backend/src/modules/enquiry/service.js:9:21)
+    at async handleCreateEnquiry (file:///C:/Users/Victus/Desktop/New%20folder/Backend/src/modules/enquiry/controller.js:9:24) {
+  code: 'P2002',
+  clientVersion: '5.22.0',
+  meta: { modelName: 'Client', target: [ 'refNo' ] }
+}
+PrismaClientKnownRequestError: 
+Invalid `prisma.client.create()` invocation:
+
+
+Unique constraint failed on the fields: (`refNo`)
+    at $n.handleRequestError (C:\Users\Victus\Desktop\New folder\Backend\src\generated\prisma\runtime\library.js:121:7315)
+    at $n.handleAndLogRequestError (C:\Users\Victus\Desktop\New folder\Backend\src\generated\prisma\runtime\library.js:121:6623)
+    at $n.request (C:\Users\Victus\Desktop\New folder\Backend\src\generated\prisma\runtime\library.js:121:6307)
+    at async l (C:\Users\Victus\Desktop\New folder\Backend\src\generated\prisma\runtime\library.js:130:9633)
+    at async file:///C:/Users/Victus/Desktop/New%20folder/Backend/src/modules/enquiry/repository.js:197:22
+    at async Proxy._transactionWithCallback (C:\Users\Victus\Desktop\New folder\Backend\src\generated\prisma\runtime\library.js:130:8000)
+    at async createEnquiry (file:///C:/Users/Victus/Desktop/New%20folder/Backend/src/modules/enquiry/service.js:9:21)
+    at async handleCreateEnquiry (file:///C:/Users/Victus/Desktop/New%20folder/Backend/src/modules/enquiry/controller.js:9:24) {
+  code: 'P2002',
+  clientVersion: '5.22.0',
+  meta: { modelName: 'Client', target: [ 'refNo' ] }
+}
+{"level":"error","timestamp":"2026-05-14T16:01:14.993Z","service":"erp-omnichannel","environment":"development","message":"[IMAP] Client error","scope":"imap-worker","code":"ETIMEOUT","_connId":"zhnmd1i0zzt2k8as86nw"}
+IMAP Client Error: Error: Socket timeout
+    at TLSSocket._socketTimeout (C:\Users\Victus\Desktop\New folder\Backend\node_modules\imapflow\lib\imap-flow.js:875:29)
+    at TLSSocket.emit (node:events:518:28)
+    at Socket._onTimeout (node:net:604:8)
+    at listOnTimeout (node:internal/timers:588:17)
+    at process.processTimers (node:internal/timers:523:7) {
+  code: 'ETIMEOUT',
+  _connId: 'zhnmd1i0zzt2k8as86nw'
+}
+{"level":"warn","timestamp":"2026-05-14T16:01:15.004Z","service":"erp-omnichannel","environment":"development","message":"[IMAP] Connection closed. Reconnecting in 15s...","scope":"imap-worker"}
+IMAP Connection Closed. Reconnecting in 15s...
+{"level":"error","timestamp":"2026-05-14T16:01:15.012Z","service":"erp-omnichannel","environment":"development","message":"[IMAP] Error during polling loop","scope":"imap-worker","code":"NoConnection"}
+{"level":"error","timestamp":"2026-05-14T16:03:35.378Z","service":"erp-omnichannel","environment":"development","message":"[IMAP] Client error","scope":"imap-worker","code":"ETIMEOUT","_connId":"m2d79i4g8tlomvskxrei"}
+IMAP Client Error: Error: Socket timeout
+    at TLSSocket._socketTimeout (C:\Users\Victus\Desktop\New folder\Backend\node_modules\imapflow\lib\imap-flow.js:875:29)
+    at TLSSocket.emit (node:events:518:28)
+    at Socket._onTimeout (node:net:604:8)
+    at listOnTimeout (node:internal/timers:588:17)
+    at process.processTimers (node:internal/timers:523:7) {
+  code: 'ETIMEOUT',
+  _connId: 'm2d79i4g8tlomvskxrei'
+}
+{"level":"warn","timestamp":"2026-05-14T16:03:35.388Z","service":"erp-omnichannel","environment":"development","message":"[IMAP] Connection closed. Reconnecting in 15s...","scope":"imap-worker"}
+IMAP Connection Closed. Reconnecting in 15s...
+{"level":"error","timestamp":"2026-05-14T16:03:35.389Z","service":"erp-omnichannel","environment":"development","message":"[IMAP] Error during polling loop","scope":"imap-worker","code":"NoConnection"}
+AiService Analysis Error: {"error":{"code":429,"message":"You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/rate-limit. \n* Quota exceeded for metric: generativelanguage.googleapis.com/generate_content_free_tier_input_token_count, limit: 0, model: gemini-2.0-flash\n* Quota exceeded for metric: generativelanguage.googleapis.com/generate_content_free_tier_requests, limit: 0, model: gemini-2.0-flash\n* Quota exceeded for metric: generativelanguage.googleapis.com/generate_content_free_tier_requests, limit: 0, model: gemini-2.0-flash\nPlease retry in 8.172000845s.","status":"RESOURCE_EXHAUSTED","details":[{"@type":"type.googleapis.com/google.rpc.Help","links":[{"description":"Learn more about Gemini API quotas","url":"https://ai.google.dev/gemini-api/docs/rate-limits"}]},{"@type":"type.googleapis.com/google.rpc.QuotaFailure","violations":[{"quotaMetric":"generativelanguage.googleapis.com/generate_content_free_tier_input_token_count","quotaId":"GenerateContentInputTokensPerModelPerMinute-FreeTier","quotaDimensions":{"model":"gemini-2.0-flash","location":"global"}},{"quotaMetric":"generativelanguage.googleapis.com/generate_content_free_tier_requests","quotaId":"GenerateRequestsPerMinutePerProjectPerModel-FreeTier","quotaDimensions":{"model":"gemini-2.0-flash","location":"global"}},{"quotaMetric":"generativelanguage.googleapis.com/generate_content_free_tier_requests","quotaId":"GenerateRequestsPerDayPerProjectPerModel-FreeTier","quotaDimensions":{"model":"gemini-2.0-flash","location":"global"}}]},{"@type":"type.googleapis.com/google.rpc.RetryInfo","retryDelay":"8s"}]}}
+LLM Complaint Analysis failed: {"error":{"code":429,"message":"You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/rate-limit. \n* Quota exceeded for metric: generativelanguage.googleapis.com/generate_content_free_tier_input_token_count, limit: 0, model: gemini-2.0-flash\n* Quota exceeded for metric: generativelanguage.googleapis.com/generate_content_free_tier_requests, limit: 0, model: gemini-2.0-flash\n* Quota exceeded for metric: generativelanguage.googleapis.com/generate_content_free_tier_requests, limit: 0, model: gemini-2.0-flash\nPlease retry in 8.172000845s.","status":"RESOURCE_EXHAUSTED","details":[{"@type":"type.googleapis.com/google.rpc.Help","links":[{"description":"Learn more about Gemini API quotas","url":"https://ai.google.dev/gemini-api/docs/rate-limits"}]},{"@type":"type.googleapis.com/google.rpc.QuotaFailure","violations":[{"quotaMetric":"generativelanguage.googleapis.com/generate_content_free_tier_input_token_count","quotaId":"GenerateContentInputTokensPerModelPerMinute-FreeTier","quotaDimensions":{"model":"gemini-2.0-flash","location":"global"}},{"quotaMetric":"generativelanguage.googleapis.com/generate_content_free_tier_requests","quotaId":"GenerateRequestsPerMinutePerProjectPerModel-FreeTier","quotaDimensions":{"model":"gemini-2.0-flash","location":"global"}},{"quotaMetric":"generativelanguage.googleapis.com/generate_content_free_tier_requests","quotaId":"GenerateRequestsPerDayPerProjectPerModel-FreeTier","quotaDimensions":{"model":"gemini-2.0-flash","location":"global"}}]},{"@type":"type.googleapis.com/google.rpc.RetryInfo","retryDelay":"8s"}]}}
+ApiError: {"error":{"code":429,"message":"You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/rate-limit. \n* Quota exceeded for metric: generativelanguage.googleapis.com/generate_content_free_tier_input_token_count, limit: 0, model: gemini-2.0-flash\n* Quota exceeded for metric: generativelanguage.googleapis.com/generate_content_free_tier_requests, limit: 0, model: gemini-2.0-flash\n* Quota exceeded for metric: generativelanguage.googleapis.com/generate_content_free_tier_requests, limit: 0, model: gemini-2.0-flash\nPlease retry in 8.172000845s.","status":"RESOURCE_EXHAUSTED","details":[{"@type":"type.googleapis.com/google.rpc.Help","links":[{"description":"Learn more about Gemini API quotas","url":"https://ai.google.dev/gemini-api/docs/rate-limits"}]},{"@type":"type.googleapis.com/google.rpc.QuotaFailure","violations":[{"quotaMetric":"generativelanguage.googleapis.com/generate_content_free_tier_input_token_count","quotaId":"GenerateContentInputTokensPerModelPerMinute-FreeTier","quotaDimensions":{"model":"gemini-2.0-flash","location":"global"}},{"quotaMetric":"generativelanguage.googleapis.com/generate_content_free_tier_requests","quotaId":"GenerateRequestsPerMinutePerProjectPerModel-FreeTier","quotaDimensions":{"model":"gemini-2.0-flash","location":"global"}},{"quotaMetric":"generativelanguage.googleapis.com/generate_content_free_tier_requests","quotaId":"GenerateRequestsPerDayPerProjectPerModel-FreeTier","quotaDimensions":{"model":"gemini-2.0-flash","location":"global"}}]},{"@type":"type.googleapis.com/google.rpc.RetryInfo","retryDelay":"8s"}]}}
+    at throwErrorIfNotOK (C:\Users\Victus\Desktop\New folder\Backend\node_modules\@google\genai\src\_api_client.ts:953:24)
+    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+    at async <anonymous> (C:\Users\Victus\Desktop\New folder\Backend\node_modules\@google\genai\src\_api_client.ts:561:9)
+    at async Models.Models.generateContent (C:\Users\Victus\Desktop\New folder\Backend\node_modules\@google\genai\src\models.ts:128:14)
+    at async AiService.analyzeText (file:///C:/Users/Victus/Desktop/New%20folder/Backend/src/intelligence/services/ai.service.js:40:28)
+    at async ComplaintIntelligenceService.analyzeComplaint (file:///C:/Users/Victus/Desktop/New%20folder/Backend/src/intelligence/services/complaint-intelligence.service.js:13:30)
+    at async createComplaint (file:///C:/Users/Victus/Desktop/New%20folder/Backend/src/modules/customer_care/service.js:8:26)
+    at async handleCreateComplaint (file:///C:/Users/Victus/Desktop/New%20folder/Backend/src/modules/customer_care/controller.js:43:23) {
+  status: 429
+}
+{"level":"error","timestamp":"2026-05-14T16:05:55.904Z","service":"erp-omnichannel","environment":"development","message":"[IMAP] Client error","scope":"imap-worker","code":"ETIMEOUT","_connId":"4edbst459ny8dp2hpsah"}
+IMAP Client Error: Error: Socket timeout
+    at TLSSocket._socketTimeout (C:\Users\Victus\Desktop\New folder\Backend\node_modules\imapflow\lib\imap-flow.js:875:29)
+    at TLSSocket.emit (node:events:518:28)
+    at Socket._onTimeout (node:net:604:8)
+    at listOnTimeout (node:internal/timers:588:17)
+    at process.processTimers (node:internal/timers:523:7) {
+  code: 'ETIMEOUT',
+  _connId: '4edbst459ny8dp2hpsah'
+}
+{"level":"warn","timestamp":"2026-05-14T16:05:55.907Z","service":"erp-omnichannel","environment":"development","message":"[IMAP] Connection closed. Reconnecting in 15s...","scope":"imap-worker"}
+IMAP Connection Closed. Reconnecting in 15s...
+{"level":"error","timestamp":"2026-05-14T16:05:55.909Z","service":"erp-omnichannel","environment":"development","message":"[IMAP] Error during polling loop","scope":"imap-worker","code":"NoConnection"}
+{"level":"error","timestamp":"2026-05-14T16:08:16.563Z","service":"erp-omnichannel","environment":"development","message":"[IMAP] Client error","scope":"imap-worker","code":"ETIMEOUT","_connId":"1f1sdtzt3fc7m61yz279"}
+IMAP Client Error: Error: Socket timeout
+    at TLSSocket._socketTimeout (C:\Users\Victus\Desktop\New folder\Backend\node_modules\imapflow\lib\imap-flow.js:875:29)
+    at TLSSocket.emit (node:events:518:28)
+    at Socket._onTimeout (node:net:604:8)
+    at listOnTimeout (node:internal/timers:588:17)
+    at process.processTimers (node:internal/timers:523:7) {
+  code: 'ETIMEOUT',
+  _connId: '1f1sdtzt3fc7m61yz279'
+}
+{"level":"warn","timestamp":"2026-05-14T16:08:16.565Z","service":"erp-omnichannel","environment":"development","message":"[IMAP] Connection closed. Reconnecting in 15s...","scope":"imap-worker"}
+IMAP Connection Closed. Reconnecting in 15s...
+{"level":"error","timestamp":"2026-05-14T16:08:16.567Z","service":"erp-omnichannel","environment":"development","message":"[IMAP] Error during polling loop","scope":"imap-worker","code":"NoConnection"}
+{"level":"error","timestamp":"2026-05-14T16:10:37.257Z","service":"erp-omnichannel","environment":"development","message":"[IMAP] Client error","scope":"imap-worker","code":"ETIMEOUT","_connId":"pscaf6u7zad11j8i6z0o"}
+IMAP Client Error: Error: Socket timeout
+    at TLSSocket._socketTimeout (C:\Users\Victus\Desktop\New folder\Backend\node_modules\imapflow\lib\imap-flow.js:875:29)
+    at TLSSocket.emit (node:events:518:28)
+    at Socket._onTimeout (node:net:604:8)
+    at listOnTimeout (node:internal/timers:588:17)
+    at process.processTimers (node:internal/timers:523:7) {
+  code: 'ETIMEOUT',
+  _connId: 'pscaf6u7zad11j8i6z0o'
+}
+{"level":"warn","timestamp":"2026-05-14T16:10:37.259Z","service":"erp-omnichannel","environment":"development","message":"[IMAP] Connection closed. Reconnecting in 15s...","scope":"imap-worker"}
+IMAP Connection Closed. Reconnecting in 15s...
+{"level":"error","timestamp":"2026-05-14T16:10:37.261Z","service":"erp-omnichannel","environment":"development","message":"[IMAP] Error during polling loop","scope":"imap-worker","code":"NoConnection"}
+{"level":"error","timestamp":"2026-05-14T16:12:57.320Z","service":"erp-omnichannel","environment":"development","message":"[IMAP] Client error","scope":"imap-worker","code":"ETIMEOUT","_connId":"uc3vzzgw4xjba62s28ra"}
+IMAP Client Error: Error: Socket timeout
+    at TLSSocket._socketTimeout (C:\Users\Victus\Desktop\New folder\Backend\node_modules\imapflow\lib\imap-flow.js:875:29)
+    at TLSSocket.emit (node:events:518:28)
+    at Socket._onTimeout (node:net:604:8)
+    at listOnTimeout (node:internal/timers:588:17)
+    at process.processTimers (node:internal/timers:523:7) {
+  code: 'ETIMEOUT',
+  _connId: 'uc3vzzgw4xjba62s28ra'
+}
+{"level":"warn","timestamp":"2026-05-14T16:12:57.321Z","service":"erp-omnichannel","environment":"development","message":"[IMAP] Connection closed. Reconnecting in 15s...","scope":"imap-worker"}
+IMAP Connection Closed. Reconnecting in 15s...
+{"level":"error","timestamp":"2026-05-14T16:12:57.322Z","service":"erp-omnichannel","environment":"development","message":"[IMAP] Error during polling loop","scope":"imap-worker","code":"NoConnection"}
+{"level":"error","timestamp":"2026-05-14T16:15:17.169Z","service":"erp-omnichannel","environment":"development","message":"[IMAP] Client error","scope":"imap-worker","code":"ETIMEOUT","_connId":"zjuz2m1052ls4ihmi01j"}
+IMAP Client Error: Error: Socket timeout
+    at TLSSocket._socketTimeout (C:\Users\Victus\Desktop\New folder\Backend\node_modules\imapflow\lib\imap-flow.js:875:29)
+    at TLSSocket.emit (node:events:518:28)
+    at Socket._onTimeout (node:net:604:8)
+    at listOnTimeout (node:internal/timers:588:17)
+    at process.processTimers (node:internal/timers:523:7) {
+  code: 'ETIMEOUT',
+  _connId: 'zjuz2m1052ls4ihmi01j'
+}
+{"level":"warn","timestamp":"2026-05-14T16:15:17.170Z","service":"erp-omnichannel","environment":"development","message":"[IMAP] Connection closed. Reconnecting in 15s...","scope":"imap-worker"}
+IMAP Connection Closed. Reconnecting in 15s...
+{"level":"error","timestamp":"2026-05-14T16:15:17.171Z","service":"erp-omnichannel","environment":"development","message":"[IMAP] Error during polling loop","scope":"imap-worker","code":"NoConnection"}
+{"level":"error","timestamp":"2026-05-14T16:17:37.261Z","service":"erp-omnichannel","environment":"development","message":"[IMAP] Client error","scope":"imap-worker","code":"ETIMEOUT","_connId":"19p5crcz5guj0i1daguz"}
+IMAP Client Error: Error: Socket timeout
+    at TLSSocket._socketTimeout (C:\Users\Victus\Desktop\New folder\Backend\node_modules\imapflow\lib\imap-flow.js:875:29)
+    at TLSSocket.emit (node:events:518:28)
+    at Socket._onTimeout (node:net:604:8)
+    at listOnTimeout (node:internal/timers:588:17)
+    at process.processTimers (node:internal/timers:523:7) {
+  code: 'ETIMEOUT',
+  _connId: '19p5crcz5guj0i1daguz'
+}
+{"level":"warn","timestamp":"2026-05-14T16:17:37.270Z","service":"erp-omnichannel","environment":"development","message":"[IMAP] Connection closed. Reconnecting in 15s...","scope":"imap-worker"}
+IMAP Connection Closed. Reconnecting in 15s...
+{"level":"error","timestamp":"2026-05-14T16:17:37.271Z","service":"erp-omnichannel","environment":"development","message":"[IMAP] Error during polling loop","scope":"imap-worker","code":"NoConnection"}
+{"level":"error","timestamp":"2026-05-14T16:19:57.383Z","service":"erp-omnichannel","environment":"development","message":"[IMAP] Client error","scope":"imap-worker","code":"ETIMEOUT","_connId":"146ddxzitbckqp1skigf"}
+IMAP Client Error: Error: Socket timeout
+    at TLSSocket._socketTimeout (C:\Users\Victus\Desktop\New folder\Backend\node_modules\imapflow\lib\imap-flow.js:875:29)
+    at TLSSocket.emit (node:events:518:28)
+    at Socket._onTimeout (node:net:604:8)
+    at listOnTimeout (node:internal/timers:588:17)
+    at process.processTimers (node:internal/timers:523:7) {
+  code: 'ETIMEOUT',
+  _connId: '146ddxzitbckqp1skigf'
+}
+{"level":"warn","timestamp":"2026-05-14T16:19:57.386Z","service":"erp-omnichannel","environment":"development","message":"[IMAP] Connection closed. Reconnecting in 15s...","scope":"imap-worker"}
+IMAP Connection Closed. Reconnecting in 15s...
+{"level":"error","timestamp":"2026-05-14T16:19:57.387Z","service":"erp-omnichannel","environment":"development","message":"[IMAP] Error during polling loop","scope":"imap-worker","code":"NoConnection"}
+{"level":"error","timestamp":"2026-05-14T16:22:17.504Z","service":"erp-omnichannel","environment":"development","message":"[IMAP] Client error","scope":"imap-worker","code":"ETIMEOUT","_connId":"13ubte9tbysmer7itrzi"}
+IMAP Client Error: Error: Socket timeout
+    at TLSSocket._socketTimeout (C:\Users\Victus\Desktop\New folder\Backend\node_modules\imapflow\lib\imap-flow.js:875:29)
+    at TLSSocket.emit (node:events:518:28)
+    at Socket._onTimeout (node:net:604:8)
+    at listOnTimeout (node:internal/timers:588:17)
+    at process.processTimers (node:internal/timers:523:7) {
+  code: 'ETIMEOUT',
+  _connId: '13ubte9tbysmer7itrzi'
+}
+{"level":"warn","timestamp":"2026-05-14T16:22:17.506Z","service":"erp-omnichannel","environment":"development","message":"[IMAP] Connection closed. Reconnecting in 15s...","scope":"imap-worker"}
+IMAP Connection Closed. Reconnecting in 15s...
+{"level":"error","timestamp":"2026-05-14T16:22:17.506Z","service":"erp-omnichannel","environment":"development","message":"[IMAP] Error during polling loop","scope":"imap-worker","code":"NoConnection"}
+{"level":"error","timestamp":"2026-05-14T16:24:37.605Z","service":"erp-omnichannel","environment":"development","message":"[IMAP] Client error","scope":"imap-worker","code":"ETIMEOUT","_connId":"mp1szw9fh4rwiex9xs3t"}
+IMAP Client Error: Error: Socket timeout
+    at TLSSocket._socketTimeout (C:\Users\Victus\Desktop\New folder\Backend\node_modules\imapflow\lib\imap-flow.js:875:29)
+    at TLSSocket.emit (node:events:518:28)
+    at Socket._onTimeout (node:net:604:8)
+    at listOnTimeout (node:internal/timers:588:17)
+    at process.processTimers (node:internal/timers:523:7) {
+  code: 'ETIMEOUT',
+  _connId: 'mp1szw9fh4rwiex9xs3t'
+}
+{"level":"warn","timestamp":"2026-05-14T16:24:37.607Z","service":"erp-omnichannel","environment":"development","message":"[IMAP] Connection closed. Reconnecting in 15s...","scope":"imap-worker"}
+IMAP Connection Closed. Reconnecting in 15s...
+{"level":"error","timestamp":"2026-05-14T16:24:37.607Z","service":"erp-omnichannel","environment":"development","message":"[IMAP] Error during polling loop","scope":"imap-worker","code":"NoConnection"}
+{"level":"error","timestamp":"2026-05-14T16:26:57.895Z","service":"erp-omnichannel","environment":"development","message":"[IMAP] Client error","scope":"imap-worker","code":"ETIMEOUT","_connId":"02ta2rzqde7lngny2z4c"}
+IMAP Client Error: Error: Socket timeout
+    at TLSSocket._socketTimeout (C:\Users\Victus\Desktop\New folder\Backend\node_modules\imapflow\lib\imap-flow.js:875:29)
+    at TLSSocket.emit (node:events:518:28)
+    at Socket._onTimeout (node:net:604:8)
+    at listOnTimeout (node:internal/timers:588:17)
+    at process.processTimers (node:internal/timers:523:7) {
+  code: 'ETIMEOUT',
+  _connId: '02ta2rzqde7lngny2z4c'
+}
+{"level":"warn","timestamp":"2026-05-14T16:26:57.896Z","service":"erp-omnichannel","environment":"development","message":"[IMAP] Connection closed. Reconnecting in 15s...","scope":"imap-worker"}
+IMAP Connection Closed. Reconnecting in 15s...
+{"level":"error","timestamp":"2026-05-14T16:26:57.897Z","service":"erp-omnichannel","environment":"development","message":"[IMAP] Error during polling loop","scope":"imap-worker","code":"NoConnection"}
+{"level":"error","timestamp":"2026-05-14T16:29:18.900Z","service":"erp-omnichannel","environment":"development","message":"[IMAP] Client error","scope":"imap-worker","code":"ETIMEOUT","_connId":"6kybc7tlyyktb13hvt27"}
+IMAP Client Error: Error: Socket timeout
+    at TLSSocket._socketTimeout (C:\Users\Victus\Desktop\New folder\Backend\node_modules\imapflow\lib\imap-flow.js:875:29)
+    at TLSSocket.emit (node:events:518:28)
+    at Socket._onTimeout (node:net:604:8)
+    at listOnTimeout (node:internal/timers:588:17)
+    at process.processTimers (node:internal/timers:523:7) {
+  code: 'ETIMEOUT',
+  _connId: '6kybc7tlyyktb13hvt27'
+}
+{"level":"warn","timestamp":"2026-05-14T16:29:18.902Z","service":"erp-omnichannel","environment":"development","message":"[IMAP] Connection closed. Reconnecting in 15s...","scope":"imap-worker"}
+IMAP Connection Closed. Reconnecting in 15s...
+{"level":"error","timestamp":"2026-05-14T16:29:18.903Z","service":"erp-omnichannel","environment":"development","message":"[IMAP] Error during polling loop","scope":"imap-worker","code":"NoConnection"}
+{"level":"error","timestamp":"2026-05-14T16:31:39.164Z","service":"erp-omnichannel","environment":"development","message":"[IMAP] Client error","scope":"imap-worker","code":"ETIMEOUT","_connId":"ixph7zhitcd763hwr92l"}
+IMAP Client Error: Error: Socket timeout
+    at TLSSocket._socketTimeout (C:\Users\Victus\Desktop\New folder\Backend\node_modules\imapflow\lib\imap-flow.js:875:29)
+    at TLSSocket.emit (node:events:518:28)
+    at Socket._onTimeout (node:net:604:8)
+    at listOnTimeout (node:internal/timers:588:17)
+    at process.processTimers (node:internal/timers:523:7) {
+  code: 'ETIMEOUT',
+  _connId: 'ixph7zhitcd763hwr92l'
+}
+{"level":"warn","timestamp":"2026-05-14T16:31:39.166Z","service":"erp-omnichannel","environment":"development","message":"[IMAP] Connection closed. Reconnecting in 15s...","scope":"imap-worker"}
+IMAP Connection Closed. Reconnecting in 15s...
+{"level":"error","timestamp":"2026-05-14T16:31:39.166Z","service":"erp-omnichannel","environment":"development","message":"[IMAP] Error during polling loop","scope":"imap-worker","code":"NoConnection"}
+{"level":"error","timestamp":"2026-05-14T16:33:59.336Z","service":"erp-omnichannel","environment":"development","message":"[IMAP] Client error","scope":"imap-worker","code":"ETIMEOUT","_connId":"19u6fj0yz8a7kqux2b7u"}
+IMAP Client Error: Error: Socket timeout
+    at TLSSocket._socketTimeout (C:\Users\Victus\Desktop\New folder\Backend\node_modules\imapflow\lib\imap-flow.js:875:29)
+    at TLSSocket.emit (node:events:518:28)
+    at Socket._onTimeout (node:net:604:8)
+    at listOnTimeout (node:internal/timers:588:17)
+    at process.processTimers (node:internal/timers:523:7) {
+  code: 'ETIMEOUT',
+  _connId: '19u6fj0yz8a7kqux2b7u'
+}
+{"level":"warn","timestamp":"2026-05-14T16:33:59.340Z","service":"erp-omnichannel","environment":"development","message":"[IMAP] Connection closed. Reconnecting in 15s...","scope":"imap-worker"}
+IMAP Connection Closed. Reconnecting in 15s...
+{"level":"error","timestamp":"2026-05-14T16:33:59.340Z","service":"erp-omnichannel","environment":"development","message":"[IMAP] Error during polling loop","scope":"imap-worker","code":"NoConnection"}
+{"level":"error","timestamp":"2026-05-14T16:36:19.642Z","service":"erp-omnichannel","environment":"development","message":"[IMAP] Client error","scope":"imap-worker","code":"ETIMEOUT","_connId":"f4adf02ou1cpd16nrxm7"}
+IMAP Client Error: Error: Socket timeout
+    at TLSSocket._socketTimeout (C:\Users\Victus\Desktop\New folder\Backend\node_modules\imapflow\lib\imap-flow.js:875:29)
+    at TLSSocket.emit (node:events:518:28)
+    at Socket._onTimeout (node:net:604:8)
+    at listOnTimeout (node:internal/timers:588:17)
+    at process.processTimers (node:internal/timers:523:7) {
+  code: 'ETIMEOUT',
+  _connId: 'f4adf02ou1cpd16nrxm7'
+}
+{"level":"warn","timestamp":"2026-05-14T16:36:19.643Z","service":"erp-omnichannel","environment":"development","message":"[IMAP] Connection closed. Reconnecting in 15s...","scope":"imap-worker"}
+IMAP Connection Closed. Reconnecting in 15s...
+{"level":"error","timestamp":"2026-05-14T16:36:19.644Z","service":"erp-omnichannel","environment":"development","message":"[IMAP] Error during polling loop","scope":"imap-worker","code":"NoConnection"}
+{"level":"error","timestamp":"2026-05-14T16:38:39.886Z","service":"erp-omnichannel","environment":"development","message":"[IMAP] Client error","scope":"imap-worker","code":"ETIMEOUT","_connId":"wes7wjpdt96rf46k5fq9"}
+IMAP Client Error: Error: Socket timeout
+    at TLSSocket._socketTimeout (C:\Users\Victus\Desktop\New folder\Backend\node_modules\imapflow\lib\imap-flow.js:875:29)
+    at TLSSocket.emit (node:events:518:28)
+    at Socket._onTimeout (node:net:604:8)
+    at listOnTimeout (node:internal/timers:588:17)
+    at process.processTimers (node:internal/timers:523:7) {
+  code: 'ETIMEOUT',
+  _connId: 'wes7wjpdt96rf46k5fq9'
+}
+{"level":"warn","timestamp":"2026-05-14T16:38:39.889Z","service":"erp-omnichannel","environment":"development","message":"[IMAP] Connection closed. Reconnecting in 15s...","scope":"imap-worker"}
+IMAP Connection Closed. Reconnecting in 15s...
+{"level":"error","timestamp":"2026-05-14T16:38:39.890Z","service":"erp-omnichannel","environment":"development","message":"[IMAP] Error during polling loop","scope":"imap-worker","code":"NoConnection"}
+{"level":"error","timestamp":"2026-05-14T16:41:00.544Z","service":"erp-omnichannel","environment":"development","message":"[IMAP] Client error","scope":"imap-worker","code":"ETIMEOUT","_connId":"udgitvhptn3et782kf2v"}
+IMAP Client Error: Error: Socket timeout
+    at TLSSocket._socketTimeout (C:\Users\Victus\Desktop\New folder\Backend\node_modules\imapflow\lib\imap-flow.js:875:29)
+    at TLSSocket.emit (node:events:518:28)
+    at Socket._onTimeout (node:net:604:8)
+    at listOnTimeout (node:internal/timers:588:17)
+    at process.processTimers (node:internal/timers:523:7) {
+  code: 'ETIMEOUT',
+  _connId: 'udgitvhptn3et782kf2v'
+}
+{"level":"warn","timestamp":"2026-05-14T16:41:00.554Z","service":"erp-omnichannel","environment":"development","message":"[IMAP] Connection closed. Reconnecting in 15s...","scope":"imap-worker"}
+IMAP Connection Closed. Reconnecting in 15s...
+{"level":"error","timestamp":"2026-05-14T16:41:00.554Z","service":"erp-omnichannel","environment":"development","message":"[IMAP] Error during polling loop","scope":"imap-worker","code":"NoConnection"}
+{"level":"error","timestamp":"2026-05-14T16:43:20.379Z","service":"erp-omnichannel","environment":"development","message":"[IMAP] Client error","scope":"imap-worker","code":"ETIMEOUT","_connId":"13ttetciauw4fcnzs8lu"}
+IMAP Client Error: Error: Socket timeout
+    at TLSSocket._socketTimeout (C:\Users\Victus\Desktop\New folder\Backend\node_modules\imapflow\lib\imap-flow.js:875:29)
+    at TLSSocket.emit (node:events:518:28)
+    at Socket._onTimeout (node:net:604:8)
+    at listOnTimeout (node:internal/timers:588:17)
+    at process.processTimers (node:internal/timers:523:7) {
+  code: 'ETIMEOUT',
+  _connId: '13ttetciauw4fcnzs8lu'
+}
+{"level":"warn","timestamp":"2026-05-14T16:43:20.383Z","service":"erp-omnichannel","environment":"development","message":"[IMAP] Connection closed. Reconnecting in 15s...","scope":"imap-worker"}
+IMAP Connection Closed. Reconnecting in 15s...
+{"level":"error","timestamp":"2026-05-14T16:43:20.384Z","service":"erp-omnichannel","environment":"development","message":"[IMAP] Error during polling loop","scope":"imap-worker","code":"NoConnection"}
+{"level":"error","timestamp":"2026-05-14T16:45:40.397Z","service":"erp-omnichannel","environment":"development","message":"[IMAP] Client error","scope":"imap-worker","code":"ETIMEOUT","_connId":"4s253hymevxme7376otl"}
+IMAP Client Error: Error: Socket timeout
+    at TLSSocket._socketTimeout (C:\Users\Victus\Desktop\New folder\Backend\node_modules\imapflow\lib\imap-flow.js:875:29)
+    at TLSSocket.emit (node:events:518:28)
+    at Socket._onTimeout (node:net:604:8)
+    at listOnTimeout (node:internal/timers:588:17)
+    at process.processTimers (node:internal/timers:523:7) {
+  code: 'ETIMEOUT',
+  _connId: '4s253hymevxme7376otl'
+}
+{"level":"warn","timestamp":"2026-05-14T16:45:40.399Z","service":"erp-omnichannel","environment":"development","message":"[IMAP] Connection closed. Reconnecting in 15s...","scope":"imap-worker"}
+IMAP Connection Closed. Reconnecting in 15s...
+{"level":"error","timestamp":"2026-05-14T16:45:40.400Z","service":"erp-omnichannel","environment":"development","message":"[IMAP] Error during polling loop","scope":"imap-worker","code":"NoConnection"}
+{"level":"error","timestamp":"2026-05-14T16:48:00.509Z","service":"erp-omnichannel","environment":"development","message":"[IMAP] Client error","scope":"imap-worker","code":"ETIMEOUT","_connId":"x46f1wn6q1kysf4se49u"}
+IMAP Client Error: Error: Socket timeout
+    at TLSSocket._socketTimeout (C:\Users\Victus\Desktop\New folder\Backend\node_modules\imapflow\lib\imap-flow.js:875:29)
+    at TLSSocket.emit (node:events:518:28)
+    at Socket._onTimeout (node:net:604:8)
+    at listOnTimeout (node:internal/timers:588:17)
+    at process.processTimers (node:internal/timers:523:7) {
+  code: 'ETIMEOUT',
+  _connId: 'x46f1wn6q1kysf4se49u'
+}
+{"level":"warn","timestamp":"2026-05-14T16:48:00.511Z","service":"erp-omnichannel","environment":"development","message":"[IMAP] Connection closed. Reconnecting in 15s...","scope":"imap-worker"}
+IMAP Connection Closed. Reconnecting in 15s...
+{"level":"error","timestamp":"2026-05-14T16:48:00.511Z","service":"erp-omnichannel","environment":"development","message":"[IMAP] Error during polling loop","scope":"imap-worker","code":"NoConnection"}
+{"level":"error","timestamp":"2026-05-14T16:50:20.458Z","service":"erp-omnichannel","environment":"development","message":"[IMAP] Client error","scope":"imap-worker","code":"ETIMEOUT","_connId":"01hzf42d32202g3rdiga"}
+IMAP Client Error: Error: Socket timeout
+    at TLSSocket._socketTimeout (C:\Users\Victus\Desktop\New folder\Backend\node_modules\imapflow\lib\imap-flow.js:875:29)
+    at TLSSocket.emit (node:events:518:28)
+    at Socket._onTimeout (node:net:604:8)
+    at listOnTimeout (node:internal/timers:588:17)
+    at process.processTimers (node:internal/timers:523:7) {
+  code: 'ETIMEOUT',
+  _connId: '01hzf42d32202g3rdiga'
+}
+{"level":"warn","timestamp":"2026-05-14T16:50:20.460Z","service":"erp-omnichannel","environment":"development","message":"[IMAP] Connection closed. Reconnecting in 15s...","scope":"imap-worker"}
+IMAP Connection Closed. Reconnecting in 15s...
+{"level":"error","timestamp":"2026-05-14T16:50:20.461Z","service":"erp-omnichannel","environment":"development","message":"[IMAP] Error during polling loop","scope":"imap-worker","code":"NoConnection"}
+{"level":"error","timestamp":"2026-05-14T16:52:40.755Z","service":"erp-omnichannel","environment":"development","message":"[IMAP] Client error","scope":"imap-worker","code":"ETIMEOUT","_connId":"03iraimwbd2ft5bbge87"}
+IMAP Client Error: Error: Socket timeout
+    at TLSSocket._socketTimeout (C:\Users\Victus\Desktop\New folder\Backend\node_modules\imapflow\lib\imap-flow.js:875:29)
+    at TLSSocket.emit (node:events:518:28)
+    at Socket._onTimeout (node:net:604:8)
+    at listOnTimeout (node:internal/timers:588:17)
+    at process.processTimers (node:internal/timers:523:7) {
+  code: 'ETIMEOUT',
+  _connId: '03iraimwbd2ft5bbge87'
+}
+{"level":"warn","timestamp":"2026-05-14T16:52:40.756Z","service":"erp-omnichannel","environment":"development","message":"[IMAP] Connection closed. Reconnecting in 15s...","scope":"imap-worker"}
+IMAP Connection Closed. Reconnecting in 15s...
+{"level":"error","timestamp":"2026-05-14T16:52:40.757Z","service":"erp-omnichannel","environment":"development","message":"[IMAP] Error during polling loop","scope":"imap-worker","code":"NoConnection"}
+{"level":"error","timestamp":"2026-05-14T16:55:00.777Z","service":"erp-omnichannel","environment":"development","message":"[IMAP] Client error","scope":"imap-worker","code":"ETIMEOUT","_connId":"yl4h4pjmemi699vv9swt"}
+IMAP Client Error: Error: Socket timeout
+    at TLSSocket._socketTimeout (C:\Users\Victus\Desktop\New folder\Backend\node_modules\imapflow\lib\imap-flow.js:875:29)
+    at TLSSocket.emit (node:events:518:28)
+    at Socket._onTimeout (node:net:604:8)
+    at listOnTimeout (node:internal/timers:588:17)
+    at process.processTimers (node:internal/timers:523:7) {
+  code: 'ETIMEOUT',
+  _connId: 'yl4h4pjmemi699vv9swt'
+}
+{"level":"warn","timestamp":"2026-05-14T16:55:00.795Z","service":"erp-omnichannel","environment":"development","message":"[IMAP] Connection closed. Reconnecting in 15s...","scope":"imap-worker"}
+IMAP Connection Closed. Reconnecting in 15s...
+{"level":"error","timestamp":"2026-05-14T16:55:00.800Z","service":"erp-omnichannel","environment":"development","message":"[IMAP] Error during polling loop","scope":"imap-worker","code":"NoConnection"}
+{"level":"error","timestamp":"2026-05-14T16:57:21.313Z","service":"erp-omnichannel","environment":"development","message":"[IMAP] Client error","scope":"imap-worker","code":"ETIMEOUT","_connId":"7b5fnu7w85o6ye0k7s4h"}
+IMAP Client Error: Error: Socket timeout
+    at TLSSocket._socketTimeout (C:\Users\Victus\Desktop\New folder\Backend\node_modules\imapflow\lib\imap-flow.js:875:29)
+    at TLSSocket.emit (node:events:518:28)
+    at Socket._onTimeout (node:net:604:8)
+    at listOnTimeout (node:internal/timers:588:17)
+    at process.processTimers (node:internal/timers:523:7) {
+  code: 'ETIMEOUT',
+  _connId: '7b5fnu7w85o6ye0k7s4h'
+}
+{"level":"warn","timestamp":"2026-05-14T16:57:21.315Z","service":"erp-omnichannel","environment":"development","message":"[IMAP] Connection closed. Reconnecting in 15s...","scope":"imap-worker"}
+IMAP Connection Closed. Reconnecting in 15s...
+{"level":"error","timestamp":"2026-05-14T16:57:21.317Z","service":"erp-omnichannel","environment":"development","message":"[IMAP] Error during polling loop","scope":"imap-worker","code":"NoConnection"}
+{"level":"error","timestamp":"2026-05-14T16:59:41.260Z","service":"erp-omnichannel","environment":"development","message":"[IMAP] Client error","scope":"imap-worker","code":"ETIMEOUT","_connId":"t1bh9mcov0zvyuthymuc"}
+IMAP Client Error: Error: Socket timeout
+    at TLSSocket._socketTimeout (C:\Users\Victus\Desktop\New folder\Backend\node_modules\imapflow\lib\imap-flow.js:875:29)
+    at TLSSocket.emit (node:events:518:28)
+    at Socket._onTimeout (node:net:604:8)
+    at listOnTimeout (node:internal/timers:588:17)
+    at process.processTimers (node:internal/timers:523:7) {
+  code: 'ETIMEOUT',
+  _connId: 't1bh9mcov0zvyuthymuc'
+}
+{"level":"warn","timestamp":"2026-05-14T16:59:41.269Z","service":"erp-omnichannel","environment":"development","message":"[IMAP] Connection closed. Reconnecting in 15s...","scope":"imap-worker"}
+IMAP Connection Closed. Reconnecting in 15s...
+{"level":"error","timestamp":"2026-05-14T16:59:41.272Z","service":"erp-omnichannel","environment":"development","message":"[IMAP] Error during polling loop","scope":"imap-worker","code":"NoConnection"}
+{"level":"error","timestamp":"2026-05-14T17:02:02.024Z","service":"erp-omnichannel","environment":"development","message":"[IMAP] Client error","scope":"imap-worker","code":"ETIMEOUT","_connId":"1abe2p82llsroqwxf5fi"}
+IMAP Client Error: Error: Socket timeout
+    at TLSSocket._socketTimeout (C:\Users\Victus\Desktop\New folder\Backend\node_modules\imapflow\lib\imap-flow.js:875:29)
+    at TLSSocket.emit (node:events:518:28)
+    at Socket._onTimeout (node:net:604:8)
+    at listOnTimeout (node:internal/timers:588:17)
+    at process.processTimers (node:internal/timers:523:7) {
+  code: 'ETIMEOUT',
+  _connId: '1abe2p82llsroqwxf5fi'
+}
+{"level":"warn","timestamp":"2026-05-14T17:02:02.026Z","service":"erp-omnichannel","environment":"development","message":"[IMAP] Connection closed. Reconnecting in 15s...","scope":"imap-worker"}
+IMAP Connection Closed. Reconnecting in 15s...
+{"level":"error","timestamp":"2026-05-14T17:02:02.027Z","service":"erp-omnichannel","environment":"development","message":"[IMAP] Error during polling loop","scope":"imap-worker","code":"NoConnection"}
+{"level":"error","timestamp":"2026-05-14T17:04:22.286Z","service":"erp-omnichannel","environment":"development","message":"[IMAP] Client error","scope":"imap-worker","code":"ETIMEOUT","_connId":"1hpnk2km5vhwrb4iw3f0"}
+IMAP Client Error: Error: Socket timeout
+    at TLSSocket._socketTimeout (C:\Users\Victus\Desktop\New folder\Backend\node_modules\imapflow\lib\imap-flow.js:875:29)
+    at TLSSocket.emit (node:events:518:28)
+    at Socket._onTimeout (node:net:604:8)
+    at listOnTimeout (node:internal/timers:588:17)
+    at process.processTimers (node:internal/timers:523:7) {
+  code: 'ETIMEOUT',
+  _connId: '1hpnk2km5vhwrb4iw3f0'
+}
+{"level":"warn","timestamp":"2026-05-14T17:04:22.409Z","service":"erp-omnichannel","environment":"development","message":"[IMAP] Connection closed. Reconnecting in 15s...","scope":"imap-worker"}
+IMAP Connection Closed. Reconnecting in 15s...
+{"level":"error","timestamp":"2026-05-14T17:04:22.416Z","service":"erp-omnichannel","environment":"development","message":"[IMAP] Error during polling loop","scope":"imap-worker","code":"NoConnection"}
+{"level":"error","timestamp":"2026-05-14T17:06:43.104Z","service":"erp-omnichannel","environment":"development","message":"[IMAP] Client error","scope":"imap-worker","code":"ETIMEOUT","_connId":"rmy2p2ep9dux6xla81vm"}
+IMAP Client Error: Error: Socket timeout
+    at TLSSocket._socketTimeout (C:\Users\Victus\Desktop\New folder\Backend\node_modules\imapflow\lib\imap-flow.js:875:29)
+    at TLSSocket.emit (node:events:518:28)
+    at Socket._onTimeout (node:net:604:8)
+    at listOnTimeout (node:internal/timers:588:17)
+    at process.processTimers (node:internal/timers:523:7) {
+  code: 'ETIMEOUT',
+  _connId: 'rmy2p2ep9dux6xla81vm'
+}
+{"level":"warn","timestamp":"2026-05-14T17:06:43.110Z","service":"erp-omnichannel","environment":"development","message":"[IMAP] Connection closed. Reconnecting in 15s...","scope":"imap-worker"}
+IMAP Connection Closed. Reconnecting in 15s...
+{"level":"error","timestamp":"2026-05-14T17:06:43.111Z","service":"erp-omnichannel","environment":"development","message":"[IMAP] Error during polling loop","scope":"imap-worker","code":"NoConnection"}
+{"level":"error","timestamp":"2026-05-14T17:09:03.613Z","service":"erp-omnichannel","environment":"development","message":"[IMAP] Client error","scope":"imap-worker","code":"ETIMEOUT","_connId":"1fclrexllyljrib6ryla"}
+IMAP Client Error: Error: Socket timeout
+    at TLSSocket._socketTimeout (C:\Users\Victus\Desktop\New folder\Backend\node_modules\imapflow\lib\imap-flow.js:875:29)
+    at TLSSocket.emit (node:events:518:28)
+    at Socket._onTimeout (node:net:604:8)
+    at listOnTimeout (node:internal/timers:588:17)
+    at process.processTimers (node:internal/timers:523:7) {
+  code: 'ETIMEOUT',
+  _connId: '1fclrexllyljrib6ryla'
+}
+{"level":"warn","timestamp":"2026-05-14T17:09:03.615Z","service":"erp-omnichannel","environment":"development","message":"[IMAP] Connection closed. Reconnecting in 15s...","scope":"imap-worker"}
+IMAP Connection Closed. Reconnecting in 15s...
+{"level":"error","timestamp":"2026-05-14T17:09:03.616Z","service":"erp-omnichannel","environment":"development","message":"[IMAP] Error during polling loop","scope":"imap-worker","code":"NoConnection"}
+{"level":"error","timestamp":"2026-05-14T17:11:23.935Z","service":"erp-omnichannel","environment":"development","message":"[IMAP] Client error","scope":"imap-worker","code":"ETIMEOUT","_connId":"o6fjzfsfinl723v79mxu"}
+IMAP Client Error: Error: Socket timeout
+    at TLSSocket._socketTimeout (C:\Users\Victus\Desktop\New folder\Backend\node_modules\imapflow\lib\imap-flow.js:875:29)
+    at TLSSocket.emit (node:events:518:28)
+    at Socket._onTimeout (node:net:604:8)
+    at listOnTimeout (node:internal/timers:588:17)
+    at process.processTimers (node:internal/timers:523:7) {
+  code: 'ETIMEOUT',
+  _connId: 'o6fjzfsfinl723v79mxu'
+}
+{"level":"warn","timestamp":"2026-05-14T17:11:23.938Z","service":"erp-omnichannel","environment":"development","message":"[IMAP] Connection closed. Reconnecting in 15s...","scope":"imap-worker"}
+IMAP Connection Closed. Reconnecting in 15s...
+{"level":"error","timestamp":"2026-05-14T17:11:23.939Z","service":"erp-omnichannel","environment":"development","message":"[IMAP] Error during polling loop","scope":"imap-worker","code":"NoConnection"}
+{"level":"error","timestamp":"2026-05-14T17:13:46.538Z","service":"erp-omnichannel","environment":"development","message":"[IMAP] Client error","scope":"imap-worker","code":"ETIMEOUT","_connId":"wpm5lmkx71y7msrqz1be"}
+IMAP Client Error: Error: Socket timeout
+    at TLSSocket._socketTimeout (C:\Users\Victus\Desktop\New folder\Backend\node_modules\imapflow\lib\imap-flow.js:875:29)
+    at TLSSocket.emit (node:events:518:28)
+    at Socket._onTimeout (node:net:604:8)
+    at listOnTimeout (node:internal/timers:588:17)
+    at process.processTimers (node:internal/timers:523:7) {
+  code: 'ETIMEOUT',
+  _connId: 'wpm5lmkx71y7msrqz1be'
+}
+{"level":"warn","timestamp":"2026-05-14T17:13:46.540Z","service":"erp-omnichannel","environment":"development","message":"[IMAP] Connection closed. Reconnecting in 15s...","scope":"imap-worker"}
+IMAP Connection Closed. Reconnecting in 15s...
+{"level":"error","timestamp":"2026-05-14T17:13:46.541Z","service":"erp-omnichannel","environment":"development","message":"[IMAP] Error during polling loop","scope":"imap-worker","code":"NoConnection"}
+{"level":"error","timestamp":"2026-05-14T17:16:06.403Z","service":"erp-omnichannel","environment":"development","message":"[IMAP] Client error","scope":"imap-worker","code":"ETIMEOUT","_connId":"1askz7ir84vdq1y987oz"}
+IMAP Client Error: Error: Socket timeout
+    at TLSSocket._socketTimeout (C:\Users\Victus\Desktop\New folder\Backend\node_modules\imapflow\lib\imap-flow.js:875:29)
+    at TLSSocket.emit (node:events:518:28)
+    at Socket._onTimeout (node:net:604:8)
+    at listOnTimeout (node:internal/timers:588:17)
+    at process.processTimers (node:internal/timers:523:7) {
+  code: 'ETIMEOUT',
+  _connId: '1askz7ir84vdq1y987oz'
+}
+{"level":"warn","timestamp":"2026-05-14T17:16:06.405Z","service":"erp-omnichannel","environment":"development","message":"[IMAP] Connection closed. Reconnecting in 15s...","scope":"imap-worker"}
+IMAP Connection Closed. Reconnecting in 15s...
+{"level":"error","timestamp":"2026-05-14T17:16:06.406Z","service":"erp-omnichannel","environment":"development","message":"[IMAP] Error during polling loop","scope":"imap-worker","code":"NoConnection"}
+{"level":"error","timestamp":"2026-05-14T17:18:26.586Z","service":"erp-omnichannel","environment":"development","message":"[IMAP] Client error","scope":"imap-worker","code":"ETIMEOUT","_connId":"ln3uze27gy8yrmz9beid"}
+IMAP Client Error: Error: Socket timeout
+    at TLSSocket._socketTimeout (C:\Users\Victus\Desktop\New folder\Backend\node_modules\imapflow\lib\imap-flow.js:875:29)
+    at TLSSocket.emit (node:events:518:28)
+    at Socket._onTimeout (node:net:604:8)
+    at listOnTimeout (node:internal/timers:588:17)
+    at process.processTimers (node:internal/timers:523:7) {
+  code: 'ETIMEOUT',
+  _connId: 'ln3uze27gy8yrmz9beid'
+}
+{"level":"warn","timestamp":"2026-05-14T17:18:26.587Z","service":"erp-omnichannel","environment":"development","message":"[IMAP] Connection closed. Reconnecting in 15s...","scope":"imap-worker"}
+IMAP Connection Closed. Reconnecting in 15s...
+{"level":"error","timestamp":"2026-05-14T17:18:26.588Z","service":"erp-omnichannel","environment":"development","message":"[IMAP] Error during polling loop","scope":"imap-worker","code":"NoConnection"}
+{"level":"error","timestamp":"2026-05-14T17:20:46.640Z","service":"erp-omnichannel","environment":"development","message":"[IMAP] Client error","scope":"imap-worker","code":"ETIMEOUT","_connId":"xssearf26clpxo3b07kn"}
+IMAP Client Error: Error: Socket timeout
+    at TLSSocket._socketTimeout (C:\Users\Victus\Desktop\New folder\Backend\node_modules\imapflow\lib\imap-flow.js:875:29)
+    at TLSSocket.emit (node:events:518:28)
+    at Socket._onTimeout (node:net:604:8)
+    at listOnTimeout (node:internal/timers:588:17)
+    at process.processTimers (node:internal/timers:523:7) {
+  code: 'ETIMEOUT',
+  _connId: 'xssearf26clpxo3b07kn'
+}
+{"level":"warn","timestamp":"2026-05-14T17:20:46.641Z","service":"erp-omnichannel","environment":"development","message":"[IMAP] Connection closed. Reconnecting in 15s...","scope":"imap-worker"}
+IMAP Connection Closed. Reconnecting in 15s...
+{"level":"error","timestamp":"2026-05-14T17:20:46.642Z","service":"erp-omnichannel","environment":"development","message":"[IMAP] Error during polling loop","scope":"imap-worker","code":"NoConnection"}
+{"level":"error","timestamp":"2026-05-14T17:23:07.003Z","service":"erp-omnichannel","environment":"development","message":"[IMAP] Client error","scope":"imap-worker","code":"ETIMEOUT","_connId":"17pjw7kdu9kjey1ydp2c"}
+IMAP Client Error: Error: Socket timeout
+    at TLSSocket._socketTimeout (C:\Users\Victus\Desktop\New folder\Backend\node_modules\imapflow\lib\imap-flow.js:875:29)
+    at TLSSocket.emit (node:events:518:28)
+    at Socket._onTimeout (node:net:604:8)
+    at listOnTimeout (node:internal/timers:588:17)
+    at process.processTimers (node:internal/timers:523:7) {
+  code: 'ETIMEOUT',
+  _connId: '17pjw7kdu9kjey1ydp2c'
+}
+{"level":"warn","timestamp":"2026-05-14T17:23:07.004Z","service":"erp-omnichannel","environment":"development","message":"[IMAP] Connection closed. Reconnecting in 15s...","scope":"imap-worker"}
+IMAP Connection Closed. Reconnecting in 15s...
+{"level":"error","timestamp":"2026-05-14T17:23:07.005Z","service":"erp-omnichannel","environment":"development","message":"[IMAP] Error during polling loop","scope":"imap-worker","code":"NoConnection"}
+Error: Invalid Aadhaar number. Please provide a valid 12-digit Aadhaar number.
+    at buildHttpError (file:///C:/Users/Victus/Desktop/New%20folder/Backend/src/modules/hr/service.js:8:19)
+    at validateStaffCompliance (file:///C:/Users/Victus/Desktop/New%20folder/Backend/src/modules/hr/service.js:197:15)
+    at createStaff (file:///C:/Users/Victus/Desktop/New%20folder/Backend/src/modules/hr/service.js:481:5)
+    at handleCreateStaff (file:///C:/Users/Victus/Desktop/New%20folder/Backend/src/modules/hr/controller.js:50:27)
+    at Layer.handleRequest (C:\Users\Victus\Desktop\New folder\Backend\node_modules\router\lib\layer.js:152:17)
+    at next (C:\Users\Victus\Desktop\New folder\Backend\node_modules\router\lib\route.js:157:13)
+    at done (C:\Users\Victus\Desktop\New folder\Backend\node_modules\multer\lib\make-middleware.js:69:7)
+    at indicateDone (C:\Users\Victus\Desktop\New folder\Backend\node_modules\multer\lib\make-middleware.js:73:68)
+    at Multipart.<anonymous> (C:\Users\Victus\Desktop\New folder\Backend\node_modules\multer\lib\make-middleware.js:243:7)
+    at Multipart.emit (node:events:518:28) {
+  status: 400
+}
+Error: Invalid Aadhaar number. Please provide a valid 12-digit Aadhaar number.
+    at buildHttpError (file:///C:/Users/Victus/Desktop/New%20folder/Backend/src/modules/hr/service.js:8:19)
+    at validateStaffCompliance (file:///C:/Users/Victus/Desktop/New%20folder/Backend/src/modules/hr/service.js:197:15)
+    at createStaff (file:///C:/Users/Victus/Desktop/New%20folder/Backend/src/modules/hr/service.js:481:5)
+    at handleCreateStaff (file:///C:/Users/Victus/Desktop/New%20folder/Backend/src/modules/hr/controller.js:50:27)
+    at Layer.handleRequest (C:\Users\Victus\Desktop\New folder\Backend\node_modules\router\lib\layer.js:152:17)
+    at next (C:\Users\Victus\Desktop\New folder\Backend\node_modules\router\lib\route.js:157:13)
+    at done (C:\Users\Victus\Desktop\New folder\Backend\node_modules\multer\lib\make-middleware.js:69:7)
+    at indicateDone (C:\Users\Victus\Desktop\New folder\Backend\node_modules\multer\lib\make-middleware.js:73:68)
+    at Multipart.<anonymous> (C:\Users\Victus\Desktop\New folder\Backend\node_modules\multer\lib\make-middleware.js:243:7)
+    at Multipart.emit (node:events:518:28) {
+  status: 400
+}
+Error: Invalid Aadhaar number. Please provide a valid 12-digit Aadhaar number.
+    at buildHttpError (file:///C:/Users/Victus/Desktop/New%20folder/Backend/src/modules/hr/service.js:8:19)
+    at validateStaffCompliance (file:///C:/Users/Victus/Desktop/New%20folder/Backend/src/modules/hr/service.js:197:15)
+    at createStaff (file:///C:/Users/Victus/Desktop/New%20folder/Backend/src/modules/hr/service.js:481:5)
+    at handleCreateStaff (file:///C:/Users/Victus/Desktop/New%20folder/Backend/src/modules/hr/controller.js:50:27)
+    at Layer.handleRequest (C:\Users\Victus\Desktop\New folder\Backend\node_modules\router\lib\layer.js:152:17)
+    at next (C:\Users\Victus\Desktop\New folder\Backend\node_modules\router\lib\route.js:157:13)
+    at done (C:\Users\Victus\Desktop\New folder\Backend\node_modules\multer\lib\make-middleware.js:69:7)
+    at indicateDone (C:\Users\Victus\Desktop\New folder\Backend\node_modules\multer\lib\make-middleware.js:73:68)
+    at Multipart.<anonymous> (C:\Users\Victus\Desktop\New folder\Backend\node_modules\multer\lib\make-middleware.js:243:7)
+    at Multipart.emit (node:events:518:28) {
+  status: 400
+}
+Error: Invalid Aadhaar number. Please provide a valid 12-digit Aadhaar number.
+    at buildHttpError (file:///C:/Users/Victus/Desktop/New%20folder/Backend/src/modules/hr/service.js:8:19)
+    at validateStaffCompliance (file:///C:/Users/Victus/Desktop/New%20folder/Backend/src/modules/hr/service.js:197:15)
+    at createStaff (file:///C:/Users/Victus/Desktop/New%20folder/Backend/src/modules/hr/service.js:481:5)
+    at handleCreateStaff (file:///C:/Users/Victus/Desktop/New%20folder/Backend/src/modules/hr/controller.js:50:27)
+    at Layer.handleRequest (C:\Users\Victus\Desktop\New folder\Backend\node_modules\router\lib\layer.js:152:17)
+    at next (C:\Users\Victus\Desktop\New folder\Backend\node_modules\router\lib\route.js:157:13)
+    at done (C:\Users\Victus\Desktop\New folder\Backend\node_modules\multer\lib\make-middleware.js:69:7)
+    at indicateDone (C:\Users\Victus\Desktop\New folder\Backend\node_modules\multer\lib\make-middleware.js:73:68)
+    at Multipart.<anonymous> (C:\Users\Victus\Desktop\New folder\Backend\node_modules\multer\lib\make-middleware.js:243:7)
+    at Multipart.emit (node:events:518:28) {
+  status: 400
+}
+{"level":"error","timestamp":"2026-05-14T17:25:27.127Z","service":"erp-omnichannel","environment":"development","message":"[IMAP] Client error","scope":"imap-worker","code":"ETIMEOUT","_connId":"9t31r7csdcw5py516wrl"}
+IMAP Client Error: Error: Socket timeout
+    at TLSSocket._socketTimeout (C:\Users\Victus\Desktop\New folder\Backend\node_modules\imapflow\lib\imap-flow.js:875:29)
+    at TLSSocket.emit (node:events:518:28)
+    at Socket._onTimeout (node:net:604:8)
+    at listOnTimeout (node:internal/timers:588:17)
+    at process.processTimers (node:internal/timers:523:7) {
+  code: 'ETIMEOUT',
+  _connId: '9t31r7csdcw5py516wrl'
+}
+{"level":"warn","timestamp":"2026-05-14T17:25:27.128Z","service":"erp-omnichannel","environment":"development","message":"[IMAP] Connection closed. Reconnecting in 15s...","scope":"imap-worker"}
+IMAP Connection Closed. Reconnecting in 15s...
+{"level":"error","timestamp":"2026-05-14T17:25:27.129Z","service":"erp-omnichannel","environment":"development","message":"[IMAP] Error during polling loop","scope":"imap-worker","code":"NoConnection"}
+{"level":"error","timestamp":"2026-05-14T17:27:47.468Z","service":"erp-omnichannel","environment":"development","message":"[IMAP] Client error","scope":"imap-worker","code":"ETIMEOUT","_connId":"1fmqkmeslugx56ee7yqr"}
+IMAP Client Error: Error: Socket timeout
+    at TLSSocket._socketTimeout (C:\Users\Victus\Desktop\New folder\Backend\node_modules\imapflow\lib\imap-flow.js:875:29)
+    at TLSSocket.emit (node:events:518:28)
+    at Socket._onTimeout (node:net:604:8)
+    at listOnTimeout (node:internal/timers:588:17)
+    at process.processTimers (node:internal/timers:523:7) {
+  code: 'ETIMEOUT',
+  _connId: '1fmqkmeslugx56ee7yqr'
+}
+{"level":"warn","timestamp":"2026-05-14T17:27:47.470Z","service":"erp-omnichannel","environment":"development","message":"[IMAP] Connection closed. Reconnecting in 15s...","scope":"imap-worker"}
+IMAP Connection Closed. Reconnecting in 15s...
+{"level":"error","timestamp":"2026-05-14T17:27:47.470Z","service":"erp-omnichannel","environment":"development","message":"[IMAP] Error during polling loop","scope":"imap-worker","code":"NoConnection"}
+{"level":"error","timestamp":"2026-05-14T17:30:08.076Z","service":"erp-omnichannel","environment":"development","message":"[IMAP] Client error","scope":"imap-worker","code":"ETIMEOUT","_connId":"6w3fijk8080ir29vuelk"}
+IMAP Client Error: Error: Socket timeout
+    at TLSSocket._socketTimeout (C:\Users\Victus\Desktop\New folder\Backend\node_modules\imapflow\lib\imap-flow.js:875:29)
+    at TLSSocket.emit (node:events:518:28)
+    at Socket._onTimeout (node:net:604:8)
+    at listOnTimeout (node:internal/timers:588:17)
+    at process.processTimers (node:internal/timers:523:7) {
+  code: 'ETIMEOUT',
+  _connId: '6w3fijk8080ir29vuelk'
+}
+{"level":"warn","timestamp":"2026-05-14T17:30:08.085Z","service":"erp-omnichannel","environment":"development","message":"[IMAP] Connection closed. Reconnecting in 15s...","scope":"imap-worker"}
+IMAP Connection Closed. Reconnecting in 15s...
+{"level":"error","timestamp":"2026-05-14T17:30:08.086Z","service":"erp-omnichannel","environment":"development","message":"[IMAP] Error during polling loop","scope":"imap-worker","code":"NoConnection"}
+{"level":"error","timestamp":"2026-05-14T17:32:28.706Z","service":"erp-omnichannel","environment":"development","message":"[IMAP] Client error","scope":"imap-worker","code":"ETIMEOUT","_connId":"9lpzomjdza4om56mdi2p"}
+IMAP Client Error: Error: Socket timeout
+    at TLSSocket._socketTimeout (C:\Users\Victus\Desktop\New folder\Backend\node_modules\imapflow\lib\imap-flow.js:875:29)
+    at TLSSocket.emit (node:events:518:28)
+    at Socket._onTimeout (node:net:604:8)
+    at listOnTimeout (node:internal/timers:588:17)
+    at process.processTimers (node:internal/timers:523:7) {
+  code: 'ETIMEOUT',
+  _connId: '9lpzomjdza4om56mdi2p'
+}
+{"level":"warn","timestamp":"2026-05-14T17:32:28.716Z","service":"erp-omnichannel","environment":"development","message":"[IMAP] Connection closed. Reconnecting in 15s...","scope":"imap-worker"}
+IMAP Connection Closed. Reconnecting in 15s...
+{"level":"error","timestamp":"2026-05-14T17:32:28.717Z","service":"erp-omnichannel","environment":"development","message":"[IMAP] Error during polling loop","scope":"imap-worker","code":"NoConnection"}
+{"level":"error","timestamp":"2026-05-14T17:34:49.010Z","service":"erp-omnichannel","environment":"development","message":"[IMAP] Client error","scope":"imap-worker","code":"ETIMEOUT","_connId":"os2k5dck721j2f76x1wn"}
+IMAP Client Error: Error: Socket timeout
+    at TLSSocket._socketTimeout (C:\Users\Victus\Desktop\New folder\Backend\node_modules\imapflow\lib\imap-flow.js:875:29)
+    at TLSSocket.emit (node:events:518:28)
+    at Socket._onTimeout (node:net:604:8)
+    at listOnTimeout (node:internal/timers:588:17)
+    at process.processTimers (node:internal/timers:523:7) {
+  code: 'ETIMEOUT',
+  _connId: 'os2k5dck721j2f76x1wn'
+}
+{"level":"warn","timestamp":"2026-05-14T17:34:49.013Z","service":"erp-omnichannel","environment":"development","message":"[IMAP] Connection closed. Reconnecting in 15s...","scope":"imap-worker"}
+IMAP Connection Closed. Reconnecting in 15s...
+{"level":"error","timestamp":"2026-05-14T17:34:49.014Z","service":"erp-omnichannel","environment":"development","message":"[IMAP] Error during polling loop","scope":"imap-worker","code":"NoConnection"}
+{"level":"error","timestamp":"2026-05-14T17:37:09.386Z","service":"erp-omnichannel","environment":"development","message":"[IMAP] Client error","scope":"imap-worker","code":"ETIMEOUT","_connId":"19gggq7oq8vuchdnfyq3"}
+IMAP Client Error: Error: Socket timeout
+    at TLSSocket._socketTimeout (C:\Users\Victus\Desktop\New folder\Backend\node_modules\imapflow\lib\imap-flow.js:875:29)
+    at TLSSocket.emit (node:events:518:28)
+    at Socket._onTimeout (node:net:604:8)
+    at listOnTimeout (node:internal/timers:588:17)
+    at process.processTimers (node:internal/timers:523:7) {
+  code: 'ETIMEOUT',
+  _connId: '19gggq7oq8vuchdnfyq3'
+}
+{"level":"warn","timestamp":"2026-05-14T17:37:09.394Z","service":"erp-omnichannel","environment":"development","message":"[IMAP] Connection closed. Reconnecting in 15s...","scope":"imap-worker"}
+IMAP Connection Closed. Reconnecting in 15s...
+{"level":"error","timestamp":"2026-05-14T17:37:09.395Z","service":"erp-omnichannel","environment":"development","message":"[IMAP] Error during polling loop","scope":"imap-worker","code":"NoConnection"}
+{"level":"error","timestamp":"2026-05-14T17:39:29.404Z","service":"erp-omnichannel","environment":"development","message":"[IMAP] Client error","scope":"imap-worker","code":"ETIMEOUT","_connId":"p0uw5qz8azxdtplchiz0"}
+IMAP Client Error: Error: Socket timeout
+    at TLSSocket._socketTimeout (C:\Users\Victus\Desktop\New folder\Backend\node_modules\imapflow\lib\imap-flow.js:875:29)
+    at TLSSocket.emit (node:events:518:28)
+    at Socket._onTimeout (node:net:604:8)
+    at listOnTimeout (node:internal/timers:588:17)
+    at process.processTimers (node:internal/timers:523:7) {
+  code: 'ETIMEOUT',
+  _connId: 'p0uw5qz8azxdtplchiz0'
+}
+{"level":"warn","timestamp":"2026-05-14T17:39:29.416Z","service":"erp-omnichannel","environment":"development","message":"[IMAP] Connection closed. Reconnecting in 15s...","scope":"imap-worker"}
+IMAP Connection Closed. Reconnecting in 15s...
+{"level":"error","timestamp":"2026-05-14T17:39:29.419Z","service":"erp-omnichannel","environment":"development","message":"[IMAP] Error during polling loop","scope":"imap-worker","code":"NoConnection"}
+{"level":"error","timestamp":"2026-05-14T17:41:50.024Z","service":"erp-omnichannel","environment":"development","message":"[IMAP] Client error","scope":"imap-worker","code":"ETIMEOUT","_connId":"d4jt70r79ad4clkw7ity"}
+IMAP Client Error: Error: Socket timeout
+    at TLSSocket._socketTimeout (C:\Users\Victus\Desktop\New folder\Backend\node_modules\imapflow\lib\imap-flow.js:875:29)
+    at TLSSocket.emit (node:events:518:28)
+    at Socket._onTimeout (node:net:604:8)
+    at listOnTimeout (node:internal/timers:588:17)
+    at process.processTimers (node:internal/timers:523:7) {
+  code: 'ETIMEOUT',
+  _connId: 'd4jt70r79ad4clkw7ity'
+}
+{"level":"warn","timestamp":"2026-05-14T17:41:50.027Z","service":"erp-omnichannel","environment":"development","message":"[IMAP] Connection closed. Reconnecting in 15s...","scope":"imap-worker"}
+IMAP Connection Closed. Reconnecting in 15s...
+{"level":"error","timestamp":"2026-05-14T17:41:50.028Z","service":"erp-omnichannel","environment":"development","message":"[IMAP] Error during polling loop","scope":"imap-worker","code":"NoConnection"}
+{"level":"error","timestamp":"2026-05-14T17:42:10.877Z","service":"erp-omnichannel","environment":"development","message":"[IMAP] Error during polling loop","scope":"imap-worker","name":"PrismaClientKnownRequestError","code":"P2021","clientVersion":"5.22.0","meta":{"modelName":"ChannelIdentity","table":"public.ChannelIdentity"}}
+{"level":"error","timestamp":"2026-05-14T17:46:00.266Z","service":"erp-omnichannel","environment":"development","message":"[IMAP] Error during polling loop","scope":"imap-worker","name":"PrismaClientKnownRequestError","code":"P2021","clientVersion":"5.22.0","meta":{"modelName":"ChannelIdentity","table":"public.ChannelIdentity"}}
+{"level":"error","timestamp":"2026-05-14T17:57:14.518Z","service":"erp-omnichannel","environment":"development","message":"Call queue worker error","scope":"call-event-queues","queue":"recording-sync","error":{"name":"Error","message":"read ECONNRESET","stack":"Error: read ECONNRESET\n    at TCP.onStreamRead (node:internal/stream_base_commons:216:20)\n    at TCP.callbackTrampoline (node:internal/async_hooks:130:17)"}}
+{"level":"error","timestamp":"2026-05-14T17:57:14.535Z","service":"erp-omnichannel","environment":"development","message":"Call queue worker error","scope":"call-event-queues","queue":"notification-events","error":{"name":"Error","message":"read ECONNRESET","stack":"Error: read ECONNRESET\n    at TCP.onStreamRead (node:internal/stream_base_commons:216:20)\n    at TCP.callbackTrampoline (node:internal/async_hooks:130:17)"}}
+{"level":"error","timestamp":"2026-05-14T17:57:14.536Z","service":"erp-omnichannel","environment":"development","message":"Call queue worker error","scope":"call-event-queues","queue":"analytics-events","error":{"name":"Error","message":"read ECONNRESET","stack":"Error: read ECONNRESET\n    at TCP.onStreamRead (node:internal/stream_base_commons:216:20)\n    at TCP.callbackTrampoline (node:internal/async_hooks:130:17)"}}
+{"level":"error","timestamp":"2026-05-14T17:57:14.538Z","service":"erp-omnichannel","environment":"development","message":"Call queue worker error","scope":"call-event-queues","queue":"call-events","error":{"name":"Error","message":"read ECONNRESET","stack":"Error: read ECONNRESET\n    at TCP.onStreamRead (node:internal/stream_base_commons:216:20)\n    at TCP.callbackTrampoline (node:internal/async_hooks:130:17)"}}
+{"level":"error","timestamp":"2026-05-14T17:57:14.542Z","service":"erp-omnichannel","environment":"development","message":"Outbound worker error","scope":"outbound-worker-runtime","error":{"name":"Error","message":"read ECONNRESET","stack":"Error: read ECONNRESET\n    at TCP.onStreamRead (node:internal/stream_base_commons:216:20)\n    at TCP.callbackTrampoline (node:internal/async_hooks:130:17)"}}
+{"level":"error","timestamp":"2026-05-14T17:57:14.549Z","service":"erp-omnichannel","environment":"development","message":"Call queue worker error","scope":"call-event-queues","queue":"webhook-events","error":{"name":"Error","message":"read ECONNRESET","stack":"Error: read ECONNRESET\n    at TCP.onStreamRead (node:internal/stream_base_commons:216:20)\n    at TCP.callbackTrampoline (node:internal/async_hooks:130:17)"}}
+{"level":"error","timestamp":"2026-05-14T17:57:14.558Z","service":"erp-omnichannel","environment":"development","message":"Redis outbound queue connection error","scope":"outbound-queue","error":{"name":"Error","message":"read ECONNRESET","stack":"Error: read ECONNRESET\n    at TCP.onStreamRead (node:internal/stream_base_commons:216:20)\n    at TCP.callbackTrampoline (node:internal/async_hooks:130:17)"}}
+{"level":"error","timestamp":"2026-05-14T17:57:14.559Z","service":"erp-omnichannel","environment":"development","message":"Outbound worker error","scope":"outbound-worker-runtime","error":{"name":"Error","message":"read ECONNRESET","stack":"Error: read ECONNRESET\n    at TCP.onStreamRead (node:internal/stream_base_commons:216:20)\n    at TCP.callbackTrampoline (node:internal/async_hooks:130:17)"}}
+[SOCKET] pubClient error: Error: read ECONNRESET
+    at TCP.onStreamRead (node:internal/stream_base_commons:216:20)
+    at TCP.callbackTrampoline (node:internal/async_hooks:130:17) {
+  errno: -4077,
+  code: 'ECONNRESET',
+  syscall: 'read'
+}
+[SOCKET] subClient error: Error: read ECONNRESET
+    at TCP.onStreamRead (node:internal/stream_base_commons:216:20)
+    at TCP.callbackTrampoline (node:internal/async_hooks:130:17) {
+  errno: -4077,
+  code: 'ECONNRESET',
+  syscall: 'read'
+}
+Automation Redis error: Error: read ECONNRESET
+    at TCP.onStreamRead (node:internal/stream_base_commons:216:20)
+    at TCP.callbackTrampoline (node:internal/async_hooks:130:17) {
+  errno: -4077,
+  code: 'ECONNRESET',
+  syscall: 'read'
+}
+Error: read ECONNRESET
+    at TCP.onStreamRead (node:internal/stream_base_commons:216:20)
+    at TCP.callbackTrampoline (node:internal/async_hooks:130:17) {
+  errno: -4077,
+  code: 'ECONNRESET',
+  syscall: 'read'
+}
+{"level":"error","timestamp":"2026-05-14T17:57:15.150Z","service":"erp-omnichannel","environment":"development","message":"Call queue Redis error","scope":"call-event-queues","error":{"name":"Error","message":"read ECONNRESET","stack":"Error: read ECONNRESET\n    at TCP.onStreamRead (node:internal/stream_base_commons:216:20)\n    at TCP.callbackTrampoline (node:internal/async_hooks:130:17)"}}
+Error: read ECONNRESET
+    at TCP.onStreamRead (node:internal/stream_base_commons:216:20)
+    at TCP.callbackTrampoline (node:internal/async_hooks:130:17) {
+  errno: -4077,
+  code: 'ECONNRESET',
+  syscall: 'read'
+}
+Error: read ECONNRESET
+    at TCP.onStreamRead (node:internal/stream_base_commons:216:20)
+    at TCP.callbackTrampoline (node:internal/async_hooks:130:17) {
+  errno: -4077,
+  code: 'ECONNRESET',
+  syscall: 'read'
+}
+Error: read ECONNRESET
+    at TCP.onStreamRead (node:internal/stream_base_commons:216:20)
+    at TCP.callbackTrampoline (node:internal/async_hooks:130:17) {
+  errno: -4077,
+  code: 'ECONNRESET',
+  syscall: 'read'
+}
+Error: read ECONNRESET
+    at TCP.onStreamRead (node:internal/stream_base_commons:216:20)
+    at TCP.callbackTrampoline (node:internal/async_hooks:130:17) {
+  errno: -4077,
+  code: 'ECONNRESET',
+  syscall: 'read'
+}
+Error: read ECONNRESET
+    at TCP.onStreamRead (node:internal/stream_base_commons:216:20)
+    at TCP.callbackTrampoline (node:internal/async_hooks:130:17) {
+  errno: -4077,
+  code: 'ECONNRESET',
+  syscall: 'read'
+}
+{"level":"error","timestamp":"2026-05-14T17:57:15.158Z","service":"erp-omnichannel","environment":"development","message":"Call queue worker error","scope":"call-event-queues","queue":"webhook-events","error":{"name":"Error","message":"read ECONNRESET","stack":"Error: read ECONNRESET\n    at TCP.onStreamRead (node:internal/stream_base_commons:216:20)\n    at TCP.callbackTrampoline (node:internal/async_hooks:130:17)"}}
+{"level":"error","timestamp":"2026-05-14T17:57:15.159Z","service":"erp-omnichannel","environment":"development","message":"Call queue worker error","scope":"call-event-queues","queue":"call-events","error":{"name":"Error","message":"read ECONNRESET","stack":"Error: read ECONNRESET\n    at TCP.onStreamRead (node:internal/stream_base_commons:216:20)\n    at TCP.callbackTrampoline (node:internal/async_hooks:130:17)"}}
+{"level":"error","timestamp":"2026-05-14T17:57:15.159Z","service":"erp-omnichannel","environment":"development","message":"Call queue worker error","scope":"call-event-queues","queue":"analytics-events","error":{"name":"Error","message":"read ECONNRESET","stack":"Error: read ECONNRESET\n    at TCP.onStreamRead (node:internal/stream_base_commons:216:20)\n    at TCP.callbackTrampoline (node:internal/async_hooks:130:17)"}}
+{"level":"error","timestamp":"2026-05-14T17:57:15.160Z","service":"erp-omnichannel","environment":"development","message":"Call queue worker error","scope":"call-event-queues","queue":"recording-sync","error":{"name":"Error","message":"read ECONNRESET","stack":"Error: read ECONNRESET\n    at TCP.onStreamRead (node:internal/stream_base_commons:216:20)\n    at TCP.callbackTrampoline (node:internal/async_hooks:130:17)"}}
+{"level":"error","timestamp":"2026-05-14T17:57:15.161Z","service":"erp-omnichannel","environment":"development","message":"Call queue worker error","scope":"call-event-queues","queue":"notification-events","error":{"name":"Error","message":"read ECONNRESET","stack":"Error: read ECONNRESET\n    at TCP.onStreamRead (node:internal/stream_base_commons:216:20)\n    at TCP.callbackTrampoline (node:internal/async_hooks:130:17)"}}
+{"level":"error","timestamp":"2026-05-14T17:57:15.188Z","service":"erp-omnichannel","environment":"development","message":"[IMAP] Client error","scope":"imap-worker","errno":-4077,"code":"ECONNRESET","syscall":"read","_connId":"cdcth9078k7onqyoim20"}
+IMAP Client Error: Error: read ECONNRESET
+    at TLSWrap.onStreamRead (node:internal/stream_base_commons:216:20)
+    at TLSWrap.callbackTrampoline (node:internal/async_hooks:130:17) {
+  errno: -4077,
+  code: 'ECONNRESET',
+  syscall: 'read',
+  _connId: 'cdcth9078k7onqyoim20'
+}
+{"level":"warn","timestamp":"2026-05-14T17:57:15.224Z","service":"erp-omnichannel","environment":"development","message":"[IMAP] Connection closed. Reconnecting in 15s...","scope":"imap-worker"}
+IMAP Connection Closed. Reconnecting in 15s...
+{"level":"error","timestamp":"2026-05-14T17:57:36.220Z","service":"erp-omnichannel","environment":"development","message":"[IMAP] Error during polling loop","scope":"imap-worker","name":"PrismaClientKnownRequestError","code":"P2021","clientVersion":"5.22.0","meta":{"modelName":"ChannelIdentity","table":"public.ChannelIdentity"}}
+{"level":"error","timestamp":"2026-05-14T18:10:48.188Z","service":"erp-omnichannel","environment":"development","message":"Call queue worker error","scope":"call-event-queues","queue":"recording-sync","error":{"name":"Error","message":"read ECONNRESET","stack":"Error: read ECONNRESET\n    at TCP.onStreamRead (node:internal/stream_base_commons:216:20)\n    at TCP.callbackTrampoline (node:internal/async_hooks:130:17)"}}
+{"level":"error","timestamp":"2026-05-14T18:10:48.199Z","service":"erp-omnichannel","environment":"development","message":"Call queue worker error","scope":"call-event-queues","queue":"webhook-events","error":{"name":"Error","message":"read ECONNRESET","stack":"Error: read ECONNRESET\n    at TCP.onStreamRead (node:internal/stream_base_commons:216:20)\n    at TCP.callbackTrampoline (node:internal/async_hooks:130:17)"}}
+{"level":"error","timestamp":"2026-05-14T18:10:48.205Z","service":"erp-omnichannel","environment":"development","message":"Outbound worker error","scope":"outbound-worker-runtime","error":{"name":"Error","message":"read ECONNRESET","stack":"Error: read ECONNRESET\n    at TCP.onStreamRead (node:internal/stream_base_commons:216:20)\n    at TCP.callbackTrampoline (node:internal/async_hooks:130:17)"}}
+{"level":"error","timestamp":"2026-05-14T18:10:48.206Z","service":"erp-omnichannel","environment":"development","message":"Call queue worker error","scope":"call-event-queues","queue":"notification-events","error":{"name":"Error","message":"read ECONNRESET","stack":"Error: read ECONNRESET\n    at TCP.onStreamRead (node:internal/stream_base_commons:216:20)\n    at TCP.callbackTrampoline (node:internal/async_hooks:130:17)"}}
+{"level":"error","timestamp":"2026-05-14T18:10:48.207Z","service":"erp-omnichannel","environment":"development","message":"Call queue worker error","scope":"call-event-queues","queue":"call-events","error":{"name":"Error","message":"read ECONNRESET","stack":"Error: read ECONNRESET\n    at TCP.onStreamRead (node:internal/stream_base_commons:216:20)\n    at TCP.callbackTrampoline (node:internal/async_hooks:130:17)"}}
+{"level":"error","timestamp":"2026-05-14T18:10:48.208Z","service":"erp-omnichannel","environment":"development","message":"Call queue worker error","scope":"call-event-queues","queue":"analytics-events","error":{"name":"Error","message":"read ECONNRESET","stack":"Error: read ECONNRESET\n    at TCP.onStreamRead (node:internal/stream_base_commons:216:20)\n    at TCP.callbackTrampoline (node:internal/async_hooks:130:17)"}}
+{"level":"error","timestamp":"2026-05-14T18:10:48.211Z","service":"erp-omnichannel","environment":"development","message":"Redis outbound queue connection error","scope":"outbound-queue","error":{"name":"Error","message":"read ECONNRESET","stack":"Error: read ECONNRESET\n    at TCP.onStreamRead (node:internal/stream_base_commons:216:20)\n    at TCP.callbackTrampoline (node:internal/async_hooks:130:17)"}}
+{"level":"error","timestamp":"2026-05-14T18:10:48.212Z","service":"erp-omnichannel","environment":"development","message":"Outbound worker error","scope":"outbound-worker-runtime","error":{"name":"Error","message":"read ECONNRESET","stack":"Error: read ECONNRESET\n    at TCP.onStreamRead (node:internal/stream_base_commons:216:20)\n    at TCP.callbackTrampoline (node:internal/async_hooks:130:17)"}}
+[SOCKET] subClient error: Error: read ECONNRESET
+    at TCP.onStreamRead (node:internal/stream_base_commons:216:20)
+    at TCP.callbackTrampoline (node:internal/async_hooks:130:17) {
+  errno: -4077,
+  code: 'ECONNRESET',
+  syscall: 'read'
+}
+[SOCKET] pubClient error: Error: read ECONNRESET
+    at TCP.onStreamRead (node:internal/stream_base_commons:216:20)
+    at TCP.callbackTrampoline (node:internal/async_hooks:130:17) {
+  errno: -4077,
+  code: 'ECONNRESET',
+  syscall: 'read'
+}
+{"level":"error","timestamp":"2026-05-14T18:10:48.279Z","service":"erp-omnichannel","environment":"development","message":"Call queue Redis error","scope":"call-event-queues","error":{"name":"Error","message":"read ECONNRESET","stack":"Error: read ECONNRESET\n    at TCP.onStreamRead (node:internal/stream_base_commons:216:20)\n    at TCP.callbackTrampoline (node:internal/async_hooks:130:17)"}}
+Error: read ECONNRESET
+    at TCP.onStreamRead (node:internal/stream_base_commons:216:20)
+    at TCP.callbackTrampoline (node:internal/async_hooks:130:17) {
+  errno: -4077,
+  code: 'ECONNRESET',
+  syscall: 'read'
+}
+Error: read ECONNRESET
+    at TCP.onStreamRead (node:internal/stream_base_commons:216:20)
+    at TCP.callbackTrampoline (node:internal/async_hooks:130:17) {
+  errno: -4077,
+  code: 'ECONNRESET',
+  syscall: 'read'
+}
+Error: read ECONNRESET
+    at TCP.onStreamRead (node:internal/stream_base_commons:216:20)
+    at TCP.callbackTrampoline (node:internal/async_hooks:130:17) {
+  errno: -4077,
+  code: 'ECONNRESET',
+  syscall: 'read'
+}
+Error: read ECONNRESET
+    at TCP.onStreamRead (node:internal/stream_base_commons:216:20)
+    at TCP.callbackTrampoline (node:internal/async_hooks:130:17) {
+  errno: -4077,
+  code: 'ECONNRESET',
+  syscall: 'read'
+}
+Error: read ECONNRESET
+    at TCP.onStreamRead (node:internal/stream_base_commons:216:20)
+    at TCP.callbackTrampoline (node:internal/async_hooks:130:17) {
+  errno: -4077,
+  code: 'ECONNRESET',
+  syscall: 'read'
+}
+{"level":"error","timestamp":"2026-05-14T18:10:48.292Z","service":"erp-omnichannel","environment":"development","message":"Call queue worker error","scope":"call-event-queues","queue":"webhook-events","error":{"name":"Error","message":"read ECONNRESET","stack":"Error: read ECONNRESET\n    at TCP.onStreamRead (node:internal/stream_base_commons:216:20)\n    at TCP.callbackTrampoline (node:internal/async_hooks:130:17)"}}
+{"level":"error","timestamp":"2026-05-14T18:10:48.292Z","service":"erp-omnichannel","environment":"development","message":"Call queue worker error","scope":"call-event-queues","queue":"call-events","error":{"name":"Error","message":"read ECONNRESET","stack":"Error: read ECONNRESET\n    at TCP.onStreamRead (node:internal/stream_base_commons:216:20)\n    at TCP.callbackTrampoline (node:internal/async_hooks:130:17)"}}
+{"level":"error","timestamp":"2026-05-14T18:10:48.293Z","service":"erp-omnichannel","environment":"development","message":"Call queue worker error","scope":"call-event-queues","queue":"analytics-events","error":{"name":"Error","message":"read ECONNRESET","stack":"Error: read ECONNRESET\n    at TCP.onStreamRead (node:internal/stream_base_commons:216:20)\n    at TCP.callbackTrampoline (node:internal/async_hooks:130:17)"}}
+{"level":"error","timestamp":"2026-05-14T18:10:48.293Z","service":"erp-omnichannel","environment":"development","message":"Call queue worker error","scope":"call-event-queues","queue":"recording-sync","error":{"name":"Error","message":"read ECONNRESET","stack":"Error: read ECONNRESET\n    at TCP.onStreamRead (node:internal/stream_base_commons:216:20)\n    at TCP.callbackTrampoline (node:internal/async_hooks:130:17)"}}
+{"level":"error","timestamp":"2026-05-14T18:10:48.293Z","service":"erp-omnichannel","environment":"development","message":"Call queue worker error","scope":"call-event-queues","queue":"notification-events","error":{"name":"Error","message":"read ECONNRESET","stack":"Error: read ECONNRESET\n    at TCP.onStreamRead (node:internal/stream_base_commons:216:20)\n    at TCP.callbackTrampoline (node:internal/async_hooks:130:17)"}}
+Automation Redis error: Error: read ECONNRESET
+    at TCP.onStreamRead (node:internal/stream_base_commons:216:20)
+    at TCP.callbackTrampoline (node:internal/async_hooks:130:17) {
+  errno: -4077,
+  code: 'ECONNRESET',
+  syscall: 'read'
+}
+Error: read ECONNRESET
+    at TCP.onStreamRead (node:internal/stream_base_commons:216:20)
+    at TCP.callbackTrampoline (node:internal/async_hooks:130:17) {
+  errno: -4077,
+  code: 'ECONNRESET',
+  syscall: 'read'
+}
+{"level":"error","timestamp":"2026-05-14T18:10:48.309Z","service":"erp-omnichannel","environment":"development","message":"[IMAP] Client error","scope":"imap-worker","errno":-4077,"code":"ECONNRESET","syscall":"read","_connId":"z938c9xibwqn0p36u9oe"}
+IMAP Client Error: Error: read ECONNRESET
+    at TLSWrap.onStreamRead (node:internal/stream_base_commons:216:20)
+    at TLSWrap.callbackTrampoline (node:internal/async_hooks:130:17) {
+  errno: -4077,
+  code: 'ECONNRESET',
+  syscall: 'read',
+  _connId: 'z938c9xibwqn0p36u9oe'
+}
+{"level":"warn","timestamp":"2026-05-14T18:10:48.325Z","service":"erp-omnichannel","environment":"development","message":"[IMAP] Connection closed. Reconnecting in 15s...","scope":"imap-worker"}
+IMAP Connection Closed. Reconnecting in 15s...
+{"level":"error","timestamp":"2026-05-14T18:11:09.301Z","service":"erp-omnichannel","environment":"development","message":"[IMAP] Error during polling loop","scope":"imap-worker","name":"PrismaClientKnownRequestError","code":"P2021","clientVersion":"5.22.0","meta":{"modelName":"ChannelIdentity","table":"public.ChannelIdentity"}}
+PrismaClientKnownRequestError: 
+Invalid `prisma.user.findUnique()` invocation:
+
+
+The column `User.firstName` does not exist in the current database.
+    at $n.handleRequestError (C:\Users\Victus\Desktop\New folder\Backend\src\generated\prisma\runtime\library.js:121:7315)
+    at $n.handleAndLogRequestError (C:\Users\Victus\Desktop\New folder\Backend\src\generated\prisma\runtime\library.js:121:6623)
+    at $n.request (C:\Users\Victus\Desktop\New folder\Backend\src\generated\prisma\runtime\library.js:121:6307)
+    at async l (C:\Users\Victus\Desktop\New folder\Backend\src\generated\prisma\runtime\library.js:130:9633)
+    at async loginUser (file:///C:/Users/Victus/Desktop/New%20folder/Backend/src/modules/auth/service.js:7:18)
+    at async login (file:///C:/Users/Victus/Desktop/New%20folder/Backend/src/modules/auth/controller.js:8:24) {
+  code: 'P2022',
+  clientVersion: '5.22.0',
+  meta: { modelName: 'User', column: 'User.firstName' }
+}
+PrismaClientKnownRequestError: 
+Invalid `prisma.user.findUnique()` invocation:
+
+
+The column `User.firstName` does not exist in the current database.
+    at $n.handleRequestError (C:\Users\Victus\Desktop\New folder\Backend\src\generated\prisma\runtime\library.js:121:7315)
+    at $n.handleAndLogRequestError (C:\Users\Victus\Desktop\New folder\Backend\src\generated\prisma\runtime\library.js:121:6623)
+    at $n.request (C:\Users\Victus\Desktop\New folder\Backend\src\generated\prisma\runtime\library.js:121:6307)
+    at async l (C:\Users\Victus\Desktop\New folder\Backend\src\generated\prisma\runtime\library.js:130:9633)
+    at async loginUser (file:///C:/Users/Victus/Desktop/New%20folder/Backend/src/modules/auth/service.js:7:18)
+    at async login (file:///C:/Users/Victus/Desktop/New%20folder/Backend/src/modules/auth/controller.js:8:24) {
+  code: 'P2022',
+  clientVersion: '5.22.0',
+  meta: { modelName: 'User', column: 'User.firstName' }
+}
+PrismaClientKnownRequestError: 
+Invalid `prisma.user.findUnique()` invocation:
+
+
+The column `User.firstName` does not exist in the current database.
+    at $n.handleRequestError (C:\Users\Victus\Desktop\New folder\Backend\src\generated\prisma\runtime\library.js:121:7315)
+    at $n.handleAndLogRequestError (C:\Users\Victus\Desktop\New folder\Backend\src\generated\prisma\runtime\library.js:121:6623)
+    at $n.request (C:\Users\Victus\Desktop\New folder\Backend\src\generated\prisma\runtime\library.js:121:6307)
+    at async l (C:\Users\Victus\Desktop\New folder\Backend\src\generated\prisma\runtime\library.js:130:9633)
+    at async loginUser (file:///C:/Users/Victus/Desktop/New%20folder/Backend/src/modules/auth/service.js:7:18)
+    at async login (file:///C:/Users/Victus/Desktop/New%20folder/Backend/src/modules/auth/controller.js:8:24) {
+  code: 'P2022',
+  clientVersion: '5.22.0',
+  meta: { modelName: 'User', column: 'User.firstName' }
+}

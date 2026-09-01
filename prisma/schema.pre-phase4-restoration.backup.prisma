@@ -1,0 +1,1467 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+// =======================
+// MASTER & RBAC MODULES
+// =======================
+
+model Tenant {
+  id       String  @id @default(uuid())
+  name     String
+  code     String  @unique
+  plan     String  @default("ENTERPRISE")
+  isActive Boolean @default(true)
+
+  units Unit[]
+  users User[]
+  roles Role[]
+
+  isDeleted Boolean   @default(false)
+  deletedAt DateTime?
+  createdAt DateTime  @default(now())
+  updatedAt DateTime  @updatedAt
+
+  @@index([isActive])
+}
+
+model Unit {
+  id         String   @id @default(uuid())
+  name       String
+  code       String   @unique
+  logoUrl    String?
+  shortName  String?
+  unitType   String?
+  locationId String
+  location   Location @relation(fields: [locationId], references: [id])
+  address    String?
+  pincode    String?
+  email      String?
+  phone      String?
+  status     Boolean  @default(true)
+
+  tenantId String
+  tenant   Tenant @relation(fields: [tenantId], references: [id])
+
+  users User[]
+
+  isDeleted Boolean   @default(false)
+  deletedAt DateTime?
+  createdAt DateTime  @default(now())
+  updatedAt DateTime  @updatedAt
+
+  @@index([tenantId])
+  @@index([locationId])
+}
+
+model Role {
+  id          String  @id @default(uuid())
+  name        String
+  description String?
+  tenantId    String
+  tenant      Tenant  @relation(fields: [tenantId], references: [id])
+
+  permissions RolePermission[]
+  users       User[]
+
+  isDeleted Boolean   @default(false)
+  deletedAt DateTime?
+  createdAt DateTime  @default(now())
+  updatedAt DateTime  @updatedAt
+
+  @@unique([name, tenantId])
+  @@index([tenantId])
+}
+
+model Permission {
+  id          String  @id @default(uuid())
+  module      String // e.g., ENQUIRY, ALLOCATION, ACCOUNTS
+  action      String // e.g., CREATE, READ, UPDATE, DELETE, APPROVE
+  description String?
+
+  roles RolePermission[]
+
+  isDeleted Boolean   @default(false)
+  deletedAt DateTime?
+  createdAt DateTime  @default(now())
+  updatedAt DateTime  @updatedAt
+
+  @@unique([module, action])
+  @@index([module])
+}
+
+model RolePermission {
+  id           String     @id @default(uuid())
+  roleId       String
+  role         Role       @relation(fields: [roleId], references: [id])
+  permissionId String
+  permission   Permission @relation(fields: [permissionId], references: [id])
+  tenantId     String
+
+  isDeleted Boolean   @default(false)
+  deletedAt DateTime?
+  createdAt DateTime  @default(now())
+  updatedAt DateTime  @updatedAt
+
+  @@unique([roleId, permissionId])
+  @@index([tenantId])
+}
+
+model User {
+  id           String  @id @default(uuid())
+  email        String? @unique
+  passwordHash String?
+  firstName    String
+  lastName     String?
+  mobile       String?
+
+  roleId String?
+  role   Role?   @relation(fields: [roleId], references: [id])
+
+  tenantId String
+  tenant   Tenant @relation(fields: [tenantId], references: [id])
+
+  unitId String
+  unit   Unit   @relation(fields: [unitId], references: [id])
+
+  isActive Boolean @default(true)
+
+  staff          Staff?
+  tasksAssigned  Task[]     @relation("TaskAssignee")
+  tasksToApprove Task[]     @relation("TaskApprovalAuthority")
+  approvedItems  Approval[] @relation("ApprovalApprover")
+  auditLogs      AuditLog[]
+
+  isDeleted Boolean   @default(false)
+  deletedAt DateTime?
+  createdAt DateTime  @default(now())
+  updatedAt DateTime  @updatedAt
+
+  @@index([tenantId])
+  @@index([unitId])
+  @@index([isActive])
+}
+
+model Staff {
+  id          String    @id @default(uuid())
+  empId       String    @unique
+  firstName   String
+  lastName    String?
+  designation String?
+  department  String?
+  phone       String?
+  email       String?
+  joiningDate DateTime?
+  status      String    @default("Working")
+  photoUrl    String?
+
+  userId String? @unique
+  user   User?   @relation(fields: [userId], references: [id])
+
+  metadata Json? // Generic mapping capturing exhaustive onboarding form parameters (Aadhar, Blood Group, etc)
+
+  // 🔹 Evolution: Smart Operations
+  skills           String[]  @default([])
+  location         String?
+  isAvailable      Boolean   @default(true)
+  performanceScore Float     @default(50)
+  workload         Int       @default(0)
+  currentWorkload  Int       @default(0)
+  latitude         Float?
+  longitude        Float?
+  shiftStart       String?
+  shiftEnd         String?
+  capacity         Int       @default(5)
+  stressLevel      Float     @default(0)
+  lastActiveAt     DateTime?
+
+  allocations   Allocation[]
+  assignedTasks Task[]
+
+  tenantId String
+  unitId   String
+
+  isDeleted Boolean   @default(false)
+  deletedAt DateTime?
+  createdAt DateTime  @default(now())
+  updatedAt DateTime  @updatedAt
+
+  @@index([tenantId])
+  @@index([unitId])
+}
+
+// =======================
+// ENQUIRY CRM & ALLOCATION
+// =======================
+
+model City {
+  id      String  @id @default(uuid())
+  name    String
+  state   String
+  country String
+  status  Boolean @default(true)
+
+  tenantId  String
+  unitId    String
+  isDeleted Boolean   @default(false)
+  deletedAt DateTime?
+  createdAt DateTime  @default(now())
+  updatedAt DateTime  @updatedAt
+
+  @@index([tenantId])
+  @@index([unitId])
+}
+
+model Location {
+  id        String   @id @default(uuid())
+  name      String
+  state     String
+  country   String
+  pincode   String?
+  createdAt DateTime @default(now())
+
+  units Unit[]
+
+  @@unique([name, state, country, pincode])
+  @@index([name])
+  @@index([state])
+  @@index([country])
+}
+
+model Client {
+  id      String  @id @default(uuid())
+  refNo   String  @unique
+  name    String
+  mobile  String
+  email   String?
+  address String?
+
+  enquiries     Enquiry[]
+  conversations Conversation[]
+
+  tenantId  String
+  unitId    String
+  isDeleted Boolean   @default(false)
+  deletedAt DateTime?
+  createdAt DateTime  @default(now())
+  updatedAt DateTime  @updatedAt
+
+  @@index([tenantId])
+  @@index([unitId])
+  @@index([mobile])
+}
+
+enum EnquiryStatus {
+  NEW
+  FOLLOW_UP
+  IN_PROGRESS
+  CLOSED
+}
+
+model JobApplication {
+  id            String  @id @default(uuid())
+  applicationNo String  @unique
+  companyUnit   String
+  applyFor      String
+  experience    String?
+  location      String?
+
+  applicantName String
+  mobileNo      String
+  email         String?
+  resumeUrl     String?
+
+  followupStatus String @default("Pending")
+  interestStatus String @default("Neutral")
+
+  tenantId  String
+  unitId    String
+  isDeleted Boolean   @default(false)
+  deletedAt DateTime?
+  createdAt DateTime  @default(now())
+  updatedAt DateTime  @updatedAt
+
+  @@index([tenantId])
+  @@index([unitId])
+}
+
+model Enquiry {
+  id       String @id @default(uuid())
+  refNo    String @unique
+  clientId String
+  client   Client @relation(fields: [clientId], references: [id])
+
+  serviceId   String?
+  service     ClientService? @relation(fields: [serviceId], references: [id])
+  mode        String?
+  source      String?
+  channelId   String? // For Omnichannel external reference
+  rawMessage  String? // Normalized initial message/payload
+  description String?
+  status      EnquiryStatus  @default(NEW)
+  priority    String?
+  intent      String?
+  sentiment   String?
+  summary     String?
+  urgency     String?
+
+  followUps        FollowUp[]
+  allocation       Allocation?
+  tasks            Task[]
+  conversations    Conversation[]
+  automationScores AutomationScore[]
+  admission        Admission?
+
+  // 🔹 Evolution: Conversion Tracking
+  isConverted Boolean?  @default(false)
+  convertedAt DateTime?
+
+  tenantId  String
+  unitId    String
+  isDeleted Boolean   @default(false)
+  deletedAt DateTime?
+  createdAt DateTime  @default(now())
+  updatedAt DateTime  @updatedAt
+
+  @@index([tenantId])
+  @@index([unitId])
+  @@index([status])
+  @@index([createdAt])
+}
+
+model Admission {
+  id           String    @id @default(uuid())
+  enquiryId    String    @unique
+  patientId    String
+  tenantId     String
+  unitId       String
+  status       String    @default("ACTIVE")
+  admittedAt   DateTime  @default(now())
+  dischargedAt DateTime?
+  createdAt    DateTime  @default(now())
+  updatedAt    DateTime  @updatedAt
+
+  enquiry Enquiry @relation(fields: [enquiryId], references: [id])
+  patient Patient @relation(fields: [patientId], references: [id])
+
+  @@index([tenantId])
+  @@index([unitId])
+  @@index([patientId])
+}
+
+model FollowUp {
+  id        String  @id @default(uuid())
+  enquiryId String
+  enquiry   Enquiry @relation(fields: [enquiryId], references: [id])
+  notes     String?
+
+  // 🔹 Evolution: Predictive Analytics
+  scheduledAt  DateTime?
+  actualAt     DateTime?
+  channel      String?   @default("CALL") // CALL | WHATSAPP | EMAIL
+  response     Boolean   @default(false)
+  converted    Boolean   @default(false)
+  responseAt   DateTime?
+  outcome      String?   @default("PENDING")
+  variant      String?
+  successScore Float     @default(0)
+
+  tenantId  String
+  unitId    String
+  isDeleted Boolean   @default(false)
+  deletedAt DateTime?
+  createdAt DateTime  @default(now())
+  updatedAt DateTime  @updatedAt
+
+  @@index([tenantId])
+  @@index([unitId])
+  @@index([scheduledAt])
+}
+
+enum AllocationStatus {
+  PENDING
+  ALLOCATED
+  ON_HOLD
+  COMPLETED
+}
+
+enum AllocationType {
+  HOME_CARE
+  CLINICAL
+  IN_HOUSE
+  OTHERS
+}
+
+model Allocation {
+  id        String  @id @default(uuid())
+  refNo     String  @unique
+  enquiryId String  @unique
+  enquiry   Enquiry @relation(fields: [enquiryId], references: [id])
+
+  type      AllocationType   @default(HOME_CARE)
+  staffId   String? // The staff allocated
+  staff     Staff?           @relation(fields: [staffId], references: [id])
+  startDate DateTime?
+  endDate   DateTime?
+  status    AllocationStatus @default(PENDING)
+  metadata  Json? // For polymorphic data: { roomNo, doctorId, etc }
+
+  // 🔹 Evolution: Automation Transparency
+  allocationScore Float? @default(0)
+
+  tenantId  String
+  unitId    String
+  isDeleted Boolean   @default(false)
+  deletedAt DateTime?
+  createdAt DateTime  @default(now())
+  updatedAt DateTime  @updatedAt
+
+  accounts AccountTransaction[]
+
+  @@index([tenantId])
+  @@index([unitId])
+  @@index([status])
+}
+
+// =======================
+// ACCOUNTS MODULE
+// =======================
+
+enum TransactionType {
+  INVOICE
+  RECEIPT
+  EXPENSE
+  REFUND
+}
+
+enum TransactionStatus {
+  CREATED
+  PENDING_APPROVAL
+  APPROVED
+  POSTED
+  REJECTED
+}
+
+model AccountTransaction {
+  id           String      @id @default(uuid())
+  refNo        String      @unique
+  allocationId String?
+  allocation   Allocation? @relation(fields: [allocationId], references: [id])
+
+  type        TransactionType
+  amount      Float
+  paymentMode String?
+  category    String?
+  clientName  String?
+  status      TransactionStatus @default(CREATED)
+  notes       String?
+  date        DateTime          @default(now())
+
+  tenantId  String
+  unitId    String
+  isDeleted Boolean   @default(false)
+  deletedAt DateTime?
+  createdAt DateTime  @default(now())
+  updatedAt DateTime  @updatedAt
+
+  @@index([tenantId])
+  @@index([unitId])
+  @@index([status])
+  @@index([type])
+}
+
+// =======================
+// TASK & COMPLAINT MODULES
+// =======================
+
+enum TaskStatus {
+  ASSIGNED
+  IN_PROGRESS
+  COMPLETED
+  APPROVED
+}
+
+model Task {
+  id          String  @id @default(uuid())
+  refNo       String  @unique
+  title       String
+  description String?
+  priority    String  @default("MEDIUM")
+  aiSummary   String?
+  aiUrgency   String?
+
+  enquiryId String?
+  enquiry   Enquiry? @relation(fields: [enquiryId], references: [id])
+
+  assigneeId      String?
+  assignee        User?   @relation("TaskAssignee", fields: [assigneeId], references: [id])
+  assignedStaffId String?
+  assignedStaff   Staff?  @relation(fields: [assignedStaffId], references: [id])
+
+  approvalAuthorityId String?
+  approvalAuthority   User?   @relation("TaskApprovalAuthority", fields: [approvalAuthorityId], references: [id])
+  type                String  @default("DAILY") // DAILY, SCHEDULED
+
+  dueDate       DateTime?
+  status        TaskStatus @default(ASSIGNED)
+  completedAt   DateTime?
+  feedbackScore Float      @default(0)
+
+  tenantId  String
+  unitId    String
+  isDeleted Boolean   @default(false)
+  deletedAt DateTime?
+  createdAt DateTime  @default(now())
+  updatedAt DateTime  @updatedAt
+
+  @@index([tenantId])
+  @@index([unitId])
+  @@index([status])
+  @@index([enquiryId])
+}
+
+enum ComplaintStatus {
+  OPEN
+  ASSIGNED
+  RESOLVED
+  CLOSED
+}
+
+model Complaint {
+  id          String            @id @default(uuid())
+  refNo       String            @unique
+  title       String
+  type        String?
+  description String
+  status      ComplaintStatus   @default(OPEN)
+  priority    String?
+  sentiment   String?
+  urgency     String?
+  serviceTag  String?
+  channel     String?
+  channelId   String?
+  metadata    Json?
+  scores      AutomationScore[]
+
+  tenantId  String
+  unitId    String
+  isDeleted Boolean   @default(false)
+  deletedAt DateTime?
+  createdAt DateTime  @default(now())
+  updatedAt DateTime  @updatedAt
+
+  @@index([tenantId])
+  @@index([unitId])
+  @@index([status])
+}
+
+// =======================
+// CORE ENGINES: WORKFLOW, APPROVAL, AUDIT
+// =======================
+
+model WorkflowLog {
+  id         String  @id @default(uuid())
+  entityType String // 'ENQUIRY', 'ALLOCATION', 'TASK', etc.
+  entityId   String
+  fromState  String?
+  toState    String
+  actionBy   String
+  notes      String?
+
+  tenantId  String
+  unitId    String
+  isDeleted Boolean   @default(false)
+  deletedAt DateTime?
+  createdAt DateTime  @default(now())
+  updatedAt DateTime  @updatedAt
+
+  @@index([entityType, entityId])
+  @@index([tenantId])
+}
+
+enum ApprovalStatus {
+  PENDING
+  APPROVED
+  REJECTED
+}
+
+model Approval {
+  id         String @id @default(uuid())
+  entityType String // 'ACCOUNT_TRANSACTION', 'TASK'
+  entityId   String
+
+  approverId String?
+  approver   User?          @relation("ApprovalApprover", fields: [approverId], references: [id])
+  status     ApprovalStatus @default(PENDING)
+  comments   String?
+
+  tenantId  String
+  unitId    String
+  isDeleted Boolean   @default(false)
+  deletedAt DateTime?
+  createdAt DateTime  @default(now())
+  updatedAt DateTime  @updatedAt
+
+  @@index([entityType, entityId])
+  @@index([tenantId])
+  @@index([status])
+}
+
+model AuditLog {
+  id      String  @id @default(uuid())
+  userId  String?
+  user    User?   @relation(fields: [userId], references: [id])
+  module  String
+  action  String
+  payload Json?
+
+  tenantId  String
+  unitId    String
+  isDeleted Boolean   @default(false)
+  deletedAt DateTime?
+  createdAt DateTime  @default(now())
+  updatedAt DateTime  @updatedAt
+
+  @@index([tenantId])
+  @@index([unitId])
+  @@index([module])
+  @@index([createdAt])
+}
+
+model FileStorage {
+  id         String  @id @default(uuid())
+  fileName   String
+  fileUrl    String
+  fileType   String
+  fileSize   Int
+  entityType String?
+  entityId   String?
+
+  tenantId  String
+  unitId    String
+  isDeleted Boolean   @default(false)
+  deletedAt DateTime?
+  createdAt DateTime  @default(now())
+  updatedAt DateTime  @updatedAt
+
+  @@index([tenantId])
+  @@index([unitId])
+}
+
+model RefCounter {
+  id      String @id @default(uuid())
+  prefix  String
+  current Int    @default(0)
+
+  tenantId String
+  unitId   String
+
+  @@unique([prefix, tenantId])
+}
+
+model Blog {
+  id          String   @id @default(uuid())
+  unitName    String?
+  title       String
+  date        String?
+  keywords    String?
+  description String?
+  images      String[] @default([])
+  status      String   @default("Draft")
+
+  tenantId String
+  unitId   String
+
+  isDeleted Boolean   @default(false)
+  deletedAt DateTime?
+  createdAt DateTime  @default(now())
+  updatedAt DateTime  @updatedAt
+
+  @@index([tenantId])
+  @@index([unitId])
+}
+
+// =======================
+// EXTENDED MASTER MODULES
+// =======================
+
+model ClientService {
+  id       String  @id @default(uuid())
+  code     String  @unique
+  name     String
+  category String
+  price    Float
+  status   Boolean @default(true)
+
+  tenantId  String
+  unitId    String
+  isDeleted Boolean   @default(false)
+  deletedAt DateTime?
+  createdAt DateTime  @default(now())
+  updatedAt DateTime  @updatedAt
+
+  enquiries Enquiry[]
+
+  @@index([tenantId])
+  @@index([unitId])
+}
+
+model Department {
+  id         String  @id @default(uuid())
+  code       String  @unique
+  name       String
+  head       String?
+  totalStaff Int     @default(0)
+  status     Boolean @default(true)
+
+  tenantId  String
+  unitId    String
+  isDeleted Boolean   @default(false)
+  deletedAt DateTime?
+  createdAt DateTime  @default(now())
+  updatedAt DateTime  @updatedAt
+
+  @@index([tenantId])
+  @@index([unitId])
+}
+
+model LabourService {
+  id     String  @id @default(uuid())
+  code   String  @unique
+  type   String
+  rate   Float
+  agency String?
+  status Boolean @default(true)
+
+  tenantId  String
+  unitId    String
+  isDeleted Boolean   @default(false)
+  deletedAt DateTime?
+  createdAt DateTime  @default(now())
+  updatedAt DateTime  @updatedAt
+
+  @@index([tenantId])
+  @@index([unitId])
+}
+
+model PaymentCategory {
+  id          String  @id @default(uuid())
+  code        String  @unique
+  name        String
+  type        String // "INCOME" or "EXPENSE"
+  description String?
+  status      Boolean @default(true)
+
+  tenantId  String
+  unitId    String
+  isDeleted Boolean   @default(false)
+  deletedAt DateTime?
+  createdAt DateTime  @default(now())
+  updatedAt DateTime  @updatedAt
+
+  @@index([tenantId])
+  @@index([unitId])
+}
+
+model Vendor {
+  id       String  @id @default(uuid())
+  code     String  @unique
+  name     String
+  category String
+  contact  String?
+  status   Boolean @default(true)
+
+  tenantId  String
+  unitId    String
+  isDeleted Boolean   @default(false)
+  deletedAt DateTime?
+  createdAt DateTime  @default(now())
+  updatedAt DateTime  @updatedAt
+
+  @@index([tenantId])
+  @@index([unitId])
+}
+
+model Room {
+  id       String  @id @default(uuid())
+  code     String  @unique
+  type     String
+  capacity Int     @default(1)
+  status   Boolean @default(true)
+
+  tenantId  String
+  unitId    String
+  isDeleted Boolean   @default(false)
+  deletedAt DateTime?
+  createdAt DateTime  @default(now())
+  updatedAt DateTime  @updatedAt
+
+  @@index([tenantId])
+  @@index([unitId])
+}
+
+model VitalSign {
+  id        String  @id @default(uuid())
+  patientId String
+  bp        String?
+  pulse     Int?
+  temp      Float?
+  spO2      Int?
+  notes     String?
+
+  recordedById String
+  tenantId     String
+  unitId       String
+  isDeleted    Boolean   @default(false)
+  deletedAt    DateTime?
+  createdAt    DateTime  @default(now())
+  updatedAt    DateTime  @updatedAt
+
+  @@index([patientId])
+  @@index([tenantId])
+}
+
+model WelcomeCall {
+  id       String    @id @default(uuid())
+  clientId String
+  status   String    @default("PENDING") // PENDING, COMPLETED
+  notes    String?
+  callDate DateTime?
+
+  tenantId  String
+  unitId    String
+  isDeleted Boolean   @default(false)
+  deletedAt DateTime?
+  createdAt DateTime  @default(now())
+  updatedAt DateTime  @updatedAt
+
+  @@index([clientId])
+  @@index([tenantId])
+}
+
+model Feedback {
+  id           String  @id @default(uuid())
+  allocationId String
+  rating       Int
+  comments     String?
+
+  tenantId  String
+  unitId    String
+  isDeleted Boolean   @default(false)
+  deletedAt DateTime?
+  createdAt DateTime  @default(now())
+  updatedAt DateTime  @updatedAt
+
+  @@index([allocationId])
+  @@index([tenantId])
+}
+
+// =======================
+// AUTOMATION ENGINE
+// =======================
+
+model AutomationRule {
+  id          String  @id @default(uuid())
+  module      String // enquiry / accounts / complaint / hr
+  name        String // Rule friendly name
+  conditions  Json // Structured { conditions: [], logic: "AND" }
+  action      String // add_score, set_priority, auto_approve, flag_anomaly
+  actionValue String? // The value produced by the action
+  priority    Int     @default(0) // Order of evaluation
+  status      Boolean @default(true)
+
+  // 🔹 Evolution: Dynamic Intelligence
+  baseWeight        Float @default(0)
+  performanceWeight Float @default(0)
+  conversionRate    Float @default(0)
+  triggerCount      Int   @default(0)
+  conversionCount   Int   @default(0)
+
+  tenantId String
+  unitId   String
+
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+
+  @@index([tenantId])
+  @@index([unitId])
+  @@index([module])
+}
+
+model AutomationWorkflow {
+  id           String  @id @default(uuid())
+  module       String
+  triggerEvent String
+  conditions   Json // Structured condition tree
+  actionType   String
+  actionConfig Json
+  status       Boolean @default(true)
+
+  tenantId String
+  unitId   String
+
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+
+  @@index([tenantId])
+  @@index([unitId])
+}
+
+model AutomationScore {
+  id           String @id @default(uuid())
+  entityId     String
+  module       String
+  score        Float
+  label        String // HOT, WARM, COLD
+  probability  Float  @default(0)
+  confidence   Float  @default(0)
+  historyScore Float  @default(0)
+  factors      Json?
+
+  tenantId    String
+  unitId      String
+  complaintId String?
+
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+
+  enquiry   Enquiry?   @relation(fields: [entityId], references: [id], map: "Score_Enquiry_FK")
+  complaint Complaint? @relation(fields: [complaintId], references: [id])
+
+  @@unique([entityId, module])
+  @@index([tenantId])
+  @@index([unitId])
+  @@index([entityId])
+  @@index([complaintId])
+}
+
+model AutomationTask {
+  id              String    @id @default(uuid())
+  entityId        String
+  module          String
+  taskType        String
+  description     String
+  assignedTo      String?
+  status          String    @default("PENDING")
+  priority        Int       @default(0)
+  attempts        Int       @default(0)
+  maxAttempts     Int       @default(3)
+  dependsOnTaskId String?
+  metadata        Json?
+  scheduledAt     DateTime?
+  completedAt     DateTime?
+  lastError       String?
+
+  tenantId String
+  unitId   String
+
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+
+  @@index([tenantId])
+  @@index([unitId])
+}
+
+model AutomationLog {
+  id              String   @id @default(uuid())
+  tenantId        String
+  unitId          String
+  module          String
+  entityId        String
+  event           String
+  score           Int?
+  label           String?
+  triggeredRules  Json? // Array of rule names/IDs
+  payload         Json? // Input data snapshot
+  traceData       Json? // 🔥 Execution trace breakdown
+  actionResults   Json?
+  feedbackSummary Json?
+  conversationId  String?
+  createdAt       DateTime @default(now())
+
+  @@index([tenantId])
+  @@index([unitId])
+  @@index([module])
+  @@index([entityId])
+}
+
+model AutomationSuggestion {
+  id             String   @id @default(uuid())
+  tenantId       String
+  unitId         String
+  module         String
+  conditions     Json
+  suggestedScore Int
+  confidence     Float?
+  status         String   @default("PENDING") // PENDING, APPROVED, REJECTED
+  reasoning      String?
+  createdAt      DateTime @default(now())
+
+  @@index([tenantId])
+  @@index([module])
+}
+
+// =======================
+// OMNICHANNEL LOGS
+// =======================
+
+model CommunicationLog {
+  id                String  @id @default(uuid())
+  entityType        String // e.g. 'enquiry'
+  entityId          String
+  conversationId    String?
+  channel           String // e.g. 'whatsapp', 'email', 'call'
+  channelId         String? // External ID
+  direction         String // 'INBOUND' or 'OUTBOUND'
+  message           String?
+  status            String?
+  templateName      String?
+  externalMessageId String?
+  metadata          Json?
+  rawPayload        Json?
+
+  tenantId String
+  unitId   String
+
+  createdAt DateTime @default(now())
+
+  @@index([tenantId])
+  @@index([unitId])
+  @@index([entityType, entityId])
+}
+
+enum ConversationStatus {
+  OPEN
+  WAITING
+  RESOLVED
+  CLOSED
+}
+
+enum MessageDirection {
+  INBOUND
+  OUTBOUND
+  SYSTEM
+}
+
+model Conversation {
+  id               String             @id @default(uuid())
+  entityType       String
+  entityId         String
+  clientId         String?
+  client           Client?            @relation(fields: [clientId], references: [id])
+  enquiryId        String?
+  enquiry          Enquiry?           @relation(fields: [enquiryId], references: [id])
+  channel          String
+  subject          String?
+  externalThreadId String?
+  lastMessageAt    DateTime?
+  status           ConversationStatus @default(OPEN)
+  metadata         Json?
+
+  tenantId  String
+  unitId    String
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+
+  messages Message[]
+
+  @@index([tenantId])
+  @@index([unitId])
+  @@index([entityType, entityId])
+}
+
+model Message {
+  id                String           @id @default(uuid())
+  conversationId    String
+  conversation      Conversation     @relation(fields: [conversationId], references: [id])
+  direction         MessageDirection
+  channel           String
+  sender            String?
+  recipient         String?
+  body              String
+  status            String?          @default("QUEUED")
+  templateName      String?
+  variant           String?
+  externalMessageId String?
+  metadata          Json?
+  sentAt            DateTime?
+  deliveredAt       DateTime?
+  readAt            DateTime?
+  createdAt         DateTime         @default(now())
+
+  tenantId String
+  unitId   String
+
+  @@index([tenantId])
+  @@index([unitId])
+  @@index([conversationId])
+}
+
+model RevenueForecast {
+  id               String   @id @default(uuid())
+  tenantId         String
+  unitId           String
+  forecastDate     DateTime
+  periodStart      DateTime
+  periodEnd        DateTime
+  scope            String   @default("MONTHLY")
+  expectedRevenue  Float?
+  projectedRevenue Float
+  baselineRevenue  Float
+  pipelineRevenue  Float
+  growthRate       Float
+  confidence       Float
+  contributingData Json?
+  reasoning        String?
+  createdAt        DateTime @default(now())
+  updatedAt        DateTime @updatedAt
+
+  @@index([tenantId])
+  @@index([unitId])
+  @@index([forecastDate])
+}
+
+model AutomationFeedback {
+  id                String   @id @default(uuid())
+  tenantId          String
+  unitId            String
+  module            String
+  entityId          String
+  event             String
+  responseRate      Float    @default(0)
+  conversionRate    Float    @default(0)
+  completionRate    Float    @default(0)
+  optimizationScore Float    @default(0)
+  signals           Json?
+  appliedChanges    Json?
+  createdAt         DateTime @default(now())
+  updatedAt         DateTime @updatedAt
+
+  @@index([tenantId])
+  @@index([unitId])
+  @@index([module])
+  @@index([entityId])
+}
+
+model AgentRun {
+  id             String    @id @default(uuid())
+  tenantId       String
+  unitId         String
+  module         String
+  entityId       String
+  agentType      String
+  priority       Int       @default(0)
+  status         String    @default("PENDING")
+  dependsOnRunId String?
+  attempt        Int       @default(0)
+  maxAttempts    Int       @default(3)
+  input          Json?
+  output         Json?
+  error          String?
+  startedAt      DateTime?
+  completedAt    DateTime?
+  createdAt      DateTime  @default(now())
+  updatedAt      DateTime  @updatedAt
+
+  @@index([tenantId])
+  @@index([unitId])
+  @@index([module])
+  @@index([entityId])
+  @@index([status])
+}
+
+model MessageTemplate {
+  id        String   @id @default(uuid())
+  tenantId  String
+  unitId    String
+  channel   String
+  name      String
+  subject   String?
+  content   String
+  variant   String?  @default("A")
+  status    String   @default("ACTIVE")
+  metadata  Json?
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+
+  @@unique([tenantId, unitId, channel, name, variant])
+  @@index([tenantId])
+  @@index([unitId])
+}
+
+model OutboundCampaign {
+  id             String    @id @default(uuid())
+  tenantId       String
+  unitId         String
+  name           String
+  channel        String
+  templateName   String
+  status         String    @default("DRAFT")
+  audienceType   String?
+  filters        Json?
+  sentCount      Int       @default(0)
+  deliveredCount Int       @default(0)
+  failedCount    Int       @default(0)
+  scheduledAt    DateTime?
+  launchedAt     DateTime?
+  createdAt      DateTime  @default(now())
+  updatedAt      DateTime  @updatedAt
+
+  @@index([tenantId])
+  @@index([unitId])
+  @@index([status])
+}
+
+// =======================
+// HEALTHCARE OPERATIONS
+// =======================
+
+model Patient {
+  id       String @id @default(uuid())
+  name     String
+  tenantId String
+  unitId   String
+
+  medications Medication[]
+  nutritions  Nutrition[]
+  laundries   Laundry[]
+  admissions  Admission[]
+
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+
+  @@index([tenantId])
+  @@index([unitId])
+}
+
+model Medication {
+  id        String  @id @default(uuid())
+  patientId String
+  patient   Patient @relation(fields: [patientId], references: [id])
+  name      String
+  dosage    String
+
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+}
+
+model Nutrition {
+  id        String  @id @default(uuid())
+  patientId String
+  patient   Patient @relation(fields: [patientId], references: [id])
+  calories  Int
+  dietPlan  String
+
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+}
+
+// =======================
+// FACILITY MANAGEMENT
+// =======================
+
+model Maintenance {
+  id       String @id @default(uuid())
+  type     String
+  status   String
+  unitId   String
+  tenantId String // Added for consistency
+
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+
+  @@index([tenantId])
+  @@index([unitId])
+}
+
+model Laundry {
+  id        String  @id @default(uuid())
+  patientId String
+  patient   Patient @relation(fields: [patientId], references: [id])
+  status    String
+  unitId    String // Added for consistency
+  tenantId  String // Added for consistency
+
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+
+  @@index([tenantId])
+  @@index([unitId])
+}
+
+// =======================
+// INVENTORY & PURCHASE
+// =======================
+
+model Product {
+  id       String @id @default(uuid())
+  name     String
+  category String // ration, fresh, assets
+  unitId   String
+  tenantId String
+
+  stocks    Stock[]
+  purchases Purchase[]
+
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+
+  @@index([tenantId])
+  @@index([unitId])
+}
+
+model Stock {
+  id        String  @id @default(uuid())
+  productId String
+  product   Product @relation(fields: [productId], references: [id])
+  quantity  Int
+  unitId    String
+  tenantId  String // Added for consistency
+
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+
+  @@unique([productId, tenantId, unitId])
+  @@index([tenantId])
+  @@index([unitId])
+}
+
+model Purchase {
+  id        String  @id @default(uuid())
+  productId String
+  product   Product @relation(fields: [productId], references: [id])
+  quantity  Int
+  vendor    String
+  tenantId  String
+  unitId    String // Added for consistency
+
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+
+  @@index([tenantId])
+  @@index([unitId])
+}
+
+// =======================
+// FINANCE & ACCOUNTS
+// =======================
+
+model Invoice {
+  id        String   @id @default(uuid())
+  amount    Float
+  status    String
+  tenantId  String
+  unitId    String
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+
+  @@index([tenantId])
+  @@index([unitId])
+}
+
+model Expense {
+  id       String @id @default(uuid())
+  amount   Float
+  category String
+  tenantId String
+  unitId   String
+
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+
+  @@index([tenantId])
+  @@index([unitId])
+}
+
+model Donor {
+  id                  String    @id @default(uuid())
+  donorNo             String    @unique
+  name                String
+  residentialAddress  String?
+  permanentAddress    String?
+  mobile              String?
+  whatsappNumber      String?
+  email               String?
+  panNumber           String?
+  fatherOrHusbandName String?
+  dob                 DateTime?
+  isCorporate         Boolean   @default(false)
+
+  tenantId  String
+  unitId    String?
+  createdBy String?
+  isDeleted Boolean   @default(false)
+  deletedAt DateTime?
+  createdAt DateTime  @default(now())
+  updatedAt DateTime  @updatedAt
+
+  donations Donation[]
+
+  @@index([tenantId, mobile])
+  @@index([tenantId, name])
+}
+
+model Donation {
+  id        String @id @default(uuid())
+  receiptNo String @unique
+  donorId   String
+  donor     Donor  @relation(fields: [donorId], references: [id])
+
+  date          DateTime @default(now())
+  amount        Float
+  amountInWords String?
+
+  paymentMode     String // CASH, UPI, NET_BANKING, CHEQUE, MATERIALS
+  materialDetails String?
+
+  category String? // FOOD, MEDICAL, CAMP, ADOPTION, EDUCATION, OTHERS
+  purpose  String? // BIRTHDAY, WEDDING, ANNIVERSARY, GENERAL
+
+  occasionName     String?
+  occasionRelation String?
+  occasionDate     DateTime?
+  occasionMobile   String?
+
+  recurringPlan String? // MONTHLY, QUARTERLY, HALF_YEARLY, YEARLY
+
+  taxDeduction Boolean @default(false)
+
+  receivedBy String?
+  verifiedBy String?
+
+  isReceiptSent Boolean   @default(false)
+  receiptSentAt DateTime?
+
+  tenantId  String
+  unitId    String?
+  createdBy String?
+  isDeleted Boolean   @default(false)
+  deletedAt DateTime?
+  createdAt DateTime  @default(now())
+  updatedAt DateTime  @updatedAt
+
+  references DonationReference[]
+
+  @@index([tenantId, date])
+  @@index([tenantId, receiptNo])
+}
+
+model DonationReference {
+  id         String   @id @default(uuid())
+  donationId String
+  donation   Donation @relation(fields: [donationId], references: [id])
+
+  name   String
+  mobile String?
+
+  tenantId  String
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+
+  @@index([tenantId, donationId])
+}

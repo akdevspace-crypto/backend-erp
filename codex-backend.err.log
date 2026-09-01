@@ -1,0 +1,32 @@
+[DB] Keep-alive ping failed PrismaClientKnownRequestError: 
+Invalid `prisma.$queryRaw()` invocation:
+
+
+Can't reach database server at `db.xciizdagxoagcsogdlsc.supabase.co:5432`
+
+Please make sure your database server is running at `db.xciizdagxoagcsogdlsc.supabase.co:5432`.
+    at $n.handleRequestError (D:\ERP\Backend\src\generated\prisma\runtime\library.js:121:7315)
+    at $n.handleAndLogRequestError (D:\ERP\Backend\src\generated\prisma\runtime\library.js:121:6623)
+    at $n.request (D:\ERP\Backend\src\generated\prisma\runtime\library.js:121:6307)
+    at async l (D:\ERP\Backend\src\generated\prisma\runtime\library.js:130:9633)
+    at async Timeout._onTimeout (D:\ERP\Backend\src\app\prismaKeepAlive.ts:10:13) {
+  code: 'P1001',
+  clientVersion: '5.22.0',
+  meta: {
+    database_host: 'db.xciizdagxoagcsogdlsc.supabase.co',
+    database_port: 5432
+  }
+}
+Error: Invalid Aadhaar number. Please provide a valid 12-digit Aadhaar number.
+    at buildHttpError (file:///D:/ERP/Backend/src/modules/hr/service.js:9:19)
+    at validateStaffCompliance (file:///D:/ERP/Backend/src/modules/hr/service.js:321:15)
+    at createStaff (file:///D:/ERP/Backend/src/modules/hr/service.js:605:5)
+    at handleCreateStaff (file:///D:/ERP/Backend/src/modules/hr/controller.js:59:27)
+    at Layer.handleRequest (D:\ERP\Backend\node_modules\router\lib\layer.js:152:17)
+    at next (D:\ERP\Backend\node_modules\router\lib\route.js:157:13)
+    at done (D:\ERP\Backend\node_modules\multer\lib\make-middleware.js:69:7)
+    at indicateDone (D:\ERP\Backend\node_modules\multer\lib\make-middleware.js:73:68)
+    at Multipart.<anonymous> (D:\ERP\Backend\node_modules\multer\lib\make-middleware.js:243:7)
+    at Multipart.emit (node:events:518:28) {
+  status: 400
+}

@@ -1,0 +1,1154 @@
+[
+  {
+    "id": "772c7ba8-e7af-4b2e-bc73-8068505b9e52",
+    "metadata": {
+      "gender": "Male",
+      "address": "rdgrt",
+      "payroll": {
+        "salaryType": "Monthly",
+        "monthlySalary": 18000,
+        "fixedAllowance": 2500,
+        "fixedDeduction": 998
+      },
+      "aadhaarNo": "752994481847",
+      "documents": {
+        "aadhaarDocument": {
+          "status": "PENDING_VERIFICATION",
+          "fileUrl": "https://xciizdagxoagcsogdlsc.supabase.co/storage/v1/object/public/Erp_software/1780091363583-Screenshot__2_.png",
+          "fileName": "Screenshot (2).png",
+          "fileSize": 479530,
+          "fileType": "image/png",
+          "uploadedAt": "2026-05-29T21:49:25.012Z"
+        }
+      },
+      "bloodGroup": "AB-",
+      "dateOfBirth": "2026-05-01",
+      "languageKnown": "tamil",
+      "maritalStatus": "Married",
+      "officialEmail": "rajan.watchman@gmail.com",
+      "officialPhone": "9087987653",
+      "aadhaarVerification": {
+        "status": "PENDING_REVIEW",
+        "aadhaarNo": "752994481847",
+        "updatedAt": "2026-05-29T21:49:25.012Z",
+        "numberVerified": true,
+        "documentSubmitted": true
+      }
+    }
+  },
+  {
+    "id": "42ef4ced-33d4-4b6c-8cbd-fe0bace5530b",
+    "metadata": {
+      "gender": "Male",
+      "address": "xgdf",
+      "payroll": {
+        "salaryType": "Monthly",
+        "monthlySalary": 35000,
+        "fixedAllowance": 2500,
+        "fixedDeduction": 1500
+      },
+      "aadhaarNo": "752994481847",
+      "documents": {
+        "aadhaarDocument": {
+          "status": "PENDING_VERIFICATION",
+          "fileUrl": "https://xciizdagxoagcsogdlsc.supabase.co/storage/v1/object/public/Erp_software/1780090492552-Screenshot__2_.png",
+          "fileName": "Screenshot (2).png",
+          "fileSize": 479530,
+          "fileType": "image/png",
+          "uploadedAt": "2026-05-29T21:34:53.979Z"
+        }
+      },
+      "bloodGroup": "O-",
+      "dateOfBirth": "2026-06-04",
+      "languageKnown": "tamil",
+      "maritalStatus": "",
+      "officialEmail": "gilbert.doctor@gmail.com",
+      "officialPhone": "9876543250",
+      "aadhaarVerification": {
+        "status": "PENDING_REVIEW",
+        "aadhaarNo": "752994481847",
+        "updatedAt": "2026-05-29T21:34:53.979Z",
+        "numberVerified": true,
+        "documentSubmitted": true
+      }
+    }
+  },
+  {
+    "id": "5cc18690-c2de-4fdd-ab1c-68b8579ffe79",
+    "metadata": {
+      "gender": "Female",
+      "address": "Dsgfd",
+      "payroll": {
+        "salaryType": "Monthly",
+        "monthlySalary": 50000,
+        "fixedAllowance": 8000,
+        "fixedDeduction": 2500
+      },
+      "aadhaarNo": "752994481847",
+      "documents": {
+        "aadhaarDocument": {
+          "status": "PENDING_VERIFICATION",
+          "fileUrl": "https://xciizdagxoagcsogdlsc.supabase.co/storage/v1/object/public/Erp_software/1780090865064-Screenshot__2_.png",
+          "fileName": "Screenshot (2).png",
+          "fileSize": 479530,
+          "fileType": "image/png",
+          "uploadedAt": "2026-05-29T21:41:06.183Z"
+        }
+      },
+      "bloodGroup": "O+",
+      "dateOfBirth": "2026-04-26",
+      "languageKnown": "english",
+      "maritalStatus": "Single",
+      "officialEmail": "chitra.doctor@gmail.com",
+      "officialPhone": "9876234565",
+      "aadhaarVerification": {
+        "status": "PENDING_REVIEW",
+        "aadhaarNo": "752994481847",
+        "updatedAt": "2026-05-29T21:41:06.183Z",
+        "numberVerified": true,
+        "documentSubmitted": true
+      }
+    }
+  },
+  {
+    "id": "224c5730-085c-4294-81e6-daac3e9180cf",
+    "metadata": {
+      "gender": "Male",
+      "address": "qw3t354eerw",
+      "payroll": {
+        "salaryType": "Monthly",
+        "monthlySalary": 23000,
+        "fixedAllowance": 1400,
+        "fixedDeduction": 1198
+      },
+      "aadhaarNo": "752994481847",
+      "documents": {
+        "aadhaarDocument": {
+          "status": "PENDING_VERIFICATION",
+          "fileUrl": "https://xciizdagxoagcsogdlsc.supabase.co/storage/v1/object/public/Erp_software/1784811953947-Screenshot__25_.png",
+          "fileName": "Screenshot (25).png",
+          "fileSize": 226306,
+          "fileType": "image/png",
+          "uploadedAt": "2026-07-23T13:05:54.930Z"
+        }
+      },
+      "bloodGroup": "AB-",
+      "dateOfBirth": "2026-07-25",
+      "languageKnown": "tamil",
+      "maritalStatus": "Married",
+      "officialEmail": "Aaron.official@gmail.com",
+      "officialPhone": "7678678789",
+      "aadhaarVerification": {
+        "status": "PENDING_REVIEW",
+        "aadhaarNo": "752994481847",
+        "updatedAt": "2026-07-23T13:05:54.930Z",
+        "numberVerified": true,
+        "documentSubmitted": true
+      }
+    }
+  },
+  {
+    "id": "be60ed9d-f1a5-4b15-b717-15974c1fdc42",
+    "metadata": {
+      "gender": "Female",
+      "address": "fdhrtjn",
+      "payroll": {
+        "salaryType": "Monthly",
+        "monthlySalary": 20000,
+        "fixedAllowance": 5000,
+        "fixedDeduction": 2500
+      },
+      "aadhaarNo": "752994481847",
+      "documents": {
+        "aadhaarDocument": {
+          "status": "PENDING_VERIFICATION",
+          "fileUrl": "https://xciizdagxoagcsogdlsc.supabase.co/storage/v1/object/public/Erp_software/1780090680931-Screenshot__2_.png",
+          "fileName": "Screenshot (2).png",
+          "fileSize": 479530,
+          "fileType": "image/png",
+          "uploadedAt": "2026-05-29T21:38:02.271Z"
+        }
+      },
+      "bloodGroup": "AB+",
+      "dateOfBirth": "2026-05-27",
+      "languageKnown": "english",
+      "maritalStatus": "Married",
+      "officialEmail": "Olivia.nurse@gmail.com",
+      "officialPhone": "7676987654",
+      "aadhaarVerification": {
+        "status": "PENDING_REVIEW",
+        "aadhaarNo": "752994481847",
+        "updatedAt": "2026-05-29T21:38:02.271Z",
+        "numberVerified": true,
+        "documentSubmitted": true
+      }
+    }
+  },
+  {
+    "id": "ea84112f-bd93-4f6f-b406-c66afae5b00e",
+    "metadata": {
+      "gender": "Female",
+      "address": "Trichy",
+      "payroll": {
+        "salaryType": "Monthly",
+        "monthlySalary": 25000,
+        "fixedAllowance": 2500,
+        "fixedDeduction": 1250
+      },
+      "aadhaarNo": "752994481847",
+      "documents": {
+        "aadhaarDocument": {
+          "status": "PENDING_VERIFICATION",
+          "fileUrl": "https://xciizdagxoagcsogdlsc.supabase.co/storage/v1/object/public/Erp_software/1786157232760-Screenshot__27_.png",
+          "fileName": "Screenshot (27).png",
+          "fileSize": 596835,
+          "fileType": "image/png",
+          "uploadedAt": "2026-08-08T02:47:14.065Z"
+        }
+      },
+      "bloodGroup": "O+",
+      "dateOfBirth": "2026-08-04",
+      "languageKnown": "tamil",
+      "maritalStatus": "Single",
+      "menuPrivilege": {
+        "permissions": {
+          "Attendance": {
+            "view": false,
+            "createUpdate": false
+          },
+          "Daily Task": {
+            "view": true,
+            "createUpdate": true
+          },
+          "My Profile": {
+            "view": true,
+            "createUpdate": true
+          },
+          "Notifications": {
+            "view": true,
+            "createUpdate": true
+          },
+          "Gate Management": {
+            "view": false,
+            "createUpdate": false
+          },
+          "Visitor Management": {
+            "view": true,
+            "createUpdate": true
+          },
+          "Profile Task Dashboard": {
+            "view": true,
+            "createUpdate": true
+          }
+        },
+        "configuredAt": "2026-08-08T04:50:45.859Z",
+        "unitAccessMode": "individual",
+        "selectedUnitIds": [
+          "253cbb92-5d93-4b78-ad31-cef14827dee5"
+        ]
+      },
+      "officialEmail": "shabana@gmail.com",
+      "officialPhone": "9363341709",
+      "aadhaarVerification": {
+        "status": "PENDING_REVIEW",
+        "aadhaarNo": "752994481847",
+        "updatedAt": "2026-08-08T02:47:14.065Z",
+        "numberVerified": true,
+        "documentSubmitted": true
+      }
+    }
+  },
+  {
+    "id": "e185e311-7aa2-4d51-9706-85ba3410788e",
+    "metadata": {
+      "gender": "Female",
+      "address": "fhjy",
+      "payroll": {
+        "salaryType": "Monthly",
+        "monthlySalary": 25000,
+        "fixedAllowance": 2500,
+        "fixedDeduction": 1300
+      },
+      "aadhaarNo": "752994481847",
+      "documents": {
+        "aadhaarDocument": {
+          "status": "PENDING_VERIFICATION",
+          "fileUrl": "https://xciizdagxoagcsogdlsc.supabase.co/storage/v1/object/public/Erp_software/1780463507953-Screenshot__2_.png",
+          "fileName": "Screenshot (2).png",
+          "fileSize": 479530,
+          "fileType": "image/png",
+          "uploadedAt": "2026-06-03T05:11:49.004Z"
+        }
+      },
+      "bloodGroup": "AB+",
+      "dateOfBirth": "2026-05-31",
+      "languageKnown": "",
+      "maritalStatus": "Married",
+      "officialEmail": "elena.official@gmail.com",
+      "officialPhone": "7653452660",
+      "aadhaarVerification": {
+        "status": "PENDING_REVIEW",
+        "aadhaarNo": "752994481847",
+        "updatedAt": "2026-06-03T05:11:49.004Z",
+        "numberVerified": true,
+        "documentSubmitted": true
+      }
+    }
+  },
+  {
+    "id": "29393f1b-2eff-4b35-9bf9-fbaf06e63143",
+    "metadata": {
+      "gender": "Female",
+      "address": "wsfretjh",
+      "payroll": {
+        "salaryType": "Monthly",
+        "monthlySalary": 20000,
+        "fixedAllowance": 1800,
+        "fixedDeduction": 900
+      },
+      "aadhaarNo": "752994481847",
+      "documents": {
+        "aadhaarDocument": {
+          "status": "PENDING_VERIFICATION",
+          "fileUrl": "https://xciizdagxoagcsogdlsc.supabase.co/storage/v1/object/public/Erp_software/1780463730654-Screenshot__2_.png",
+          "fileName": "Screenshot (2).png",
+          "fileSize": 479530,
+          "fileType": "image/png",
+          "uploadedAt": "2026-06-03T05:15:31.609Z"
+        }
+      },
+      "bloodGroup": "B+",
+      "dateOfBirth": "2026-05-24",
+      "languageKnown": "",
+      "maritalStatus": "Married",
+      "officialEmail": "georgia.official@gmail.com",
+      "officialPhone": "9863425620",
+      "aadhaarVerification": {
+        "status": "PENDING_REVIEW",
+        "aadhaarNo": "752994481847",
+        "updatedAt": "2026-06-03T05:15:31.609Z",
+        "numberVerified": true,
+        "documentSubmitted": true
+      }
+    }
+  },
+  {
+    "id": "be973ad5-8a14-4931-a781-61a3126a42f6",
+    "metadata": {
+      "gender": "Male",
+      "address": "fdbhngj",
+      "payroll": {
+        "salaryType": "Monthly",
+        "monthlySalary": 25000,
+        "fixedAllowance": 4000,
+        "fixedDeduction": 1498
+      },
+      "aadhaarNo": "752994481847",
+      "documents": {
+        "aadhaarDocument": {
+          "status": "PENDING_VERIFICATION",
+          "fileUrl": "https://xciizdagxoagcsogdlsc.supabase.co/storage/v1/object/public/Erp_software/1782214258839-Screenshot__1_.png",
+          "fileName": "Screenshot (1).png",
+          "fileSize": 535122,
+          "fileType": "image/png",
+          "uploadedAt": "2026-06-23T11:31:03.082Z"
+        }
+      },
+      "bloodGroup": "A-",
+      "dateOfBirth": "2026-05-31",
+      "languageKnown": "tamil",
+      "maritalStatus": "Married",
+      "officialEmail": "Lenin26@gmail.com",
+      "officialPhone": "9876543210",
+      "aadhaarVerification": {
+        "status": "PENDING_REVIEW",
+        "aadhaarNo": "752994481847",
+        "updatedAt": "2026-06-23T11:31:03.082Z",
+        "numberVerified": true,
+        "documentSubmitted": true
+      }
+    }
+  },
+  {
+    "id": "4c8068b5-61cc-463f-a103-a0a64de34307",
+    "metadata": {
+      "gender": "Male",
+      "address": "fdbhngjgfhj",
+      "payroll": {
+        "salaryType": "Monthly",
+        "monthlySalary": 20000,
+        "fixedAllowance": 2000,
+        "fixedDeduction": 2000
+      },
+      "aadhaarNo": "752994481847",
+      "documents": {
+        "aadhaarDocument": {
+          "status": "PENDING_VERIFICATION",
+          "fileUrl": "https://xciizdagxoagcsogdlsc.supabase.co/storage/v1/object/public/Erp_software/1782214459350-Screenshot__3_.png",
+          "fileName": "Screenshot (3).png",
+          "fileSize": 765161,
+          "fileType": "image/png",
+          "uploadedAt": "2026-06-23T11:34:24.115Z"
+        }
+      },
+      "bloodGroup": "B-",
+      "dateOfBirth": "2026-05-31",
+      "languageKnown": "Tamil",
+      "maritalStatus": "Married",
+      "officialEmail": "Kannan@gmail.com",
+      "officialPhone": "9087987653",
+      "aadhaarVerification": {
+        "status": "PENDING_REVIEW",
+        "aadhaarNo": "752994481847",
+        "updatedAt": "2026-06-23T11:34:24.115Z",
+        "numberVerified": true,
+        "documentSubmitted": true
+      }
+    }
+  },
+  {
+    "id": "1ba47dd5-dc72-4d27-a032-62823f2588c1",
+    "metadata": {
+      "gender": "Female",
+      "address": "Nagarcoil",
+      "payroll": {
+        "salaryType": "Monthly",
+        "monthlySalary": 27000,
+        "fixedAllowance": 1500,
+        "fixedDeduction": 710
+      },
+      "aadhaarNo": "752994481847",
+      "documents": {
+        "aadhaarDocument": {
+          "status": "PENDING_VERIFICATION",
+          "fileUrl": "https://xciizdagxoagcsogdlsc.supabase.co/storage/v1/object/public/Erp_software/1786180655399-Screenshot__27_.png",
+          "fileName": "Screenshot (27).png",
+          "fileSize": 596835,
+          "fileType": "image/png",
+          "uploadedAt": "2026-08-08T09:17:37.353Z"
+        }
+      },
+      "bloodGroup": "AB+",
+      "dateOfBirth": "1992-06-24",
+      "languageKnown": "English",
+      "maritalStatus": "",
+      "officialEmail": "leelavathi.employee@gmail.com",
+      "officialPhone": "9876546750",
+      "aadhaarVerification": {
+        "status": "PENDING_REVIEW",
+        "aadhaarNo": "752994481847",
+        "updatedAt": "2026-08-08T09:17:37.354Z",
+        "numberVerified": true,
+        "documentSubmitted": true
+      }
+    }
+  },
+  {
+    "id": "52ca551b-d61d-4cc4-a55e-044a05d90987",
+    "metadata": {
+      "gender": "Female",
+      "address": "Trichy",
+      "payroll": {
+        "salaryType": "Monthly",
+        "monthlySalary": 25000,
+        "fixedAllowance": 2500,
+        "fixedDeduction": 1250
+      },
+      "aadhaarNo": "752994481847",
+      "documents": {
+        "aadhaarDocument": {
+          "status": "PENDING_VERIFICATION",
+          "fileUrl": "https://xciizdagxoagcsogdlsc.supabase.co/storage/v1/object/public/Erp_software/1786181338424-Screenshot__27_.png",
+          "fileName": "Screenshot (27).png",
+          "fileSize": 596835,
+          "fileType": "image/png",
+          "uploadedAt": "2026-08-08T09:29:00.405Z"
+        }
+      },
+      "bloodGroup": "",
+      "dateOfBirth": "2026-07-27",
+      "languageKnown": "tamil",
+      "maritalStatus": "Married",
+      "officialEmail": "anitha.nurse@gmail.com",
+      "officialPhone": "9543246780",
+      "aadhaarVerification": {
+        "status": "PENDING_REVIEW",
+        "aadhaarNo": "752994481847",
+        "updatedAt": "2026-08-08T09:29:00.405Z",
+        "numberVerified": true,
+        "documentSubmitted": true
+      }
+    }
+  },
+  {
+    "id": "d18c8007-0fe3-40fa-928a-174c5c16dde7",
+    "metadata": {
+      "gender": "Male",
+      "address": "fdbhngjgfhjshghf",
+      "payroll": {
+        "salaryType": "Monthly",
+        "monthlySalary": 20000,
+        "fixedAllowance": 2000,
+        "fixedDeduction": 2000
+      },
+      "aadhaarNo": "752994481847",
+      "documents": {
+        "aadhaarDocument": {
+          "status": "PENDING_VERIFICATION",
+          "fileUrl": "https://xciizdagxoagcsogdlsc.supabase.co/storage/v1/object/public/Erp_software/1782214946706-Screenshot__1_.png",
+          "fileName": "Screenshot (1).png",
+          "fileSize": 535122,
+          "fileType": "image/png",
+          "uploadedAt": "2026-06-23T11:42:29.847Z"
+        }
+      },
+      "bloodGroup": "AB-",
+      "dateOfBirth": "2026-05-26",
+      "languageKnown": "tamil",
+      "maritalStatus": "Married",
+      "officialEmail": "johnson@gmail.com",
+      "officialPhone": "9876543215",
+      "aadhaarVerification": {
+        "status": "PENDING_REVIEW",
+        "aadhaarNo": "752994481847",
+        "updatedAt": "2026-06-23T11:42:29.847Z",
+        "numberVerified": true,
+        "documentSubmitted": true
+      }
+    }
+  },
+  {
+    "id": "0bea915b-e326-4fe6-b7f4-a7f84b9258ea",
+    "metadata": {
+      "gender": "Male",
+      "address": "Trichy",
+      "payroll": {
+        "records": {
+          "2026-08": {
+            "month": "2026-08",
+            "netPay": 0,
+            "status": "Processed",
+            "grossPay": 27500,
+            "absentDays": 31,
+            "baseSalary": 25000,
+            "deductions": 28750,
+            "presentDays": 0,
+            "processedAt": "2026-08-20T08:59:49.154Z",
+            "processedBy": "179aeabf-a39b-40c1-bdea-19dd780bcb06",
+            "workingDays": 31,
+            "fixedAllowance": 2500,
+            "fixedDeduction": 1250,
+            "approvedLeaveDays": 0
+          }
+        },
+        "salaryType": "Monthly",
+        "monthlySalary": 25000,
+        "fixedAllowance": 2500,
+        "fixedDeduction": 1250
+      },
+      "aadhaarNo": "752994481847",
+      "documents": {
+        "aadhaarDocument": {
+          "status": "PENDING_VERIFICATION",
+          "fileUrl": "https://xciizdagxoagcsogdlsc.supabase.co/storage/v1/object/public/Erp_software/1786180983548-Screenshot__27_.png",
+          "fileName": "Screenshot (27).png",
+          "fileSize": 596835,
+          "fileType": "image/png",
+          "uploadedAt": "2026-08-08T09:23:05.250Z"
+        }
+      },
+      "bloodGroup": "B+",
+      "dateOfBirth": "2026-09-03",
+      "languageKnown": "tamil",
+      "maritalStatus": "Married",
+      "officialEmail": "anandh.employee@gmail.com",
+      "officialPhone": "6787654320",
+      "aadhaarVerification": {
+        "status": "PENDING_REVIEW",
+        "aadhaarNo": "752994481847",
+        "updatedAt": "2026-08-08T09:23:05.250Z",
+        "numberVerified": true,
+        "documentSubmitted": true
+      }
+    }
+  },
+  {
+    "id": "bb9db816-98b6-4f35-ad64-b5d07a03dde5",
+    "metadata": {
+      "gender": "Female",
+      "address": "Trichy",
+      "payroll": {
+        "salaryType": "Monthly",
+        "monthlySalary": 25000,
+        "fixedAllowance": 2500,
+        "fixedDeduction": 1250
+      },
+      "aadhaarNo": "752994481847",
+      "documents": {
+        "aadhaarDocument": {
+          "status": "PENDING_VERIFICATION",
+          "fileUrl": "https://xciizdagxoagcsogdlsc.supabase.co/storage/v1/object/public/Erp_software/1786181533169-Screenshot__27_.png",
+          "fileName": "Screenshot (27).png",
+          "fileSize": 596835,
+          "fileType": "image/png",
+          "uploadedAt": "2026-08-08T09:32:14.477Z"
+        }
+      },
+      "bloodGroup": "B+",
+      "dateOfBirth": "2026-08-26",
+      "languageKnown": "tamil",
+      "maritalStatus": "Single",
+      "officialEmail": "aparna.employee@gmail.com",
+      "officialPhone": "8956432780",
+      "aadhaarVerification": {
+        "status": "PENDING_REVIEW",
+        "aadhaarNo": "752994481847",
+        "updatedAt": "2026-08-08T09:32:14.477Z",
+        "numberVerified": true,
+        "documentSubmitted": true
+      }
+    }
+  },
+  {
+    "id": "75c032f0-f7fb-4285-9a11-3cbb2082ca1e",
+    "metadata": {
+      "menuPrivilege": {
+        "permissions": {
+          "Payroll": {
+            "view": true,
+            "createUpdate": true
+          },
+          "Attendance": {
+            "view": true,
+            "createUpdate": true
+          },
+          "HR Reports": {
+            "view": true,
+            "createUpdate": true
+          },
+          "Labour Mgt": {
+            "view": true,
+            "createUpdate": true
+          },
+          "Job Enquiry": {
+            "view": true,
+            "createUpdate": true
+          },
+          "Recruitment": {
+            "view": true,
+            "createUpdate": true
+          },
+          "Shift Roster": {
+            "view": true,
+            "createUpdate": true
+          },
+          "Human Resource": {
+            "view": true,
+            "createUpdate": true
+          },
+          "Holiday Mapping": {
+            "view": true,
+            "createUpdate": true
+          },
+          "Staff Privilege": {
+            "view": true,
+            "createUpdate": true
+          },
+          "Document Tracker": {
+            "view": true,
+            "createUpdate": true
+          },
+          "Leave Management": {
+            "view": true,
+            "createUpdate": true
+          },
+          "Staff Management": {
+            "view": true,
+            "createUpdate": true
+          },
+          "Training Compliance": {
+            "view": true,
+            "createUpdate": true
+          },
+          "HR Manager Dashboard": {
+            "view": true,
+            "createUpdate": true
+          }
+        },
+        "configuredAt": "2026-08-21T05:41:52.035Z",
+        "unitAccessMode": "all",
+        "selectedUnitIds": []
+      }
+    }
+  },
+  {
+    "id": "4078ef11-5a53-4552-821f-0765157028d2",
+    "metadata": {
+      "exit": {
+        "date": "2026-06-03",
+        "reason": "Drunk addict",
+        "remarks": "not preferable",
+        "recordedAt": "2026-05-29T21:29:58.967Z"
+      },
+      "gender": "Male",
+      "address": "xgdf",
+      "payroll": {
+        "salaryType": "Monthly",
+        "monthlySalary": 35000,
+        "fixedAllowance": 2500,
+        "fixedDeduction": 1500
+      },
+      "aadhaarNo": "752994481847",
+      "documents": {
+        "aadhaarDocument": {
+          "status": "PENDING_VERIFICATION",
+          "fileUrl": "https://xciizdagxoagcsogdlsc.supabase.co/storage/v1/object/public/Erp_software/1779056198037-download__3_.jpg",
+          "fileName": "download (3).jpg",
+          "fileSize": 18419,
+          "fileType": "image/jpeg",
+          "uploadedAt": "2026-05-17T22:16:39.086Z"
+        }
+      },
+      "bloodGroup": "AB-",
+      "dateOfBirth": "2026-06-04",
+      "languageKnown": "tamil",
+      "maritalStatus": "Married",
+      "officialEmail": "shanandreson@gmail.com",
+      "officialPhone": "9876543210",
+      "finalSettlement": {
+        "status": "Paid",
+        "payable": 45000,
+        "allowance": 40000,
+        "deduction": 10000,
+        "lastSalary": 15000,
+        "recordedAt": "2026-05-29T21:29:58.967Z"
+      },
+      "aadhaarVerification": {
+        "status": "PENDING_REVIEW",
+        "aadhaarNo": "752994481847",
+        "updatedAt": "2026-05-17T22:16:39.086Z",
+        "numberVerified": true,
+        "documentSubmitted": true
+      }
+    }
+  },
+  {
+    "id": "f3dcccc8-0501-4be4-9587-d0dbae8628c6",
+    "metadata": {
+      "gender": "Male",
+      "address": "Trichy",
+      "payroll": {
+        "salaryType": "Monthly",
+        "monthlySalary": 2500,
+        "fixedAllowance": 1500,
+        "fixedDeduction": 800
+      },
+      "aadhaarNo": "752994481847",
+      "documents": {
+        "aadhaarDocument": {
+          "status": "PENDING_VERIFICATION",
+          "fileUrl": "https://xciizdagxoagcsogdlsc.supabase.co/storage/v1/object/public/Erp_software/1787292962385-ERP_System_Wide_Health_Report_With_Verification.pdf",
+          "fileName": "ERP_System_Wide_Health_Report_With_Verification.pdf",
+          "fileSize": 25874,
+          "fileType": "application/pdf",
+          "uploadedAt": "2026-08-21T06:16:03.657Z"
+        }
+      },
+      "bloodGroup": "",
+      "dateOfBirth": "2026-07-30",
+      "languageKnown": "tamil",
+      "maritalStatus": "",
+      "officialEmail": "testing1.official@gmail.com",
+      "officialPhone": "",
+      "aadhaarVerification": {
+        "status": "PENDING_REVIEW",
+        "aadhaarNo": "752994481847",
+        "updatedAt": "2026-08-21T06:16:03.657Z",
+        "numberVerified": true,
+        "documentSubmitted": true
+      }
+    }
+  },
+  {
+    "id": "4a352efb-d59b-4fb5-b5d9-977109f30d89",
+    "metadata": {
+      "gender": "Female",
+      "address": "hgtj",
+      "payroll": {
+        "records": {
+          "2026-08": {
+            "month": "2026-08",
+            "netPay": 0,
+            "status": "Processed",
+            "grossPay": 19800,
+            "absentDays": 30,
+            "baseSalary": 18000,
+            "deductions": 20061,
+            "presentDays": 1,
+            "processedAt": "2026-08-21T19:15:57.926Z",
+            "processedBy": "179aeabf-a39b-40c1-bdea-19dd780bcb06",
+            "workingDays": 31,
+            "fixedAllowance": 1800,
+            "fixedDeduction": 900,
+            "approvedLeaveDays": 0
+          }
+        },
+        "salaryType": "Monthly",
+        "monthlySalary": 18000,
+        "fixedAllowance": 1800,
+        "fixedDeduction": 900
+      },
+      "aadhaarNo": "752994481847",
+      "documents": {
+        "aadhaarDocument": {
+          "status": "PENDING_VERIFICATION",
+          "fileUrl": "https://xciizdagxoagcsogdlsc.supabase.co/storage/v1/object/public/Erp_software/1780463880532-Screenshot__2_.png",
+          "fileName": "Screenshot (2).png",
+          "fileSize": 479530,
+          "fileType": "image/png",
+          "uploadedAt": "2026-06-03T05:18:01.530Z"
+        }
+      },
+      "attendance": {
+        "logs": [
+          {
+            "id": "07557e6c-696e-4dbe-bb6a-c6ac86e740a8",
+            "date": "2026-08-06",
+            "note": "",
+            "status": "Present",
+            "checkIn": "2026-08-06T18:47:36.586Z",
+            "updatedAt": "2026-08-06T18:47:36.586Z"
+          }
+        ]
+      },
+      "bloodGroup": "O+",
+      "dateOfBirth": "2026-05-14",
+      "languageKnown": "",
+      "maritalStatus": "Single",
+      "officialEmail": "raphael.official@gmail.com",
+      "officialPhone": "6735241352",
+      "aadhaarVerification": {
+        "status": "PENDING_REVIEW",
+        "aadhaarNo": "752994481847",
+        "updatedAt": "2026-06-03T05:18:01.530Z",
+        "numberVerified": true,
+        "documentSubmitted": true
+      }
+    }
+  },
+  {
+    "id": "e67b0f6f-f0ef-4cb7-acc7-d59fe25a93df",
+    "metadata": {
+      "gender": "Male",
+      "address": "sdgg",
+      "aadhaarNo": "752994481847",
+      "documents": {
+        "resumeDocument": {
+          "status": "UPLOADED",
+          "fileUrl": "https://xciizdagxoagcsogdlsc.supabase.co/storage/v1/object/public/Erp_software/1779035804591-Visily-Export_23-01-2026_01-57.pdf",
+          "fileName": "Visily-Export_23-01-2026_01-57.pdf",
+          "fileSize": 2336192,
+          "fileType": "application/pdf",
+          "uploadedAt": "2026-05-17T16:36:45.387Z"
+        },
+        "aadhaarDocument": {
+          "status": "PENDING_VERIFICATION",
+          "fileUrl": "https://xciizdagxoagcsogdlsc.supabase.co/storage/v1/object/public/Erp_software/1779035803674-download__3_.jpg",
+          "fileName": "download (3).jpg",
+          "fileSize": 18419,
+          "fileType": "image/jpeg",
+          "uploadedAt": "2026-05-17T16:36:44.591Z"
+        }
+      },
+      "attendance": {
+        "logs": [
+          {
+            "id": "aa99715e-5e25-492b-8eb1-ff01eb1f07d3",
+            "date": "2026-05-25",
+            "note": "",
+            "status": "Present",
+            "checkIn": "2026-05-25T08:02:31.899Z",
+            "checkOut": "2026-05-25T08:07:17.548Z",
+            "updatedAt": "2026-05-25T08:07:17.548Z"
+          }
+        ]
+      },
+      "bloodGroup": "B-",
+      "dateOfBirth": "2026-05-19",
+      "languageKnown": "tamil",
+      "leaveRequests": [
+        {
+          "id": "4aea185a-1587-49ab-847f-9d108a9d1437",
+          "reason": "nvb ",
+          "status": "PENDING",
+          "toDate": "2026-05-25",
+          "fromDate": "2026-05-24",
+          "leaveType": "Sick Leave",
+          "requestedAt": "2026-05-24T18:31:08.224Z",
+          "requestedBy": "e21ffe0f-4bfc-4b0a-9ec4-f75efcc45da6"
+        }
+      ],
+      "maritalStatus": "Single",
+      "officialEmail": "xyz@gmail.com",
+      "officialPhone": "9876543215",
+      "aadhaarVerification": {
+        "status": "PENDING_REVIEW",
+        "aadhaarNo": "752994481847",
+        "updatedAt": "2026-05-17T16:36:45.387Z",
+        "numberVerified": true,
+        "documentSubmitted": true
+      }
+    }
+  },
+  {
+    "id": "f71ff119-c73b-4e96-ac1b-ef21a90c95ba",
+    "metadata": {
+      "gender": "Male",
+      "address": "sdgg",
+      "aadhaarNo": "752994481847",
+      "documents": {
+        "resumeDocument": {
+          "status": "UPLOADED",
+          "fileUrl": "https://xciizdagxoagcsogdlsc.supabase.co/storage/v1/object/public/Erp_software/1779056563745-Visily-Export_23-01-2026_01-57.pdf",
+          "fileName": "Visily-Export_23-01-2026_01-57.pdf",
+          "fileSize": 2336192,
+          "fileType": "application/pdf",
+          "uploadedAt": "2026-05-17T22:22:44.759Z"
+        },
+        "aadhaarDocument": {
+          "status": "PENDING_VERIFICATION",
+          "fileUrl": "https://xciizdagxoagcsogdlsc.supabase.co/storage/v1/object/public/Erp_software/1779056562508-download__3_.jpg",
+          "fileName": "download (3).jpg",
+          "fileSize": 18419,
+          "fileType": "image/jpeg",
+          "uploadedAt": "2026-05-17T22:22:43.745Z"
+        }
+      },
+      "attendance": {
+        "logs": [
+          {
+            "id": "7d6f226e-2d9b-4ff7-9a74-b673456deae7",
+            "date": "2026-05-25",
+            "note": "",
+            "status": "Present",
+            "checkIn": "2026-05-25T07:43:11.524Z",
+            "checkOut": "2026-05-25T07:44:40.840Z",
+            "updatedAt": "2026-05-25T07:44:40.840Z"
+          }
+        ]
+      },
+      "bloodGroup": "O+",
+      "dateOfBirth": "2026-06-04",
+      "languageKnown": "tamil",
+      "leaveRequests": [
+        {
+          "id": "ba0967da-14c6-4ab5-b25a-24f7f3b5c3d0",
+          "reason": "fhzyrhd",
+          "status": "APPROVED",
+          "toDate": "2026-05-26",
+          "remarks": "",
+          "fromDate": "2026-05-24",
+          "decidedAt": "2026-05-24T19:04:18.025Z",
+          "decidedBy": "179aeabf-a39b-40c1-bdea-19dd780bcb06",
+          "leaveType": "Comp Off",
+          "requestedAt": "2026-05-24T18:38:45.439Z",
+          "requestedBy": "9f8add73-e216-403e-82f6-923bb0b1fffe"
+        }
+      ],
+      "maritalStatus": "",
+      "officialEmail": "andreson@gmail.com",
+      "officialPhone": "9876543218",
+      "aadhaarVerification": {
+        "status": "PENDING_REVIEW",
+        "aadhaarNo": "752994481847",
+        "updatedAt": "2026-05-17T22:22:44.759Z",
+        "numberVerified": true,
+        "documentSubmitted": true
+      }
+    }
+  },
+  {
+    "id": "06f1765a-07bb-4527-a56d-fd8c08dcfebb",
+    "metadata": {
+      "gender": "Male",
+      "address": "shrtht",
+      "payroll": {
+        "records": {
+          "2026-05": {
+            "month": "2026-05",
+            "netPay": 194,
+            "status": "Processed",
+            "grossPay": 52500,
+            "absentDays": 30,
+            "baseSalary": 50000,
+            "deductions": 52306,
+            "presentDays": 1,
+            "processedAt": "2026-05-25T10:06:30.244Z",
+            "processedBy": "179aeabf-a39b-40c1-bdea-19dd780bcb06",
+            "workingDays": 31,
+            "fixedAllowance": 2500,
+            "fixedDeduction": 1500,
+            "approvedLeaveDays": 0
+          }
+        },
+        "salaryType": "Monthly",
+        "monthlySalary": 50000,
+        "fixedAllowance": 2500,
+        "fixedDeduction": 1500
+      },
+      "aadhaarNo": "752994481847",
+      "documents": {
+        "resumeDocument": {
+          "status": "UPLOADED",
+          "fileUrl": "https://xciizdagxoagcsogdlsc.supabase.co/storage/v1/object/public/Erp_software/1779025754343-Visily-Export_23-01-2026_01-57.pdf",
+          "fileName": "Visily-Export_23-01-2026_01-57.pdf",
+          "fileSize": 2336192,
+          "fileType": "application/pdf",
+          "uploadedAt": "2026-05-17T13:49:17.634Z"
+        },
+        "aadhaarDocument": {
+          "status": "PENDING_VERIFICATION",
+          "fileUrl": "https://xciizdagxoagcsogdlsc.supabase.co/storage/v1/object/public/Erp_software/1779025752768-download__3_.jpg",
+          "fileName": "download (3).jpg",
+          "fileSize": 18419,
+          "fileType": "image/jpeg",
+          "uploadedAt": "2026-05-17T13:49:14.343Z"
+        }
+      },
+      "attendance": {
+        "logs": [
+          {
+            "id": "7bcd4c42-e825-4d46-95fa-760607fb919a",
+            "date": "2026-05-25",
+            "note": "",
+            "status": "Present",
+            "checkIn": "2026-05-25T08:09:39.298Z",
+            "updatedAt": "2026-05-25T08:09:39.298Z"
+          }
+        ]
+      },
+      "bloodGroup": "A+",
+      "dateOfBirth": "2026-04-30",
+      "languageKnown": "tamil",
+      "maritalStatus": "Married",
+      "officialEmail": "xyz@gmail.com",
+      "officialPhone": "9876543210",
+      "aadhaarVerification": {
+        "status": "PENDING_REVIEW",
+        "aadhaarNo": "752994481847",
+        "updatedAt": "2026-05-17T13:49:17.634Z",
+        "numberVerified": true,
+        "documentSubmitted": true
+      }
+    }
+  },
+  {
+    "id": "740761e2-3db3-40f2-a70c-3f40cfd5a532",
+    "metadata": {
+      "exit": {
+        "date": "2026-05-30",
+        "reason": "hjkfy",
+        "remarks": "zdrgtdfhg",
+        "recordedAt": "2026-05-25T12:11:34.700Z"
+      },
+      "gender": "Male",
+      "address": "sdgg",
+      "payroll": {
+        "salaryType": "Monthly",
+        "monthlySalary": 25000,
+        "fixedAllowance": 1500,
+        "fixedDeduction": 2500
+      },
+      "aadhaarNo": "752994481847",
+      "documents": {
+        "aadhaarDocument": {
+          "status": "PENDING_VERIFICATION",
+          "fileUrl": "https://xciizdagxoagcsogdlsc.supabase.co/storage/v1/object/public/Erp_software/1779038677637-download__3_.jpg",
+          "fileName": "download (3).jpg",
+          "fileSize": 18419,
+          "fileType": "image/jpeg",
+          "uploadedAt": "2026-05-17T17:24:38.705Z"
+        }
+      },
+      "bloodGroup": "",
+      "dateOfBirth": "2026-05-19",
+      "languageKnown": "tamil",
+      "leaveRequests": [
+        {
+          "id": "ebf20099-a56f-49e1-baa3-6e6280c27f90",
+          "reason": "Severe Fever",
+          "status": "APPROVED",
+          "toDate": "2026-05-25",
+          "remarks": "",
+          "fromDate": "2026-05-24",
+          "decidedAt": "2026-05-24T18:32:41.840Z",
+          "decidedBy": "179aeabf-a39b-40c1-bdea-19dd780bcb06",
+          "leaveType": "Sick Leave",
+          "requestedAt": "2026-05-24T18:16:55.288Z",
+          "requestedBy": "5c9ecbf2-712a-4fd7-ad0c-897a117f2a35"
+        }
+      ],
+      "maritalStatus": "",
+      "officialEmail": "xyz@gmail.com",
+      "officialPhone": "",
+      "finalSettlement": {
+        "status": "Pending",
+        "payable": 75000,
+        "allowance": 20000,
+        "deduction": 5000,
+        "lastSalary": 60000,
+        "recordedAt": "2026-05-25T12:11:34.700Z"
+      },
+      "aadhaarVerification": {
+        "status": "PENDING_REVIEW",
+        "aadhaarNo": "752994481847",
+        "updatedAt": "2026-05-17T17:24:38.705Z",
+        "numberVerified": true,
+        "documentSubmitted": true
+      }
+    }
+  },
+  {
+    "id": "2ae48852-b233-4530-a939-46ba7305eb96",
+    "metadata": {
+      "gender": "Female",
+      "address": "tgdfh",
+      "payroll": {
+        "salaryType": "Monthly",
+        "monthlySalary": 20000,
+        "fixedAllowance": 2500,
+        "fixedDeduction": 1500
+      },
+      "aadhaarNo": "752994481847",
+      "documents": {
+        "aadhaarDocument": {
+          "status": "PENDING_VERIFICATION",
+          "fileUrl": "https://xciizdagxoagcsogdlsc.supabase.co/storage/v1/object/public/Erp_software/1779936631332-Screenshot__1_.png",
+          "fileName": "Screenshot (1).png",
+          "fileSize": 535122,
+          "fileType": "image/png",
+          "uploadedAt": "2026-05-28T02:50:32.423Z"
+        }
+      },
+      "bloodGroup": "O+",
+      "dateOfBirth": "2026-04-28",
+      "languageKnown": "tamil",
+      "maritalStatus": "Married",
+      "menuPrivilege": {
+        "permissions": {},
+        "configuredAt": "2026-07-23T15:08:26.819Z",
+        "unitAccessMode": "individual",
+        "selectedUnitIds": []
+      },
+      "officialEmail": "Reginamothvani@gmail.com",
+      "officialPhone": "8765875760",
+      "aadhaarVerification": {
+        "status": "PENDING_REVIEW",
+        "aadhaarNo": "752994481847",
+        "updatedAt": "2026-05-28T02:50:32.423Z",
+        "numberVerified": true,
+        "documentSubmitted": true
+      }
+    }
+  }
+]

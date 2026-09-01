@@ -1,0 +1,1 @@
+import 'dotenv/config'; import { PrismaClient } from '@prisma/client'; const prisma = new PrismaClient(); async function main() { console.log(await prisma.staff.findMany({ where: { firstName: { contains: 'Regina' } }, select: { id: true, firstName: true, status: true, isDeleted: true, userId: true } })); } main().finally(() => prisma.$disconnect());

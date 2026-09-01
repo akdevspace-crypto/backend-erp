@@ -1,0 +1,51 @@
+{
+  "structureFields": [
+    "id",
+    "date",
+    "note",
+    "status",
+    "checkIn",
+    "updatedAt",
+    "checkOut"
+  ],
+  "inventory": {
+    "totalStaff": 24,
+    "staffWithAttendance": 4,
+    "staffWithZeroRecords": 20,
+    "totalHistoricalRecords": 4,
+    "earliestDate": "2026-05-25T00:00:00.000Z",
+    "latestDate": "2026-08-06T00:00:00.000Z",
+    "recordsPerTenant": {
+      "f866c6e5-949b-4b6f-a137-0ba659918b34": 4
+    },
+    "recordsPerUnit": {
+      "d3bfe50c-edd5-4bd8-9d20-be37a84cdb2b": 3,
+      "d9d68a07-eb1d-43b7-9dc0-12ac3a5e1c2d": 1
+    }
+  },
+  "checkInOut": {
+    "bothPresent": 2,
+    "missingCheckIn": 0,
+    "missingCheckOut": 2,
+    "neitherPresent": 0,
+    "checkoutEarlier": 0,
+    "invalidTimestamps": 0
+  },
+  "statuses": [
+    "Present"
+  ],
+  "duplicates": {
+    "duplicateStaffDateCombos": 0,
+    "maxDuplicates": 0
+  },
+  "tenantUnitSafety": {
+    "inconsistentTenant": 0,
+    "missingUnit": 0
+  },
+  "existingLogs": {
+    "totalRows": 1,
+    "earliestDate": "2026-08-21T00:00:00.000Z",
+    "latestDate": "2026-08-21T00:00:00.000Z",
+    "overlaps": 0
+  }
+}

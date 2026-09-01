@@ -1,0 +1,226 @@
+🚀 Worker booting...
+✅ Worker initialized
+✅ Redis connected
+✅ Redis connected
+📡 Socket.io Emitter initialized (Redis)
+🚀 Worker ready and listening for jobs...
+✅ Redis ready
+⚡ Job 40 started
+
+🔥 JOB RECEIVED
+🆔 Job ID: 40
+📦 Payload: {
+  "eventId": "bc0681d3-0413-41be-afce-59a0e0519a16",
+  "tenantId": "test-tenant",
+  "unitId": "test-unit",
+  "module": "enquiry",
+  "event": "ENQUIRY_CREATED",
+  "entityId": "4a97829b-1a8f-4c57-8316-be56446c360c",
+  "input": {
+    "enquiryId": "4a97829b-1a8f-4c57-8316-be56446c360c",
+    "enquiryMode": "Call",
+    "serviceType": "In-House Care",
+    "clientComments": "Urgent patient care needed",
+    "createdAt": "2026-04-09T06:54:40.350Z"
+  },
+  "source": "test-suite"
+}
+🚀 Processing event: {
+  module: 'enquiry',
+  event: 'ENQUIRY_CREATED',
+  entityId: '4a97829b-1a8f-4c57-8316-be56446c360c'
+}
+⚡ Job 41 started
+
+🔥 JOB RECEIVED
+🆔 Job ID: 41
+📦 Payload: {
+  "eventId": "b3395437-cf6b-42a0-80ac-9a11deb30a82",
+  "tenantId": "test-tenant",
+  "unitId": "test-unit",
+  "module": "enquiry",
+  "event": "ENQUIRY_CREATED",
+  "entityId": "51a6d532-1322-4a4b-b577-4f2fd656639b",
+  "input": {
+    "enquiryId": "51a6d532-1322-4a4b-b577-4f2fd656639b",
+    "enquiryMode": "Website",
+    "serviceType": "In-House Care",
+    "clientComments": "Need details",
+    "createdAt": "2026-04-09T06:54:40.351Z"
+  },
+  "source": "test-suite"
+}
+🚀 Processing event: {
+  module: 'enquiry',
+  event: 'ENQUIRY_CREATED',
+  entityId: '51a6d532-1322-4a4b-b577-4f2fd656639b'
+}
+⚡ Job 42 started
+
+🔥 JOB RECEIVED
+🆔 Job ID: 42
+📦 Payload: {
+  "eventId": "2570e5b5-3f1a-41b4-9592-a9457a6f3303",
+  "tenantId": "test-tenant",
+  "unitId": "test-unit",
+  "module": "enquiry",
+  "event": "ENQUIRY_CREATED",
+  "entityId": "b0e96f9a-a4ac-4d01-8b88-4180bfd1b0c2",
+  "input": {
+    "enquiryId": "b0e96f9a-a4ac-4d01-8b88-4180bfd1b0c2",
+    "enquiryMode": "Walk-in",
+    "serviceType": "Basic",
+    "clientComments": "Just checking",
+    "createdAt": "2026-04-09T06:54:40.351Z"
+  },
+  "source": "test-suite"
+}
+🚀 Processing event: {
+  module: 'enquiry',
+  event: 'ENQUIRY_CREATED',
+  entityId: 'b0e96f9a-a4ac-4d01-8b88-4180bfd1b0c2'
+}
+🔍 Found 3 active rules for enquiry
+📊 Scoring Breakdown: {
+  entityId: '4a97829b-1a8f-4c57-8316-be56446c360c',
+  totalScore: 100,
+  label: 'HOT',
+  rulesApplied: 3,
+  breakdown: [
+    {
+      ruleId: '670bbc92-3c28-4e78-847f-d7bf48410f70',
+      ruleName: 'High Value Service (In-House Care)',
+      score: 50
+    },
+    {
+      ruleId: '9e0a1b15-4f04-4241-9fad-5a0da47fb05f',
+      ruleName: 'Urgency Detection',
+      score: 30
+    },
+    {
+      ruleId: '5e1bb05a-5d0f-439f-ad25-00933ed9b17c',
+      ruleName: 'High Intent Channel (Call)',
+      score: 20
+    }
+  ]
+}
+🔍 Found 3 active rules for enquiry
+📊 Scoring Breakdown: {
+  entityId: 'b0e96f9a-a4ac-4d01-8b88-4180bfd1b0c2',
+  totalScore: 0,
+  label: 'COLD',
+  rulesApplied: 0,
+  breakdown: []
+}
+🔍 Found 3 active rules for enquiry
+📊 Scoring Breakdown: {
+  entityId: '51a6d532-1322-4a4b-b577-4f2fd656639b',
+  totalScore: 50,
+  label: 'WARM',
+  rulesApplied: 1,
+  breakdown: [
+    {
+      ruleId: '670bbc92-3c28-4e78-847f-d7bf48410f70',
+      ruleName: 'High Value Service (In-House Care)',
+      score: 50
+    }
+  ]
+}
+🎯 FINAL DECISION: {
+  entityId: '4a97829b-1a8f-4c57-8316-be56446c360c',
+  score: 100,
+  label: 'HOT',
+  triggeredRulesCount: 3
+}
+📡 WebSocket emitted (Redis Emitter): automation:update 4a97829b-1a8f-4c57-8316-be56446c360c
+🎯 FINAL DECISION: {
+  entityId: 'b0e96f9a-a4ac-4d01-8b88-4180bfd1b0c2',
+  score: 0,
+  label: 'COLD',
+  triggeredRulesCount: 0
+}
+📡 WebSocket emitted (Redis Emitter): automation:update b0e96f9a-a4ac-4d01-8b88-4180bfd1b0c2
+🎯 FINAL DECISION: {
+  entityId: '51a6d532-1322-4a4b-b577-4f2fd656639b',
+  score: 50,
+  label: 'WARM',
+  triggeredRulesCount: 1
+}
+📡 WebSocket emitted (Redis Emitter): automation:update 51a6d532-1322-4a4b-b577-4f2fd656639b
+🎯 JOB RESULT: {
+  triggeredRules: [
+    'High Value Service (In-House Care)',
+    'Urgency Detection',
+    'High Intent Channel (Call)'
+  ],
+  computed: {
+    score: 100,
+    label: 'HOT',
+    priority: 'HOT',
+    autoApproved: false,
+    anomalies: []
+  },
+  actions: []
+}
+✅ Job 40 completed
+📊 Result: {
+  triggeredRules: [
+    'High Value Service (In-House Care)',
+    'Urgency Detection',
+    'High Intent Channel (Call)'
+  ],
+  computed: {
+    score: 100,
+    label: 'HOT',
+    priority: 'HOT',
+    autoApproved: false,
+    anomalies: []
+  },
+  actions: []
+}
+🎯 JOB RESULT: {
+  triggeredRules: [],
+  computed: {
+    score: 0,
+    label: 'COLD',
+    priority: 'COLD',
+    autoApproved: false,
+    anomalies: []
+  },
+  actions: []
+}
+🎯 JOB RESULT: {
+  triggeredRules: [ 'High Value Service (In-House Care)' ],
+  computed: {
+    score: 50,
+    label: 'WARM',
+    priority: 'WARM',
+    autoApproved: false,
+    anomalies: []
+  },
+  actions: []
+}
+✅ Job 42 completed
+📊 Result: {
+  triggeredRules: [],
+  computed: {
+    score: 0,
+    label: 'COLD',
+    priority: 'COLD',
+    autoApproved: false,
+    anomalies: []
+  },
+  actions: []
+}
+✅ Job 41 completed
+📊 Result: {
+  triggeredRules: [ 'High Value Service (In-House Care)' ],
+  computed: {
+    score: 50,
+    label: 'WARM',
+    priority: 'WARM',
+    autoApproved: false,
+    anomalies: []
+  },
+  actions: []
+}

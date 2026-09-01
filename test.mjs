@@ -1,0 +1,1 @@
+import { prisma } from './src/app/prisma.js'; async function main() { const res = await prisma.serviceClosure.findFirst({ where: { status: 'EXECUTED' }, include: { admission: { include: { patient: true } } } }); console.log(JSON.stringify(res, null, 2)); } main().catch(console.error).finally(() => prisma.$disconnect());

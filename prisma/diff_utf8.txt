@@ -1,0 +1,420 @@
+﻿diff --git a/schema.prisma b/schema.phase4-pre-sync.prisma
+index ee1292d..e042a58 100644
+--- a/schema.prisma
++++ b/schema.phase4-pre-sync.prisma
+@@ -1,10 +1,12 @@
+ generator client {
+   provider = "prisma-client-js"
++  output   = "../src/generated/prisma"
+ }
+ 
+ datasource db {
+   provider = "postgresql"
+   url      = env("DATABASE_URL")
++  directUrl = env("DIRECT_URL")
+ }
+ 
+ // =======================
+@@ -371,6 +373,11 @@ model FollowUp {
+   variant      String?
+   successScore Float     @default(0)
+ 
++  // ≡ƒö╣ New Fields
++  clientInterest     String?
++  readyToPayAmount   Float?
++  paymentMode        String?
++  nextFollowupStatus String?
+   tenantId  String
+   unitId    String
+   isDeleted Boolean   @default(false)
+@@ -808,6 +815,7 @@ model Room {
+ model VitalSign {
+   id        String  @id @default(uuid())
+   patientId String
++  patient   Patient @relation(fields: [patientId], references: [id])
+   bp        String?
+   pulse     Int?
+   temp      Float?
+@@ -823,6 +831,7 @@ model VitalSign {
+   updatedAt    DateTime  @updatedAt
+ 
+   @@index([patientId])
++  @@index([patientId, createdAt])
+   @@index([tenantId])
+ }
+ 
+@@ -1227,10 +1236,16 @@ model Patient {
+   tenantId String
+   unitId   String
+ 
++  vitals      VitalSign[]
+   medications Medication[]
+   nutritions  Nutrition[]
+   laundries   Laundry[]
+   admissions  Admission[]
++  portalAccounts PatientPortalAccount[]
++  timelines ResidentTimeline[]
++  adlRecords  ADLRecord[]
++  incidents   Incident[]
++  stockIssueRequests StockIssueRequest[]
+ 
+   createdAt DateTime @default(now())
+   updatedAt DateTime @updatedAt
+@@ -1239,6 +1254,39 @@ model Patient {
+   @@index([unitId])
+ }
+ 
++model PatientPortalAccount {
++  id        String   @id @default(uuid())
++  patientId String
++  patient   Patient  @relation(fields: [patientId], references: [id])
++  mobile    String   @unique
++  password  String
++  name      String
++
++  tenantId  String
++  unitId    String
++  
++  sessions  PatientPortalSession[]
++
++  createdAt DateTime @default(now())
++  updatedAt DateTime @updatedAt
++
++  @@index([patientId])
++  @@index([mobile])
++}
++
++model PatientPortalSession {
++  id        String   @id @default(uuid())
++  accountId String
++  account   PatientPortalAccount @relation(fields: [accountId], references: [id])
++  token     String   @unique
++  expiresAt DateTime
++
++  createdAt DateTime @default(now())
++  
++  @@index([token])
++  @@index([accountId])
++}
++
+ model Medication {
+   id        String  @id @default(uuid())
+   patientId String
+@@ -1377,91 +1425,253 @@ model Expense {
+   @@index([tenantId])
+   @@index([unitId])
+ }
+-
+ model Donor {
+-  id                  String    @id @default(uuid())
+-  donorNo             String    @unique
+-  name                String
+-  residentialAddress  String?
+-  permanentAddress    String?
+-  mobile              String?
+-  whatsappNumber      String?
+-  email               String?
+-  panNumber           String?
++  id                 String   @id @default(uuid())
++  donorNo            String   @unique
++  name               String
++  residentialAddress String?
++  permanentAddress   String?
++  mobile             String?
++  whatsappNumber     String?
++  email              String?
++  panNumber          String?
+   fatherOrHusbandName String?
+-  dob                 DateTime?
+-  isCorporate         Boolean   @default(false)
+-
+-  tenantId  String
+-  unitId    String?
+-  createdBy String?
+-  isDeleted Boolean   @default(false)
+-  deletedAt DateTime?
+-  createdAt DateTime  @default(now())
+-  updatedAt DateTime  @updatedAt
+-
+-  donations Donation[]
++  dob                DateTime?
++  isCorporate        Boolean  @default(false)
++  
++  tenantId           String
++  unitId             String?
++  createdBy          String?
++  isDeleted          Boolean  @default(false)
++  deletedAt          DateTime?
++  createdAt          DateTime @default(now())
++  updatedAt          DateTime @updatedAt
++
++  donations          Donation[]
+ 
+   @@index([tenantId, mobile])
+   @@index([tenantId, name])
+ }
+ 
+ model Donation {
+-  id        String @id @default(uuid())
+-  receiptNo String @unique
+-  donorId   String
+-  donor     Donor  @relation(fields: [donorId], references: [id])
++  id                 String   @id @default(uuid())
++  receiptNo          String   @unique
++  donorId            String
++  donor              Donor    @relation(fields: [donorId], references: [id])
++  
++  date               DateTime @default(now())
++  amount             Float
++  amountInWords      String?
++  
++  paymentMode        String   // CASH, UPI, NET_BANKING, CHEQUE, MATERIALS
++  materialDetails    String?
++  
++  category           String?  // FOOD, MEDICAL, CAMP, ADOPTION, EDUCATION, OTHERS
++  purpose            String?  // BIRTHDAY, WEDDING, ANNIVERSARY, GENERAL
++  
++  occasionName       String?
++  occasionRelation   String?
++  occasionDate       DateTime?
++  occasionMobile     String?
++  
++  recurringPlan      String?  // MONTHLY, QUARTERLY, HALF_YEARLY, YEARLY
++  
++  preferredPrayerDate DateTime?
++  honouredPersonImage String? @db.Text
++  specialPrayerMessage String? @db.Text
++  
++  wishToVisitHome    Boolean  @default(false)
++  preferredVisitDate DateTime?
++  
++  taxDeduction       Boolean  @default(false)
++  
++  receivedBy         String?
++  verifiedBy         String?
++  
++  isReceiptSent      Boolean  @default(false)
++  receiptSentAt      DateTime?
++  
++  tenantId           String
++  unitId             String?
++  createdBy          String?
++  isDeleted          Boolean  @default(false)
++  deletedAt          DateTime?
++  createdAt          DateTime @default(now())
++  updatedAt          DateTime @updatedAt
++
++  references         DonationReference[]
+ 
+-  date          DateTime @default(now())
+-  amount        Float
+-  amountInWords String?
++  @@index([tenantId, date])
++  @@index([tenantId, receiptNo])
++}
+ 
+-  paymentMode     String // CASH, UPI, NET_BANKING, CHEQUE, MATERIALS
+-  materialDetails String?
++model DonationReference {
++  id                 String   @id @default(uuid())
++  donationId         String
++  donation           Donation @relation(fields: [donationId], references: [id])
++  
++  name               String
++  mobile             String?
++  
++  tenantId           String
++  createdAt          DateTime @default(now())
++  updatedAt          DateTime @updatedAt
+ 
+-  category String? // FOOD, MEDICAL, CAMP, ADOPTION, EDUCATION, OTHERS
+-  purpose  String? // BIRTHDAY, WEDDING, ANNIVERSARY, GENERAL
++  @@index([tenantId, donationId])
++}
+ 
+-  occasionName     String?
+-  occasionRelation String?
+-  occasionDate     DateTime?
+-  occasionMobile   String?
++// =======================
++// VISITOR MANAGEMENT
++// =======================
+ 
+-  recurringPlan String? // MONTHLY, QUARTERLY, HALF_YEARLY, YEARLY
++model VisitorProfile {
++  id            String   @id @default(uuid())
++  mobile        String
++  name          String
++  category      String   @default("GUEST") // GUEST, VENDOR, DOCTOR, REGULAR_STAFF
++  company       String?
++  photoUrl      String?
++  email         String?
++  
++  tenantId      String
++  createdAt     DateTime @default(now())
++  updatedAt     DateTime @updatedAt
+ 
+-  taxDeduction Boolean @default(false)
++  passes        VisitorPass[]
+ 
+-  receivedBy String?
+-  verifiedBy String?
++  @@unique([tenantId, mobile])
++  @@index([tenantId])
++}
+ 
+-  isReceiptSent Boolean   @default(false)
+-  receiptSentAt DateTime?
++model VisitorPass {
++  id              String   @id @default(uuid())
++  visitorId       String
++  visitor         VisitorProfile @relation(fields: [visitorId], references: [id])
++  
++  passType        String   @default("ONE_TIME") // ONE_TIME, MULTI_ENTRY, PERMANENT
++  purpose         String?
++  department      String?
++  hostName        String?
++  hostMobile      String?
++  vehicleNo       String?
++  materialDetails String?
++  
++  checkInAt       DateTime?
++  checkOutAt      DateTime?
++  expectedAt      DateTime?
++  
++  status          String   @default("PENDING") // PENDING, APPROVED, DENIED, CHECKED_IN, CHECKED_OUT
++  qrCodeUrl       String?
++  
++  tenantId        String
++  unitId          String?
++  recordedBy      String?
++  
++  createdAt       DateTime @default(now())
++  updatedAt       DateTime @updatedAt
+ 
+-  tenantId  String
+-  unitId    String?
+-  createdBy String?
+-  isDeleted Boolean   @default(false)
+-  deletedAt DateTime?
+-  createdAt DateTime  @default(now())
+-  updatedAt DateTime  @updatedAt
++  @@index([tenantId])
++  @@index([visitorId])
++  @@index([status])
++}
+ 
+-  references DonationReference[]
++// =======================
++// RESIDENT TIMELINE
++// =======================
+ 
+-  @@index([tenantId, date])
+-  @@index([tenantId, receiptNo])
+-}
++model ResidentTimeline {
++  id          String   @id @default(uuid())
++  patientId   String
++  patient     Patient  @relation(fields: [patientId], references: [id])
++  
++  category    String   // e.g., NURSING, PATIENT_CARE, DOCTOR, FAMILY, INCIDENT
++  action      String   // e.g., MEDICATION_GIVEN, VITALS_RECORDED, ADL_LOGGED
++  details     Json?    // Flexible payload for the specific event
++  
++  performedBy String?  // User ID or Staff ID
++  
++  tenantId    String
++  unitId      String?
++  createdAt   DateTime @default(now())
++  updatedAt   DateTime @updatedAt
+ 
+-model DonationReference {
+-  id         String   @id @default(uuid())
+-  donationId String
+-  donation   Donation @relation(fields: [donationId], references: [id])
++  @@index([tenantId])
++  @@index([patientId])
++  @@index([category])
++  @@index([createdAt])
++}
+ 
+-  name   String
+-  mobile String?
++// =======================
++// NEW PHASE 4A MODELS
++// =======================
+ 
+-  tenantId  String
+-  createdAt DateTime @default(now())
+-  updatedAt DateTime @updatedAt
++model ADLRecord {
++  id          String   @id @default(uuid())
++  patientId   String
++  patient     Patient  @relation(fields: [patientId], references: [id])
++  mobility    String?
++  hygiene     String?
++  feeding     String?
++  notes       String?
++  status      String
++  recordedById String?
++  
++  tenantId    String
++  unitId      String
++  createdAt   DateTime @default(now())
++  updatedAt   DateTime @updatedAt
++  
++  @@index([patientId, createdAt])
++}
+ 
+-  @@index([tenantId, donationId])
++model Incident {
++  id          String   @id @default(uuid())
++  patientId   String
++  patient     Patient  @relation(fields: [patientId], references: [id])
++  title       String
++  description String
++  date        DateTime
++  severity    String
++  witnesses   String?
++  actionTaken String?
++  
++  tenantId    String
++  unitId      String
++  createdAt   DateTime @default(now())
++  updatedAt   DateTime @updatedAt
++  
++  @@index([patientId, createdAt])
++}
++
++model StockIssueRequest {
++  id           String   @id
++  productId    String
++  productName  String
++  category     String
++  quantity     Int
++  usageType    String
++  issuedTo     String?
++  notes        String?
++  status       String
++  requestedBy  String?
++  requestedAt  DateTime
++  approvedBy   String?
++  approvedAt   DateTime?
++  rejectedBy   String?
++  rejectedAt   DateTime?
++  
++  tenantId     String
++  unitId       String
++  isDeleted    Boolean  @default(false)
++  deletedAt    DateTime?
++  createdAt    DateTime @default(now())
++  updatedAt    DateTime @updatedAt
++  allocationId String?
++  
++  patientId    String?
++  patient      Patient? @relation(fields: [patientId], references: [id])
++  rate         Float?
++  amount       Float?
++  
++  @@index([patientId, createdAt])
+ }

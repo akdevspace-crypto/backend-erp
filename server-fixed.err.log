@@ -1,0 +1,1695 @@
+IMPORTANT! Eviction policy is volatile-lru. It should be "noeviction"
+[DB] Keep-alive ping failed PrismaClientKnownRequestError: 
+Invalid `prisma.$queryRaw()` invocation:
+
+
+Can't reach database server at `aws-1-ap-southeast-1.pooler.supabase.com:6543`
+
+Please make sure your database server is running at `aws-1-ap-southeast-1.pooler.supabase.com:6543`.
+    at $n.handleRequestError (G:\ERP\Backend\src\generated\prisma\runtime\library.js:121:7315)
+    at $n.handleAndLogRequestError (G:\ERP\Backend\src\generated\prisma\runtime\library.js:121:6623)
+    at $n.request (G:\ERP\Backend\src\generated\prisma\runtime\library.js:121:6307)
+    at async l (G:\ERP\Backend\src\generated\prisma\runtime\library.js:130:9633)
+    at async Timeout._onTimeout (G:\ERP\Backend\src\app\prismaKeepAlive.ts:10:13) {
+  code: 'P1001',
+  clientVersion: '5.22.0',
+  meta: {
+    database_host: 'aws-1-ap-southeast-1.pooler.supabase.com',
+    database_port: 6543
+  }
+}
+[DB] Keep-alive ping failed PrismaClientKnownRequestError: 
+Invalid `prisma.$queryRaw()` invocation:
+
+
+Can't reach database server at `aws-1-ap-southeast-1.pooler.supabase.com:6543`
+
+Please make sure your database server is running at `aws-1-ap-southeast-1.pooler.supabase.com:6543`.
+    at $n.handleRequestError (G:\ERP\Backend\src\generated\prisma\runtime\library.js:121:7315)
+    at $n.handleAndLogRequestError (G:\ERP\Backend\src\generated\prisma\runtime\library.js:121:6623)
+    at $n.request (G:\ERP\Backend\src\generated\prisma\runtime\library.js:121:6307)
+    at async l (G:\ERP\Backend\src\generated\prisma\runtime\library.js:130:9633)
+    at async Timeout._onTimeout (G:\ERP\Backend\src\app\prismaKeepAlive.ts:10:13) {
+  code: 'P1001',
+  clientVersion: '5.22.0',
+  meta: {
+    database_host: 'aws-1-ap-southeast-1.pooler.supabase.com',
+    database_port: 6543
+  }
+}
+[DB] Keep-alive ping failed PrismaClientKnownRequestError: 
+Invalid `prisma.$queryRaw()` invocation:
+
+
+Can't reach database server at `aws-1-ap-southeast-1.pooler.supabase.com:6543`
+
+Please make sure your database server is running at `aws-1-ap-southeast-1.pooler.supabase.com:6543`.
+    at $n.handleRequestError (G:\ERP\Backend\src\generated\prisma\runtime\library.js:121:7315)
+    at $n.handleAndLogRequestError (G:\ERP\Backend\src\generated\prisma\runtime\library.js:121:6623)
+    at $n.request (G:\ERP\Backend\src\generated\prisma\runtime\library.js:121:6307)
+    at async l (G:\ERP\Backend\src\generated\prisma\runtime\library.js:130:9633)
+    at async Timeout._onTimeout (G:\ERP\Backend\src\app\prismaKeepAlive.ts:10:13) {
+  code: 'P1001',
+  clientVersion: '5.22.0',
+  meta: {
+    database_host: 'aws-1-ap-southeast-1.pooler.supabase.com',
+    database_port: 6543
+  }
+}
+[DB] Keep-alive ping failed PrismaClientKnownRequestError: 
+Invalid `prisma.$queryRaw()` invocation:
+
+
+Can't reach database server at `aws-1-ap-southeast-1.pooler.supabase.com:6543`
+
+Please make sure your database server is running at `aws-1-ap-southeast-1.pooler.supabase.com:6543`.
+    at $n.handleRequestError (G:\ERP\Backend\src\generated\prisma\runtime\library.js:121:7315)
+    at $n.handleAndLogRequestError (G:\ERP\Backend\src\generated\prisma\runtime\library.js:121:6623)
+    at $n.request (G:\ERP\Backend\src\generated\prisma\runtime\library.js:121:6307)
+    at async l (G:\ERP\Backend\src\generated\prisma\runtime\library.js:130:9633)
+    at async Timeout._onTimeout (G:\ERP\Backend\src\app\prismaKeepAlive.ts:10:13) {
+  code: 'P1001',
+  clientVersion: '5.22.0',
+  meta: {
+    database_host: 'aws-1-ap-southeast-1.pooler.supabase.com',
+    database_port: 6543
+  }
+}
+{"timestamp":"2026-05-15T06:04:14.083Z","level":"error","message":"Redis connection error","service":"erp-backend","component":"automation-queue","subsystem":"redis","error":{"name":"Error","message":"read ECONNRESET","stack":"Error: read ECONNRESET\n    at TCP.onStreamRead (node:internal/stream_base_commons:216:20)"}}
+Error: read ECONNRESET
+    at TCP.onStreamRead (node:internal/stream_base_commons:216:20) {
+  errno: -4077,
+  code: 'ECONNRESET',
+  syscall: 'read'
+}
+{"timestamp":"2026-05-15T06:04:24.155Z","level":"error","message":"Redis connection error","service":"erp-backend","component":"automation-queue","subsystem":"redis","error":{"name":"Error","message":"connect ETIMEDOUT","stack":"Error: connect ETIMEDOUT\n    at Socket.<anonymous> (G:\\ERP\\Backend\\node_modules\\ioredis\\built\\Redis.js:171:41)\n    at Object.onceWrapper (node:events:622:28)\n    at Socket.emit (node:events:508:28)\n    at Socket._onTimeout (node:net:604:8)\n    at listOnTimeout (node:internal/timers:605:17)\n    at process.processTimers (node:internal/timers:541:7)"}}
+Error: connect ETIMEDOUT
+    at Socket.<anonymous> (G:\ERP\Backend\node_modules\ioredis\built\Redis.js:171:41)
+    at Object.onceWrapper (node:events:622:28)
+    at Socket.emit (node:events:508:28)
+    at Socket._onTimeout (node:net:604:8)
+    at listOnTimeout (node:internal/timers:605:17)
+    at process.processTimers (node:internal/timers:541:7) {
+  errorno: 'ETIMEDOUT',
+  code: 'ETIMEDOUT',
+  syscall: 'connect'
+}
+{"timestamp":"2026-05-15T06:49:07.195Z","level":"error","message":"Redis connection error","service":"erp-backend","component":"automation-queue","subsystem":"redis","error":{"name":"Error","message":"read ECONNRESET","stack":"Error: read ECONNRESET\n    at TCP.onStreamRead (node:internal/stream_base_commons:216:20)"}}
+Error: read ECONNRESET
+    at TCP.onStreamRead (node:internal/stream_base_commons:216:20) {
+  errno: -4077,
+  code: 'ECONNRESET',
+  syscall: 'read'
+}
+{"timestamp":"2026-05-15T07:06:03.793Z","level":"error","message":"Redis connection error","service":"erp-backend","component":"automation-queue","subsystem":"redis","error":{"name":"Error","message":"read ECONNRESET","stack":"Error: read ECONNRESET\n    at TCP.onStreamRead (node:internal/stream_base_commons:216:20)"}}
+Error: read ECONNRESET
+    at TCP.onStreamRead (node:internal/stream_base_commons:216:20) {
+  errno: -4077,
+  code: 'ECONNRESET',
+  syscall: 'read'
+}
+PrismaClientKnownRequestError: 
+Invalid `prisma.complaint.findMany()` invocation:
+
+
+The table `public.Complaint` does not exist in the current database.
+    at $n.handleRequestError (G:\ERP\Backend\src\generated\prisma\runtime\library.js:121:7315)
+    at $n.handleAndLogRequestError (G:\ERP\Backend\src\generated\prisma\runtime\library.js:121:6623)
+    at $n.request (G:\ERP\Backend\src\generated\prisma\runtime\library.js:121:6307)
+    at async l (G:\ERP\Backend\src\generated\prisma\runtime\library.js:130:9633)
+    at async handleGetComplaints (file:///G:/ERP/Backend/src/modules/customer_care/controller.js:54:28) {
+  code: 'P2021',
+  clientVersion: '5.22.0',
+  meta: { modelName: 'Complaint', table: 'public.Complaint' }
+}
+PrismaClientKnownRequestError: 
+Invalid `prisma.complaint.findMany()` invocation:
+
+
+The table `public.Complaint` does not exist in the current database.
+    at $n.handleRequestError (G:\ERP\Backend\src\generated\prisma\runtime\library.js:121:7315)
+    at $n.handleAndLogRequestError (G:\ERP\Backend\src\generated\prisma\runtime\library.js:121:6623)
+    at $n.request (G:\ERP\Backend\src\generated\prisma\runtime\library.js:121:6307)
+    at async l (G:\ERP\Backend\src\generated\prisma\runtime\library.js:130:9633)
+    at async handleGetComplaints (file:///G:/ERP/Backend/src/modules/customer_care/controller.js:54:28) {
+  code: 'P2021',
+  clientVersion: '5.22.0',
+  meta: { modelName: 'Complaint', table: 'public.Complaint' }
+}
+PrismaClientKnownRequestError: 
+Invalid `prisma.complaint.findMany()` invocation:
+
+
+The table `public.Complaint` does not exist in the current database.
+    at $n.handleRequestError (G:\ERP\Backend\src\generated\prisma\runtime\library.js:121:7315)
+    at $n.handleAndLogRequestError (G:\ERP\Backend\src\generated\prisma\runtime\library.js:121:6623)
+    at $n.request (G:\ERP\Backend\src\generated\prisma\runtime\library.js:121:6307)
+    at async l (G:\ERP\Backend\src\generated\prisma\runtime\library.js:130:9633)
+    at async handleGetComplaints (file:///G:/ERP/Backend/src/modules/customer_care/controller.js:54:28) {
+  code: 'P2021',
+  clientVersion: '5.22.0',
+  meta: { modelName: 'Complaint', table: 'public.Complaint' }
+}
+AiService Analysis Error: {"error":{"code":429,"message":"You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/rate-limit. \n* Quota exceeded for metric: generativelanguage.googleapis.com/generate_content_free_tier_input_token_count, limit: 0, model: gemini-2.0-flash\n* Quota exceeded for metric: generativelanguage.googleapis.com/generate_content_free_tier_requests, limit: 0, model: gemini-2.0-flash\n* Quota exceeded for metric: generativelanguage.googleapis.com/generate_content_free_tier_requests, limit: 0, model: gemini-2.0-flash\nPlease retry in 26.385192726s.","status":"RESOURCE_EXHAUSTED","details":[{"@type":"type.googleapis.com/google.rpc.Help","links":[{"description":"Learn more about Gemini API quotas","url":"https://ai.google.dev/gemini-api/docs/rate-limits"}]},{"@type":"type.googleapis.com/google.rpc.QuotaFailure","violations":[{"quotaMetric":"generativelanguage.googleapis.com/generate_content_free_tier_input_token_count","quotaId":"GenerateContentInputTokensPerModelPerMinute-FreeTier","quotaDimensions":{"location":"global","model":"gemini-2.0-flash"}},{"quotaMetric":"generativelanguage.googleapis.com/generate_content_free_tier_requests","quotaId":"GenerateRequestsPerMinutePerProjectPerModel-FreeTier","quotaDimensions":{"model":"gemini-2.0-flash","location":"global"}},{"quotaMetric":"generativelanguage.googleapis.com/generate_content_free_tier_requests","quotaId":"GenerateRequestsPerDayPerProjectPerModel-FreeTier","quotaDimensions":{"location":"global","model":"gemini-2.0-flash"}}]},{"@type":"type.googleapis.com/google.rpc.RetryInfo","retryDelay":"26s"}]}}
+LLM Complaint Analysis failed: {"error":{"code":429,"message":"You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/rate-limit. \n* Quota exceeded for metric: generativelanguage.googleapis.com/generate_content_free_tier_input_token_count, limit: 0, model: gemini-2.0-flash\n* Quota exceeded for metric: generativelanguage.googleapis.com/generate_content_free_tier_requests, limit: 0, model: gemini-2.0-flash\n* Quota exceeded for metric: generativelanguage.googleapis.com/generate_content_free_tier_requests, limit: 0, model: gemini-2.0-flash\nPlease retry in 26.385192726s.","status":"RESOURCE_EXHAUSTED","details":[{"@type":"type.googleapis.com/google.rpc.Help","links":[{"description":"Learn more about Gemini API quotas","url":"https://ai.google.dev/gemini-api/docs/rate-limits"}]},{"@type":"type.googleapis.com/google.rpc.QuotaFailure","violations":[{"quotaMetric":"generativelanguage.googleapis.com/generate_content_free_tier_input_token_count","quotaId":"GenerateContentInputTokensPerModelPerMinute-FreeTier","quotaDimensions":{"location":"global","model":"gemini-2.0-flash"}},{"quotaMetric":"generativelanguage.googleapis.com/generate_content_free_tier_requests","quotaId":"GenerateRequestsPerMinutePerProjectPerModel-FreeTier","quotaDimensions":{"model":"gemini-2.0-flash","location":"global"}},{"quotaMetric":"generativelanguage.googleapis.com/generate_content_free_tier_requests","quotaId":"GenerateRequestsPerDayPerProjectPerModel-FreeTier","quotaDimensions":{"location":"global","model":"gemini-2.0-flash"}}]},{"@type":"type.googleapis.com/google.rpc.RetryInfo","retryDelay":"26s"}]}}
+ApiError: {"error":{"code":429,"message":"You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/rate-limit. \n* Quota exceeded for metric: generativelanguage.googleapis.com/generate_content_free_tier_input_token_count, limit: 0, model: gemini-2.0-flash\n* Quota exceeded for metric: generativelanguage.googleapis.com/generate_content_free_tier_requests, limit: 0, model: gemini-2.0-flash\n* Quota exceeded for metric: generativelanguage.googleapis.com/generate_content_free_tier_requests, limit: 0, model: gemini-2.0-flash\nPlease retry in 26.385192726s.","status":"RESOURCE_EXHAUSTED","details":[{"@type":"type.googleapis.com/google.rpc.Help","links":[{"description":"Learn more about Gemini API quotas","url":"https://ai.google.dev/gemini-api/docs/rate-limits"}]},{"@type":"type.googleapis.com/google.rpc.QuotaFailure","violations":[{"quotaMetric":"generativelanguage.googleapis.com/generate_content_free_tier_input_token_count","quotaId":"GenerateContentInputTokensPerModelPerMinute-FreeTier","quotaDimensions":{"location":"global","model":"gemini-2.0-flash"}},{"quotaMetric":"generativelanguage.googleapis.com/generate_content_free_tier_requests","quotaId":"GenerateRequestsPerMinutePerProjectPerModel-FreeTier","quotaDimensions":{"model":"gemini-2.0-flash","location":"global"}},{"quotaMetric":"generativelanguage.googleapis.com/generate_content_free_tier_requests","quotaId":"GenerateRequestsPerDayPerProjectPerModel-FreeTier","quotaDimensions":{"location":"global","model":"gemini-2.0-flash"}}]},{"@type":"type.googleapis.com/google.rpc.RetryInfo","retryDelay":"26s"}]}}
+    at throwErrorIfNotOK (G:\ERP\Backend\node_modules\@google\genai\src\_api_client.ts:953:24)
+    at process.processTicksAndRejections (node:internal/process/task_queues:103:5)
+    at async <anonymous> (G:\ERP\Backend\node_modules\@google\genai\src\_api_client.ts:561:9)
+    at async Models.Models.generateContent (G:\ERP\Backend\node_modules\@google\genai\src\models.ts:128:14)
+    at async AiService.analyzeText (file:///G:/ERP/Backend/src/intelligence/services/ai.service.js:40:28)
+    at async ComplaintIntelligenceService.analyzeComplaint (file:///G:/ERP/Backend/src/intelligence/services/complaint-intelligence.service.js:13:30)
+    at async createComplaint (file:///G:/ERP/Backend/src/modules/customer_care/service.js:8:26)
+    at async handleCreateComplaint (file:///G:/ERP/Backend/src/modules/customer_care/controller.js:43:23) {
+  status: 429
+}
+AiService Analysis Error: {"error":{"code":429,"message":"You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/rate-limit. \n* Quota exceeded for metric: generativelanguage.googleapis.com/generate_content_free_tier_input_token_count, limit: 0, model: gemini-2.0-flash\n* Quota exceeded for metric: generativelanguage.googleapis.com/generate_content_free_tier_requests, limit: 0, model: gemini-2.0-flash\n* Quota exceeded for metric: generativelanguage.googleapis.com/generate_content_free_tier_requests, limit: 0, model: gemini-2.0-flash\nPlease retry in 45.742673214s.","status":"RESOURCE_EXHAUSTED","details":[{"@type":"type.googleapis.com/google.rpc.Help","links":[{"description":"Learn more about Gemini API quotas","url":"https://ai.google.dev/gemini-api/docs/rate-limits"}]},{"@type":"type.googleapis.com/google.rpc.QuotaFailure","violations":[{"quotaMetric":"generativelanguage.googleapis.com/generate_content_free_tier_input_token_count","quotaId":"GenerateContentInputTokensPerModelPerMinute-FreeTier","quotaDimensions":{"location":"global","model":"gemini-2.0-flash"}},{"quotaMetric":"generativelanguage.googleapis.com/generate_content_free_tier_requests","quotaId":"GenerateRequestsPerMinutePerProjectPerModel-FreeTier","quotaDimensions":{"location":"global","model":"gemini-2.0-flash"}},{"quotaMetric":"generativelanguage.googleapis.com/generate_content_free_tier_requests","quotaId":"GenerateRequestsPerDayPerProjectPerModel-FreeTier","quotaDimensions":{"location":"global","model":"gemini-2.0-flash"}}]},{"@type":"type.googleapis.com/google.rpc.RetryInfo","retryDelay":"45s"}]}}
+LLM Complaint Analysis failed: {"error":{"code":429,"message":"You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/rate-limit. \n* Quota exceeded for metric: generativelanguage.googleapis.com/generate_content_free_tier_input_token_count, limit: 0, model: gemini-2.0-flash\n* Quota exceeded for metric: generativelanguage.googleapis.com/generate_content_free_tier_requests, limit: 0, model: gemini-2.0-flash\n* Quota exceeded for metric: generativelanguage.googleapis.com/generate_content_free_tier_requests, limit: 0, model: gemini-2.0-flash\nPlease retry in 45.742673214s.","status":"RESOURCE_EXHAUSTED","details":[{"@type":"type.googleapis.com/google.rpc.Help","links":[{"description":"Learn more about Gemini API quotas","url":"https://ai.google.dev/gemini-api/docs/rate-limits"}]},{"@type":"type.googleapis.com/google.rpc.QuotaFailure","violations":[{"quotaMetric":"generativelanguage.googleapis.com/generate_content_free_tier_input_token_count","quotaId":"GenerateContentInputTokensPerModelPerMinute-FreeTier","quotaDimensions":{"location":"global","model":"gemini-2.0-flash"}},{"quotaMetric":"generativelanguage.googleapis.com/generate_content_free_tier_requests","quotaId":"GenerateRequestsPerMinutePerProjectPerModel-FreeTier","quotaDimensions":{"location":"global","model":"gemini-2.0-flash"}},{"quotaMetric":"generativelanguage.googleapis.com/generate_content_free_tier_requests","quotaId":"GenerateRequestsPerDayPerProjectPerModel-FreeTier","quotaDimensions":{"location":"global","model":"gemini-2.0-flash"}}]},{"@type":"type.googleapis.com/google.rpc.RetryInfo","retryDelay":"45s"}]}}
+ApiError: {"error":{"code":429,"message":"You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/rate-limit. \n* Quota exceeded for metric: generativelanguage.googleapis.com/generate_content_free_tier_input_token_count, limit: 0, model: gemini-2.0-flash\n* Quota exceeded for metric: generativelanguage.googleapis.com/generate_content_free_tier_requests, limit: 0, model: gemini-2.0-flash\n* Quota exceeded for metric: generativelanguage.googleapis.com/generate_content_free_tier_requests, limit: 0, model: gemini-2.0-flash\nPlease retry in 45.742673214s.","status":"RESOURCE_EXHAUSTED","details":[{"@type":"type.googleapis.com/google.rpc.Help","links":[{"description":"Learn more about Gemini API quotas","url":"https://ai.google.dev/gemini-api/docs/rate-limits"}]},{"@type":"type.googleapis.com/google.rpc.QuotaFailure","violations":[{"quotaMetric":"generativelanguage.googleapis.com/generate_content_free_tier_input_token_count","quotaId":"GenerateContentInputTokensPerModelPerMinute-FreeTier","quotaDimensions":{"location":"global","model":"gemini-2.0-flash"}},{"quotaMetric":"generativelanguage.googleapis.com/generate_content_free_tier_requests","quotaId":"GenerateRequestsPerMinutePerProjectPerModel-FreeTier","quotaDimensions":{"location":"global","model":"gemini-2.0-flash"}},{"quotaMetric":"generativelanguage.googleapis.com/generate_content_free_tier_requests","quotaId":"GenerateRequestsPerDayPerProjectPerModel-FreeTier","quotaDimensions":{"location":"global","model":"gemini-2.0-flash"}}]},{"@type":"type.googleapis.com/google.rpc.RetryInfo","retryDelay":"45s"}]}}
+    at throwErrorIfNotOK (G:\ERP\Backend\node_modules\@google\genai\src\_api_client.ts:953:24)
+    at process.processTicksAndRejections (node:internal/process/task_queues:103:5)
+    at async <anonymous> (G:\ERP\Backend\node_modules\@google\genai\src\_api_client.ts:561:9)
+    at async Models.Models.generateContent (G:\ERP\Backend\node_modules\@google\genai\src\models.ts:128:14)
+    at async AiService.analyzeText (file:///G:/ERP/Backend/src/intelligence/services/ai.service.js:40:28)
+    at async ComplaintIntelligenceService.analyzeComplaint (file:///G:/ERP/Backend/src/intelligence/services/complaint-intelligence.service.js:13:30)
+    at async createComplaint (file:///G:/ERP/Backend/src/modules/customer_care/service.js:8:26)
+    at async handleCreateComplaint (file:///G:/ERP/Backend/src/modules/customer_care/controller.js:43:23) {
+  status: 429
+}
+AiService Analysis Error: {"error":{"code":429,"message":"You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/rate-limit. \n* Quota exceeded for metric: generativelanguage.googleapis.com/generate_content_free_tier_input_token_count, limit: 0, model: gemini-2.0-flash\n* Quota exceeded for metric: generativelanguage.googleapis.com/generate_content_free_tier_requests, limit: 0, model: gemini-2.0-flash\n* Quota exceeded for metric: generativelanguage.googleapis.com/generate_content_free_tier_requests, limit: 0, model: gemini-2.0-flash\nPlease retry in 15.026175176s.","status":"RESOURCE_EXHAUSTED","details":[{"@type":"type.googleapis.com/google.rpc.Help","links":[{"description":"Learn more about Gemini API quotas","url":"https://ai.google.dev/gemini-api/docs/rate-limits"}]},{"@type":"type.googleapis.com/google.rpc.QuotaFailure","violations":[{"quotaMetric":"generativelanguage.googleapis.com/generate_content_free_tier_input_token_count","quotaId":"GenerateContentInputTokensPerModelPerMinute-FreeTier","quotaDimensions":{"location":"global","model":"gemini-2.0-flash"}},{"quotaMetric":"generativelanguage.googleapis.com/generate_content_free_tier_requests","quotaId":"GenerateRequestsPerMinutePerProjectPerModel-FreeTier","quotaDimensions":{"location":"global","model":"gemini-2.0-flash"}},{"quotaMetric":"generativelanguage.googleapis.com/generate_content_free_tier_requests","quotaId":"GenerateRequestsPerDayPerProjectPerModel-FreeTier","quotaDimensions":{"location":"global","model":"gemini-2.0-flash"}}]},{"@type":"type.googleapis.com/google.rpc.RetryInfo","retryDelay":"15s"}]}}
+LLM Complaint Analysis failed: {"error":{"code":429,"message":"You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/rate-limit. \n* Quota exceeded for metric: generativelanguage.googleapis.com/generate_content_free_tier_input_token_count, limit: 0, model: gemini-2.0-flash\n* Quota exceeded for metric: generativelanguage.googleapis.com/generate_content_free_tier_requests, limit: 0, model: gemini-2.0-flash\n* Quota exceeded for metric: generativelanguage.googleapis.com/generate_content_free_tier_requests, limit: 0, model: gemini-2.0-flash\nPlease retry in 15.026175176s.","status":"RESOURCE_EXHAUSTED","details":[{"@type":"type.googleapis.com/google.rpc.Help","links":[{"description":"Learn more about Gemini API quotas","url":"https://ai.google.dev/gemini-api/docs/rate-limits"}]},{"@type":"type.googleapis.com/google.rpc.QuotaFailure","violations":[{"quotaMetric":"generativelanguage.googleapis.com/generate_content_free_tier_input_token_count","quotaId":"GenerateContentInputTokensPerModelPerMinute-FreeTier","quotaDimensions":{"location":"global","model":"gemini-2.0-flash"}},{"quotaMetric":"generativelanguage.googleapis.com/generate_content_free_tier_requests","quotaId":"GenerateRequestsPerMinutePerProjectPerModel-FreeTier","quotaDimensions":{"location":"global","model":"gemini-2.0-flash"}},{"quotaMetric":"generativelanguage.googleapis.com/generate_content_free_tier_requests","quotaId":"GenerateRequestsPerDayPerProjectPerModel-FreeTier","quotaDimensions":{"location":"global","model":"gemini-2.0-flash"}}]},{"@type":"type.googleapis.com/google.rpc.RetryInfo","retryDelay":"15s"}]}}
+ApiError: {"error":{"code":429,"message":"You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/rate-limit. \n* Quota exceeded for metric: generativelanguage.googleapis.com/generate_content_free_tier_input_token_count, limit: 0, model: gemini-2.0-flash\n* Quota exceeded for metric: generativelanguage.googleapis.com/generate_content_free_tier_requests, limit: 0, model: gemini-2.0-flash\n* Quota exceeded for metric: generativelanguage.googleapis.com/generate_content_free_tier_requests, limit: 0, model: gemini-2.0-flash\nPlease retry in 15.026175176s.","status":"RESOURCE_EXHAUSTED","details":[{"@type":"type.googleapis.com/google.rpc.Help","links":[{"description":"Learn more about Gemini API quotas","url":"https://ai.google.dev/gemini-api/docs/rate-limits"}]},{"@type":"type.googleapis.com/google.rpc.QuotaFailure","violations":[{"quotaMetric":"generativelanguage.googleapis.com/generate_content_free_tier_input_token_count","quotaId":"GenerateContentInputTokensPerModelPerMinute-FreeTier","quotaDimensions":{"location":"global","model":"gemini-2.0-flash"}},{"quotaMetric":"generativelanguage.googleapis.com/generate_content_free_tier_requests","quotaId":"GenerateRequestsPerMinutePerProjectPerModel-FreeTier","quotaDimensions":{"location":"global","model":"gemini-2.0-flash"}},{"quotaMetric":"generativelanguage.googleapis.com/generate_content_free_tier_requests","quotaId":"GenerateRequestsPerDayPerProjectPerModel-FreeTier","quotaDimensions":{"location":"global","model":"gemini-2.0-flash"}}]},{"@type":"type.googleapis.com/google.rpc.RetryInfo","retryDelay":"15s"}]}}
+    at throwErrorIfNotOK (G:\ERP\Backend\node_modules\@google\genai\src\_api_client.ts:953:24)
+    at process.processTicksAndRejections (node:internal/process/task_queues:103:5)
+    at async <anonymous> (G:\ERP\Backend\node_modules\@google\genai\src\_api_client.ts:561:9)
+    at async Models.Models.generateContent (G:\ERP\Backend\node_modules\@google\genai\src\models.ts:128:14)
+    at async AiService.analyzeText (file:///G:/ERP/Backend/src/intelligence/services/ai.service.js:40:28)
+    at async ComplaintIntelligenceService.analyzeComplaint (file:///G:/ERP/Backend/src/intelligence/services/complaint-intelligence.service.js:13:30)
+    at async createComplaint (file:///G:/ERP/Backend/src/modules/customer_care/service.js:8:26)
+    at async handleCreateComplaint (file:///G:/ERP/Backend/src/modules/customer_care/controller.js:43:23) {
+  status: 429
+}
+PrismaClientKnownRequestError: 
+Invalid `prisma.complaint.findMany()` invocation:
+
+
+The table `public.Complaint` does not exist in the current database.
+    at $n.handleRequestError (G:\ERP\Backend\src\generated\prisma\runtime\library.js:121:7315)
+    at $n.handleAndLogRequestError (G:\ERP\Backend\src\generated\prisma\runtime\library.js:121:6623)
+    at $n.request (G:\ERP\Backend\src\generated\prisma\runtime\library.js:121:6307)
+    at async l (G:\ERP\Backend\src\generated\prisma\runtime\library.js:130:9633)
+    at async handleGetComplaints (file:///G:/ERP/Backend/src/modules/customer_care/controller.js:54:28) {
+  code: 'P2021',
+  clientVersion: '5.22.0',
+  meta: { modelName: 'Complaint', table: 'public.Complaint' }
+}
+PrismaClientKnownRequestError: 
+Invalid `prisma.complaint.findMany()` invocation:
+
+
+The table `public.Complaint` does not exist in the current database.
+    at $n.handleRequestError (G:\ERP\Backend\src\generated\prisma\runtime\library.js:121:7315)
+    at $n.handleAndLogRequestError (G:\ERP\Backend\src\generated\prisma\runtime\library.js:121:6623)
+    at $n.request (G:\ERP\Backend\src\generated\prisma\runtime\library.js:121:6307)
+    at async l (G:\ERP\Backend\src\generated\prisma\runtime\library.js:130:9633)
+    at async handleGetComplaints (file:///G:/ERP/Backend/src/modules/customer_care/controller.js:54:28) {
+  code: 'P2021',
+  clientVersion: '5.22.0',
+  meta: { modelName: 'Complaint', table: 'public.Complaint' }
+}
+PrismaClientKnownRequestError: 
+Invalid `prisma.complaint.findMany()` invocation:
+
+
+The table `public.Complaint` does not exist in the current database.
+    at $n.handleRequestError (G:\ERP\Backend\src\generated\prisma\runtime\library.js:121:7315)
+    at $n.handleAndLogRequestError (G:\ERP\Backend\src\generated\prisma\runtime\library.js:121:6623)
+    at $n.request (G:\ERP\Backend\src\generated\prisma\runtime\library.js:121:6307)
+    at async l (G:\ERP\Backend\src\generated\prisma\runtime\library.js:130:9633)
+    at async handleGetComplaints (file:///G:/ERP/Backend/src/modules/customer_care/controller.js:54:28) {
+  code: 'P2021',
+  clientVersion: '5.22.0',
+  meta: { modelName: 'Complaint', table: 'public.Complaint' }
+}
+PrismaClientKnownRequestError: 
+Invalid `prisma.complaint.findMany()` invocation:
+
+
+The table `public.Complaint` does not exist in the current database.
+    at $n.handleRequestError (G:\ERP\Backend\src\generated\prisma\runtime\library.js:121:7315)
+    at $n.handleAndLogRequestError (G:\ERP\Backend\src\generated\prisma\runtime\library.js:121:6623)
+    at $n.request (G:\ERP\Backend\src\generated\prisma\runtime\library.js:121:6307)
+    at async l (G:\ERP\Backend\src\generated\prisma\runtime\library.js:130:9633)
+    at async handleGetComplaints (file:///G:/ERP/Backend/src/modules/customer_care/controller.js:54:28) {
+  code: 'P2021',
+  clientVersion: '5.22.0',
+  meta: { modelName: 'Complaint', table: 'public.Complaint' }
+}
+PrismaClientKnownRequestError: 
+Invalid `prisma.complaint.findMany()` invocation:
+
+
+The table `public.Complaint` does not exist in the current database.
+    at $n.handleRequestError (G:\ERP\Backend\src\generated\prisma\runtime\library.js:121:7315)
+    at $n.handleAndLogRequestError (G:\ERP\Backend\src\generated\prisma\runtime\library.js:121:6623)
+    at $n.request (G:\ERP\Backend\src\generated\prisma\runtime\library.js:121:6307)
+    at async l (G:\ERP\Backend\src\generated\prisma\runtime\library.js:130:9633)
+    at async handleGetComplaints (file:///G:/ERP/Backend/src/modules/customer_care/controller.js:54:28) {
+  code: 'P2021',
+  clientVersion: '5.22.0',
+  meta: { modelName: 'Complaint', table: 'public.Complaint' }
+}
+AiService Analysis Error: {"error":{"code":429,"message":"You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/rate-limit. \n* Quota exceeded for metric: generativelanguage.googleapis.com/generate_content_free_tier_requests, limit: 0, model: gemini-2.0-flash\n* Quota exceeded for metric: generativelanguage.googleapis.com/generate_content_free_tier_requests, limit: 0, model: gemini-2.0-flash\n* Quota exceeded for metric: generativelanguage.googleapis.com/generate_content_free_tier_input_token_count, limit: 0, model: gemini-2.0-flash\nPlease retry in 6.67105089s.","status":"RESOURCE_EXHAUSTED","details":[{"@type":"type.googleapis.com/google.rpc.Help","links":[{"description":"Learn more about Gemini API quotas","url":"https://ai.google.dev/gemini-api/docs/rate-limits"}]},{"@type":"type.googleapis.com/google.rpc.QuotaFailure","violations":[{"quotaMetric":"generativelanguage.googleapis.com/generate_content_free_tier_requests","quotaId":"GenerateRequestsPerDayPerProjectPerModel-FreeTier","quotaDimensions":{"location":"global","model":"gemini-2.0-flash"}},{"quotaMetric":"generativelanguage.googleapis.com/generate_content_free_tier_requests","quotaId":"GenerateRequestsPerMinutePerProjectPerModel-FreeTier","quotaDimensions":{"model":"gemini-2.0-flash","location":"global"}},{"quotaMetric":"generativelanguage.googleapis.com/generate_content_free_tier_input_token_count","quotaId":"GenerateContentInputTokensPerModelPerMinute-FreeTier","quotaDimensions":{"model":"gemini-2.0-flash","location":"global"}}]},{"@type":"type.googleapis.com/google.rpc.RetryInfo","retryDelay":"6s"}]}}
+LLM Complaint Analysis failed: {"error":{"code":429,"message":"You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/rate-limit. \n* Quota exceeded for metric: generativelanguage.googleapis.com/generate_content_free_tier_requests, limit: 0, model: gemini-2.0-flash\n* Quota exceeded for metric: generativelanguage.googleapis.com/generate_content_free_tier_requests, limit: 0, model: gemini-2.0-flash\n* Quota exceeded for metric: generativelanguage.googleapis.com/generate_content_free_tier_input_token_count, limit: 0, model: gemini-2.0-flash\nPlease retry in 6.67105089s.","status":"RESOURCE_EXHAUSTED","details":[{"@type":"type.googleapis.com/google.rpc.Help","links":[{"description":"Learn more about Gemini API quotas","url":"https://ai.google.dev/gemini-api/docs/rate-limits"}]},{"@type":"type.googleapis.com/google.rpc.QuotaFailure","violations":[{"quotaMetric":"generativelanguage.googleapis.com/generate_content_free_tier_requests","quotaId":"GenerateRequestsPerDayPerProjectPerModel-FreeTier","quotaDimensions":{"location":"global","model":"gemini-2.0-flash"}},{"quotaMetric":"generativelanguage.googleapis.com/generate_content_free_tier_requests","quotaId":"GenerateRequestsPerMinutePerProjectPerModel-FreeTier","quotaDimensions":{"model":"gemini-2.0-flash","location":"global"}},{"quotaMetric":"generativelanguage.googleapis.com/generate_content_free_tier_input_token_count","quotaId":"GenerateContentInputTokensPerModelPerMinute-FreeTier","quotaDimensions":{"model":"gemini-2.0-flash","location":"global"}}]},{"@type":"type.googleapis.com/google.rpc.RetryInfo","retryDelay":"6s"}]}}
+ApiError: {"error":{"code":429,"message":"You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/rate-limit. \n* Quota exceeded for metric: generativelanguage.googleapis.com/generate_content_free_tier_requests, limit: 0, model: gemini-2.0-flash\n* Quota exceeded for metric: generativelanguage.googleapis.com/generate_content_free_tier_requests, limit: 0, model: gemini-2.0-flash\n* Quota exceeded for metric: generativelanguage.googleapis.com/generate_content_free_tier_input_token_count, limit: 0, model: gemini-2.0-flash\nPlease retry in 6.67105089s.","status":"RESOURCE_EXHAUSTED","details":[{"@type":"type.googleapis.com/google.rpc.Help","links":[{"description":"Learn more about Gemini API quotas","url":"https://ai.google.dev/gemini-api/docs/rate-limits"}]},{"@type":"type.googleapis.com/google.rpc.QuotaFailure","violations":[{"quotaMetric":"generativelanguage.googleapis.com/generate_content_free_tier_requests","quotaId":"GenerateRequestsPerDayPerProjectPerModel-FreeTier","quotaDimensions":{"location":"global","model":"gemini-2.0-flash"}},{"quotaMetric":"generativelanguage.googleapis.com/generate_content_free_tier_requests","quotaId":"GenerateRequestsPerMinutePerProjectPerModel-FreeTier","quotaDimensions":{"model":"gemini-2.0-flash","location":"global"}},{"quotaMetric":"generativelanguage.googleapis.com/generate_content_free_tier_input_token_count","quotaId":"GenerateContentInputTokensPerModelPerMinute-FreeTier","quotaDimensions":{"model":"gemini-2.0-flash","location":"global"}}]},{"@type":"type.googleapis.com/google.rpc.RetryInfo","retryDelay":"6s"}]}}
+    at throwErrorIfNotOK (G:\ERP\Backend\node_modules\@google\genai\src\_api_client.ts:953:24)
+    at process.processTicksAndRejections (node:internal/process/task_queues:103:5)
+    at async <anonymous> (G:\ERP\Backend\node_modules\@google\genai\src\_api_client.ts:561:9)
+    at async Models.Models.generateContent (G:\ERP\Backend\node_modules\@google\genai\src\models.ts:128:14)
+    at async AiService.analyzeText (file:///G:/ERP/Backend/src/intelligence/services/ai.service.js:40:28)
+    at async ComplaintIntelligenceService.analyzeComplaint (file:///G:/ERP/Backend/src/intelligence/services/complaint-intelligence.service.js:13:30)
+    at async createComplaint (file:///G:/ERP/Backend/src/modules/customer_care/service.js:8:26)
+    at async handleCreateComplaint (file:///G:/ERP/Backend/src/modules/customer_care/controller.js:43:23) {
+  status: 429
+}
+PrismaClientKnownRequestError: 
+Invalid `prisma.complaint.findMany()` invocation:
+
+
+The table `public.Complaint` does not exist in the current database.
+    at $n.handleRequestError (G:\ERP\Backend\src\generated\prisma\runtime\library.js:121:7315)
+    at $n.handleAndLogRequestError (G:\ERP\Backend\src\generated\prisma\runtime\library.js:121:6623)
+    at $n.request (G:\ERP\Backend\src\generated\prisma\runtime\library.js:121:6307)
+    at async l (G:\ERP\Backend\src\generated\prisma\runtime\library.js:130:9633)
+    at async handleGetComplaints (file:///G:/ERP/Backend/src/modules/customer_care/controller.js:54:28) {
+  code: 'P2021',
+  clientVersion: '5.22.0',
+  meta: { modelName: 'Complaint', table: 'public.Complaint' }
+}
+PrismaClientKnownRequestError: 
+Invalid `prisma.complaint.findMany()` invocation:
+
+
+The table `public.Complaint` does not exist in the current database.
+    at $n.handleRequestError (G:\ERP\Backend\src\generated\prisma\runtime\library.js:121:7315)
+    at $n.handleAndLogRequestError (G:\ERP\Backend\src\generated\prisma\runtime\library.js:121:6623)
+    at $n.request (G:\ERP\Backend\src\generated\prisma\runtime\library.js:121:6307)
+    at async l (G:\ERP\Backend\src\generated\prisma\runtime\library.js:130:9633)
+    at async handleGetComplaints (file:///G:/ERP/Backend/src/modules/customer_care/controller.js:54:28) {
+  code: 'P2021',
+  clientVersion: '5.22.0',
+  meta: { modelName: 'Complaint', table: 'public.Complaint' }
+}
+{"timestamp":"2026-05-15T09:20:28.063Z","level":"error","message":"Redis connection error","service":"erp-backend","component":"automation-queue","subsystem":"redis","error":{"name":"Error","message":"read ECONNRESET","stack":"Error: read ECONNRESET\n    at TCP.onStreamRead (node:internal/stream_base_commons:216:20)"}}
+Error: read ECONNRESET
+    at TCP.onStreamRead (node:internal/stream_base_commons:216:20) {
+  errno: -4077,
+  code: 'ECONNRESET',
+  syscall: 'read'
+}
+PrismaClientKnownRequestError: 
+Invalid `prisma.blog.findMany()` invocation:
+
+
+The table `public.Blog` does not exist in the current database.
+    at $n.handleRequestError (G:\ERP\Backend\src\generated\prisma\runtime\library.js:121:7315)
+    at $n.handleAndLogRequestError (G:\ERP\Backend\src\generated\prisma\runtime\library.js:121:6623)
+    at $n.request (G:\ERP\Backend\src\generated\prisma\runtime\library.js:121:6307)
+    at async l (G:\ERP\Backend\src\generated\prisma\runtime\library.js:130:9633)
+    at async handleGetBlogs (file:///G:/ERP/Backend/src/modules/cms/controller.js:27:23) {
+  code: 'P2021',
+  clientVersion: '5.22.0',
+  meta: { modelName: 'Blog', table: 'public.Blog' }
+}
+PrismaClientKnownRequestError: 
+Invalid `prisma.blog.findMany()` invocation:
+
+
+The table `public.Blog` does not exist in the current database.
+    at $n.handleRequestError (G:\ERP\Backend\src\generated\prisma\runtime\library.js:121:7315)
+    at $n.handleAndLogRequestError (G:\ERP\Backend\src\generated\prisma\runtime\library.js:121:6623)
+    at $n.request (G:\ERP\Backend\src\generated\prisma\runtime\library.js:121:6307)
+    at async l (G:\ERP\Backend\src\generated\prisma\runtime\library.js:130:9633)
+    at async handleGetBlogs (file:///G:/ERP/Backend/src/modules/cms/controller.js:27:23) {
+  code: 'P2021',
+  clientVersion: '5.22.0',
+  meta: { modelName: 'Blog', table: 'public.Blog' }
+}
+PrismaClientKnownRequestError: 
+Invalid `prisma.blog.findMany()` invocation:
+
+
+The table `public.Blog` does not exist in the current database.
+    at $n.handleRequestError (G:\ERP\Backend\src\generated\prisma\runtime\library.js:121:7315)
+    at $n.handleAndLogRequestError (G:\ERP\Backend\src\generated\prisma\runtime\library.js:121:6623)
+    at $n.request (G:\ERP\Backend\src\generated\prisma\runtime\library.js:121:6307)
+    at async l (G:\ERP\Backend\src\generated\prisma\runtime\library.js:130:9633)
+    at async handleGetBlogs (file:///G:/ERP/Backend/src/modules/cms/controller.js:27:23) {
+  code: 'P2021',
+  clientVersion: '5.22.0',
+  meta: { modelName: 'Blog', table: 'public.Blog' }
+}
+PrismaClientKnownRequestError: 
+Invalid `prisma.conversation.findMany()` invocation:
+
+
+The column `Conversation.entityType` does not exist in the current database.
+    at $n.handleRequestError (G:\ERP\Backend\src\generated\prisma\runtime\library.js:121:7315)
+    at $n.handleAndLogRequestError (G:\ERP\Backend\src\generated\prisma\runtime\library.js:121:6623)
+    at $n.request (G:\ERP\Backend\src\generated\prisma\runtime\library.js:121:6307)
+    at async l (G:\ERP\Backend\src\generated\prisma\runtime\library.js:130:9633)
+    at async handleListConversations (file:///G:/ERP/Backend/src/modules/conversation/controller.js:27:31) {
+  code: 'P2022',
+  clientVersion: '5.22.0',
+  meta: { modelName: 'Conversation', column: 'Conversation.entityType' }
+}
+PrismaClientKnownRequestError: 
+Invalid `prisma.conversation.findMany()` invocation:
+
+
+The column `Conversation.entityType` does not exist in the current database.
+    at $n.handleRequestError (G:\ERP\Backend\src\generated\prisma\runtime\library.js:121:7315)
+    at $n.handleAndLogRequestError (G:\ERP\Backend\src\generated\prisma\runtime\library.js:121:6623)
+    at $n.request (G:\ERP\Backend\src\generated\prisma\runtime\library.js:121:6307)
+    at async l (G:\ERP\Backend\src\generated\prisma\runtime\library.js:130:9633)
+    at async handleListConversations (file:///G:/ERP/Backend/src/modules/conversation/controller.js:27:31) {
+  code: 'P2022',
+  clientVersion: '5.22.0',
+  meta: { modelName: 'Conversation', column: 'Conversation.entityType' }
+}
+[DB] Keep-alive ping failed PrismaClientKnownRequestError: 
+Invalid `prisma.$queryRaw()` invocation:
+
+
+Can't reach database server at `aws-1-ap-southeast-1.pooler.supabase.com:6543`
+
+Please make sure your database server is running at `aws-1-ap-southeast-1.pooler.supabase.com:6543`.
+    at $n.handleRequestError (G:\ERP\Backend\src\generated\prisma\runtime\library.js:121:7315)
+    at $n.handleAndLogRequestError (G:\ERP\Backend\src\generated\prisma\runtime\library.js:121:6623)
+    at $n.request (G:\ERP\Backend\src\generated\prisma\runtime\library.js:121:6307)
+    at async l (G:\ERP\Backend\src\generated\prisma\runtime\library.js:130:9633)
+    at async Timeout._onTimeout (G:\ERP\Backend\src\app\prismaKeepAlive.ts:10:13) {
+  code: 'P1001',
+  clientVersion: '5.22.0',
+  meta: {
+    database_host: 'aws-1-ap-southeast-1.pooler.supabase.com',
+    database_port: 6543
+  }
+}
+[DB] Keep-alive ping failed PrismaClientKnownRequestError: 
+Invalid `prisma.$queryRaw()` invocation:
+
+
+Can't reach database server at `aws-1-ap-southeast-1.pooler.supabase.com:6543`
+
+Please make sure your database server is running at `aws-1-ap-southeast-1.pooler.supabase.com:6543`.
+    at $n.handleRequestError (G:\ERP\Backend\src\generated\prisma\runtime\library.js:121:7315)
+    at $n.handleAndLogRequestError (G:\ERP\Backend\src\generated\prisma\runtime\library.js:121:6623)
+    at $n.request (G:\ERP\Backend\src\generated\prisma\runtime\library.js:121:6307)
+    at async l (G:\ERP\Backend\src\generated\prisma\runtime\library.js:130:9633)
+    at async Timeout._onTimeout (G:\ERP\Backend\src\app\prismaKeepAlive.ts:10:13) {
+  code: 'P1001',
+  clientVersion: '5.22.0',
+  meta: {
+    database_host: 'aws-1-ap-southeast-1.pooler.supabase.com',
+    database_port: 6543
+  }
+}
+[DB] Keep-alive ping failed PrismaClientKnownRequestError: 
+Invalid `prisma.$queryRaw()` invocation:
+
+
+Can't reach database server at `aws-1-ap-southeast-1.pooler.supabase.com:6543`
+
+Please make sure your database server is running at `aws-1-ap-southeast-1.pooler.supabase.com:6543`.
+    at $n.handleRequestError (G:\ERP\Backend\src\generated\prisma\runtime\library.js:121:7315)
+    at $n.handleAndLogRequestError (G:\ERP\Backend\src\generated\prisma\runtime\library.js:121:6623)
+    at $n.request (G:\ERP\Backend\src\generated\prisma\runtime\library.js:121:6307)
+    at async l (G:\ERP\Backend\src\generated\prisma\runtime\library.js:130:9633)
+    at async Timeout._onTimeout (G:\ERP\Backend\src\app\prismaKeepAlive.ts:10:13) {
+  code: 'P1001',
+  clientVersion: '5.22.0',
+  meta: {
+    database_host: 'aws-1-ap-southeast-1.pooler.supabase.com',
+    database_port: 6543
+  }
+}
+[DB] Keep-alive ping failed PrismaClientKnownRequestError: 
+Invalid `prisma.$queryRaw()` invocation:
+
+
+Can't reach database server at `aws-1-ap-southeast-1.pooler.supabase.com:6543`
+
+Please make sure your database server is running at `aws-1-ap-southeast-1.pooler.supabase.com:6543`.
+    at $n.handleRequestError (G:\ERP\Backend\src\generated\prisma\runtime\library.js:121:7315)
+    at $n.handleAndLogRequestError (G:\ERP\Backend\src\generated\prisma\runtime\library.js:121:6623)
+    at $n.request (G:\ERP\Backend\src\generated\prisma\runtime\library.js:121:6307)
+    at async l (G:\ERP\Backend\src\generated\prisma\runtime\library.js:130:9633)
+    at async Timeout._onTimeout (G:\ERP\Backend\src\app\prismaKeepAlive.ts:10:13) {
+  code: 'P1001',
+  clientVersion: '5.22.0',
+  meta: {
+    database_host: 'aws-1-ap-southeast-1.pooler.supabase.com',
+    database_port: 6543
+  }
+}
+[DB] Keep-alive ping failed PrismaClientKnownRequestError: 
+Invalid `prisma.$queryRaw()` invocation:
+
+
+Can't reach database server at `aws-1-ap-southeast-1.pooler.supabase.com:6543`
+
+Please make sure your database server is running at `aws-1-ap-southeast-1.pooler.supabase.com:6543`.
+    at $n.handleRequestError (G:\ERP\Backend\src\generated\prisma\runtime\library.js:121:7315)
+    at $n.handleAndLogRequestError (G:\ERP\Backend\src\generated\prisma\runtime\library.js:121:6623)
+    at $n.request (G:\ERP\Backend\src\generated\prisma\runtime\library.js:121:6307)
+    at async l (G:\ERP\Backend\src\generated\prisma\runtime\library.js:130:9633)
+    at async Timeout._onTimeout (G:\ERP\Backend\src\app\prismaKeepAlive.ts:10:13) {
+  code: 'P1001',
+  clientVersion: '5.22.0',
+  meta: {
+    database_host: 'aws-1-ap-southeast-1.pooler.supabase.com',
+    database_port: 6543
+  }
+}
+{"timestamp":"2026-05-15T11:08:58.255Z","level":"error","message":"Redis connection error","service":"erp-backend","component":"automation-queue","subsystem":"redis","error":{"name":"Error","message":"read ECONNRESET","stack":"Error: read ECONNRESET\n    at TCP.onStreamRead (node:internal/stream_base_commons:216:20)"}}
+Error: read ECONNRESET
+    at TCP.onStreamRead (node:internal/stream_base_commons:216:20) {
+  errno: -4077,
+  code: 'ECONNRESET',
+  syscall: 'read'
+}
+{"timestamp":"2026-05-15T11:09:00.877Z","level":"error","message":"Redis connection error","service":"erp-backend","component":"automation-queue","subsystem":"redis","error":{"name":"Error","message":"getaddrinfo ENOENT redis-12592.crce276.ap-south-1-3.ec2.cloud.redislabs.com","stack":"Error: getaddrinfo ENOENT redis-12592.crce276.ap-south-1-3.ec2.cloud.redislabs.com\n    at GetAddrInfoReqWrap.onlookupall [as oncomplete] (node:dns:122:26)"}}
+Error: getaddrinfo ENOENT redis-12592.crce276.ap-south-1-3.ec2.cloud.redislabs.com
+    at GetAddrInfoReqWrap.onlookupall [as oncomplete] (node:dns:122:26) {
+  errno: -4058,
+  code: 'ENOENT',
+  syscall: 'getaddrinfo',
+  hostname: 'redis-12592.crce276.ap-south-1-3.ec2.cloud.redislabs.com'
+}
+{"timestamp":"2026-05-15T11:09:01.131Z","level":"error","message":"Redis connection error","service":"erp-backend","component":"automation-queue","subsystem":"redis","error":{"name":"Error","message":"getaddrinfo ENOENT redis-12592.crce276.ap-south-1-3.ec2.cloud.redislabs.com","stack":"Error: getaddrinfo ENOENT redis-12592.crce276.ap-south-1-3.ec2.cloud.redislabs.com\n    at GetAddrInfoReqWrap.onlookupall [as oncomplete] (node:dns:122:26)"}}
+Error: getaddrinfo ENOENT redis-12592.crce276.ap-south-1-3.ec2.cloud.redislabs.com
+    at GetAddrInfoReqWrap.onlookupall [as oncomplete] (node:dns:122:26) {
+  errno: -4058,
+  code: 'ENOENT',
+  syscall: 'getaddrinfo',
+  hostname: 'redis-12592.crce276.ap-south-1-3.ec2.cloud.redislabs.com'
+}
+{"timestamp":"2026-05-15T11:09:01.530Z","level":"error","message":"Redis connection error","service":"erp-backend","component":"automation-queue","subsystem":"redis","error":{"name":"Error","message":"getaddrinfo ENOENT redis-12592.crce276.ap-south-1-3.ec2.cloud.redislabs.com","stack":"Error: getaddrinfo ENOENT redis-12592.crce276.ap-south-1-3.ec2.cloud.redislabs.com\n    at GetAddrInfoReqWrap.onlookupall [as oncomplete] (node:dns:122:26)"}}
+Error: getaddrinfo ENOENT redis-12592.crce276.ap-south-1-3.ec2.cloud.redislabs.com
+    at GetAddrInfoReqWrap.onlookupall [as oncomplete] (node:dns:122:26) {
+  errno: -4058,
+  code: 'ENOENT',
+  syscall: 'getaddrinfo',
+  hostname: 'redis-12592.crce276.ap-south-1-3.ec2.cloud.redislabs.com'
+}
+{"timestamp":"2026-05-15T11:09:02.273Z","level":"error","message":"Redis connection error","service":"erp-backend","component":"automation-queue","subsystem":"redis","error":{"name":"AggregateError","message":"","stack":"AggregateError [ETIMEDOUT]: \n    at internalConnectMultiple (node:net:1134:18)\n    at afterConnectMultiple (node:net:1715:7)"}}
+AggregateError [ETIMEDOUT]: 
+    at internalConnectMultiple (node:net:1134:18)
+    at afterConnectMultiple (node:net:1715:7) {
+  code: 'ETIMEDOUT',
+  [errors]: [
+    Error: connect ETIMEDOUT 43.205.137.220:12592
+        at createConnectionError (node:net:1678:14)
+        at Timeout.internalConnectMultipleTimeout (node:net:1737:38)
+        at listOnTimeout (node:internal/timers:607:11)
+        at process.processTimers (node:internal/timers:541:7) {
+      errno: -4039,
+      code: 'ETIMEDOUT',
+      syscall: 'connect',
+      address: '43.205.137.220',
+      port: 12592
+    },
+    Error: connect ENETUNREACH 64:ff9b::2bcd:89dc:12592
+        at createConnectionError (node:net:1678:14)
+        at afterConnectMultiple (node:net:1708:16) {
+      errno: -4062,
+      code: 'ENETUNREACH',
+      syscall: 'connect',
+      address: '64:ff9b::2bcd:89dc',
+      port: 12592
+    }
+  ]
+}
+{"timestamp":"2026-05-15T11:09:12.963Z","level":"error","message":"Redis connection error","service":"erp-backend","component":"automation-queue","subsystem":"redis","error":{"name":"Error","message":"connect ETIMEDOUT","stack":"Error: connect ETIMEDOUT\n    at Socket.<anonymous> (G:\\ERP\\Backend\\node_modules\\ioredis\\built\\Redis.js:171:41)\n    at Object.onceWrapper (node:events:622:28)\n    at Socket.emit (node:events:508:28)\n    at Socket._onTimeout (node:net:604:8)\n    at listOnTimeout (node:internal/timers:605:17)\n    at process.processTimers (node:internal/timers:541:7)"}}
+Error: connect ETIMEDOUT
+    at Socket.<anonymous> (G:\ERP\Backend\node_modules\ioredis\built\Redis.js:171:41)
+    at Object.onceWrapper (node:events:622:28)
+    at Socket.emit (node:events:508:28)
+    at Socket._onTimeout (node:net:604:8)
+    at listOnTimeout (node:internal/timers:605:17)
+    at process.processTimers (node:internal/timers:541:7) {
+  errorno: 'ETIMEDOUT',
+  code: 'ETIMEDOUT',
+  syscall: 'connect'
+}
+{"timestamp":"2026-05-15T11:09:23.572Z","level":"error","message":"Redis connection error","service":"erp-backend","component":"automation-queue","subsystem":"redis","error":{"name":"Error","message":"connect ETIMEDOUT","stack":"Error: connect ETIMEDOUT\n    at Socket.<anonymous> (G:\\ERP\\Backend\\node_modules\\ioredis\\built\\Redis.js:171:41)\n    at Object.onceWrapper (node:events:622:28)\n    at Socket.emit (node:events:508:28)\n    at Socket._onTimeout (node:net:604:8)\n    at listOnTimeout (node:internal/timers:605:17)\n    at process.processTimers (node:internal/timers:541:7)"}}
+Error: connect ETIMEDOUT
+    at Socket.<anonymous> (G:\ERP\Backend\node_modules\ioredis\built\Redis.js:171:41)
+    at Object.onceWrapper (node:events:622:28)
+    at Socket.emit (node:events:508:28)
+    at Socket._onTimeout (node:net:604:8)
+    at listOnTimeout (node:internal/timers:605:17)
+    at process.processTimers (node:internal/timers:541:7) {
+  errorno: 'ETIMEDOUT',
+  code: 'ETIMEDOUT',
+  syscall: 'connect'
+}
+[DB] Keep-alive ping failed PrismaClientKnownRequestError: 
+Invalid `prisma.$queryRaw()` invocation:
+
+
+Can't reach database server at `aws-1-ap-southeast-1.pooler.supabase.com:6543`
+
+Please make sure your database server is running at `aws-1-ap-southeast-1.pooler.supabase.com:6543`.
+    at $n.handleRequestError (G:\ERP\Backend\src\generated\prisma\runtime\library.js:121:7315)
+    at $n.handleAndLogRequestError (G:\ERP\Backend\src\generated\prisma\runtime\library.js:121:6623)
+    at $n.request (G:\ERP\Backend\src\generated\prisma\runtime\library.js:121:6307)
+    at async l (G:\ERP\Backend\src\generated\prisma\runtime\library.js:130:9633)
+    at async Timeout._onTimeout (G:\ERP\Backend\src\app\prismaKeepAlive.ts:10:13) {
+  code: 'P1001',
+  clientVersion: '5.22.0',
+  meta: {
+    database_host: 'aws-1-ap-southeast-1.pooler.supabase.com',
+    database_port: 6543
+  }
+}
+{"timestamp":"2026-05-15T11:09:35.679Z","level":"error","message":"Redis connection error","service":"erp-backend","component":"automation-queue","subsystem":"redis","error":{"name":"Error","message":"connect ETIMEDOUT","stack":"Error: connect ETIMEDOUT\n    at Socket.<anonymous> (G:\\ERP\\Backend\\node_modules\\ioredis\\built\\Redis.js:171:41)\n    at Object.onceWrapper (node:events:622:28)\n    at Socket.emit (node:events:508:28)\n    at Socket._onTimeout (node:net:604:8)\n    at listOnTimeout (node:internal/timers:605:17)\n    at process.processTimers (node:internal/timers:541:7)"}}
+Error: connect ETIMEDOUT
+    at Socket.<anonymous> (G:\ERP\Backend\node_modules\ioredis\built\Redis.js:171:41)
+    at Object.onceWrapper (node:events:622:28)
+    at Socket.emit (node:events:508:28)
+    at Socket._onTimeout (node:net:604:8)
+    at listOnTimeout (node:internal/timers:605:17)
+    at process.processTimers (node:internal/timers:541:7) {
+  errorno: 'ETIMEDOUT',
+  code: 'ETIMEDOUT',
+  syscall: 'connect'
+}
+{"timestamp":"2026-05-15T11:09:46.216Z","level":"error","message":"Redis connection error","service":"erp-backend","component":"automation-queue","subsystem":"redis","error":{"name":"Error","message":"connect ETIMEDOUT","stack":"Error: connect ETIMEDOUT\n    at Socket.<anonymous> (G:\\ERP\\Backend\\node_modules\\ioredis\\built\\Redis.js:171:41)\n    at Object.onceWrapper (node:events:622:28)\n    at Socket.emit (node:events:508:28)\n    at Socket._onTimeout (node:net:604:8)\n    at listOnTimeout (node:internal/timers:605:17)\n    at process.processTimers (node:internal/timers:541:7)"}}
+Error: connect ETIMEDOUT
+    at Socket.<anonymous> (G:\ERP\Backend\node_modules\ioredis\built\Redis.js:171:41)
+    at Object.onceWrapper (node:events:622:28)
+    at Socket.emit (node:events:508:28)
+    at Socket._onTimeout (node:net:604:8)
+    at listOnTimeout (node:internal/timers:605:17)
+    at process.processTimers (node:internal/timers:541:7) {
+  errorno: 'ETIMEDOUT',
+  code: 'ETIMEDOUT',
+  syscall: 'connect'
+}
+{"timestamp":"2026-05-15T11:09:56.757Z","level":"error","message":"Redis connection error","service":"erp-backend","component":"automation-queue","subsystem":"redis","error":{"name":"Error","message":"connect ETIMEDOUT","stack":"Error: connect ETIMEDOUT\n    at Socket.<anonymous> (G:\\ERP\\Backend\\node_modules\\ioredis\\built\\Redis.js:171:41)\n    at Object.onceWrapper (node:events:622:28)\n    at Socket.emit (node:events:508:28)\n    at Socket._onTimeout (node:net:604:8)\n    at listOnTimeout (node:internal/timers:605:17)\n    at process.processTimers (node:internal/timers:541:7)"}}
+Error: connect ETIMEDOUT
+    at Socket.<anonymous> (G:\ERP\Backend\node_modules\ioredis\built\Redis.js:171:41)
+    at Object.onceWrapper (node:events:622:28)
+    at Socket.emit (node:events:508:28)
+    at Socket._onTimeout (node:net:604:8)
+    at listOnTimeout (node:internal/timers:605:17)
+    at process.processTimers (node:internal/timers:541:7) {
+  errorno: 'ETIMEDOUT',
+  code: 'ETIMEDOUT',
+  syscall: 'connect'
+}
+[DB] Keep-alive ping failed PrismaClientKnownRequestError: 
+Invalid `prisma.$queryRaw()` invocation:
+
+
+Can't reach database server at `aws-1-ap-southeast-1.pooler.supabase.com:6543`
+
+Please make sure your database server is running at `aws-1-ap-southeast-1.pooler.supabase.com:6543`.
+    at $n.handleRequestError (G:\ERP\Backend\src\generated\prisma\runtime\library.js:121:7315)
+    at $n.handleAndLogRequestError (G:\ERP\Backend\src\generated\prisma\runtime\library.js:121:6623)
+    at $n.request (G:\ERP\Backend\src\generated\prisma\runtime\library.js:121:6307)
+    at async l (G:\ERP\Backend\src\generated\prisma\runtime\library.js:130:9633)
+    at async Timeout._onTimeout (G:\ERP\Backend\src\app\prismaKeepAlive.ts:10:13) {
+  code: 'P1001',
+  clientVersion: '5.22.0',
+  meta: {
+    database_host: 'aws-1-ap-southeast-1.pooler.supabase.com',
+    database_port: 6543
+  }
+}
+{"timestamp":"2026-05-15T11:10:07.550Z","level":"error","message":"Redis connection error","service":"erp-backend","component":"automation-queue","subsystem":"redis","error":{"name":"Error","message":"connect ETIMEDOUT","stack":"Error: connect ETIMEDOUT\n    at Socket.<anonymous> (G:\\ERP\\Backend\\node_modules\\ioredis\\built\\Redis.js:171:41)\n    at Object.onceWrapper (node:events:622:28)\n    at Socket.emit (node:events:508:28)\n    at Socket._onTimeout (node:net:604:8)\n    at listOnTimeout (node:internal/timers:605:17)\n    at process.processTimers (node:internal/timers:541:7)"}}
+Error: connect ETIMEDOUT
+    at Socket.<anonymous> (G:\ERP\Backend\node_modules\ioredis\built\Redis.js:171:41)
+    at Object.onceWrapper (node:events:622:28)
+    at Socket.emit (node:events:508:28)
+    at Socket._onTimeout (node:net:604:8)
+    at listOnTimeout (node:internal/timers:605:17)
+    at process.processTimers (node:internal/timers:541:7) {
+  errorno: 'ETIMEDOUT',
+  code: 'ETIMEDOUT',
+  syscall: 'connect'
+}
+{"timestamp":"2026-05-15T11:10:18.484Z","level":"error","message":"Redis connection error","service":"erp-backend","component":"automation-queue","subsystem":"redis","error":{"name":"Error","message":"connect ETIMEDOUT","stack":"Error: connect ETIMEDOUT\n    at Socket.<anonymous> (G:\\ERP\\Backend\\node_modules\\ioredis\\built\\Redis.js:171:41)\n    at Object.onceWrapper (node:events:622:28)\n    at Socket.emit (node:events:508:28)\n    at Socket._onTimeout (node:net:604:8)\n    at listOnTimeout (node:internal/timers:605:17)\n    at process.processTimers (node:internal/timers:541:7)"}}
+Error: connect ETIMEDOUT
+    at Socket.<anonymous> (G:\ERP\Backend\node_modules\ioredis\built\Redis.js:171:41)
+    at Object.onceWrapper (node:events:622:28)
+    at Socket.emit (node:events:508:28)
+    at Socket._onTimeout (node:net:604:8)
+    at listOnTimeout (node:internal/timers:605:17)
+    at process.processTimers (node:internal/timers:541:7) {
+  errorno: 'ETIMEDOUT',
+  code: 'ETIMEDOUT',
+  syscall: 'connect'
+}
+{"timestamp":"2026-05-15T11:10:29.188Z","level":"error","message":"Redis connection error","service":"erp-backend","component":"automation-queue","subsystem":"redis","error":{"name":"Error","message":"connect ETIMEDOUT","stack":"Error: connect ETIMEDOUT\n    at Socket.<anonymous> (G:\\ERP\\Backend\\node_modules\\ioredis\\built\\Redis.js:171:41)\n    at Object.onceWrapper (node:events:622:28)\n    at Socket.emit (node:events:508:28)\n    at Socket._onTimeout (node:net:604:8)\n    at listOnTimeout (node:internal/timers:605:17)\n    at process.processTimers (node:internal/timers:541:7)"}}
+Error: connect ETIMEDOUT
+    at Socket.<anonymous> (G:\ERP\Backend\node_modules\ioredis\built\Redis.js:171:41)
+    at Object.onceWrapper (node:events:622:28)
+    at Socket.emit (node:events:508:28)
+    at Socket._onTimeout (node:net:604:8)
+    at listOnTimeout (node:internal/timers:605:17)
+    at process.processTimers (node:internal/timers:541:7) {
+  errorno: 'ETIMEDOUT',
+  code: 'ETIMEDOUT',
+  syscall: 'connect'
+}
+[DB] Keep-alive ping failed PrismaClientKnownRequestError: 
+Invalid `prisma.$queryRaw()` invocation:
+
+
+Timed out fetching a new connection from the connection pool. More info: http://pris.ly/d/connection-pool (Current connection pool timeout: 30, connection limit: 1)
+    at $n.handleRequestError (G:\ERP\Backend\src\generated\prisma\runtime\library.js:121:7315)
+    at $n.handleAndLogRequestError (G:\ERP\Backend\src\generated\prisma\runtime\library.js:121:6623)
+    at $n.request (G:\ERP\Backend\src\generated\prisma\runtime\library.js:121:6307)
+    at async l (G:\ERP\Backend\src\generated\prisma\runtime\library.js:130:9633)
+    at async Timeout._onTimeout (G:\ERP\Backend\src\app\prismaKeepAlive.ts:10:13) {
+  code: 'P2024',
+  clientVersion: '5.22.0',
+  meta: { connection_limit: 1, timeout: 30 }
+}
+{"timestamp":"2026-05-15T11:10:40.169Z","level":"error","message":"Redis connection error","service":"erp-backend","component":"automation-queue","subsystem":"redis","error":{"name":"Error","message":"connect ETIMEDOUT","stack":"Error: connect ETIMEDOUT\n    at Socket.<anonymous> (G:\\ERP\\Backend\\node_modules\\ioredis\\built\\Redis.js:171:41)\n    at Object.onceWrapper (node:events:622:28)\n    at Socket.emit (node:events:508:28)\n    at Socket._onTimeout (node:net:604:8)\n    at listOnTimeout (node:internal/timers:605:17)\n    at process.processTimers (node:internal/timers:541:7)"}}
+Error: connect ETIMEDOUT
+    at Socket.<anonymous> (G:\ERP\Backend\node_modules\ioredis\built\Redis.js:171:41)
+    at Object.onceWrapper (node:events:622:28)
+    at Socket.emit (node:events:508:28)
+    at Socket._onTimeout (node:net:604:8)
+    at listOnTimeout (node:internal/timers:605:17)
+    at process.processTimers (node:internal/timers:541:7) {
+  errorno: 'ETIMEDOUT',
+  code: 'ETIMEDOUT',
+  syscall: 'connect'
+}
+{"timestamp":"2026-05-15T11:10:51.063Z","level":"error","message":"Redis connection error","service":"erp-backend","component":"automation-queue","subsystem":"redis","error":{"name":"Error","message":"connect ETIMEDOUT","stack":"Error: connect ETIMEDOUT\n    at Socket.<anonymous> (G:\\ERP\\Backend\\node_modules\\ioredis\\built\\Redis.js:171:41)\n    at Object.onceWrapper (node:events:622:28)\n    at Socket.emit (node:events:508:28)\n    at Socket._onTimeout (node:net:604:8)\n    at listOnTimeout (node:internal/timers:605:17)\n    at process.processTimers (node:internal/timers:541:7)"}}
+Error: connect ETIMEDOUT
+    at Socket.<anonymous> (G:\ERP\Backend\node_modules\ioredis\built\Redis.js:171:41)
+    at Object.onceWrapper (node:events:622:28)
+    at Socket.emit (node:events:508:28)
+    at Socket._onTimeout (node:net:604:8)
+    at listOnTimeout (node:internal/timers:605:17)
+    at process.processTimers (node:internal/timers:541:7) {
+  errorno: 'ETIMEDOUT',
+  code: 'ETIMEDOUT',
+  syscall: 'connect'
+}
+[DB] Keep-alive ping failed PrismaClientKnownRequestError: 
+Invalid `prisma.$queryRaw()` invocation:
+
+
+Can't reach database server at `aws-1-ap-southeast-1.pooler.supabase.com:6543`
+
+Please make sure your database server is running at `aws-1-ap-southeast-1.pooler.supabase.com:6543`.
+    at $n.handleRequestError (G:\ERP\Backend\src\generated\prisma\runtime\library.js:121:7315)
+    at $n.handleAndLogRequestError (G:\ERP\Backend\src\generated\prisma\runtime\library.js:121:6623)
+    at $n.request (G:\ERP\Backend\src\generated\prisma\runtime\library.js:121:6307)
+    at async l (G:\ERP\Backend\src\generated\prisma\runtime\library.js:130:9633)
+    at async Timeout._onTimeout (G:\ERP\Backend\src\app\prismaKeepAlive.ts:10:13) {
+  code: 'P1001',
+  clientVersion: '5.22.0',
+  meta: {
+    database_host: 'aws-1-ap-southeast-1.pooler.supabase.com',
+    database_port: 6543
+  }
+}
+{"timestamp":"2026-05-15T11:11:02.407Z","level":"error","message":"Redis connection error","service":"erp-backend","component":"automation-queue","subsystem":"redis","error":{"name":"Error","message":"connect ETIMEDOUT","stack":"Error: connect ETIMEDOUT\n    at Socket.<anonymous> (G:\\ERP\\Backend\\node_modules\\ioredis\\built\\Redis.js:171:41)\n    at Object.onceWrapper (node:events:622:28)\n    at Socket.emit (node:events:508:28)\n    at Socket._onTimeout (node:net:604:8)\n    at listOnTimeout (node:internal/timers:605:17)\n    at process.processTimers (node:internal/timers:541:7)"}}
+Error: connect ETIMEDOUT
+    at Socket.<anonymous> (G:\ERP\Backend\node_modules\ioredis\built\Redis.js:171:41)
+    at Object.onceWrapper (node:events:622:28)
+    at Socket.emit (node:events:508:28)
+    at Socket._onTimeout (node:net:604:8)
+    at listOnTimeout (node:internal/timers:605:17)
+    at process.processTimers (node:internal/timers:541:7) {
+  errorno: 'ETIMEDOUT',
+  code: 'ETIMEDOUT',
+  syscall: 'connect'
+}
+{"timestamp":"2026-05-15T11:11:13.288Z","level":"error","message":"Redis connection error","service":"erp-backend","component":"automation-queue","subsystem":"redis","error":{"name":"Error","message":"connect ETIMEDOUT","stack":"Error: connect ETIMEDOUT\n    at Socket.<anonymous> (G:\\ERP\\Backend\\node_modules\\ioredis\\built\\Redis.js:171:41)\n    at Object.onceWrapper (node:events:622:28)\n    at Socket.emit (node:events:508:28)\n    at Socket._onTimeout (node:net:604:8)\n    at listOnTimeout (node:internal/timers:605:17)\n    at process.processTimers (node:internal/timers:541:7)"}}
+Error: connect ETIMEDOUT
+    at Socket.<anonymous> (G:\ERP\Backend\node_modules\ioredis\built\Redis.js:171:41)
+    at Object.onceWrapper (node:events:622:28)
+    at Socket.emit (node:events:508:28)
+    at Socket._onTimeout (node:net:604:8)
+    at listOnTimeout (node:internal/timers:605:17)
+    at process.processTimers (node:internal/timers:541:7) {
+  errorno: 'ETIMEDOUT',
+  code: 'ETIMEDOUT',
+  syscall: 'connect'
+}
+{"timestamp":"2026-05-15T11:11:24.838Z","level":"error","message":"Redis connection error","service":"erp-backend","component":"automation-queue","subsystem":"redis","error":{"name":"Error","message":"connect ETIMEDOUT","stack":"Error: connect ETIMEDOUT\n    at Socket.<anonymous> (G:\\ERP\\Backend\\node_modules\\ioredis\\built\\Redis.js:171:41)\n    at Object.onceWrapper (node:events:622:28)\n    at Socket.emit (node:events:508:28)\n    at Socket._onTimeout (node:net:604:8)\n    at listOnTimeout (node:internal/timers:605:17)\n    at process.processTimers (node:internal/timers:541:7)"}}
+Error: connect ETIMEDOUT
+    at Socket.<anonymous> (G:\ERP\Backend\node_modules\ioredis\built\Redis.js:171:41)
+    at Object.onceWrapper (node:events:622:28)
+    at Socket.emit (node:events:508:28)
+    at Socket._onTimeout (node:net:604:8)
+    at listOnTimeout (node:internal/timers:605:17)
+    at process.processTimers (node:internal/timers:541:7) {
+  errorno: 'ETIMEDOUT',
+  code: 'ETIMEDOUT',
+  syscall: 'connect'
+}
+[DB] Keep-alive ping failed PrismaClientKnownRequestError: 
+Invalid `prisma.$queryRaw()` invocation:
+
+
+Can't reach database server at `aws-1-ap-southeast-1.pooler.supabase.com:6543`
+
+Please make sure your database server is running at `aws-1-ap-southeast-1.pooler.supabase.com:6543`.
+    at $n.handleRequestError (G:\ERP\Backend\src\generated\prisma\runtime\library.js:121:7315)
+    at $n.handleAndLogRequestError (G:\ERP\Backend\src\generated\prisma\runtime\library.js:121:6623)
+    at $n.request (G:\ERP\Backend\src\generated\prisma\runtime\library.js:121:6307)
+    at async l (G:\ERP\Backend\src\generated\prisma\runtime\library.js:130:9633)
+    at async Timeout._onTimeout (G:\ERP\Backend\src\app\prismaKeepAlive.ts:10:13) {
+  code: 'P1001',
+  clientVersion: '5.22.0',
+  meta: {
+    database_host: 'aws-1-ap-southeast-1.pooler.supabase.com',
+    database_port: 6543
+  }
+}
+{"timestamp":"2026-05-15T11:11:35.859Z","level":"error","message":"Redis connection error","service":"erp-backend","component":"automation-queue","subsystem":"redis","error":{"name":"Error","message":"connect ETIMEDOUT","stack":"Error: connect ETIMEDOUT\n    at Socket.<anonymous> (G:\\ERP\\Backend\\node_modules\\ioredis\\built\\Redis.js:171:41)\n    at Object.onceWrapper (node:events:622:28)\n    at Socket.emit (node:events:508:28)\n    at Socket._onTimeout (node:net:604:8)\n    at listOnTimeout (node:internal/timers:605:17)\n    at process.processTimers (node:internal/timers:541:7)"}}
+Error: connect ETIMEDOUT
+    at Socket.<anonymous> (G:\ERP\Backend\node_modules\ioredis\built\Redis.js:171:41)
+    at Object.onceWrapper (node:events:622:28)
+    at Socket.emit (node:events:508:28)
+    at Socket._onTimeout (node:net:604:8)
+    at listOnTimeout (node:internal/timers:605:17)
+    at process.processTimers (node:internal/timers:541:7) {
+  errorno: 'ETIMEDOUT',
+  code: 'ETIMEDOUT',
+  syscall: 'connect'
+}
+{"timestamp":"2026-05-15T11:11:46.947Z","level":"error","message":"Redis connection error","service":"erp-backend","component":"automation-queue","subsystem":"redis","error":{"name":"Error","message":"connect ETIMEDOUT","stack":"Error: connect ETIMEDOUT\n    at Socket.<anonymous> (G:\\ERP\\Backend\\node_modules\\ioredis\\built\\Redis.js:171:41)\n    at Object.onceWrapper (node:events:622:28)\n    at Socket.emit (node:events:508:28)\n    at Socket._onTimeout (node:net:604:8)\n    at listOnTimeout (node:internal/timers:605:17)\n    at process.processTimers (node:internal/timers:541:7)"}}
+Error: connect ETIMEDOUT
+    at Socket.<anonymous> (G:\ERP\Backend\node_modules\ioredis\built\Redis.js:171:41)
+    at Object.onceWrapper (node:events:622:28)
+    at Socket.emit (node:events:508:28)
+    at Socket._onTimeout (node:net:604:8)
+    at listOnTimeout (node:internal/timers:605:17)
+    at process.processTimers (node:internal/timers:541:7) {
+  errorno: 'ETIMEDOUT',
+  code: 'ETIMEDOUT',
+  syscall: 'connect'
+}
+{"timestamp":"2026-05-15T11:11:58.254Z","level":"error","message":"Redis connection error","service":"erp-backend","component":"automation-queue","subsystem":"redis","error":{"name":"Error","message":"connect ETIMEDOUT","stack":"Error: connect ETIMEDOUT\n    at Socket.<anonymous> (G:\\ERP\\Backend\\node_modules\\ioredis\\built\\Redis.js:171:41)\n    at Object.onceWrapper (node:events:622:28)\n    at Socket.emit (node:events:508:28)\n    at Socket._onTimeout (node:net:604:8)\n    at listOnTimeout (node:internal/timers:605:17)\n    at process.processTimers (node:internal/timers:541:7)"}}
+Error: connect ETIMEDOUT
+    at Socket.<anonymous> (G:\ERP\Backend\node_modules\ioredis\built\Redis.js:171:41)
+    at Object.onceWrapper (node:events:622:28)
+    at Socket.emit (node:events:508:28)
+    at Socket._onTimeout (node:net:604:8)
+    at listOnTimeout (node:internal/timers:605:17)
+    at process.processTimers (node:internal/timers:541:7) {
+  errorno: 'ETIMEDOUT',
+  code: 'ETIMEDOUT',
+  syscall: 'connect'
+}
+[DB] Keep-alive ping failed PrismaClientKnownRequestError: 
+Invalid `prisma.$queryRaw()` invocation:
+
+
+Can't reach database server at `aws-1-ap-southeast-1.pooler.supabase.com:6543`
+
+Please make sure your database server is running at `aws-1-ap-southeast-1.pooler.supabase.com:6543`.
+    at $n.handleRequestError (G:\ERP\Backend\src\generated\prisma\runtime\library.js:121:7315)
+    at $n.handleAndLogRequestError (G:\ERP\Backend\src\generated\prisma\runtime\library.js:121:6623)
+    at $n.request (G:\ERP\Backend\src\generated\prisma\runtime\library.js:121:6307)
+    at async l (G:\ERP\Backend\src\generated\prisma\runtime\library.js:130:9633)
+    at async Timeout._onTimeout (G:\ERP\Backend\src\app\prismaKeepAlive.ts:10:13) {
+  code: 'P1001',
+  clientVersion: '5.22.0',
+  meta: {
+    database_host: 'aws-1-ap-southeast-1.pooler.supabase.com',
+    database_port: 6543
+  }
+}
+{"timestamp":"2026-05-15T11:12:09.610Z","level":"error","message":"Redis connection error","service":"erp-backend","component":"automation-queue","subsystem":"redis","error":{"name":"Error","message":"connect ETIMEDOUT","stack":"Error: connect ETIMEDOUT\n    at Socket.<anonymous> (G:\\ERP\\Backend\\node_modules\\ioredis\\built\\Redis.js:171:41)\n    at Object.onceWrapper (node:events:622:28)\n    at Socket.emit (node:events:508:28)\n    at Socket._onTimeout (node:net:604:8)\n    at listOnTimeout (node:internal/timers:605:17)\n    at process.processTimers (node:internal/timers:541:7)"}}
+Error: connect ETIMEDOUT
+    at Socket.<anonymous> (G:\ERP\Backend\node_modules\ioredis\built\Redis.js:171:41)
+    at Object.onceWrapper (node:events:622:28)
+    at Socket.emit (node:events:508:28)
+    at Socket._onTimeout (node:net:604:8)
+    at listOnTimeout (node:internal/timers:605:17)
+    at process.processTimers (node:internal/timers:541:7) {
+  errorno: 'ETIMEDOUT',
+  code: 'ETIMEDOUT',
+  syscall: 'connect'
+}
+{"timestamp":"2026-05-15T11:12:20.786Z","level":"error","message":"Redis connection error","service":"erp-backend","component":"automation-queue","subsystem":"redis","error":{"name":"Error","message":"connect ETIMEDOUT","stack":"Error: connect ETIMEDOUT\n    at Socket.<anonymous> (G:\\ERP\\Backend\\node_modules\\ioredis\\built\\Redis.js:171:41)\n    at Object.onceWrapper (node:events:622:28)\n    at Socket.emit (node:events:508:28)\n    at Socket._onTimeout (node:net:604:8)\n    at listOnTimeout (node:internal/timers:605:17)\n    at process.processTimers (node:internal/timers:541:7)"}}
+Error: connect ETIMEDOUT
+    at Socket.<anonymous> (G:\ERP\Backend\node_modules\ioredis\built\Redis.js:171:41)
+    at Object.onceWrapper (node:events:622:28)
+    at Socket.emit (node:events:508:28)
+    at Socket._onTimeout (node:net:604:8)
+    at listOnTimeout (node:internal/timers:605:17)
+    at process.processTimers (node:internal/timers:541:7) {
+  errorno: 'ETIMEDOUT',
+  code: 'ETIMEDOUT',
+  syscall: 'connect'
+}
+[DB] Keep-alive ping failed PrismaClientKnownRequestError: 
+Invalid `prisma.$queryRaw()` invocation:
+
+
+Timed out fetching a new connection from the connection pool. More info: http://pris.ly/d/connection-pool (Current connection pool timeout: 30, connection limit: 1)
+    at $n.handleRequestError (G:\ERP\Backend\src\generated\prisma\runtime\library.js:121:7315)
+    at $n.handleAndLogRequestError (G:\ERP\Backend\src\generated\prisma\runtime\library.js:121:6623)
+    at $n.request (G:\ERP\Backend\src\generated\prisma\runtime\library.js:121:6307)
+    at async l (G:\ERP\Backend\src\generated\prisma\runtime\library.js:130:9633)
+    at async Timeout._onTimeout (G:\ERP\Backend\src\app\prismaKeepAlive.ts:10:13) {
+  code: 'P2024',
+  clientVersion: '5.22.0',
+  meta: { connection_limit: 1, timeout: 30 }
+}
+{"timestamp":"2026-05-15T11:12:32.566Z","level":"error","message":"Redis connection error","service":"erp-backend","component":"automation-queue","subsystem":"redis","error":{"name":"Error","message":"connect ETIMEDOUT","stack":"Error: connect ETIMEDOUT\n    at Socket.<anonymous> (G:\\ERP\\Backend\\node_modules\\ioredis\\built\\Redis.js:171:41)\n    at Object.onceWrapper (node:events:622:28)\n    at Socket.emit (node:events:508:28)\n    at Socket._onTimeout (node:net:604:8)\n    at listOnTimeout (node:internal/timers:605:17)\n    at process.processTimers (node:internal/timers:541:7)"}}
+Error: connect ETIMEDOUT
+    at Socket.<anonymous> (G:\ERP\Backend\node_modules\ioredis\built\Redis.js:171:41)
+    at Object.onceWrapper (node:events:622:28)
+    at Socket.emit (node:events:508:28)
+    at Socket._onTimeout (node:net:604:8)
+    at listOnTimeout (node:internal/timers:605:17)
+    at process.processTimers (node:internal/timers:541:7) {
+  errorno: 'ETIMEDOUT',
+  code: 'ETIMEDOUT',
+  syscall: 'connect'
+}
+{"timestamp":"2026-05-15T11:12:44.139Z","level":"error","message":"Redis connection error","service":"erp-backend","component":"automation-queue","subsystem":"redis","error":{"name":"Error","message":"connect ETIMEDOUT","stack":"Error: connect ETIMEDOUT\n    at Socket.<anonymous> (G:\\ERP\\Backend\\node_modules\\ioredis\\built\\Redis.js:171:41)\n    at Object.onceWrapper (node:events:622:28)\n    at Socket.emit (node:events:508:28)\n    at Socket._onTimeout (node:net:604:8)\n    at listOnTimeout (node:internal/timers:605:17)\n    at process.processTimers (node:internal/timers:541:7)"}}
+Error: connect ETIMEDOUT
+    at Socket.<anonymous> (G:\ERP\Backend\node_modules\ioredis\built\Redis.js:171:41)
+    at Object.onceWrapper (node:events:622:28)
+    at Socket.emit (node:events:508:28)
+    at Socket._onTimeout (node:net:604:8)
+    at listOnTimeout (node:internal/timers:605:17)
+    at process.processTimers (node:internal/timers:541:7) {
+  errorno: 'ETIMEDOUT',
+  code: 'ETIMEDOUT',
+  syscall: 'connect'
+}
+{"timestamp":"2026-05-15T11:12:56.078Z","level":"error","message":"Redis connection error","service":"erp-backend","component":"automation-queue","subsystem":"redis","error":{"name":"Error","message":"connect ETIMEDOUT","stack":"Error: connect ETIMEDOUT\n    at Socket.<anonymous> (G:\\ERP\\Backend\\node_modules\\ioredis\\built\\Redis.js:171:41)\n    at Object.onceWrapper (node:events:622:28)\n    at Socket.emit (node:events:508:28)\n    at Socket._onTimeout (node:net:604:8)\n    at listOnTimeout (node:internal/timers:605:17)\n    at process.processTimers (node:internal/timers:541:7)"}}
+Error: connect ETIMEDOUT
+    at Socket.<anonymous> (G:\ERP\Backend\node_modules\ioredis\built\Redis.js:171:41)
+    at Object.onceWrapper (node:events:622:28)
+    at Socket.emit (node:events:508:28)
+    at Socket._onTimeout (node:net:604:8)
+    at listOnTimeout (node:internal/timers:605:17)
+    at process.processTimers (node:internal/timers:541:7) {
+  errorno: 'ETIMEDOUT',
+  code: 'ETIMEDOUT',
+  syscall: 'connect'
+}
+[DB] Keep-alive ping failed PrismaClientKnownRequestError: 
+Invalid `prisma.$queryRaw()` invocation:
+
+
+Can't reach database server at `aws-1-ap-southeast-1.pooler.supabase.com:6543`
+
+Please make sure your database server is running at `aws-1-ap-southeast-1.pooler.supabase.com:6543`.
+    at $n.handleRequestError (G:\ERP\Backend\src\generated\prisma\runtime\library.js:121:7315)
+    at $n.handleAndLogRequestError (G:\ERP\Backend\src\generated\prisma\runtime\library.js:121:6623)
+    at $n.request (G:\ERP\Backend\src\generated\prisma\runtime\library.js:121:6307)
+    at async l (G:\ERP\Backend\src\generated\prisma\runtime\library.js:130:9633)
+    at async Timeout._onTimeout (G:\ERP\Backend\src\app\prismaKeepAlive.ts:10:13) {
+  code: 'P1001',
+  clientVersion: '5.22.0',
+  meta: {
+    database_host: 'aws-1-ap-southeast-1.pooler.supabase.com',
+    database_port: 6543
+  }
+}
+{"timestamp":"2026-05-15T11:13:07.534Z","level":"error","message":"Redis connection error","service":"erp-backend","component":"automation-queue","subsystem":"redis","error":{"name":"Error","message":"connect ETIMEDOUT","stack":"Error: connect ETIMEDOUT\n    at Socket.<anonymous> (G:\\ERP\\Backend\\node_modules\\ioredis\\built\\Redis.js:171:41)\n    at Object.onceWrapper (node:events:622:28)\n    at Socket.emit (node:events:508:28)\n    at Socket._onTimeout (node:net:604:8)\n    at listOnTimeout (node:internal/timers:605:17)\n    at process.processTimers (node:internal/timers:541:7)"}}
+Error: connect ETIMEDOUT
+    at Socket.<anonymous> (G:\ERP\Backend\node_modules\ioredis\built\Redis.js:171:41)
+    at Object.onceWrapper (node:events:622:28)
+    at Socket.emit (node:events:508:28)
+    at Socket._onTimeout (node:net:604:8)
+    at listOnTimeout (node:internal/timers:605:17)
+    at process.processTimers (node:internal/timers:541:7) {
+  errorno: 'ETIMEDOUT',
+  code: 'ETIMEDOUT',
+  syscall: 'connect'
+}
+{"timestamp":"2026-05-15T11:13:18.914Z","level":"error","message":"Redis connection error","service":"erp-backend","component":"automation-queue","subsystem":"redis","error":{"name":"Error","message":"connect ETIMEDOUT","stack":"Error: connect ETIMEDOUT\n    at Socket.<anonymous> (G:\\ERP\\Backend\\node_modules\\ioredis\\built\\Redis.js:171:41)\n    at Object.onceWrapper (node:events:622:28)\n    at Socket.emit (node:events:508:28)\n    at Socket._onTimeout (node:net:604:8)\n    at listOnTimeout (node:internal/timers:605:17)\n    at process.processTimers (node:internal/timers:541:7)"}}
+Error: connect ETIMEDOUT
+    at Socket.<anonymous> (G:\ERP\Backend\node_modules\ioredis\built\Redis.js:171:41)
+    at Object.onceWrapper (node:events:622:28)
+    at Socket.emit (node:events:508:28)
+    at Socket._onTimeout (node:net:604:8)
+    at listOnTimeout (node:internal/timers:605:17)
+    at process.processTimers (node:internal/timers:541:7) {
+  errorno: 'ETIMEDOUT',
+  code: 'ETIMEDOUT',
+  syscall: 'connect'
+}
+{"timestamp":"2026-05-15T11:13:20.344Z","level":"error","message":"Redis connection error","service":"erp-backend","component":"automation-queue","subsystem":"redis","error":{"name":"Error","message":"getaddrinfo ENOTFOUND redis-12592.crce276.ap-south-1-3.ec2.cloud.redislabs.com","stack":"Error: getaddrinfo ENOTFOUND redis-12592.crce276.ap-south-1-3.ec2.cloud.redislabs.com\n    at GetAddrInfoReqWrap.onlookupall [as oncomplete] (node:dns:122:26)"}}
+Error: getaddrinfo ENOTFOUND redis-12592.crce276.ap-south-1-3.ec2.cloud.redislabs.com
+    at GetAddrInfoReqWrap.onlookupall [as oncomplete] (node:dns:122:26) {
+  errno: -3008,
+  code: 'ENOTFOUND',
+  syscall: 'getaddrinfo',
+  hostname: 'redis-12592.crce276.ap-south-1-3.ec2.cloud.redislabs.com'
+}
+[DB] Keep-alive ping failed PrismaClientKnownRequestError: 
+Invalid `prisma.$queryRaw()` invocation:
+
+
+Can't reach database server at `aws-1-ap-southeast-1.pooler.supabase.com:6543`
+
+Please make sure your database server is running at `aws-1-ap-southeast-1.pooler.supabase.com:6543`.
+    at $n.handleRequestError (G:\ERP\Backend\src\generated\prisma\runtime\library.js:121:7315)
+    at $n.handleAndLogRequestError (G:\ERP\Backend\src\generated\prisma\runtime\library.js:121:6623)
+    at $n.request (G:\ERP\Backend\src\generated\prisma\runtime\library.js:121:6307)
+    at async l (G:\ERP\Backend\src\generated\prisma\runtime\library.js:130:9633)
+    at async Timeout._onTimeout (G:\ERP\Backend\src\app\prismaKeepAlive.ts:10:13) {
+  code: 'P1001',
+  clientVersion: '5.22.0',
+  meta: {
+    database_host: 'aws-1-ap-southeast-1.pooler.supabase.com',
+    database_port: 6543
+  }
+}
+{"timestamp":"2026-05-15T11:13:21.823Z","level":"error","message":"Redis connection error","service":"erp-backend","component":"automation-queue","subsystem":"redis","error":{"name":"Error","message":"getaddrinfo ENOTFOUND redis-12592.crce276.ap-south-1-3.ec2.cloud.redislabs.com","stack":"Error: getaddrinfo ENOTFOUND redis-12592.crce276.ap-south-1-3.ec2.cloud.redislabs.com\n    at GetAddrInfoReqWrap.onlookupall [as oncomplete] (node:dns:122:26)"}}
+Error: getaddrinfo ENOTFOUND redis-12592.crce276.ap-south-1-3.ec2.cloud.redislabs.com
+    at GetAddrInfoReqWrap.onlookupall [as oncomplete] (node:dns:122:26) {
+  errno: -3008,
+  code: 'ENOTFOUND',
+  syscall: 'getaddrinfo',
+  hostname: 'redis-12592.crce276.ap-south-1-3.ec2.cloud.redislabs.com'
+}
+{"timestamp":"2026-05-15T11:13:23.358Z","level":"error","message":"Redis connection error","service":"erp-backend","component":"automation-queue","subsystem":"redis","error":{"name":"Error","message":"getaddrinfo ENOTFOUND redis-12592.crce276.ap-south-1-3.ec2.cloud.redislabs.com","stack":"Error: getaddrinfo ENOTFOUND redis-12592.crce276.ap-south-1-3.ec2.cloud.redislabs.com\n    at GetAddrInfoReqWrap.onlookupall [as oncomplete] (node:dns:122:26)"}}
+Error: getaddrinfo ENOTFOUND redis-12592.crce276.ap-south-1-3.ec2.cloud.redislabs.com
+    at GetAddrInfoReqWrap.onlookupall [as oncomplete] (node:dns:122:26) {
+  errno: -3008,
+  code: 'ENOTFOUND',
+  syscall: 'getaddrinfo',
+  hostname: 'redis-12592.crce276.ap-south-1-3.ec2.cloud.redislabs.com'
+}
+{"timestamp":"2026-05-15T11:13:24.928Z","level":"error","message":"Redis connection error","service":"erp-backend","component":"automation-queue","subsystem":"redis","error":{"name":"Error","message":"getaddrinfo ENOTFOUND redis-12592.crce276.ap-south-1-3.ec2.cloud.redislabs.com","stack":"Error: getaddrinfo ENOTFOUND redis-12592.crce276.ap-south-1-3.ec2.cloud.redislabs.com\n    at GetAddrInfoReqWrap.onlookupall [as oncomplete] (node:dns:122:26)"}}
+Error: getaddrinfo ENOTFOUND redis-12592.crce276.ap-south-1-3.ec2.cloud.redislabs.com
+    at GetAddrInfoReqWrap.onlookupall [as oncomplete] (node:dns:122:26) {
+  errno: -3008,
+  code: 'ENOTFOUND',
+  syscall: 'getaddrinfo',
+  hostname: 'redis-12592.crce276.ap-south-1-3.ec2.cloud.redislabs.com'
+}
+{"timestamp":"2026-05-15T11:13:26.557Z","level":"error","message":"Redis connection error","service":"erp-backend","component":"automation-queue","subsystem":"redis","error":{"name":"Error","message":"getaddrinfo ENOTFOUND redis-12592.crce276.ap-south-1-3.ec2.cloud.redislabs.com","stack":"Error: getaddrinfo ENOTFOUND redis-12592.crce276.ap-south-1-3.ec2.cloud.redislabs.com\n    at GetAddrInfoReqWrap.onlookupall [as oncomplete] (node:dns:122:26)"}}
+Error: getaddrinfo ENOTFOUND redis-12592.crce276.ap-south-1-3.ec2.cloud.redislabs.com
+    at GetAddrInfoReqWrap.onlookupall [as oncomplete] (node:dns:122:26) {
+  errno: -3008,
+  code: 'ENOTFOUND',
+  syscall: 'getaddrinfo',
+  hostname: 'redis-12592.crce276.ap-south-1-3.ec2.cloud.redislabs.com'
+}
+{"timestamp":"2026-05-15T11:13:28.232Z","level":"error","message":"Redis connection error","service":"erp-backend","component":"automation-queue","subsystem":"redis","error":{"name":"Error","message":"getaddrinfo ENOTFOUND redis-12592.crce276.ap-south-1-3.ec2.cloud.redislabs.com","stack":"Error: getaddrinfo ENOTFOUND redis-12592.crce276.ap-south-1-3.ec2.cloud.redislabs.com\n    at GetAddrInfoReqWrap.onlookupall [as oncomplete] (node:dns:122:26)"}}
+Error: getaddrinfo ENOTFOUND redis-12592.crce276.ap-south-1-3.ec2.cloud.redislabs.com
+    at GetAddrInfoReqWrap.onlookupall [as oncomplete] (node:dns:122:26) {
+  errno: -3008,
+  code: 'ENOTFOUND',
+  syscall: 'getaddrinfo',
+  hostname: 'redis-12592.crce276.ap-south-1-3.ec2.cloud.redislabs.com'
+}
+{"timestamp":"2026-05-15T11:13:29.958Z","level":"error","message":"Redis connection error","service":"erp-backend","component":"automation-queue","subsystem":"redis","error":{"name":"Error","message":"getaddrinfo ENOTFOUND redis-12592.crce276.ap-south-1-3.ec2.cloud.redislabs.com","stack":"Error: getaddrinfo ENOTFOUND redis-12592.crce276.ap-south-1-3.ec2.cloud.redislabs.com\n    at GetAddrInfoReqWrap.onlookupall [as oncomplete] (node:dns:122:26)"}}
+Error: getaddrinfo ENOTFOUND redis-12592.crce276.ap-south-1-3.ec2.cloud.redislabs.com
+    at GetAddrInfoReqWrap.onlookupall [as oncomplete] (node:dns:122:26) {
+  errno: -3008,
+  code: 'ENOTFOUND',
+  syscall: 'getaddrinfo',
+  hostname: 'redis-12592.crce276.ap-south-1-3.ec2.cloud.redislabs.com'
+}
+{"timestamp":"2026-05-15T11:13:31.724Z","level":"error","message":"Redis connection error","service":"erp-backend","component":"automation-queue","subsystem":"redis","error":{"name":"Error","message":"getaddrinfo ENOTFOUND redis-12592.crce276.ap-south-1-3.ec2.cloud.redislabs.com","stack":"Error: getaddrinfo ENOTFOUND redis-12592.crce276.ap-south-1-3.ec2.cloud.redislabs.com\n    at GetAddrInfoReqWrap.onlookupall [as oncomplete] (node:dns:122:26)"}}
+Error: getaddrinfo ENOTFOUND redis-12592.crce276.ap-south-1-3.ec2.cloud.redislabs.com
+    at GetAddrInfoReqWrap.onlookupall [as oncomplete] (node:dns:122:26) {
+  errno: -3008,
+  code: 'ENOTFOUND',
+  syscall: 'getaddrinfo',
+  hostname: 'redis-12592.crce276.ap-south-1-3.ec2.cloud.redislabs.com'
+}
+[DB] Keep-alive ping failed PrismaClientKnownRequestError: 
+Invalid `prisma.$queryRaw()` invocation:
+
+
+Can't reach database server at `aws-1-ap-southeast-1.pooler.supabase.com:6543`
+
+Please make sure your database server is running at `aws-1-ap-southeast-1.pooler.supabase.com:6543`.
+    at $n.handleRequestError (G:\ERP\Backend\src\generated\prisma\runtime\library.js:121:7315)
+    at $n.handleAndLogRequestError (G:\ERP\Backend\src\generated\prisma\runtime\library.js:121:6623)
+    at $n.request (G:\ERP\Backend\src\generated\prisma\runtime\library.js:121:6307)
+    at async l (G:\ERP\Backend\src\generated\prisma\runtime\library.js:130:9633)
+    at async Timeout._onTimeout (G:\ERP\Backend\src\app\prismaKeepAlive.ts:10:13) {
+  code: 'P1001',
+  clientVersion: '5.22.0',
+  meta: {
+    database_host: 'aws-1-ap-southeast-1.pooler.supabase.com',
+    database_port: 6543
+  }
+}
+{"timestamp":"2026-05-15T11:13:33.549Z","level":"error","message":"Redis connection error","service":"erp-backend","component":"automation-queue","subsystem":"redis","error":{"name":"Error","message":"getaddrinfo ENOTFOUND redis-12592.crce276.ap-south-1-3.ec2.cloud.redislabs.com","stack":"Error: getaddrinfo ENOTFOUND redis-12592.crce276.ap-south-1-3.ec2.cloud.redislabs.com\n    at GetAddrInfoReqWrap.onlookupall [as oncomplete] (node:dns:122:26)"}}
+Error: getaddrinfo ENOTFOUND redis-12592.crce276.ap-south-1-3.ec2.cloud.redislabs.com
+    at GetAddrInfoReqWrap.onlookupall [as oncomplete] (node:dns:122:26) {
+  errno: -3008,
+  code: 'ENOTFOUND',
+  syscall: 'getaddrinfo',
+  hostname: 'redis-12592.crce276.ap-south-1-3.ec2.cloud.redislabs.com'
+}
+{"timestamp":"2026-05-15T11:13:35.421Z","level":"error","message":"Redis connection error","service":"erp-backend","component":"automation-queue","subsystem":"redis","error":{"name":"Error","message":"getaddrinfo ENOTFOUND redis-12592.crce276.ap-south-1-3.ec2.cloud.redislabs.com","stack":"Error: getaddrinfo ENOTFOUND redis-12592.crce276.ap-south-1-3.ec2.cloud.redislabs.com\n    at GetAddrInfoReqWrap.onlookupall [as oncomplete] (node:dns:122:26)"}}
+Error: getaddrinfo ENOTFOUND redis-12592.crce276.ap-south-1-3.ec2.cloud.redislabs.com
+    at GetAddrInfoReqWrap.onlookupall [as oncomplete] (node:dns:122:26) {
+  errno: -3008,
+  code: 'ENOTFOUND',
+  syscall: 'getaddrinfo',
+  hostname: 'redis-12592.crce276.ap-south-1-3.ec2.cloud.redislabs.com'
+}
+{"timestamp":"2026-05-15T11:13:37.353Z","level":"error","message":"Redis connection error","service":"erp-backend","component":"automation-queue","subsystem":"redis","error":{"name":"Error","message":"getaddrinfo ENOTFOUND redis-12592.crce276.ap-south-1-3.ec2.cloud.redislabs.com","stack":"Error: getaddrinfo ENOTFOUND redis-12592.crce276.ap-south-1-3.ec2.cloud.redislabs.com\n    at GetAddrInfoReqWrap.onlookupall [as oncomplete] (node:dns:122:26)"}}
+Error: getaddrinfo ENOTFOUND redis-12592.crce276.ap-south-1-3.ec2.cloud.redislabs.com
+    at GetAddrInfoReqWrap.onlookupall [as oncomplete] (node:dns:122:26) {
+  errno: -3008,
+  code: 'ENOTFOUND',
+  syscall: 'getaddrinfo',
+  hostname: 'redis-12592.crce276.ap-south-1-3.ec2.cloud.redislabs.com'
+}
+{"timestamp":"2026-05-15T11:13:39.322Z","level":"error","message":"Redis connection error","service":"erp-backend","component":"automation-queue","subsystem":"redis","error":{"name":"Error","message":"getaddrinfo ENOTFOUND redis-12592.crce276.ap-south-1-3.ec2.cloud.redislabs.com","stack":"Error: getaddrinfo ENOTFOUND redis-12592.crce276.ap-south-1-3.ec2.cloud.redislabs.com\n    at GetAddrInfoReqWrap.onlookupall [as oncomplete] (node:dns:122:26)"}}
+Error: getaddrinfo ENOTFOUND redis-12592.crce276.ap-south-1-3.ec2.cloud.redislabs.com
+    at GetAddrInfoReqWrap.onlookupall [as oncomplete] (node:dns:122:26) {
+  errno: -3008,
+  code: 'ENOTFOUND',
+  syscall: 'getaddrinfo',
+  hostname: 'redis-12592.crce276.ap-south-1-3.ec2.cloud.redislabs.com'
+}
+{"timestamp":"2026-05-15T11:13:41.347Z","level":"error","message":"Redis connection error","service":"erp-backend","component":"automation-queue","subsystem":"redis","error":{"name":"Error","message":"getaddrinfo ENOTFOUND redis-12592.crce276.ap-south-1-3.ec2.cloud.redislabs.com","stack":"Error: getaddrinfo ENOTFOUND redis-12592.crce276.ap-south-1-3.ec2.cloud.redislabs.com\n    at GetAddrInfoReqWrap.onlookupall [as oncomplete] (node:dns:122:26)"}}
+Error: getaddrinfo ENOTFOUND redis-12592.crce276.ap-south-1-3.ec2.cloud.redislabs.com
+    at GetAddrInfoReqWrap.onlookupall [as oncomplete] (node:dns:122:26) {
+  errno: -3008,
+  code: 'ENOTFOUND',
+  syscall: 'getaddrinfo',
+  hostname: 'redis-12592.crce276.ap-south-1-3.ec2.cloud.redislabs.com'
+}
+{"timestamp":"2026-05-15T11:13:43.378Z","level":"error","message":"Redis connection error","service":"erp-backend","component":"automation-queue","subsystem":"redis","error":{"name":"Error","message":"getaddrinfo ENOTFOUND redis-12592.crce276.ap-south-1-3.ec2.cloud.redislabs.com","stack":"Error: getaddrinfo ENOTFOUND redis-12592.crce276.ap-south-1-3.ec2.cloud.redislabs.com\n    at GetAddrInfoReqWrap.onlookupall [as oncomplete] (node:dns:122:26)"}}
+Error: getaddrinfo ENOTFOUND redis-12592.crce276.ap-south-1-3.ec2.cloud.redislabs.com
+    at GetAddrInfoReqWrap.onlookupall [as oncomplete] (node:dns:122:26) {
+  errno: -3008,
+  code: 'ENOTFOUND',
+  syscall: 'getaddrinfo',
+  hostname: 'redis-12592.crce276.ap-south-1-3.ec2.cloud.redislabs.com'
+}
+{"timestamp":"2026-05-15T11:13:45.396Z","level":"error","message":"Redis connection error","service":"erp-backend","component":"automation-queue","subsystem":"redis","error":{"name":"Error","message":"getaddrinfo ENOTFOUND redis-12592.crce276.ap-south-1-3.ec2.cloud.redislabs.com","stack":"Error: getaddrinfo ENOTFOUND redis-12592.crce276.ap-south-1-3.ec2.cloud.redislabs.com\n    at GetAddrInfoReqWrap.onlookupall [as oncomplete] (node:dns:122:26)"}}
+Error: getaddrinfo ENOTFOUND redis-12592.crce276.ap-south-1-3.ec2.cloud.redislabs.com
+    at GetAddrInfoReqWrap.onlookupall [as oncomplete] (node:dns:122:26) {
+  errno: -3008,
+  code: 'ENOTFOUND',
+  syscall: 'getaddrinfo',
+  hostname: 'redis-12592.crce276.ap-south-1-3.ec2.cloud.redislabs.com'
+}
+{"timestamp":"2026-05-15T11:13:47.420Z","level":"error","message":"Redis connection error","service":"erp-backend","component":"automation-queue","subsystem":"redis","error":{"name":"Error","message":"getaddrinfo ENOTFOUND redis-12592.crce276.ap-south-1-3.ec2.cloud.redislabs.com","stack":"Error: getaddrinfo ENOTFOUND redis-12592.crce276.ap-south-1-3.ec2.cloud.redislabs.com\n    at GetAddrInfoReqWrap.onlookupall [as oncomplete] (node:dns:122:26)"}}
+Error: getaddrinfo ENOTFOUND redis-12592.crce276.ap-south-1-3.ec2.cloud.redislabs.com
+    at GetAddrInfoReqWrap.onlookupall [as oncomplete] (node:dns:122:26) {
+  errno: -3008,
+  code: 'ENOTFOUND',
+  syscall: 'getaddrinfo',
+  hostname: 'redis-12592.crce276.ap-south-1-3.ec2.cloud.redislabs.com'
+}
+{"timestamp":"2026-05-15T11:13:49.447Z","level":"error","message":"Redis connection error","service":"erp-backend","component":"automation-queue","subsystem":"redis","error":{"name":"Error","message":"getaddrinfo ENOTFOUND redis-12592.crce276.ap-south-1-3.ec2.cloud.redislabs.com","stack":"Error: getaddrinfo ENOTFOUND redis-12592.crce276.ap-south-1-3.ec2.cloud.redislabs.com\n    at GetAddrInfoReqWrap.onlookupall [as oncomplete] (node:dns:122:26)"}}
+Error: getaddrinfo ENOTFOUND redis-12592.crce276.ap-south-1-3.ec2.cloud.redislabs.com
+    at GetAddrInfoReqWrap.onlookupall [as oncomplete] (node:dns:122:26) {
+  errno: -3008,
+  code: 'ENOTFOUND',
+  syscall: 'getaddrinfo',
+  hostname: 'redis-12592.crce276.ap-south-1-3.ec2.cloud.redislabs.com'
+}
+{"timestamp":"2026-05-15T11:13:51.466Z","level":"error","message":"Redis connection error","service":"erp-backend","component":"automation-queue","subsystem":"redis","error":{"name":"Error","message":"getaddrinfo ENOTFOUND redis-12592.crce276.ap-south-1-3.ec2.cloud.redislabs.com","stack":"Error: getaddrinfo ENOTFOUND redis-12592.crce276.ap-south-1-3.ec2.cloud.redislabs.com\n    at GetAddrInfoReqWrap.onlookupall [as oncomplete] (node:dns:122:26)"}}
+Error: getaddrinfo ENOTFOUND redis-12592.crce276.ap-south-1-3.ec2.cloud.redislabs.com
+    at GetAddrInfoReqWrap.onlookupall [as oncomplete] (node:dns:122:26) {
+  errno: -3008,
+  code: 'ENOTFOUND',
+  syscall: 'getaddrinfo',
+  hostname: 'redis-12592.crce276.ap-south-1-3.ec2.cloud.redislabs.com'
+}
+{"timestamp":"2026-05-15T11:13:53.521Z","level":"error","message":"Redis connection error","service":"erp-backend","component":"automation-queue","subsystem":"redis","error":{"name":"Error","message":"getaddrinfo ENOTFOUND redis-12592.crce276.ap-south-1-3.ec2.cloud.redislabs.com","stack":"Error: getaddrinfo ENOTFOUND redis-12592.crce276.ap-south-1-3.ec2.cloud.redislabs.com\n    at GetAddrInfoReqWrap.onlookupall [as oncomplete] (node:dns:122:26)"}}
+Error: getaddrinfo ENOTFOUND redis-12592.crce276.ap-south-1-3.ec2.cloud.redislabs.com
+    at GetAddrInfoReqWrap.onlookupall [as oncomplete] (node:dns:122:26) {
+  errno: -3008,
+  code: 'ENOTFOUND',
+  syscall: 'getaddrinfo',
+  hostname: 'redis-12592.crce276.ap-south-1-3.ec2.cloud.redislabs.com'
+}
+{"timestamp":"2026-05-15T11:13:55.540Z","level":"error","message":"Redis connection error","service":"erp-backend","component":"automation-queue","subsystem":"redis","error":{"name":"Error","message":"getaddrinfo ENOTFOUND redis-12592.crce276.ap-south-1-3.ec2.cloud.redislabs.com","stack":"Error: getaddrinfo ENOTFOUND redis-12592.crce276.ap-south-1-3.ec2.cloud.redislabs.com\n    at GetAddrInfoReqWrap.onlookupall [as oncomplete] (node:dns:122:26)"}}
+Error: getaddrinfo ENOTFOUND redis-12592.crce276.ap-south-1-3.ec2.cloud.redislabs.com
+    at GetAddrInfoReqWrap.onlookupall [as oncomplete] (node:dns:122:26) {
+  errno: -3008,
+  code: 'ENOTFOUND',
+  syscall: 'getaddrinfo',
+  hostname: 'redis-12592.crce276.ap-south-1-3.ec2.cloud.redislabs.com'
+}
+{"timestamp":"2026-05-15T11:13:57.557Z","level":"error","message":"Redis connection error","service":"erp-backend","component":"automation-queue","subsystem":"redis","error":{"name":"Error","message":"getaddrinfo ENOTFOUND redis-12592.crce276.ap-south-1-3.ec2.cloud.redislabs.com","stack":"Error: getaddrinfo ENOTFOUND redis-12592.crce276.ap-south-1-3.ec2.cloud.redislabs.com\n    at GetAddrInfoReqWrap.onlookupall [as oncomplete] (node:dns:122:26)"}}
+Error: getaddrinfo ENOTFOUND redis-12592.crce276.ap-south-1-3.ec2.cloud.redislabs.com
+    at GetAddrInfoReqWrap.onlookupall [as oncomplete] (node:dns:122:26) {
+  errno: -3008,
+  code: 'ENOTFOUND',
+  syscall: 'getaddrinfo',
+  hostname: 'redis-12592.crce276.ap-south-1-3.ec2.cloud.redislabs.com'
+}
+{"timestamp":"2026-05-15T11:13:59.586Z","level":"error","message":"Redis connection error","service":"erp-backend","component":"automation-queue","subsystem":"redis","error":{"name":"Error","message":"getaddrinfo ENOTFOUND redis-12592.crce276.ap-south-1-3.ec2.cloud.redislabs.com","stack":"Error: getaddrinfo ENOTFOUND redis-12592.crce276.ap-south-1-3.ec2.cloud.redislabs.com\n    at GetAddrInfoReqWrap.onlookupall [as oncomplete] (node:dns:122:26)"}}
+Error: getaddrinfo ENOTFOUND redis-12592.crce276.ap-south-1-3.ec2.cloud.redislabs.com
+    at GetAddrInfoReqWrap.onlookupall [as oncomplete] (node:dns:122:26) {
+  errno: -3008,
+  code: 'ENOTFOUND',
+  syscall: 'getaddrinfo',
+  hostname: 'redis-12592.crce276.ap-south-1-3.ec2.cloud.redislabs.com'
+}
+{"timestamp":"2026-05-15T11:14:01.639Z","level":"error","message":"Redis connection error","service":"erp-backend","component":"automation-queue","subsystem":"redis","error":{"name":"Error","message":"getaddrinfo ENOTFOUND redis-12592.crce276.ap-south-1-3.ec2.cloud.redislabs.com","stack":"Error: getaddrinfo ENOTFOUND redis-12592.crce276.ap-south-1-3.ec2.cloud.redislabs.com\n    at GetAddrInfoReqWrap.onlookupall [as oncomplete] (node:dns:122:26)"}}
+Error: getaddrinfo ENOTFOUND redis-12592.crce276.ap-south-1-3.ec2.cloud.redislabs.com
+    at GetAddrInfoReqWrap.onlookupall [as oncomplete] (node:dns:122:26) {
+  errno: -3008,
+  code: 'ENOTFOUND',
+  syscall: 'getaddrinfo',
+  hostname: 'redis-12592.crce276.ap-south-1-3.ec2.cloud.redislabs.com'
+}
+[DB] Keep-alive ping failed PrismaClientKnownRequestError: 
+Invalid `prisma.$queryRaw()` invocation:
+
+
+Can't reach database server at `aws-1-ap-southeast-1.pooler.supabase.com:6543`
+
+Please make sure your database server is running at `aws-1-ap-southeast-1.pooler.supabase.com:6543`.
+    at $n.handleRequestError (G:\ERP\Backend\src\generated\prisma\runtime\library.js:121:7315)
+    at $n.handleAndLogRequestError (G:\ERP\Backend\src\generated\prisma\runtime\library.js:121:6623)
+    at $n.request (G:\ERP\Backend\src\generated\prisma\runtime\library.js:121:6307)
+    at async l (G:\ERP\Backend\src\generated\prisma\runtime\library.js:130:9633)
+    at async Timeout._onTimeout (G:\ERP\Backend\src\app\prismaKeepAlive.ts:10:13) {
+  code: 'P1001',
+  clientVersion: '5.22.0',
+  meta: {
+    database_host: 'aws-1-ap-southeast-1.pooler.supabase.com',
+    database_port: 6543
+  }
+}
+{"timestamp":"2026-05-15T11:14:03.666Z","level":"error","message":"Redis connection error","service":"erp-backend","component":"automation-queue","subsystem":"redis","error":{"name":"Error","message":"getaddrinfo ENOTFOUND redis-12592.crce276.ap-south-1-3.ec2.cloud.redislabs.com","stack":"Error: getaddrinfo ENOTFOUND redis-12592.crce276.ap-south-1-3.ec2.cloud.redislabs.com\n    at GetAddrInfoReqWrap.onlookupall [as oncomplete] (node:dns:122:26)"}}
+Error: getaddrinfo ENOTFOUND redis-12592.crce276.ap-south-1-3.ec2.cloud.redislabs.com
+    at GetAddrInfoReqWrap.onlookupall [as oncomplete] (node:dns:122:26) {
+  errno: -3008,
+  code: 'ENOTFOUND',
+  syscall: 'getaddrinfo',
+  hostname: 'redis-12592.crce276.ap-south-1-3.ec2.cloud.redislabs.com'
+}
+PrismaClientKnownRequestError: 
+Invalid `prisma.jobApplication.findMany()` invocation:
+
+
+The table `public.JobApplication` does not exist in the current database.
+    at $n.handleRequestError (G:\ERP\Backend\src\generated\prisma\runtime\library.js:121:7315)
+    at $n.handleAndLogRequestError (G:\ERP\Backend\src\generated\prisma\runtime\library.js:121:6623)
+    at $n.request (G:\ERP\Backend\src\generated\prisma\runtime\library.js:121:6307)
+    at async l (G:\ERP\Backend\src\generated\prisma\runtime\library.js:130:9633)
+    at async handleGetJobApplications (file:///G:/ERP/Backend/src/modules/hr/controller.js:199:30) {
+  code: 'P2021',
+  clientVersion: '5.22.0',
+  meta: { modelName: 'JobApplication', table: 'public.JobApplication' }
+}
+PrismaClientKnownRequestError: 
+Invalid `prisma.jobApplication.findMany()` invocation:
+
+
+The table `public.JobApplication` does not exist in the current database.
+    at $n.handleRequestError (G:\ERP\Backend\src\generated\prisma\runtime\library.js:121:7315)
+    at $n.handleAndLogRequestError (G:\ERP\Backend\src\generated\prisma\runtime\library.js:121:6623)
+    at $n.request (G:\ERP\Backend\src\generated\prisma\runtime\library.js:121:6307)
+    at async l (G:\ERP\Backend\src\generated\prisma\runtime\library.js:130:9633)
+    at async handleGetJobApplications (file:///G:/ERP/Backend/src/modules/hr/controller.js:199:30) {
+  code: 'P2021',
+  clientVersion: '5.22.0',
+  meta: { modelName: 'JobApplication', table: 'public.JobApplication' }
+}
+PrismaClientKnownRequestError: 
+Invalid `prisma.jobApplication.findMany()` invocation:
+
+
+The table `public.JobApplication` does not exist in the current database.
+    at $n.handleRequestError (G:\ERP\Backend\src\generated\prisma\runtime\library.js:121:7315)
+    at $n.handleAndLogRequestError (G:\ERP\Backend\src\generated\prisma\runtime\library.js:121:6623)
+    at $n.request (G:\ERP\Backend\src\generated\prisma\runtime\library.js:121:6307)
+    at async l (G:\ERP\Backend\src\generated\prisma\runtime\library.js:130:9633)
+    at async handleGetJobApplications (file:///G:/ERP/Backend/src/modules/hr/controller.js:199:30) {
+  code: 'P2021',
+  clientVersion: '5.22.0',
+  meta: { modelName: 'JobApplication', table: 'public.JobApplication' }
+}
+{"timestamp":"2026-05-15T12:03:24.079Z","level":"error","message":"Redis connection error","service":"erp-backend","component":"automation-queue","subsystem":"redis","error":{"name":"Error","message":"read ECONNRESET","stack":"Error: read ECONNRESET\n    at TCP.onStreamRead (node:internal/stream_base_commons:216:20)"}}
+Error: read ECONNRESET
+    at TCP.onStreamRead (node:internal/stream_base_commons:216:20) {
+  errno: -4077,
+  code: 'ECONNRESET',
+  syscall: 'read'
+}
+[DB] Keep-alive ping failed PrismaClientKnownRequestError: 
+Invalid `prisma.$queryRaw()` invocation:
+
+
+Can't reach database server at `aws-1-ap-southeast-1.pooler.supabase.com:6543`
+
+Please make sure your database server is running at `aws-1-ap-southeast-1.pooler.supabase.com:6543`.
+    at $n.handleRequestError (G:\ERP\Backend\src\generated\prisma\runtime\library.js:121:7315)
+    at $n.handleAndLogRequestError (G:\ERP\Backend\src\generated\prisma\runtime\library.js:121:6623)
+    at $n.request (G:\ERP\Backend\src\generated\prisma\runtime\library.js:121:6307)
+    at async l (G:\ERP\Backend\src\generated\prisma\runtime\library.js:130:9633)
+    at async Timeout._onTimeout (G:\ERP\Backend\src\app\prismaKeepAlive.ts:10:13) {
+  code: 'P1001',
+  clientVersion: '5.22.0',
+  meta: {
+    database_host: 'aws-1-ap-southeast-1.pooler.supabase.com',
+    database_port: 6543
+  }
+}
+{"timestamp":"2026-05-15T12:03:24.218Z","level":"error","message":"Redis connection error","service":"erp-backend","component":"automation-queue","subsystem":"redis","error":{"name":"Error","message":"getaddrinfo ENOTFOUND redis-12592.crce276.ap-south-1-3.ec2.cloud.redislabs.com","stack":"Error: getaddrinfo ENOTFOUND redis-12592.crce276.ap-south-1-3.ec2.cloud.redislabs.com\n    at GetAddrInfoReqWrap.onlookupall [as oncomplete] (node:dns:122:26)"}}
+Error: getaddrinfo ENOTFOUND redis-12592.crce276.ap-south-1-3.ec2.cloud.redislabs.com
+    at GetAddrInfoReqWrap.onlookupall [as oncomplete] (node:dns:122:26) {
+  errno: -3008,
+  code: 'ENOTFOUND',
+  syscall: 'getaddrinfo',
+  hostname: 'redis-12592.crce276.ap-south-1-3.ec2.cloud.redislabs.com'
+}
+{"timestamp":"2026-05-15T12:03:24.333Z","level":"error","message":"Redis connection error","service":"erp-backend","component":"automation-queue","subsystem":"redis","error":{"name":"Error","message":"getaddrinfo ENOTFOUND redis-12592.crce276.ap-south-1-3.ec2.cloud.redislabs.com","stack":"Error: getaddrinfo ENOTFOUND redis-12592.crce276.ap-south-1-3.ec2.cloud.redislabs.com\n    at GetAddrInfoReqWrap.onlookupall [as oncomplete] (node:dns:122:26)"}}
+Error: getaddrinfo ENOTFOUND redis-12592.crce276.ap-south-1-3.ec2.cloud.redislabs.com
+    at GetAddrInfoReqWrap.onlookupall [as oncomplete] (node:dns:122:26) {
+  errno: -3008,
+  code: 'ENOTFOUND',
+  syscall: 'getaddrinfo',
+  hostname: 'redis-12592.crce276.ap-south-1-3.ec2.cloud.redislabs.com'
+}
+{"timestamp":"2026-05-15T12:03:24.503Z","level":"error","message":"Redis connection error","service":"erp-backend","component":"automation-queue","subsystem":"redis","error":{"name":"Error","message":"getaddrinfo ENOTFOUND redis-12592.crce276.ap-south-1-3.ec2.cloud.redislabs.com","stack":"Error: getaddrinfo ENOTFOUND redis-12592.crce276.ap-south-1-3.ec2.cloud.redislabs.com\n    at GetAddrInfoReqWrap.onlookupall [as oncomplete] (node:dns:122:26)"}}
+Error: getaddrinfo ENOTFOUND redis-12592.crce276.ap-south-1-3.ec2.cloud.redislabs.com
+    at GetAddrInfoReqWrap.onlookupall [as oncomplete] (node:dns:122:26) {
+  errno: -3008,
+  code: 'ENOTFOUND',
+  syscall: 'getaddrinfo',
+  hostname: 'redis-12592.crce276.ap-south-1-3.ec2.cloud.redislabs.com'
+}
+{"timestamp":"2026-05-15T12:03:24.716Z","level":"error","message":"Redis connection error","service":"erp-backend","component":"automation-queue","subsystem":"redis","error":{"name":"Error","message":"getaddrinfo ENOTFOUND redis-12592.crce276.ap-south-1-3.ec2.cloud.redislabs.com","stack":"Error: getaddrinfo ENOTFOUND redis-12592.crce276.ap-south-1-3.ec2.cloud.redislabs.com\n    at GetAddrInfoReqWrap.onlookupall [as oncomplete] (node:dns:122:26)"}}
+Error: getaddrinfo ENOTFOUND redis-12592.crce276.ap-south-1-3.ec2.cloud.redislabs.com
+    at GetAddrInfoReqWrap.onlookupall [as oncomplete] (node:dns:122:26) {
+  errno: -3008,
+  code: 'ENOTFOUND',
+  syscall: 'getaddrinfo',
+  hostname: 'redis-12592.crce276.ap-south-1-3.ec2.cloud.redislabs.com'
+}
+{"timestamp":"2026-05-15T12:03:24.988Z","level":"error","message":"Redis connection error","service":"erp-backend","component":"automation-queue","subsystem":"redis","error":{"name":"Error","message":"getaddrinfo ENOTFOUND redis-12592.crce276.ap-south-1-3.ec2.cloud.redislabs.com","stack":"Error: getaddrinfo ENOTFOUND redis-12592.crce276.ap-south-1-3.ec2.cloud.redislabs.com\n    at GetAddrInfoReqWrap.onlookupall [as oncomplete] (node:dns:122:26)"}}
+Error: getaddrinfo ENOTFOUND redis-12592.crce276.ap-south-1-3.ec2.cloud.redislabs.com
+    at GetAddrInfoReqWrap.onlookupall [as oncomplete] (node:dns:122:26) {
+  errno: -3008,
+  code: 'ENOTFOUND',
+  syscall: 'getaddrinfo',
+  hostname: 'redis-12592.crce276.ap-south-1-3.ec2.cloud.redislabs.com'
+}
+{"timestamp":"2026-05-15T12:03:25.299Z","level":"error","message":"Redis connection error","service":"erp-backend","component":"automation-queue","subsystem":"redis","error":{"name":"Error","message":"getaddrinfo ENOTFOUND redis-12592.crce276.ap-south-1-3.ec2.cloud.redislabs.com","stack":"Error: getaddrinfo ENOTFOUND redis-12592.crce276.ap-south-1-3.ec2.cloud.redislabs.com\n    at GetAddrInfoReqWrap.onlookupall [as oncomplete] (node:dns:122:26)"}}
+Error: getaddrinfo ENOTFOUND redis-12592.crce276.ap-south-1-3.ec2.cloud.redislabs.com
+    at GetAddrInfoReqWrap.onlookupall [as oncomplete] (node:dns:122:26) {
+  errno: -3008,
+  code: 'ENOTFOUND',
+  syscall: 'getaddrinfo',
+  hostname: 'redis-12592.crce276.ap-south-1-3.ec2.cloud.redislabs.com'
+}
+{"timestamp":"2026-05-15T12:03:25.666Z","level":"error","message":"Redis connection error","service":"erp-backend","component":"automation-queue","subsystem":"redis","error":{"name":"Error","message":"getaddrinfo ENOTFOUND redis-12592.crce276.ap-south-1-3.ec2.cloud.redislabs.com","stack":"Error: getaddrinfo ENOTFOUND redis-12592.crce276.ap-south-1-3.ec2.cloud.redislabs.com\n    at GetAddrInfoReqWrap.onlookupall [as oncomplete] (node:dns:122:26)"}}
+Error: getaddrinfo ENOTFOUND redis-12592.crce276.ap-south-1-3.ec2.cloud.redislabs.com
+    at GetAddrInfoReqWrap.onlookupall [as oncomplete] (node:dns:122:26) {
+  errno: -3008,
+  code: 'ENOTFOUND',
+  syscall: 'getaddrinfo',
+  hostname: 'redis-12592.crce276.ap-south-1-3.ec2.cloud.redislabs.com'
+}
+{"timestamp":"2026-05-15T12:03:26.084Z","level":"error","message":"Redis connection error","service":"erp-backend","component":"automation-queue","subsystem":"redis","error":{"name":"Error","message":"getaddrinfo ENOTFOUND redis-12592.crce276.ap-south-1-3.ec2.cloud.redislabs.com","stack":"Error: getaddrinfo ENOTFOUND redis-12592.crce276.ap-south-1-3.ec2.cloud.redislabs.com\n    at GetAddrInfoReqWrap.onlookupall [as oncomplete] (node:dns:122:26)"}}
+Error: getaddrinfo ENOTFOUND redis-12592.crce276.ap-south-1-3.ec2.cloud.redislabs.com
+    at GetAddrInfoReqWrap.onlookupall [as oncomplete] (node:dns:122:26) {
+  errno: -3008,
+  code: 'ENOTFOUND',
+  syscall: 'getaddrinfo',
+  hostname: 'redis-12592.crce276.ap-south-1-3.ec2.cloud.redislabs.com'
+}
+{"timestamp":"2026-05-15T12:03:26.547Z","level":"error","message":"Redis connection error","service":"erp-backend","component":"automation-queue","subsystem":"redis","error":{"name":"Error","message":"getaddrinfo ENOTFOUND redis-12592.crce276.ap-south-1-3.ec2.cloud.redislabs.com","stack":"Error: getaddrinfo ENOTFOUND redis-12592.crce276.ap-south-1-3.ec2.cloud.redislabs.com\n    at GetAddrInfoReqWrap.onlookupall [as oncomplete] (node:dns:122:26)"}}
+Error: getaddrinfo ENOTFOUND redis-12592.crce276.ap-south-1-3.ec2.cloud.redislabs.com
+    at GetAddrInfoReqWrap.onlookupall [as oncomplete] (node:dns:122:26) {
+  errno: -3008,
+  code: 'ENOTFOUND',
+  syscall: 'getaddrinfo',
+  hostname: 'redis-12592.crce276.ap-south-1-3.ec2.cloud.redislabs.com'
+}
+{"timestamp":"2026-05-15T12:03:27.063Z","level":"error","message":"Redis connection error","service":"erp-backend","component":"automation-queue","subsystem":"redis","error":{"name":"Error","message":"getaddrinfo ENOTFOUND redis-12592.crce276.ap-south-1-3.ec2.cloud.redislabs.com","stack":"Error: getaddrinfo ENOTFOUND redis-12592.crce276.ap-south-1-3.ec2.cloud.redislabs.com\n    at GetAddrInfoReqWrap.onlookupall [as oncomplete] (node:dns:122:26)"}}
+Error: getaddrinfo ENOTFOUND redis-12592.crce276.ap-south-1-3.ec2.cloud.redislabs.com
+    at GetAddrInfoReqWrap.onlookupall [as oncomplete] (node:dns:122:26) {
+  errno: -3008,
+  code: 'ENOTFOUND',
+  syscall: 'getaddrinfo',
+  hostname: 'redis-12592.crce276.ap-south-1-3.ec2.cloud.redislabs.com'
+}
+{"timestamp":"2026-05-15T12:03:27.631Z","level":"error","message":"Redis connection error","service":"erp-backend","component":"automation-queue","subsystem":"redis","error":{"name":"Error","message":"getaddrinfo ENOTFOUND redis-12592.crce276.ap-south-1-3.ec2.cloud.redislabs.com","stack":"Error: getaddrinfo ENOTFOUND redis-12592.crce276.ap-south-1-3.ec2.cloud.redislabs.com\n    at GetAddrInfoReqWrap.onlookupall [as oncomplete] (node:dns:122:26)"}}
+Error: getaddrinfo ENOTFOUND redis-12592.crce276.ap-south-1-3.ec2.cloud.redislabs.com
+    at GetAddrInfoReqWrap.onlookupall [as oncomplete] (node:dns:122:26) {
+  errno: -3008,
+  code: 'ENOTFOUND',
+  syscall: 'getaddrinfo',
+  hostname: 'redis-12592.crce276.ap-south-1-3.ec2.cloud.redislabs.com'
+}
+{"timestamp":"2026-05-15T12:03:28.260Z","level":"error","message":"Redis connection error","service":"erp-backend","component":"automation-queue","subsystem":"redis","error":{"name":"Error","message":"getaddrinfo ENOTFOUND redis-12592.crce276.ap-south-1-3.ec2.cloud.redislabs.com","stack":"Error: getaddrinfo ENOTFOUND redis-12592.crce276.ap-south-1-3.ec2.cloud.redislabs.com\n    at GetAddrInfoReqWrap.onlookupall [as oncomplete] (node:dns:122:26)"}}
+Error: getaddrinfo ENOTFOUND redis-12592.crce276.ap-south-1-3.ec2.cloud.redislabs.com
+    at GetAddrInfoReqWrap.onlookupall [as oncomplete] (node:dns:122:26) {
+  errno: -3008,
+  code: 'ENOTFOUND',
+  syscall: 'getaddrinfo',
+  hostname: 'redis-12592.crce276.ap-south-1-3.ec2.cloud.redislabs.com'
+}
+{"timestamp":"2026-05-15T12:03:28.942Z","level":"error","message":"Redis connection error","service":"erp-backend","component":"automation-queue","subsystem":"redis","error":{"name":"Error","message":"getaddrinfo ENOTFOUND redis-12592.crce276.ap-south-1-3.ec2.cloud.redislabs.com","stack":"Error: getaddrinfo ENOTFOUND redis-12592.crce276.ap-south-1-3.ec2.cloud.redislabs.com\n    at GetAddrInfoReqWrap.onlookupall [as oncomplete] (node:dns:122:26)"}}
+Error: getaddrinfo ENOTFOUND redis-12592.crce276.ap-south-1-3.ec2.cloud.redislabs.com
+    at GetAddrInfoReqWrap.onlookupall [as oncomplete] (node:dns:122:26) {
+  errno: -3008,
+  code: 'ENOTFOUND',
+  syscall: 'getaddrinfo',
+  hostname: 'redis-12592.crce276.ap-south-1-3.ec2.cloud.redislabs.com'
+}
+{"timestamp":"2026-05-15T12:15:33.625Z","level":"error","message":"Redis connection error","service":"erp-backend","component":"automation-queue","subsystem":"redis","error":{"name":"Error","message":"getaddrinfo ENOTFOUND redis-12592.crce276.ap-south-1-3.ec2.cloud.redislabs.com","stack":"Error: getaddrinfo ENOTFOUND redis-12592.crce276.ap-south-1-3.ec2.cloud.redislabs.com\n    at GetAddrInfoReqWrap.onlookupall [as oncomplete] (node:dns:122:26)"}}
+Error: getaddrinfo ENOTFOUND redis-12592.crce276.ap-south-1-3.ec2.cloud.redislabs.com
+    at GetAddrInfoReqWrap.onlookupall [as oncomplete] (node:dns:122:26) {
+  errno: -3008,
+  code: 'ENOTFOUND',
+  syscall: 'getaddrinfo',
+  hostname: 'redis-12592.crce276.ap-south-1-3.ec2.cloud.redislabs.com'
+}
+[DB] Keep-alive ping failed PrismaClientKnownRequestError: 
+Invalid `prisma.$queryRaw()` invocation:
+
+
+Can't reach database server at `aws-1-ap-southeast-1.pooler.supabase.com:6543`
+
+Please make sure your database server is running at `aws-1-ap-southeast-1.pooler.supabase.com:6543`.
+    at $n.handleRequestError (G:\ERP\Backend\src\generated\prisma\runtime\library.js:121:7315)
+    at $n.handleAndLogRequestError (G:\ERP\Backend\src\generated\prisma\runtime\library.js:121:6623)
+    at $n.request (G:\ERP\Backend\src\generated\prisma\runtime\library.js:121:6307)
+    at async l (G:\ERP\Backend\src\generated\prisma\runtime\library.js:130:9633)
+    at async Timeout._onTimeout (G:\ERP\Backend\src\app\prismaKeepAlive.ts:10:13) {
+  code: 'P1001',
+  clientVersion: '5.22.0',
+  meta: {
+    database_host: 'aws-1-ap-southeast-1.pooler.supabase.com',
+    database_port: 6543
+  }
+}
+[DB] Keep-alive ping failed PrismaClientKnownRequestError: 
+Invalid `prisma.$queryRaw()` invocation:
+
+
+Can't reach database server at `aws-1-ap-southeast-1.pooler.supabase.com:6543`
+
+Please make sure your database server is running at `aws-1-ap-southeast-1.pooler.supabase.com:6543`.
+    at $n.handleRequestError (G:\ERP\Backend\src\generated\prisma\runtime\library.js:121:7315)
+    at $n.handleAndLogRequestError (G:\ERP\Backend\src\generated\prisma\runtime\library.js:121:6623)
+    at $n.request (G:\ERP\Backend\src\generated\prisma\runtime\library.js:121:6307)
+    at async l (G:\ERP\Backend\src\generated\prisma\runtime\library.js:130:9633)
+    at async Timeout._onTimeout (G:\ERP\Backend\src\app\prismaKeepAlive.ts:10:13) {
+  code: 'P1001',
+  clientVersion: '5.22.0',
+  meta: {
+    database_host: 'aws-1-ap-southeast-1.pooler.supabase.com',
+    database_port: 6543
+  }
+}
+{"timestamp":"2026-05-15T12:18:43.323Z","level":"error","message":"Redis connection error","service":"erp-backend","component":"automation-queue","subsystem":"redis","error":{"name":"Error","message":"read ECONNRESET","stack":"Error: read ECONNRESET\n    at TCP.onStreamRead (node:internal/stream_base_commons:216:20)"}}
+Error: read ECONNRESET
+    at TCP.onStreamRead (node:internal/stream_base_commons:216:20) {
+  errno: -4077,
+  code: 'ECONNRESET',
+  syscall: 'read'
+}
+{"timestamp":"2026-05-15T12:18:45.822Z","level":"error","message":"Redis connection error","service":"erp-backend","component":"automation-queue","subsystem":"redis","error":{"name":"Error","message":"read ECONNRESET","stack":"Error: read ECONNRESET\n    at TCP.onStreamRead (node:internal/stream_base_commons:216:20)"}}
+Error: read ECONNRESET
+    at TCP.onStreamRead (node:internal/stream_base_commons:216:20) {
+  errno: -4077,
+  code: 'ECONNRESET',
+  syscall: 'read'
+}
+{"timestamp":"2026-05-15T12:18:45.993Z","level":"error","message":"Redis connection error","service":"erp-backend","component":"automation-queue","subsystem":"redis","error":{"name":"Error","message":"getaddrinfo ENOTFOUND redis-12592.crce276.ap-south-1-3.ec2.cloud.redislabs.com","stack":"Error: getaddrinfo ENOTFOUND redis-12592.crce276.ap-south-1-3.ec2.cloud.redislabs.com\n    at GetAddrInfoReqWrap.onlookupall [as oncomplete] (node:dns:122:26)"}}
+Error: getaddrinfo ENOTFOUND redis-12592.crce276.ap-south-1-3.ec2.cloud.redislabs.com
+    at GetAddrInfoReqWrap.onlookupall [as oncomplete] (node:dns:122:26) {
+  errno: -3008,
+  code: 'ENOTFOUND',
+  syscall: 'getaddrinfo',
+  hostname: 'redis-12592.crce276.ap-south-1-3.ec2.cloud.redislabs.com'
+}
+{"timestamp":"2026-05-15T12:18:46.125Z","level":"error","message":"Redis connection error","service":"erp-backend","component":"automation-queue","subsystem":"redis","error":{"name":"Error","message":"getaddrinfo ENOTFOUND redis-12592.crce276.ap-south-1-3.ec2.cloud.redislabs.com","stack":"Error: getaddrinfo ENOTFOUND redis-12592.crce276.ap-south-1-3.ec2.cloud.redislabs.com\n    at GetAddrInfoReqWrap.onlookupall [as oncomplete] (node:dns:122:26)"}}
+Error: getaddrinfo ENOTFOUND redis-12592.crce276.ap-south-1-3.ec2.cloud.redislabs.com
+    at GetAddrInfoReqWrap.onlookupall [as oncomplete] (node:dns:122:26) {
+  errno: -3008,
+  code: 'ENOTFOUND',
+  syscall: 'getaddrinfo',
+  hostname: 'redis-12592.crce276.ap-south-1-3.ec2.cloud.redislabs.com'
+}
+{"timestamp":"2026-05-15T12:18:46.289Z","level":"error","message":"Redis connection error","service":"erp-backend","component":"automation-queue","subsystem":"redis","error":{"name":"Error","message":"getaddrinfo ENOTFOUND redis-12592.crce276.ap-south-1-3.ec2.cloud.redislabs.com","stack":"Error: getaddrinfo ENOTFOUND redis-12592.crce276.ap-south-1-3.ec2.cloud.redislabs.com\n    at GetAddrInfoReqWrap.onlookupall [as oncomplete] (node:dns:122:26)"}}
+Error: getaddrinfo ENOTFOUND redis-12592.crce276.ap-south-1-3.ec2.cloud.redislabs.com
+    at GetAddrInfoReqWrap.onlookupall [as oncomplete] (node:dns:122:26) {
+  errno: -3008,
+  code: 'ENOTFOUND',
+  syscall: 'getaddrinfo',
+  hostname: 'redis-12592.crce276.ap-south-1-3.ec2.cloud.redislabs.com'
+}
+{"timestamp":"2026-05-15T12:18:46.503Z","level":"error","message":"Redis connection error","service":"erp-backend","component":"automation-queue","subsystem":"redis","error":{"name":"Error","message":"getaddrinfo ENOTFOUND redis-12592.crce276.ap-south-1-3.ec2.cloud.redislabs.com","stack":"Error: getaddrinfo ENOTFOUND redis-12592.crce276.ap-south-1-3.ec2.cloud.redislabs.com\n    at GetAddrInfoReqWrap.onlookupall [as oncomplete] (node:dns:122:26)"}}
+Error: getaddrinfo ENOTFOUND redis-12592.crce276.ap-south-1-3.ec2.cloud.redislabs.com
+    at GetAddrInfoReqWrap.onlookupall [as oncomplete] (node:dns:122:26) {
+  errno: -3008,
+  code: 'ENOTFOUND',
+  syscall: 'getaddrinfo',
+  hostname: 'redis-12592.crce276.ap-south-1-3.ec2.cloud.redislabs.com'
+}
+{"timestamp":"2026-05-15T12:18:46.768Z","level":"error","message":"Redis connection error","service":"erp-backend","component":"automation-queue","subsystem":"redis","error":{"name":"Error","message":"getaddrinfo ENOTFOUND redis-12592.crce276.ap-south-1-3.ec2.cloud.redislabs.com","stack":"Error: getaddrinfo ENOTFOUND redis-12592.crce276.ap-south-1-3.ec2.cloud.redislabs.com\n    at GetAddrInfoReqWrap.onlookupall [as oncomplete] (node:dns:122:26)"}}
+Error: getaddrinfo ENOTFOUND redis-12592.crce276.ap-south-1-3.ec2.cloud.redislabs.com
+    at GetAddrInfoReqWrap.onlookupall [as oncomplete] (node:dns:122:26) {
+  errno: -3008,
+  code: 'ENOTFOUND',
+  syscall: 'getaddrinfo',
+  hostname: 'redis-12592.crce276.ap-south-1-3.ec2.cloud.redislabs.com'
+}
+{"timestamp":"2026-05-15T12:18:47.083Z","level":"error","message":"Redis connection error","service":"erp-backend","component":"automation-queue","subsystem":"redis","error":{"name":"Error","message":"getaddrinfo ENOTFOUND redis-12592.crce276.ap-south-1-3.ec2.cloud.redislabs.com","stack":"Error: getaddrinfo ENOTFOUND redis-12592.crce276.ap-south-1-3.ec2.cloud.redislabs.com\n    at GetAddrInfoReqWrap.onlookupall [as oncomplete] (node:dns:122:26)"}}
+Error: getaddrinfo ENOTFOUND redis-12592.crce276.ap-south-1-3.ec2.cloud.redislabs.com
+    at GetAddrInfoReqWrap.onlookupall [as oncomplete] (node:dns:122:26) {
+  errno: -3008,
+  code: 'ENOTFOUND',
+  syscall: 'getaddrinfo',
+  hostname: 'redis-12592.crce276.ap-south-1-3.ec2.cloud.redislabs.com'
+}
+{"timestamp":"2026-05-15T12:18:47.451Z","level":"error","message":"Redis connection error","service":"erp-backend","component":"automation-queue","subsystem":"redis","error":{"name":"Error","message":"getaddrinfo ENOTFOUND redis-12592.crce276.ap-south-1-3.ec2.cloud.redislabs.com","stack":"Error: getaddrinfo ENOTFOUND redis-12592.crce276.ap-south-1-3.ec2.cloud.redislabs.com\n    at GetAddrInfoReqWrap.onlookupall [as oncomplete] (node:dns:122:26)"}}
+Error: getaddrinfo ENOTFOUND redis-12592.crce276.ap-south-1-3.ec2.cloud.redislabs.com
+    at GetAddrInfoReqWrap.onlookupall [as oncomplete] (node:dns:122:26) {
+  errno: -3008,
+  code: 'ENOTFOUND',
+  syscall: 'getaddrinfo',
+  hostname: 'redis-12592.crce276.ap-south-1-3.ec2.cloud.redislabs.com'
+}
+{"timestamp":"2026-05-15T12:18:47.875Z","level":"error","message":"Redis connection error","service":"erp-backend","component":"automation-queue","subsystem":"redis","error":{"name":"Error","message":"getaddrinfo ENOTFOUND redis-12592.crce276.ap-south-1-3.ec2.cloud.redislabs.com","stack":"Error: getaddrinfo ENOTFOUND redis-12592.crce276.ap-south-1-3.ec2.cloud.redislabs.com\n    at GetAddrInfoReqWrap.onlookupall [as oncomplete] (node:dns:122:26)"}}
+Error: getaddrinfo ENOTFOUND redis-12592.crce276.ap-south-1-3.ec2.cloud.redislabs.com
+    at GetAddrInfoReqWrap.onlookupall [as oncomplete] (node:dns:122:26) {
+  errno: -3008,
+  code: 'ENOTFOUND',
+  syscall: 'getaddrinfo',
+  hostname: 'redis-12592.crce276.ap-south-1-3.ec2.cloud.redislabs.com'
+}
+{"timestamp":"2026-05-15T12:18:51.396Z","level":"error","message":"Redis connection error","service":"erp-backend","component":"automation-queue","subsystem":"redis","error":{"name":"Error","message":"getaddrinfo ENOTFOUND redis-12592.crce276.ap-south-1-3.ec2.cloud.redislabs.com","stack":"Error: getaddrinfo ENOTFOUND redis-12592.crce276.ap-south-1-3.ec2.cloud.redislabs.com\n    at GetAddrInfoReqWrap.onlookupall [as oncomplete] (node:dns:122:26)"}}
+Error: getaddrinfo ENOTFOUND redis-12592.crce276.ap-south-1-3.ec2.cloud.redislabs.com
+    at GetAddrInfoReqWrap.onlookupall [as oncomplete] (node:dns:122:26) {
+  errno: -3008,
+  code: 'ENOTFOUND',
+  syscall: 'getaddrinfo',
+  hostname: 'redis-12592.crce276.ap-south-1-3.ec2.cloud.redislabs.com'
+}
+{"timestamp":"2026-05-15T12:34:03.259Z","level":"error","message":"Redis connection error","service":"erp-backend","component":"automation-queue","subsystem":"redis","error":{"name":"Error","message":"read ECONNRESET","stack":"Error: read ECONNRESET\n    at TCP.onStreamRead (node:internal/stream_base_commons:216:20)"}}
+Error: read ECONNRESET
+    at TCP.onStreamRead (node:internal/stream_base_commons:216:20) {
+  errno: -4077,
+  code: 'ECONNRESET',
+  syscall: 'read'
+}
+[DB] Keep-alive ping failed PrismaClientKnownRequestError: 
+Invalid `prisma.$queryRaw()` invocation:
+
+
+Can't reach database server at `aws-1-ap-southeast-1.pooler.supabase.com:6543`
+
+Please make sure your database server is running at `aws-1-ap-southeast-1.pooler.supabase.com:6543`.
+    at $n.handleRequestError (G:\ERP\Backend\src\generated\prisma\runtime\library.js:121:7315)
+    at $n.handleAndLogRequestError (G:\ERP\Backend\src\generated\prisma\runtime\library.js:121:6623)
+    at $n.request (G:\ERP\Backend\src\generated\prisma\runtime\library.js:121:6307)
+    at async l (G:\ERP\Backend\src\generated\prisma\runtime\library.js:130:9633)
+    at async Timeout._onTimeout (G:\ERP\Backend\src\app\prismaKeepAlive.ts:10:13) {
+  code: 'P1001',
+  clientVersion: '5.22.0',
+  meta: {
+    database_host: 'aws-1-ap-southeast-1.pooler.supabase.com',
+    database_port: 6543
+  }
+}
+{"timestamp":"2026-05-15T12:34:03.451Z","level":"error","message":"Redis connection error","service":"erp-backend","component":"automation-queue","subsystem":"redis","error":{"name":"Error","message":"getaddrinfo ENOTFOUND redis-12592.crce276.ap-south-1-3.ec2.cloud.redislabs.com","stack":"Error: getaddrinfo ENOTFOUND redis-12592.crce276.ap-south-1-3.ec2.cloud.redislabs.com\n    at GetAddrInfoReqWrap.onlookupall [as oncomplete] (node:dns:122:26)"}}
+Error: getaddrinfo ENOTFOUND redis-12592.crce276.ap-south-1-3.ec2.cloud.redislabs.com
+    at GetAddrInfoReqWrap.onlookupall [as oncomplete] (node:dns:122:26) {
+  errno: -3008,
+  code: 'ENOTFOUND',
+  syscall: 'getaddrinfo',
+  hostname: 'redis-12592.crce276.ap-south-1-3.ec2.cloud.redislabs.com'
+}
+{"timestamp":"2026-05-15T12:34:03.584Z","level":"error","message":"Redis connection error","service":"erp-backend","component":"automation-queue","subsystem":"redis","error":{"name":"Error","message":"getaddrinfo ENOTFOUND redis-12592.crce276.ap-south-1-3.ec2.cloud.redislabs.com","stack":"Error: getaddrinfo ENOTFOUND redis-12592.crce276.ap-south-1-3.ec2.cloud.redislabs.com\n    at GetAddrInfoReqWrap.onlookupall [as oncomplete] (node:dns:122:26)"}}
+Error: getaddrinfo ENOTFOUND redis-12592.crce276.ap-south-1-3.ec2.cloud.redislabs.com
+    at GetAddrInfoReqWrap.onlookupall [as oncomplete] (node:dns:122:26) {
+  errno: -3008,
+  code: 'ENOTFOUND',
+  syscall: 'getaddrinfo',
+  hostname: 'redis-12592.crce276.ap-south-1-3.ec2.cloud.redislabs.com'
+}
+{"timestamp":"2026-05-15T12:34:03.746Z","level":"error","message":"Redis connection error","service":"erp-backend","component":"automation-queue","subsystem":"redis","error":{"name":"Error","message":"getaddrinfo ENOTFOUND redis-12592.crce276.ap-south-1-3.ec2.cloud.redislabs.com","stack":"Error: getaddrinfo ENOTFOUND redis-12592.crce276.ap-south-1-3.ec2.cloud.redislabs.com\n    at GetAddrInfoReqWrap.onlookupall [as oncomplete] (node:dns:122:26)"}}
+Error: getaddrinfo ENOTFOUND redis-12592.crce276.ap-south-1-3.ec2.cloud.redislabs.com
+    at GetAddrInfoReqWrap.onlookupall [as oncomplete] (node:dns:122:26) {
+  errno: -3008,
+  code: 'ENOTFOUND',
+  syscall: 'getaddrinfo',
+  hostname: 'redis-12592.crce276.ap-south-1-3.ec2.cloud.redislabs.com'
+}
+{"timestamp":"2026-05-15T12:34:03.958Z","level":"error","message":"Redis connection error","service":"erp-backend","component":"automation-queue","subsystem":"redis","error":{"name":"Error","message":"getaddrinfo ENOTFOUND redis-12592.crce276.ap-south-1-3.ec2.cloud.redislabs.com","stack":"Error: getaddrinfo ENOTFOUND redis-12592.crce276.ap-south-1-3.ec2.cloud.redislabs.com\n    at GetAddrInfoReqWrap.onlookupall [as oncomplete] (node:dns:122:26)"}}
+Error: getaddrinfo ENOTFOUND redis-12592.crce276.ap-south-1-3.ec2.cloud.redislabs.com
+    at GetAddrInfoReqWrap.onlookupall [as oncomplete] (node:dns:122:26) {
+  errno: -3008,
+  code: 'ENOTFOUND',
+  syscall: 'getaddrinfo',
+  hostname: 'redis-12592.crce276.ap-south-1-3.ec2.cloud.redislabs.com'
+}
+{"timestamp":"2026-05-15T12:34:04.224Z","level":"error","message":"Redis connection error","service":"erp-backend","component":"automation-queue","subsystem":"redis","error":{"name":"Error","message":"getaddrinfo ENOTFOUND redis-12592.crce276.ap-south-1-3.ec2.cloud.redislabs.com","stack":"Error: getaddrinfo ENOTFOUND redis-12592.crce276.ap-south-1-3.ec2.cloud.redislabs.com\n    at GetAddrInfoReqWrap.onlookupall [as oncomplete] (node:dns:122:26)"}}
+Error: getaddrinfo ENOTFOUND redis-12592.crce276.ap-south-1-3.ec2.cloud.redislabs.com
+    at GetAddrInfoReqWrap.onlookupall [as oncomplete] (node:dns:122:26) {
+  errno: -3008,
+  code: 'ENOTFOUND',
+  syscall: 'getaddrinfo',
+  hostname: 'redis-12592.crce276.ap-south-1-3.ec2.cloud.redislabs.com'
+}
+{"timestamp":"2026-05-15T12:34:04.538Z","level":"error","message":"Redis connection error","service":"erp-backend","component":"automation-queue","subsystem":"redis","error":{"name":"Error","message":"getaddrinfo ENOTFOUND redis-12592.crce276.ap-south-1-3.ec2.cloud.redislabs.com","stack":"Error: getaddrinfo ENOTFOUND redis-12592.crce276.ap-south-1-3.ec2.cloud.redislabs.com\n    at GetAddrInfoReqWrap.onlookupall [as oncomplete] (node:dns:122:26)"}}
+Error: getaddrinfo ENOTFOUND redis-12592.crce276.ap-south-1-3.ec2.cloud.redislabs.com
+    at GetAddrInfoReqWrap.onlookupall [as oncomplete] (node:dns:122:26) {
+  errno: -3008,
+  code: 'ENOTFOUND',
+  syscall: 'getaddrinfo',
+  hostname: 'redis-12592.crce276.ap-south-1-3.ec2.cloud.redislabs.com'
+}
+{"timestamp":"2026-05-15T12:34:04.911Z","level":"error","message":"Redis connection error","service":"erp-backend","component":"automation-queue","subsystem":"redis","error":{"name":"Error","message":"getaddrinfo ENOTFOUND redis-12592.crce276.ap-south-1-3.ec2.cloud.redislabs.com","stack":"Error: getaddrinfo ENOTFOUND redis-12592.crce276.ap-south-1-3.ec2.cloud.redislabs.com\n    at GetAddrInfoReqWrap.onlookupall [as oncomplete] (node:dns:122:26)"}}
+Error: getaddrinfo ENOTFOUND redis-12592.crce276.ap-south-1-3.ec2.cloud.redislabs.com
+    at GetAddrInfoReqWrap.onlookupall [as oncomplete] (node:dns:122:26) {
+  errno: -3008,
+  code: 'ENOTFOUND',
+  syscall: 'getaddrinfo',
+  hostname: 'redis-12592.crce276.ap-south-1-3.ec2.cloud.redislabs.com'
+}
+{"timestamp":"2026-05-15T12:34:05.323Z","level":"error","message":"Redis connection error","service":"erp-backend","component":"automation-queue","subsystem":"redis","error":{"name":"Error","message":"getaddrinfo ENOTFOUND redis-12592.crce276.ap-south-1-3.ec2.cloud.redislabs.com","stack":"Error: getaddrinfo ENOTFOUND redis-12592.crce276.ap-south-1-3.ec2.cloud.redislabs.com\n    at GetAddrInfoReqWrap.onlookupall [as oncomplete] (node:dns:122:26)"}}
+Error: getaddrinfo ENOTFOUND redis-12592.crce276.ap-south-1-3.ec2.cloud.redislabs.com
+    at GetAddrInfoReqWrap.onlookupall [as oncomplete] (node:dns:122:26) {
+  errno: -3008,
+  code: 'ENOTFOUND',
+  syscall: 'getaddrinfo',
+  hostname: 'redis-12592.crce276.ap-south-1-3.ec2.cloud.redislabs.com'
+}
+{"timestamp":"2026-05-15T12:34:05.802Z","level":"error","message":"Redis connection error","service":"erp-backend","component":"automation-queue","subsystem":"redis","error":{"name":"Error","message":"getaddrinfo ENOTFOUND redis-12592.crce276.ap-south-1-3.ec2.cloud.redislabs.com","stack":"Error: getaddrinfo ENOTFOUND redis-12592.crce276.ap-south-1-3.ec2.cloud.redislabs.com\n    at GetAddrInfoReqWrap.onlookupall [as oncomplete] (node:dns:122:26)"}}
+Error: getaddrinfo ENOTFOUND redis-12592.crce276.ap-south-1-3.ec2.cloud.redislabs.com
+    at GetAddrInfoReqWrap.onlookupall [as oncomplete] (node:dns:122:26) {
+  errno: -3008,
+  code: 'ENOTFOUND',
+  syscall: 'getaddrinfo',
+  hostname: 'redis-12592.crce276.ap-south-1-3.ec2.cloud.redislabs.com'
+}
+{"timestamp":"2026-05-15T12:34:06.315Z","level":"error","message":"Redis connection error","service":"erp-backend","component":"automation-queue","subsystem":"redis","error":{"name":"Error","message":"getaddrinfo ENOTFOUND redis-12592.crce276.ap-south-1-3.ec2.cloud.redislabs.com","stack":"Error: getaddrinfo ENOTFOUND redis-12592.crce276.ap-south-1-3.ec2.cloud.redislabs.com\n    at GetAddrInfoReqWrap.onlookupall [as oncomplete] (node:dns:122:26)"}}
+Error: getaddrinfo ENOTFOUND redis-12592.crce276.ap-south-1-3.ec2.cloud.redislabs.com
+    at GetAddrInfoReqWrap.onlookupall [as oncomplete] (node:dns:122:26) {
+  errno: -3008,
+  code: 'ENOTFOUND',
+  syscall: 'getaddrinfo',
+  hostname: 'redis-12592.crce276.ap-south-1-3.ec2.cloud.redislabs.com'
+}
+{"timestamp":"2026-05-15T12:34:06.886Z","level":"error","message":"Redis connection error","service":"erp-backend","component":"automation-queue","subsystem":"redis","error":{"name":"Error","message":"getaddrinfo ENOTFOUND redis-12592.crce276.ap-south-1-3.ec2.cloud.redislabs.com","stack":"Error: getaddrinfo ENOTFOUND redis-12592.crce276.ap-south-1-3.ec2.cloud.redislabs.com\n    at GetAddrInfoReqWrap.onlookupall [as oncomplete] (node:dns:122:26)"}}
+Error: getaddrinfo ENOTFOUND redis-12592.crce276.ap-south-1-3.ec2.cloud.redislabs.com
+    at GetAddrInfoReqWrap.onlookupall [as oncomplete] (node:dns:122:26) {
+  errno: -3008,
+  code: 'ENOTFOUND',
+  syscall: 'getaddrinfo',
+  hostname: 'redis-12592.crce276.ap-south-1-3.ec2.cloud.redislabs.com'
+}
+{"timestamp":"2026-05-15T12:34:07.504Z","level":"error","message":"Redis connection error","service":"erp-backend","component":"automation-queue","subsystem":"redis","error":{"name":"Error","message":"getaddrinfo ENOTFOUND redis-12592.crce276.ap-south-1-3.ec2.cloud.redislabs.com","stack":"Error: getaddrinfo ENOTFOUND redis-12592.crce276.ap-south-1-3.ec2.cloud.redislabs.com\n    at GetAddrInfoReqWrap.onlookupall [as oncomplete] (node:dns:122:26)"}}
+Error: getaddrinfo ENOTFOUND redis-12592.crce276.ap-south-1-3.ec2.cloud.redislabs.com
+    at GetAddrInfoReqWrap.onlookupall [as oncomplete] (node:dns:122:26) {
+  errno: -3008,
+  code: 'ENOTFOUND',
+  syscall: 'getaddrinfo',
+  hostname: 'redis-12592.crce276.ap-south-1-3.ec2.cloud.redislabs.com'
+}
+{"timestamp":"2026-05-15T12:34:08.177Z","level":"error","message":"Redis connection error","service":"erp-backend","component":"automation-queue","subsystem":"redis","error":{"name":"Error","message":"getaddrinfo ENOTFOUND redis-12592.crce276.ap-south-1-3.ec2.cloud.redislabs.com","stack":"Error: getaddrinfo ENOTFOUND redis-12592.crce276.ap-south-1-3.ec2.cloud.redislabs.com\n    at GetAddrInfoReqWrap.onlookupall [as oncomplete] (node:dns:122:26)"}}
+Error: getaddrinfo ENOTFOUND redis-12592.crce276.ap-south-1-3.ec2.cloud.redislabs.com
+    at GetAddrInfoReqWrap.onlookupall [as oncomplete] (node:dns:122:26) {
+  errno: -3008,
+  code: 'ENOTFOUND',
+  syscall: 'getaddrinfo',
+  hostname: 'redis-12592.crce276.ap-south-1-3.ec2.cloud.redislabs.com'
+}
+{"timestamp":"2026-05-15T12:43:46.355Z","level":"error","message":"Redis connection error","service":"erp-backend","component":"automation-queue","subsystem":"redis","error":{"name":"Error","message":"getaddrinfo ENOTFOUND redis-12592.crce276.ap-south-1-3.ec2.cloud.redislabs.com","stack":"Error: getaddrinfo ENOTFOUND redis-12592.crce276.ap-south-1-3.ec2.cloud.redislabs.com\n    at GetAddrInfoReqWrap.onlookupall [as oncomplete] (node:dns:122:26)"}}
+Error: getaddrinfo ENOTFOUND redis-12592.crce276.ap-south-1-3.ec2.cloud.redislabs.com
+    at GetAddrInfoReqWrap.onlookupall [as oncomplete] (node:dns:122:26) {
+  errno: -3008,
+  code: 'ENOTFOUND',
+  syscall: 'getaddrinfo',
+  hostname: 'redis-12592.crce276.ap-south-1-3.ec2.cloud.redislabs.com'
+}
+[DB] Keep-alive ping failed PrismaClientKnownRequestError: 
+Invalid `prisma.$queryRaw()` invocation:
+
+
+Can't reach database server at `aws-1-ap-southeast-1.pooler.supabase.com:6543`
+
+Please make sure your database server is running at `aws-1-ap-southeast-1.pooler.supabase.com:6543`.
+    at $n.handleRequestError (G:\ERP\Backend\src\generated\prisma\runtime\library.js:121:7315)
+    at $n.handleAndLogRequestError (G:\ERP\Backend\src\generated\prisma\runtime\library.js:121:6623)
+    at $n.request (G:\ERP\Backend\src\generated\prisma\runtime\library.js:121:6307)
+    at async l (G:\ERP\Backend\src\generated\prisma\runtime\library.js:130:9633)
+    at async Timeout._onTimeout (G:\ERP\Backend\src\app\prismaKeepAlive.ts:10:13) {
+  code: 'P1001',
+  clientVersion: '5.22.0',
+  meta: {
+    database_host: 'aws-1-ap-southeast-1.pooler.supabase.com',
+    database_port: 6543
+  }
+}
+[DB] Keep-alive ping failed PrismaClientKnownRequestError: 
+Invalid `prisma.$queryRaw()` invocation:
+
+
+Can't reach database server at `aws-1-ap-southeast-1.pooler.supabase.com:6543`
+
+Please make sure your database server is running at `aws-1-ap-southeast-1.pooler.supabase.com:6543`.
+    at $n.handleRequestError (G:\ERP\Backend\src\generated\prisma\runtime\library.js:121:7315)
+    at $n.handleAndLogRequestError (G:\ERP\Backend\src\generated\prisma\runtime\library.js:121:6623)
+    at $n.request (G:\ERP\Backend\src\generated\prisma\runtime\library.js:121:6307)
+    at async l (G:\ERP\Backend\src\generated\prisma\runtime\library.js:130:9633)
+    at async Timeout._onTimeout (G:\ERP\Backend\src\app\prismaKeepAlive.ts:10:13) {
+  code: 'P1001',
+  clientVersion: '5.22.0',
+  meta: {
+    database_host: 'aws-1-ap-southeast-1.pooler.supabase.com',
+    database_port: 6543
+  }
+}
+{"timestamp":"2026-05-15T13:17:04.527Z","level":"error","message":"Redis connection error","service":"erp-backend","component":"automation-queue","subsystem":"redis","error":{"name":"Error","message":"read ECONNRESET","stack":"Error: read ECONNRESET\n    at TCP.onStreamRead (node:internal/stream_base_commons:216:20)"}}
+Error: read ECONNRESET
+    at TCP.onStreamRead (node:internal/stream_base_commons:216:20) {
+  errno: -4077,
+  code: 'ECONNRESET',
+  syscall: 'read'
+}
+{"timestamp":"2026-05-15T13:17:05.937Z","level":"error","message":"Redis connection error","service":"erp-backend","component":"automation-queue","subsystem":"redis","error":{"name":"Error","message":"getaddrinfo ENOTFOUND redis-12592.crce276.ap-south-1-3.ec2.cloud.redislabs.com","stack":"Error: getaddrinfo ENOTFOUND redis-12592.crce276.ap-south-1-3.ec2.cloud.redislabs.com\n    at GetAddrInfoReqWrap.onlookupall [as oncomplete] (node:dns:122:26)"}}
+Error: getaddrinfo ENOTFOUND redis-12592.crce276.ap-south-1-3.ec2.cloud.redislabs.com
+    at GetAddrInfoReqWrap.onlookupall [as oncomplete] (node:dns:122:26) {
+  errno: -3008,
+  code: 'ENOTFOUND',
+  syscall: 'getaddrinfo',
+  hostname: 'redis-12592.crce276.ap-south-1-3.ec2.cloud.redislabs.com'
+}

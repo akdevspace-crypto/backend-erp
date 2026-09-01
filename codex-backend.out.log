@@ -1,0 +1,15 @@
+[dotenv@17.3.1] injecting env (0) from .env -- tip: 🤖 agentic secret storage: https://dotenvx.com/as2
+[dotenv@17.3.1] injecting env (0) from .env -- tip: ⚡️ secrets for agents: https://dotenvx.com/as2
+[dotenv@17.3.1] injecting env (0) from .env -- tip: 🤖 agentic secret storage: https://dotenvx.com/as2
+[dotenv@17.3.1] injecting env (0) from .env -- tip: ⚡️ secrets for agents: https://dotenvx.com/as2
+[AI] Gemini Enabled: true
+[DB] Connected to PostgreSQL successfully
+[DB] Keep-alive ping scheduled every 30 seconds
+[SOCKET] Initializing WebSockets...
+[SOCKET] Socket.io initialized without Redis adapter
+[SOCKET] WebSockets initialized
+[CALLS] Inline call queue workers disabled.
+[OUTBOUND] Inline outbound worker disabled. Run `npm run worker:outbound` in production.
+[API] ERP Backend running on port 4000
+BODY UNIT: b985d530-033d-446f-9191-d2b1aec78bdf
+BODY UNIT: b985d530-033d-446f-9191-d2b1aec78bdf
