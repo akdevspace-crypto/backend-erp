@@ -108,33 +108,43 @@ model RolePermission {
 }
 
 model User {
-  id               String            @id @default(uuid())
-  email            String?           @unique
-  passwordHash     String?
-  createdAt        DateTime          @default(now())
-  updatedAt        DateTime          @updatedAt
-  deletedAt        DateTime?
-  firstName        String?
-  isActive         Boolean           @default(true)
-  isDeleted        Boolean           @default(false)
-  lastName         String?
-  mobile           String?
-  roleId           String?
-  tenantId         String?
-  unitId           String?
-  approvedItems    Approval[]        @relation("ApprovalApprover")
-  auditLogs        AuditLog[]
-  staff            Staff?
-  tasksToApprove   Task[]            @relation("TaskApprovalAuthority")
-  tasksAssigned    Task[]            @relation("TaskAssignee")
-  role             Role?             @relation(fields: [roleId], references: [id])
-  tenant           Tenant?           @relation(fields: [tenantId], references: [id])
-  unit             Unit?             @relation(fields: [unitId], references: [id])
-  notifications    Notification[]
-  ServiceContract  ServiceContract[]
-  medicalApprovals ServiceClosure[]  @relation("MedicalClosureApprover")
-  financeApprovals ServiceClosure[]  @relation("FinanceClosureApprover")
-  assetApprovals   ServiceClosure[]  @relation("AssetClosureApprover")
+  id                           String                  @id @default(uuid())
+  email                        String?                 @unique
+  passwordHash                 String?
+  createdAt                    DateTime                @default(now())
+  updatedAt                    DateTime                @updatedAt
+  deletedAt                    DateTime?
+  firstName                    String?
+  isActive                     Boolean                 @default(true)
+  isDeleted                    Boolean                 @default(false)
+  lastName                     String?
+  mobile                       String?
+  roleId                       String?
+  tenantId                     String?
+  unitId                       String?
+  approvedItems                Approval[]              @relation("ApprovalApprover")
+  auditLogs                    AuditLog[]
+  staff                        Staff?
+  tasksToApprove               Task[]                  @relation("TaskApprovalAuthority")
+  tasksAssigned                Task[]                  @relation("TaskAssignee")
+  role                         Role?                   @relation(fields: [roleId], references: [id])
+  tenant                       Tenant?                 @relation(fields: [tenantId], references: [id])
+  unit                         Unit?                   @relation(fields: [unitId], references: [id])
+  notifications                Notification[]
+  ServiceContract              ServiceContract[]
+  medicalApprovals             ServiceClosure[]        @relation("MedicalClosureApprover")
+  financeApprovals             ServiceClosure[]        @relation("FinanceClosureApprover")
+  assetApprovals               ServiceClosure[]        @relation("AssetClosureApprover")
+  approvedVisitorPasses        VisitorPass[]           @relation("VisitorPassApprover")
+  outingRequests               ResidentOutingRequest[] @relation("OutingRequester")
+  outingExitsRecorded          ResidentGateMovement[]  @relation("OutingExitRecorder")
+  outingReturnsRecorded        ResidentGateMovement[]  @relation("OutingReturnRecorder")
+  staffDailyEntriesRecorded    StaffDailyMovement[]    @relation("StaffDailyEntryRecorder")
+  staffDailyFinalExitsRecorded StaffDailyMovement[]    @relation("StaffDailyExitRecorder")
+  staffTripExitsRecorded       StaffGateTrip[]         @relation("StaffTripExitRecorder")
+  staffTripReturnsRecorded     StaffGateTrip[]         @relation("StaffTripReturnRecorder")
+  vehicleEntriesRecorded       VehicleMovement[]       @relation("VehicleEntryRecorder")
+  vehicleExitsRecorded         VehicleMovement[]       @relation("VehicleExitRecorder")
 
   @@index([tenantId])
   @@index([unitId])
@@ -142,8 +152,8 @@ model User {
 }
 
 model Staff {
-  id                String              @id @default(uuid())
-  empId             String              @unique
+  id                String                  @id @default(uuid())
+  empId             String                  @unique
   firstName         String
   lastName          String?
   designation       String?
@@ -151,32 +161,33 @@ model Staff {
   phone             String?
   email             String?
   joiningDate       DateTime?
-  status            String              @default("Working")
+  status            String                  @default("Working")
   photoUrl          String?
-  userId            String?             @unique
+  userId            String?                 @unique
   metadata          Json?
-  skills            String[]            @default([])
+  skills            String[]                @default([])
   location          String?
-  isAvailable       Boolean             @default(true)
-  performanceScore  Float               @default(50)
-  workload          Int                 @default(0)
-  currentWorkload   Int                 @default(0)
+  isAvailable       Boolean                 @default(true)
+  performanceScore  Float                   @default(50)
+  workload          Int                     @default(0)
+  currentWorkload   Int                     @default(0)
   latitude          Float?
   longitude         Float?
   shiftStart        String?
   shiftEnd          String?
-  capacity          Int                 @default(5)
-  stressLevel       Float               @default(0)
+  capacity          Int                     @default(5)
+  stressLevel       Float                   @default(0)
   lastActiveAt      DateTime?
   tenantId          String
   unitId            String
-  isDeleted         Boolean             @default(false)
+  isDeleted         Boolean                 @default(false)
   deletedAt         DateTime?
-  createdAt         DateTime            @default(now())
-  updatedAt         DateTime            @updatedAt
+  createdAt         DateTime                @default(now())
+  updatedAt         DateTime                @updatedAt
   allocations       Allocation[]
   MedicalAssignment MedicalAssignment[]
-  user              User?               @relation(fields: [userId], references: [id])
+  user              User?                   @relation(fields: [userId], references: [id])
+  outingCompanions  ResidentOutingRequest[]
   assignedTasks     Task[]
   documents         StaffDocument[]
   attendanceLogs    AttendanceLog[]
@@ -184,6 +195,8 @@ model Staff {
   incidentLogs      StaffIncidentLog[]
   payrollRecords    PayrollRecord[]
   salary            StaffSalary?
+  dailyMovements    StaffDailyMovement[]
+  tripCompanions    StaffGateTrip[]         @relation("StaffTripCompanion")
 
   @@index([tenantId])
   @@index([unitId])
@@ -1247,7 +1260,8 @@ model OutboundCampaign {
 }
 
 model Patient {
-  id                  String               @id @default(uuid())
+  id                  String                  @id @default(uuid())
+  elderId             String?                 @unique
   name                String
   dob                 String?
   age                 Int?
@@ -1260,8 +1274,8 @@ model Patient {
   address             String?
   tenantId            String
   unitId              String
-  createdAt           DateTime             @default(now())
-  updatedAt           DateTime             @updatedAt
+  createdAt           DateTime                @default(now())
+  updatedAt           DateTime                @updatedAt
   admissions          Admission[]
   laundries           Laundry[]
   MedicalAssignment   MedicalAssignment[]
@@ -1277,6 +1291,8 @@ model Patient {
   stockIssueRequests  StockIssueRequest[]
   FacilityVisit       FacilityVisit[]
   dailyOperationTasks DailyOperationTask[]
+  outingRequests      ResidentOutingRequest[]
+  gateMovements       ResidentGateMovement[]
 
   @@index([tenantId])
   @@index([unitId])
@@ -1634,46 +1650,52 @@ model DonationReference {
 }
 
 model VisitorProfile {
-  id                 String        @id @default(uuid())
-  mobile             String
-  name               String
-  category           String        @default("GUEST")
-  company            String?
-  photoUrl           String?
-  email              String?
-  bloodGroup         String?
-  residentialAddress String?
-  pincode            String?
-  tenantId           String
-  createdAt          DateTime      @default(now())
-  updatedAt          DateTime      @updatedAt
-  passes             VisitorPass[]
+  id                  String                  @id @default(uuid())
+  mobile              String
+  name                String
+  category            String                  @default("GUEST")
+  company             String?
+  photoUrl            String?
+  email               String?
+  bloodGroup          String?
+  residentialAddress  String?
+  pincode             String?
+  whatsapp            String?
+  dob                 String?
+  tenantId            String
+  createdAt           DateTime                @default(now())
+  updatedAt           DateTime                @updatedAt
+  passes              VisitorPass[]
+  outingCompanions    ResidentOutingRequest[]
+  staffTripCompanions StaffGateTrip[]         @relation("StaffTripCompanionVisitor")
 
   @@unique([tenantId, mobile])
   @@index([tenantId])
 }
 
 model VisitorPass {
-  id              String         @id @default(uuid())
-  visitorId       String
-  passType        String         @default("ONE_TIME")
-  purpose         String?
-  department      String?
-  hostName        String?
-  hostMobile      String?
-  vehicleNo       String?
-  materialDetails String?
-  checkInAt       DateTime?
-  checkOutAt      DateTime?
-  expectedAt      DateTime?
-  status          String         @default("PENDING")
-  qrCodeUrl       String?
-  tenantId        String
-  unitId          String?
-  recordedBy      String?
-  createdAt       DateTime       @default(now())
-  updatedAt       DateTime       @updatedAt
-  visitor         VisitorProfile @relation(fields: [visitorId], references: [id])
+  id               String         @id @default(uuid())
+  visitorId        String
+  passType         String         @default("ONE_TIME")
+  purpose          String?
+  department       String?
+  hostName         String?
+  hostMobile       String?
+  vehicleNo        String?
+  materialDetails  String?
+  checkInAt        DateTime?
+  checkOutAt       DateTime?
+  expectedAt       DateTime?
+  status           String         @default("PENDING")
+  qrCodeUrl        String?
+  tenantId         String
+  unitId           String?
+  recordedBy       String?
+  approvedByUserId String?
+  approvedByUser   User?          @relation("VisitorPassApprover", fields: [approvedByUserId], references: [id])
+  createdAt        DateTime       @default(now())
+  updatedAt        DateTime       @updatedAt
+  visitor          VisitorProfile @relation(fields: [visitorId], references: [id])
 
   @@index([tenantId])
   @@index([visitorId])
@@ -2455,4 +2477,227 @@ enum ClosureStatus {
   IN_PROGRESS
   READY
   EXECUTED
+}
+
+enum OutingRequestStatus {
+  PENDING_APPROVAL
+  APPROVED
+  REJECTED
+  CANCELLED
+  COMPLETED
+}
+
+enum CompanionType {
+  STAFF
+  VISITOR
+  EXTERNAL
+}
+
+enum ResidentMovementStatus {
+  OUTSIDE
+  RETURNED
+}
+
+model ResidentOutingRequest {
+  id               String              @id @default(uuid())
+  patientId        String
+  tenantId         String
+  unitId           String
+  reason           String?
+  destination      String?
+  expectedExitAt   DateTime?
+  expectedReturnAt DateTime?
+  status           OutingRequestStatus @default(PENDING_APPROVAL)
+
+  requestedByUserId String?
+
+  companionType             CompanionType?
+  companionStaffId          String?
+  companionVisitorProfileId String?
+  companionName             String?
+  companionPhone            String?
+  companionRelation         String?
+
+  materials Json?
+
+  isDeleted Boolean   @default(false)
+  deletedAt DateTime?
+  createdAt DateTime  @default(now())
+  updatedAt DateTime  @updatedAt
+
+  patient                 Patient         @relation(fields: [patientId], references: [id])
+  requestedByUser         User?           @relation("OutingRequester", fields: [requestedByUserId], references: [id])
+  companionStaff          Staff?          @relation(fields: [companionStaffId], references: [id])
+  companionVisitorProfile VisitorProfile? @relation(fields: [companionVisitorProfileId], references: [id])
+
+  movements ResidentGateMovement[]
+
+  @@index([tenantId])
+  @@index([unitId])
+  @@index([patientId])
+  @@index([status])
+  @@index([expectedReturnAt])
+}
+
+model ResidentGateMovement {
+  id              String @id @default(uuid())
+  outingRequestId String @unique
+  patientId       String
+  tenantId        String
+  unitId          String
+
+  exitAt         DateTime?
+  actualReturnAt DateTime?
+
+  status ResidentMovementStatus?
+
+  exitRecordedByUserId   String?
+  returnRecordedByUserId String?
+
+  isDeleted Boolean   @default(false)
+  deletedAt DateTime?
+  createdAt DateTime  @default(now())
+  updatedAt DateTime  @updatedAt
+
+  outingRequest        ResidentOutingRequest @relation(fields: [outingRequestId], references: [id])
+  patient              Patient               @relation(fields: [patientId], references: [id])
+  exitRecordedByUser   User?                 @relation("OutingExitRecorder", fields: [exitRecordedByUserId], references: [id])
+  returnRecordedByUser User?                 @relation("OutingReturnRecorder", fields: [returnRecordedByUserId], references: [id])
+
+  @@index([tenantId])
+  @@index([unitId])
+  @@index([patientId])
+  @@index([outingRequestId])
+  @@index([status])
+  @@index([exitAt])
+  @@index([actualReturnAt])
+}
+
+enum StaffDailyMovementStatus {
+  INSIDE
+  COMPLETED
+}
+
+enum StaffGateTripStatus {
+  OUTSIDE
+  RETURNED
+}
+
+model StaffDailyMovement {
+  id       String @id @default(uuid())
+  tenantId String
+  unitId   String
+  staffId  String
+
+  entryAt     DateTime?
+  finalExitAt DateTime?
+
+  entryRecordedByUserId     String?
+  finalExitRecordedByUserId String?
+
+  status StaffDailyMovementStatus @default(INSIDE)
+
+  isDeleted Boolean   @default(false)
+  deletedAt DateTime?
+  createdAt DateTime  @default(now())
+  updatedAt DateTime  @updatedAt
+
+  staff                   Staff @relation(fields: [staffId], references: [id])
+  entryRecordedByUser     User? @relation("StaffDailyEntryRecorder", fields: [entryRecordedByUserId], references: [id])
+  finalExitRecordedByUser User? @relation("StaffDailyExitRecorder", fields: [finalExitRecordedByUserId], references: [id])
+
+  trips StaffGateTrip[]
+
+  @@index([tenantId])
+  @@index([unitId])
+  @@index([staffId])
+  @@index([status])
+  @@index([entryAt])
+  @@index([finalExitAt])
+}
+
+model StaffGateTrip {
+  id         String @id @default(uuid())
+  movementId String
+  tenantId   String
+  unitId     String
+
+  exitAt   DateTime?
+  returnAt DateTime?
+
+  reason           String?
+  expectedReturnAt DateTime?
+
+  companionType             CompanionType?
+  companionStaffId          String?
+  companionVisitorProfileId String?
+  companionName             String?
+  companionPhone            String?
+  companionRelation         String?
+
+  materials Json?
+
+  exitRecordedByUserId   String?
+  returnRecordedByUserId String?
+
+  status StaffGateTripStatus?
+
+  isDeleted Boolean   @default(false)
+  deletedAt DateTime?
+  createdAt DateTime  @default(now())
+  updatedAt DateTime  @updatedAt
+
+  movement                StaffDailyMovement @relation(fields: [movementId], references: [id])
+  companionStaff          Staff?             @relation("StaffTripCompanion", fields: [companionStaffId], references: [id])
+  companionVisitorProfile VisitorProfile?    @relation("StaffTripCompanionVisitor", fields: [companionVisitorProfileId], references: [id])
+  exitRecordedByUser      User?              @relation("StaffTripExitRecorder", fields: [exitRecordedByUserId], references: [id])
+  returnRecordedByUser    User?              @relation("StaffTripReturnRecorder", fields: [returnRecordedByUserId], references: [id])
+
+  @@index([movementId])
+  @@index([tenantId])
+  @@index([unitId])
+  @@index([status])
+  @@index([exitAt])
+  @@index([returnAt])
+}
+
+enum VehicleMovementStatus {
+  INSIDE
+  COMPLETED
+}
+
+model VehicleMovement {
+  id              String  @id @default(cuid())
+  tenantId        String
+  unitId          String
+  vehicleNo       String
+  vehicleType     String?
+  driverName      String
+  driverMobile    String?
+  companyName     String?
+  purpose         String
+  materialDetails String?
+  remarks         String?
+
+  entryAt DateTime  @default(now())
+  exitAt  DateTime?
+
+  entryUserId String
+  exitUserId  String?
+
+  status VehicleMovementStatus @default(INSIDE)
+
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+
+  entryUser User  @relation("VehicleEntryRecorder", fields: [entryUserId], references: [id])
+  exitUser  User? @relation("VehicleExitRecorder", fields: [exitUserId], references: [id])
+
+  @@index([tenantId])
+  @@index([unitId])
+  @@index([vehicleNo])
+  @@index([status])
+  @@index([entryAt])
+  @@index([exitAt])
+  @@index([tenantId, unitId, status])
 }

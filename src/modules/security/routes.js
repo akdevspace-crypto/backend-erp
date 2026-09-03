@@ -2,7 +2,15 @@ import { Router } from 'express';
 import { prisma } from '../../app/prisma.js';
 import { auth, enforceTenant } from '../../shared/middleware/auth.middleware.js';
 import { requirePermission } from '../../shared/middleware/rbac.middleware.js';
-import { getOtpSummariesForReferences, hasVerifiedOtpForReference, listOtpLogs, otpPurposes, requestOtp, verifyOtp } from './otp.service.js';
+import { hasVerifiedOtpForReference, otpPurposes } from './otp.service.js';
+import * as outingController from './outing.controller.js';
+import * as staffController from './staff.controller.js';
+import * as vehicleController from './vehicle.controller.js';
+import * as entryLogsController from './entry-logs.controller.js';
+import * as dashboardController from './dashboard.controller.js';
+import * as gateQueueController from './gate-queue.controller.js';
+import * as reportsController from './reports.controller.js';
+import { checkoutVisitorPass } from '../visitor/visitor.service.js';
 
 const router = Router();
 
@@ -72,7 +80,7 @@ const readStaffPayload = (body) => ({
 });
 
 const normalizeEntry = (entry) => {
-    if (entry.entryType === 'VISITOR_PASS') return entry;
+    if (entry.entryType === 'VISITOR_PASS' || entry.entryType === 'RESIDENT') return entry;
     return {
         id: entry.id,
         createdAt: entry.createdAt,
@@ -84,95 +92,15 @@ const normalizeEntry = (entry) => {
     };
 };
 
-const normalizeEntriesWithOtp = async (req, scope, entries) => {
-    const otpSummaries = await getOtpSummariesForReferences({
-        tenantId: scope.tenantId,
-        unitId: scope.unitId,
-        referenceIds: entries.map((entry) => entry.id),
-        includeTenant: canAccessTenantSecurityLogs(req)
-    });
+router.get('/dashboard-summary', auth, enforceTenant, canReadSecurity, dashboardController.getDashboardSummary);
 
-    return entries.map((entry) => ({
-        ...normalizeEntry(entry),
-        otpVerification: otpSummaries.get(entry.id) || {}
-    }));
-};
+router.get('/dashboard/action-queue', auth, enforceTenant, canReadSecurity, dashboardController.getActionQueueController);
 
-router.get('/gate-entries', auth, enforceTenant, canReadSecurity, async (req, res, next) => {
-    try {
-        const scope = getScope(req);
-        const auditLogEntries = await prisma.auditLog.findMany({
-            where: buildSecurityWhere(req, scope),
-            include: {
-                user: {
-                    select: {
-                        firstName: true,
-                        email: true
-                    }
-                }
-            },
-            orderBy: { createdAt: 'desc' }
-        });
+router.get('/movement-timeline', auth, enforceTenant, canReadSecurity, entryLogsController.getMovementTimelineController);
 
-        const startOfDay = new Date();
-        startOfDay.setHours(0, 0, 0, 0);
+router.get('/gate-queue', auth, enforceTenant, canReadSecurity, gateQueueController.getGateQueueController);
 
-        const visitorPasses = await prisma.visitorPass.findMany({
-            where: {
-                tenantId: scope.tenantId,
-                ...(canAccessTenantSecurityLogs(req) ? {} : { unitId: scope.unitId }),
-                OR: [
-                    { checkInAt: { not: null }, checkOutAt: null }, // Currently inside
-                    { createdAt: { gte: startOfDay } }, // Registered today
-                    { expectedAt: { gte: startOfDay } }, // Expected today
-                    { checkOutAt: { gte: startOfDay } } // Checked out today
-                ]
-            },
-            include: {
-                visitor: true
-            },
-            orderBy: { createdAt: 'desc' }
-        });
-
-        const mappedVisitorPasses = visitorPasses.map(vp => {
-            let status = 'Expected';
-            if (vp.checkOutAt) status = 'Checked Out';
-            else if (vp.checkInAt) status = 'Checked In';
-            else if (vp.status === 'PENDING') status = 'Pending';
-            else status = 'Registered';
-
-            return {
-                id: vp.id,
-                createdAt: vp.createdAt,
-                updatedAt: vp.updatedAt,
-                tenantId: vp.tenantId,
-                unitId: vp.unitId,
-                recordedBy: vp.user?.firstName || vp.user?.email || vp.recordedBy || 'Front Desk',
-                entryType: 'VISITOR_PASS',
-                visitorName: vp.visitor?.name,
-                mobile: vp.visitor?.mobile,
-                photoUrl: vp.visitor?.photoUrl,
-                category: vp.visitor?.category,
-                purpose: vp.purpose,
-                visitingPerson: vp.hostName,
-                department: vp.department,
-                vehicleNo: vp.vehicleNo,
-                remarks: vp.materialDetails || '',
-                expectedAt: vp.expectedAt,
-                checkInAt: vp.checkInAt,
-                checkOutAt: vp.checkOutAt,
-                status: status
-            };
-        });
-
-        const combined = [...auditLogEntries, ...mappedVisitorPasses];
-        combined.sort((a, b) => new Date(b.createdAt) - new Date(a.createdAt));
-
-        res.json({ success: true, data: await normalizeEntriesWithOtp(req, scope, combined) });
-    } catch (error) {
-        next(error);
-    }
-});
+router.get('/reports/daily-movement', auth, enforceTenant, canReadSecurity, reportsController.getDailyMovementReportController);
 
 router.post('/vehicle-entries', auth, enforceTenant, canCreateSecurity, async (req, res, next) => {
     try {
@@ -403,41 +331,20 @@ router.patch('/gate-entries/:id/checkout', auth, enforceTenant, canUpdateSecurit
         const id = normalizeString(req.params.id);
         if (!id) throw buildHttpError('Gate entry id is required');
 
-        const visitorPass = await prisma.visitorPass.findFirst({
-            where: {
-                id,
-                tenantId: scope.tenantId,
-                ...(canAccessTenantSecurityLogs(req) ? {} : { unitId: scope.unitId })
-            }
+        const visitorPass = await checkoutVisitorPass({
+            id,
+            tenantId: scope.tenantId,
+            unitId: canAccessTenantSecurityLogs(req) ? undefined : scope.unitId
         });
 
         if (visitorPass) {
-            if (visitorPass.checkOutAt) throw buildHttpError('Visitor is already checked out');
-
-            /*
-            const hasCheckoutOtp = await hasVerifiedOtpForReference({
-                tenantId: scope.tenantId,
-                unitId: scope.unitId,
-                referenceId: visitorPass.id,
-                purpose: otpPurposes.visitorCheckout,
-                includeTenant: canAccessTenantSecurityLogs(req)
-            });
-
-            if (!hasCheckoutOtp) throw buildHttpError('Visitor checkout requires verified checkout OTP');
-            */
-
-            const updated = await prisma.visitorPass.update({
-                where: { id: visitorPass.id },
-                data: { checkOutAt: new Date().toISOString() }
-            });
-
             return res.json({
                 success: true,
                 data: {
-                    id: updated.id,
+                    id: visitorPass.id,
                     entryType: 'VISITOR_PASS',
                     status: 'Checked Out',
-                    checkOutAt: updated.checkOutAt
+                    checkOutAt: visitorPass.checkOutAt
                 },
                 message: 'Visitor checked out successfully'
             });
@@ -526,63 +433,27 @@ router.patch('/gate-entries/:id/checkout', auth, enforceTenant, canUpdateSecurit
     }
 });
 
-router.get('/otp-logs', auth, enforceTenant, canReadSecurity, async (req, res, next) => {
-    try {
-        const scope = getScope(req);
-        const logs = await listOtpLogs({
-            tenantId: scope.tenantId,
-            unitId: scope.unitId,
-            includeTenant: canAccessTenantSecurityLogs(req)
-        });
 
-        res.json({ success: true, data: logs });
-    } catch (error) {
-        next(error);
-    }
-});
 
-router.post('/otp/request', auth, enforceTenant, canCreateSecurity, async (req, res, next) => {
-    try {
-        const scope = getScope(req);
-        const result = await requestOtp({
-            tenantId: scope.tenantId,
-            unitId: scope.unitId,
-            userId: scope.userId,
-            userName: req.user?.name || req.user?.email || 'Security',
-            mobile: req.body.mobile,
-            purpose: req.body.purpose,
-            referenceId: req.body.referenceId
-        });
 
-        res.status(201).json({
-            success: true,
-            data: result.log,
-            developmentOtp: result.developmentOtp,
-            message: result.developmentOtp
-                ? 'OTP created for development. SMS delivery is not configured.'
-                : 'OTP sent successfully'
-        });
-    } catch (error) {
-        next(error);
-    }
-});
+// Resident Outings Security API
+router.get('/resident-outings', auth, enforceTenant, canReadSecurity, outingController.getSecurityOutings);
+router.post('/resident-outings', auth, enforceTenant, canCreateSecurity, outingController.createSecurityOuting);
+router.post('/resident-outings/:id/exit', auth, enforceTenant, canCreateSecurity, outingController.recordPhysicalExit);
+router.post('/resident-outings/:id/return', auth, enforceTenant, canUpdateSecurity, outingController.recordPhysicalReturn);
+// Staff Movements
+router.get('/staff-movements', auth, enforceTenant, canReadSecurity, staffController.getStaffMovements);
+router.get('/staff-movements/:id', auth, enforceTenant, canReadSecurity, staffController.getStaffMovementById);
+router.post('/staff-movements/entry', auth, enforceTenant, canCreateSecurity, staffController.recordStaffEntry);
+router.post('/staff-movements/:id/temp-exit', auth, enforceTenant, canUpdateSecurity, staffController.recordTempExit);
+router.post('/staff-movements/:id/return', auth, enforceTenant, canUpdateSecurity, staffController.recordTempReturn);
+router.post('/staff-movements/:id/final-exit', auth, enforceTenant, canUpdateSecurity, staffController.recordFinalExit);
 
-router.post('/otp/:id/verify', auth, enforceTenant, canUpdateSecurity, async (req, res, next) => {
-    try {
-        const scope = getScope(req);
-        const log = await verifyOtp({
-            id: normalizeString(req.params.id),
-            tenantId: scope.tenantId,
-            unitId: scope.unitId,
-            includeTenant: canAccessTenantSecurityLogs(req),
-            otp: req.body.otp
-        });
-
-        req.body.otp = '[REDACTED]';
-        res.json({ success: true, data: log, message: 'OTP verified successfully' });
-    } catch (error) {
-        next(error);
-    }
-});
+// Vehicle Movements
+router.get('/vehicle-movements', auth, enforceTenant, canReadSecurity, vehicleController.getVehicleMovements);
+router.get('/vehicle-movements/:id', auth, enforceTenant, canReadSecurity, vehicleController.getVehicleMovementById);
+router.post('/vehicle-movements/entry', auth, enforceTenant, canCreateSecurity, vehicleController.createVehicleMovement);
+router.post('/vehicle-movements/:id/exit', auth, enforceTenant, canUpdateSecurity, vehicleController.exitVehicleMovement);
 
 export default router;
+

@@ -1,15 +1,13 @@
-import { PrismaClient } from '@prisma/client';
-const prisma = new PrismaClient();
+import { prisma } from './src/app/prisma.js';
 
-async function check() {
-    try {
-        const columns = await prisma.$queryRaw`SELECT column_name FROM information_schema.columns WHERE table_name = 'Enquiry'`;
-        console.log(JSON.stringify(columns, null, 2));
-    } catch (e) {
-        console.error(e);
-    } finally {
-        await prisma.$disconnect();
-    }
+async function main() {
+    const latestPass = await prisma.visitorPass.findFirst({
+        orderBy: { createdAt: 'desc' },
+        include: {
+            approvedByUser: true
+        }
+    });
+    console.log(JSON.stringify(latestPass, null, 2));
 }
 
-check();
+main().catch(console.error).finally(() => prisma.$disconnect());

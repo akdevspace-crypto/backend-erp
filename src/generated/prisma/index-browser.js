@@ -1372,6 +1372,8 @@ exports.Prisma.VisitorProfileScalarFieldEnum = {
   bloodGroup: 'bloodGroup',
   residentialAddress: 'residentialAddress',
   pincode: 'pincode',
+  whatsapp: 'whatsapp',
+  dob: 'dob',
   tenantId: 'tenantId',
   createdAt: 'createdAt',
   updatedAt: 'updatedAt'
@@ -1395,6 +1397,7 @@ exports.Prisma.VisitorPassScalarFieldEnum = {
   tenantId: 'tenantId',
   unitId: 'unitId',
   recordedBy: 'recordedBy',
+  approvedByUserId: 'approvedByUserId',
   createdAt: 'createdAt',
   updatedAt: 'updatedAt'
 };
@@ -1909,6 +1912,109 @@ exports.Prisma.ServiceClosureScalarFieldEnum = {
   updatedAt: 'updatedAt'
 };
 
+exports.Prisma.ResidentOutingRequestScalarFieldEnum = {
+  id: 'id',
+  patientId: 'patientId',
+  tenantId: 'tenantId',
+  unitId: 'unitId',
+  reason: 'reason',
+  destination: 'destination',
+  expectedExitAt: 'expectedExitAt',
+  expectedReturnAt: 'expectedReturnAt',
+  status: 'status',
+  requestedByUserId: 'requestedByUserId',
+  companionType: 'companionType',
+  companionStaffId: 'companionStaffId',
+  companionVisitorProfileId: 'companionVisitorProfileId',
+  companionName: 'companionName',
+  companionPhone: 'companionPhone',
+  companionRelation: 'companionRelation',
+  materials: 'materials',
+  isDeleted: 'isDeleted',
+  deletedAt: 'deletedAt',
+  createdAt: 'createdAt',
+  updatedAt: 'updatedAt'
+};
+
+exports.Prisma.ResidentGateMovementScalarFieldEnum = {
+  id: 'id',
+  outingRequestId: 'outingRequestId',
+  patientId: 'patientId',
+  tenantId: 'tenantId',
+  unitId: 'unitId',
+  exitAt: 'exitAt',
+  actualReturnAt: 'actualReturnAt',
+  status: 'status',
+  exitRecordedByUserId: 'exitRecordedByUserId',
+  returnRecordedByUserId: 'returnRecordedByUserId',
+  isDeleted: 'isDeleted',
+  deletedAt: 'deletedAt',
+  createdAt: 'createdAt',
+  updatedAt: 'updatedAt'
+};
+
+exports.Prisma.StaffDailyMovementScalarFieldEnum = {
+  id: 'id',
+  tenantId: 'tenantId',
+  unitId: 'unitId',
+  staffId: 'staffId',
+  entryAt: 'entryAt',
+  finalExitAt: 'finalExitAt',
+  entryRecordedByUserId: 'entryRecordedByUserId',
+  finalExitRecordedByUserId: 'finalExitRecordedByUserId',
+  status: 'status',
+  isDeleted: 'isDeleted',
+  deletedAt: 'deletedAt',
+  createdAt: 'createdAt',
+  updatedAt: 'updatedAt'
+};
+
+exports.Prisma.StaffGateTripScalarFieldEnum = {
+  id: 'id',
+  movementId: 'movementId',
+  tenantId: 'tenantId',
+  unitId: 'unitId',
+  exitAt: 'exitAt',
+  returnAt: 'returnAt',
+  reason: 'reason',
+  expectedReturnAt: 'expectedReturnAt',
+  companionType: 'companionType',
+  companionStaffId: 'companionStaffId',
+  companionVisitorProfileId: 'companionVisitorProfileId',
+  companionName: 'companionName',
+  companionPhone: 'companionPhone',
+  companionRelation: 'companionRelation',
+  materials: 'materials',
+  exitRecordedByUserId: 'exitRecordedByUserId',
+  returnRecordedByUserId: 'returnRecordedByUserId',
+  status: 'status',
+  isDeleted: 'isDeleted',
+  deletedAt: 'deletedAt',
+  createdAt: 'createdAt',
+  updatedAt: 'updatedAt'
+};
+
+exports.Prisma.VehicleMovementScalarFieldEnum = {
+  id: 'id',
+  tenantId: 'tenantId',
+  unitId: 'unitId',
+  vehicleNo: 'vehicleNo',
+  vehicleType: 'vehicleType',
+  driverName: 'driverName',
+  driverMobile: 'driverMobile',
+  companyName: 'companyName',
+  purpose: 'purpose',
+  materialDetails: 'materialDetails',
+  remarks: 'remarks',
+  entryAt: 'entryAt',
+  exitAt: 'exitAt',
+  entryUserId: 'entryUserId',
+  exitUserId: 'exitUserId',
+  status: 'status',
+  createdAt: 'createdAt',
+  updatedAt: 'updatedAt'
+};
+
 exports.Prisma.SortOrder = {
   asc: 'asc',
   desc: 'desc'
@@ -2030,6 +2136,40 @@ exports.ClosureStatus = exports.$Enums.ClosureStatus = {
   EXECUTED: 'EXECUTED'
 };
 
+exports.OutingRequestStatus = exports.$Enums.OutingRequestStatus = {
+  PENDING_APPROVAL: 'PENDING_APPROVAL',
+  APPROVED: 'APPROVED',
+  REJECTED: 'REJECTED',
+  CANCELLED: 'CANCELLED',
+  COMPLETED: 'COMPLETED'
+};
+
+exports.CompanionType = exports.$Enums.CompanionType = {
+  STAFF: 'STAFF',
+  VISITOR: 'VISITOR',
+  EXTERNAL: 'EXTERNAL'
+};
+
+exports.ResidentMovementStatus = exports.$Enums.ResidentMovementStatus = {
+  OUTSIDE: 'OUTSIDE',
+  RETURNED: 'RETURNED'
+};
+
+exports.StaffDailyMovementStatus = exports.$Enums.StaffDailyMovementStatus = {
+  INSIDE: 'INSIDE',
+  COMPLETED: 'COMPLETED'
+};
+
+exports.StaffGateTripStatus = exports.$Enums.StaffGateTripStatus = {
+  OUTSIDE: 'OUTSIDE',
+  RETURNED: 'RETURNED'
+};
+
+exports.VehicleMovementStatus = exports.$Enums.VehicleMovementStatus = {
+  INSIDE: 'INSIDE',
+  COMPLETED: 'COMPLETED'
+};
+
 exports.Prisma.ModelName = {
   Tenant: 'Tenant',
   Unit: 'Unit',
@@ -2133,7 +2273,12 @@ exports.Prisma.ModelName = {
   Notification: 'Notification',
   NotificationTemplate: 'NotificationTemplate',
   ServiceContract: 'ServiceContract',
-  ServiceClosure: 'ServiceClosure'
+  ServiceClosure: 'ServiceClosure',
+  ResidentOutingRequest: 'ResidentOutingRequest',
+  ResidentGateMovement: 'ResidentGateMovement',
+  StaffDailyMovement: 'StaffDailyMovement',
+  StaffGateTrip: 'StaffGateTrip',
+  VehicleMovement: 'VehicleMovement'
 };
 
 /**

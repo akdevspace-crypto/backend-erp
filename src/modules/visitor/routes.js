@@ -2,6 +2,7 @@ import { Router } from 'express';
 import { prisma } from '../../app/prisma.js';
 import { auth, enforceTenant } from '../../shared/middleware/auth.middleware.js';
 import { requestOtp, verifyOtp } from '../security/otp.service.js';
+import { checkoutVisitorPass } from './visitor.service.js';
 
 const router = Router();
 
@@ -116,7 +117,9 @@ router.post('/pass', auth, enforceTenant, async (req, res, next) => {
                     email: body.email || profile.email,
                     bloodGroup: body.bloodGroup || profile.bloodGroup,
                     residentialAddress: body.residentialAddress || profile.residentialAddress,
-                    pincode: body.pincode || profile.pincode
+                    pincode: body.pincode || profile.pincode,
+                    whatsapp: body.whatsapp || profile.whatsapp,
+                    dob: body.dob || profile.dob
                 }
             });
         } else {
@@ -131,7 +134,9 @@ router.post('/pass', auth, enforceTenant, async (req, res, next) => {
                     email: body.email,
                     bloodGroup: body.bloodGroup,
                     residentialAddress: body.residentialAddress,
-                    pincode: body.pincode
+                    pincode: body.pincode,
+                    whatsapp: body.whatsapp,
+                    dob: body.dob
                 }
             });
         }
@@ -158,7 +163,8 @@ router.post('/pass', auth, enforceTenant, async (req, res, next) => {
                 status: finalStatus, // Auto-approve if created by receptionist
                 checkInAt,
                 expectedAt,
-                recordedBy: scope.userId
+                recordedBy: scope.userId,
+                approvedByUserId: scope.userId
             }
         });
 
@@ -262,22 +268,13 @@ router.patch('/pass/:id/checkout', auth, enforceTenant, async (req, res, next) =
         const scope = getScope(req);
         const { id } = req.params;
 
-        const existingPass = await prisma.visitorPass.findFirst({
-            where: { id, tenantId: scope.tenantId }
+        const pass = await checkoutVisitorPass({
+            id,
+            tenantId: scope.tenantId,
+            unitId: undefined // Enforces strict tenant ownership for Visitor route, no strict unit restriction unless necessary, but visitor pass didn't have unit restriction before: `where: { id, tenantId: scope.tenantId }`
         });
 
-        if (!existingPass) return res.status(404).json({ error: 'Pass not found' });
-
-        if (existingPass.checkOutAt) {
-            throw buildHttpError('Visitor is already checked out', 400);
-        }
-
-        const pass = await prisma.visitorPass.update({
-            where: { id },
-            data: {
-                checkOutAt: new Date().toISOString()
-            }
-        });
+        if (!pass) return res.status(404).json({ error: 'Pass not found' });
 
         res.json({ success: true, data: pass });
     } catch (err) {
@@ -329,7 +326,19 @@ router.get('/passes', auth, enforceTenant, async (req, res, next) => {
                 tenantId: scope.tenantId
             },
             include: {
-                visitor: true
+                visitor: true,
+                approvedByUser: {
+                    select: {
+                        firstName: true,
+                        lastName: true,
+                        staff: {
+                            select: {
+                                empId: true,
+                                designation: true
+                            }
+                        }
+                    }
+                }
             },
             orderBy: {
                 createdAt: 'desc'
@@ -404,6 +413,31 @@ router.get('/analytics', auth, enforceTenant, async (req, res, next) => {
             hourlyData[hour].count++;
         });
 
+        const currentlyInside = await prisma.visitorPass.count({
+            where: {
+                tenantId: scope.tenantId,
+                checkInAt: { not: null },
+                checkOutAt: null
+            }
+        });
+
+        const completedToday = await prisma.visitorPass.count({
+            where: {
+                tenantId: scope.tenantId,
+                checkOutAt: {
+                    gte: startOfDay,
+                    lte: endOfDay
+                }
+            }
+        });
+
+        const recentVisitors = await prisma.visitorPass.findMany({
+            where: { tenantId: scope.tenantId },
+            include: { visitor: true },
+            orderBy: { createdAt: 'desc' },
+            take: 10
+        });
+
         res.json({
             success: true,
             data: {
@@ -413,7 +447,10 @@ router.get('/analytics', auth, enforceTenant, async (req, res, next) => {
                 guestCount,
                 vendorCount,
                 otherCount,
-                hourlyData
+                hourlyData,
+                currentlyInside,
+                completedToday,
+                recentVisitors
             }
         });
 

@@ -1,38 +1,51 @@
-import axios from 'axios';
-import { PrismaClient } from '@prisma/client';
 import jwt from 'jsonwebtoken';
+import http from 'http';
+import { prisma } from './src/app/prisma.js';
 
-const prisma = new PrismaClient();
+async function test() {
+    const user = await prisma.user.findFirst({
+        where: { role: { name: { contains: 'Security' } } },
+        include: { role: true }
+    });
+    const patient = await prisma.patient.findFirst({ where: { tenantId: user.tenantId }});
 
-async function run() {
-    try {
-        const user = await prisma.user.findFirst();
-        
-        if (!user) {
-            console.log("No user found");
-            return;
+    if (!user || !patient) return console.log("Missing test data");
+
+    const token = jwt.sign({
+        id: user.id,
+        tenantId: user.tenantId,
+        unitId: user.unitId,
+        role: user.role.name
+    }, 'supersecretjwtkeyforerpsystem');
+
+    const data = JSON.stringify({
+        patientId: patient.id,
+        reason: 'Medical Appointment',
+        destination: 'Hospital',
+        expectedReturnAt: '2026-09-02T20:30'
+    });
+
+    const options = {
+        hostname: 'localhost',
+        port: 5000,
+        path: '/api/v1/security/resident-outings',
+        method: 'POST',
+        headers: {
+            'Content-Type': 'application/json',
+            'Authorization': `Bearer ${token}`,
+            'Content-Length': Buffer.byteLength(data)
         }
+    };
 
-        const token = jwt.sign({ id: user.id, tenantId: user.tenantId, unitId: user.unitId, role: { name: 'super admin' } }, process.env.JWT_SECRET || 'test_secret', { expiresIn: '1h' });
-        // NOTE: if JWT_SECRET isn't right, the API will reject it with 401. 
-
-        const res = await axios.get('http://localhost:4000/api/v1/accounts/invoice', {
-            headers: { 
-                'Authorization': 'Bearer ' + token,
-                'x-tenant-id': user.tenantId
-            }
-        });
-        
-        console.log("API responded with", res.data.data.length, "invoices");
-        const manual = res.data.data.filter(i => i.category === 'Manual Billing');
-        console.log("Manual invoices in API:", manual.length);
-        if (manual.length > 0) {
-            console.log(manual[0]);
-        }
-    } catch(e) {
-        console.error("API test failed:", e.response?.data || e.message);
-    } finally {
-        await prisma.$disconnect();
-    }
+    const req = http.request(options, (res) => {
+        let body = '';
+        res.on('data', chunk => body += chunk);
+        res.on('end', () => console.log(`STATUS: ${res.statusCode}`, body));
+    });
+    
+    req.on('error', (e) => console.error(e));
+    req.write(data);
+    req.end();
 }
-run();
+
+test();
