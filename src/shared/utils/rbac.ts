@@ -17,6 +17,7 @@ export const canReadFacilityWide = (user: any): boolean => {
     const managerRoles = [
         'nursing_manager',
         'patient_care_manager',
+        'finance manager',
         // Legacy roles that originally had this access
         'admin',
         'super admin',

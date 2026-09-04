@@ -414,7 +414,8 @@ export const createIncome = async (tenantId, unitId, userId, data) => {
 
 export const recordInvoicePayment = async (tenantId, unitId, userId, invoiceId, data) => {
     return prisma.$transaction(async (tx) => {
-        const invoice = await tx.accountTransaction.findFirst({
+        let isInvoiceTableModel = false;
+        let invoice = await tx.accountTransaction.findFirst({
             where: {
                 id: invoiceId,
                 tenantId,
@@ -424,12 +425,25 @@ export const recordInvoicePayment = async (tenantId, unitId, userId, invoiceId, 
         });
 
         if (!invoice) {
-            const error = new Error('Invoice not found');
-            error.status = 404;
-            throw error;
+            invoice = await tx.invoice.findFirst({
+                where: {
+                    id: invoiceId,
+                    tenantId,
+                    isFinalized: true
+                }
+            });
+            if (invoice) {
+                isInvoiceTableModel = true;
+            } else {
+                const error = new Error('Invoice not found');
+                error.status = 404;
+                throw error;
+            }
         }
 
-        if (invoice.status !== 'POSTED') {
+        const invoiceStatus = isInvoiceTableModel ? (invoice.status === 'FINALIZED' ? 'POSTED' : invoice.status) : invoice.status;
+
+        if (invoiceStatus !== 'POSTED') {
             const error = new Error('Only posted invoices can receive payments');
             error.status = 400;
             throw error;
@@ -477,12 +491,12 @@ export const recordInvoicePayment = async (tenantId, unitId, userId, invoiceId, 
         const receipt = await tx.accountTransaction.create({
             data: {
                 refNo: await generateRef('REC', tenantId, invoice.unitId || unitId, tx),
-                allocationId: invoice.allocationId,
+                allocationId: isInvoiceTableModel ? null : invoice.allocationId,
                 type: 'RECEIPT',
                 amount: requestedAmount,
-                paymentMode: data.mode || invoice.paymentMode || 'Cash',
-                category: invoice.category || 'Service Payment',
-                clientName: invoice.clientName,
+                paymentMode: data.mode || (isInvoiceTableModel ? 'Cash' : invoice.paymentMode || 'Cash'),
+                category: isInvoiceTableModel ? 'Manual Billing' : (invoice.category || 'Service Payment'),
+                clientName: isInvoiceTableModel ? (invoiceMetadata.patientName || 'Manual Bill') : invoice.clientName,
                 notes: data.remarks || `Payment received for invoice ${invoice.refNo}`,
                 status: 'POSTED',
                 date: data.date ? new Date(data.date) : new Date(),
@@ -490,7 +504,7 @@ export const recordInvoicePayment = async (tenantId, unitId, userId, invoiceId, 
                     source: 'INVOICE_PAYMENT',
                     invoiceId: invoice.id,
                     invoiceRefNo: invoice.refNo,
-                    allocationId: invoice.allocationId,
+                    allocationId: isInvoiceTableModel ? null : invoice.allocationId,
                     taskId: invoiceMetadata.taskId || null,
                     taskRefNo: invoiceMetadata.taskRefNo || null,
                     previousPaidAmount: Number(paidBefore.toFixed(2)),
@@ -503,21 +517,39 @@ export const recordInvoicePayment = async (tenantId, unitId, userId, invoiceId, 
             }
         });
 
-        const updatedInvoice = await tx.accountTransaction.update({
-            where: { id: invoice.id },
-            data: {
-                paymentMode: data.mode || invoice.paymentMode,
-                metadata: {
-                    ...invoiceMetadata,
-                    paidAmount: paidAfter,
-                    balanceAmount: balanceAfter,
-                    paymentStatus,
-                    lastReceiptId: receipt.id,
-                    lastReceiptRefNo: receipt.refNo,
-                    lastPaymentAt: receipt.date
+        let updatedInvoice;
+        if (isInvoiceTableModel) {
+            updatedInvoice = await tx.invoice.update({
+                where: { id: invoice.id },
+                data: {
+                    metadata: {
+                        ...invoiceMetadata,
+                        paidAmount: paidAfter,
+                        balanceAmount: balanceAfter,
+                        paymentStatus,
+                        lastReceiptId: receipt.id,
+                        lastReceiptRefNo: receipt.refNo,
+                        lastPaymentAt: receipt.date
+                    }
                 }
-            }
-        });
+            });
+        } else {
+            updatedInvoice = await tx.accountTransaction.update({
+                where: { id: invoice.id },
+                data: {
+                    paymentMode: data.mode || invoice.paymentMode,
+                    metadata: {
+                        ...invoiceMetadata,
+                        paidAmount: paidAfter,
+                        balanceAmount: balanceAfter,
+                        paymentStatus,
+                        lastReceiptId: receipt.id,
+                        lastReceiptRefNo: receipt.refNo,
+                        lastPaymentAt: receipt.date
+                    }
+                }
+            });
+        }
 
         let closedAllocation = null;
         if (paymentStatus === 'PAID' && invoice.allocationId) {
@@ -660,7 +692,7 @@ export const createExpense = async (tenantId, unitId, userId, data) => {
     });
 };
 
-export const getCashbox = async (tenantId, unitId) => {
+export const getCashbox = async (tenantId, unitId, fromDate, toDate) => {
     const where = {
         tenantId,
         isDeleted: false,
@@ -669,6 +701,24 @@ export const getCashbox = async (tenantId, unitId) => {
     if (unitId && unitId !== 'ALL') {
         where.unitId = unitId;
     }
+
+    if (fromDate && toDate) {
+        const start = new Date(fromDate);
+        const end = new Date(toDate);
+
+        if (!isNaN(start.getTime()) && !isNaN(end.getTime()) && start <= end) {
+            end.setDate(end.getDate() + 1);
+            where.date = {
+                gte: start,
+                lt: end
+            };
+        } else {
+            const error = new Error('Invalid date range');
+            error.status = 400;
+            throw error;
+        }
+    }
+
     return prisma.accountTransaction.findMany({
         where,
         orderBy: { createdAt: 'desc' }

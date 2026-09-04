@@ -180,6 +180,18 @@ router.post('/billing/manual-generate', auth, enforceTenant, async (req, res, ne
         const scope = getScope(req);
         const body = req.body;
 
+        // HOME CARE SUBSIDY PROTECTION
+        // Ensure no subsidy data is stored if bill type is Home Care.
+        if (body.billType === 'HOME_CARE') {
+            if (body.homeFields) {
+                Object.keys(body.homeFields).forEach(key => {
+                    if (body.homeFields[key] && body.homeFields[key].subsidy !== undefined) {
+                        delete body.homeFields[key].subsidy;
+                    }
+                });
+            }
+        }
+
         const year = new Date().getFullYear();
         const refPrefix = `UEC-INV-${year}`;
         const refNo = await generateRefNumber(refPrefix, scope.tenantId, scope.unitId);

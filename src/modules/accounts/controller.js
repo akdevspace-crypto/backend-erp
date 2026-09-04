@@ -96,7 +96,14 @@ export const handleCreateExpense = async (req, res, next) => {
 export const handleGetCashbox = async (req, res, next) => {
     try {
         const requestedAllUnits = String(req.query?.scope || '').trim().toLowerCase() === 'all';
-        const results = await getCashbox(req.tenantId, requestedAllUnits && canReadAllUnitFinance(req.user) ? 'ALL' : req.unitId);
+        const fromDate = req.query?.fromDate;
+        const toDate = req.query?.toDate;
+        const results = await getCashbox(
+            req.tenantId, 
+            requestedAllUnits && canReadAllUnitFinance(req.user) ? 'ALL' : req.unitId,
+            fromDate,
+            toDate
+        );
         return success(res, results);
     } catch (error) {
         next(error);
